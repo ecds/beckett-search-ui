@@ -30,8 +30,7 @@ import { icon as EuiIconArrowRight } from "@elastic/eui/es/components/icon/asset
 import { icon as EuiIconCross } from "@elastic/eui/es/components/icon/assets/cross";
 import { icon as EuiIconSearch } from "@elastic/eui/es/components/icon/assets/search";
 
-import "./App.css";
-import EntitiesResults from "./EntitiesResults";
+import EntitiesResults from "../components/EntitiesResults";
 import { getEntitiesQuery } from "../utils/query";
 
 // icon component cache required for dynamically imported EUI icons in Vite;
@@ -90,9 +89,8 @@ const config = {
  *
  * @returns React application root component
  */
-function App() {
-    // TODO: Use react-router, add site navigation, style, componentize better.
-    // eui and react-router: https://github.com/elastic/eui/blob/main/wiki/react-router.md
+function EntitiesSearch() {
+    // TODO: add site navigation, style, componentize better.
     const variables = useSearchkitVariables();
     const Facets = FacetsList([]);
     const { results, loading } = useSearchkitSDK(config, variables);
@@ -138,4 +136,4 @@ function App() {
     );
 }
 
-export default App;
+export default EntitiesSearch;
