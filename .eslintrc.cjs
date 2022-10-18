@@ -46,7 +46,7 @@ module.exports = {
         "jsdoc/require-param": [
             "warn",
             {
-                unnamedRootBase: ["kwargs", "opts"],
+                unnamedRootBase: ["props", "kwargs"],
                 checkDestructured: true,
             },
         ],
