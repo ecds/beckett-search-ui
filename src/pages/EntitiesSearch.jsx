@@ -68,8 +68,9 @@ const config = {
         new RefinementSelectFacet({
             field: "e_type",
             identifier: "e_type",
-            label: "Type",
+            label: "Entity Type",
             multipleSelect: true,
+            order: "value",
         }),
     ],
     /**
