@@ -71,6 +71,7 @@ const config = {
             label: "Entity Type",
             multipleSelect: true,
             order: "value",
+            size: 100, // Show at most 100 facets (there won't be that many!)
         }),
     ],
     /**
