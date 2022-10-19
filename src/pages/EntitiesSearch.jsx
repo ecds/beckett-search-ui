@@ -1,7 +1,7 @@
 import { RefinementSelectFacet } from "@searchkit/sdk";
 // eslint-disable-next-line import/no-unresolved
 import { useSearchkitSDK } from "@searchkit/sdk/src/react-hooks";
-import { useSearchkitVariables } from "@searchkit/client";
+import { useSearchkitVariables, withSearchkit, withSearchkitRouting } from "@searchkit/client";
 import {
     FacetsList,
     SearchBar,
@@ -32,6 +32,7 @@ import { icon as EuiIconSearch } from "@elastic/eui/es/components/icon/assets/se
 
 import EntitiesResults from "../components/EntitiesResults";
 import { getEntitiesQuery } from "../utils/query";
+import "./EntitiesSearch.css";
 
 // icon component cache required for dynamically imported EUI icons in Vite;
 // see https://github.com/elastic/eui/issues/5463
@@ -51,6 +52,49 @@ const fields = [
 
 const analyzers = ["searchkick_search", "searchkick_search2"];
 
+/**
+ * Converts the current search state to a URL route.
+ *
+ * @param {object} searchState Current search state
+ * @returns {object} Route object
+ */
+function stateToRoute(searchState) {
+    // console.log(searchState);
+    const routeState = {
+        query: searchState.query,
+        sort: searchState.sortBy,
+        filters: searchState.filters,
+        size: Number(searchState.page?.size) || 25,
+        from: Number(searchState.page?.from),
+    };
+    return Object.keys(routeState).reduce((sum, key) => {
+        const s = sum;
+        if (
+            (Array.isArray(routeState[key]) && routeState[key].length > 0)
+        || (!Array.isArray(routeState[key]) && !!routeState[key])
+        ) {
+            s[key] = routeState[key];
+        }
+        return s;
+    }, {});
+}
+/**
+ * Converts the current URL route to a search state.
+ *
+ * @param {object} route Route object containing query, sort, filters, etc.
+ * @returns {object} Search state object
+ */
+function routeToState(route) {
+    return {
+        query: route.query || "",
+        sortBy: route.sort,
+        filters: route.filters || [],
+        page: {
+            size: Number(route.size) || 25,
+            from: Number(route.from) || 0,
+        },
+    };
+}
 // Config for Searchkit SDK; see https://searchkit.co/docs/core/reference/searchkit-sdk
 const config = {
     host: import.meta.env.VITE_SEARCHKIT_ENDPOINT,
@@ -87,9 +131,9 @@ const config = {
 };
 
 /**
- * The root of the React application.
+ * Entities search page.
  *
- * @returns React application root component
+ * @returns React entities search page component
  */
 function EntitiesSearch() {
     // TODO: add site navigation, style, componentize better.
@@ -97,13 +141,15 @@ function EntitiesSearch() {
     const Facets = FacetsList([]);
     const { results, loading } = useSearchkitSDK(config, variables);
     return (
-        <EuiPage>
-            <EuiPageSideBar>
-                <SearchBar loading={loading} />
-                <EuiHorizontalRule margin="m" />
-                <Facets data={results} loading={loading} />
-            </EuiPageSideBar>
-            <EuiPageBody component="div">
+        <EuiPage paddingSize="l">
+            <aside>
+                <EuiPageSideBar>
+                    <SearchBar loading={loading} />
+                    <EuiHorizontalRule margin="m" />
+                    <Facets data={results} loading={loading} />
+                </EuiPageSideBar>
+            </aside>
+            <EuiPageBody component="section">
                 <EuiPageHeader>
                     <EuiPageHeaderSection>
                         <EuiTitle size="l">
@@ -138,4 +184,7 @@ function EntitiesSearch() {
     );
 }
 
-export default EntitiesSearch;
+export default withSearchkit(withSearchkitRouting(EntitiesSearch, {
+    stateToRoute,
+    routeToState,
+}));
