@@ -3,7 +3,6 @@ import { RefinementSelectFacet } from "@searchkit/sdk";
 import { useSearchkitSDK } from "@searchkit/sdk/src/react-hooks";
 import { useSearchkitVariables, withSearchkit, withSearchkitRouting } from "@searchkit/client";
 import {
-    FacetsList,
     SearchBar,
     ResetSearchButton,
     SelectedFilters,
@@ -34,6 +33,7 @@ import EntitiesResults from "../components/EntitiesResults";
 import Navigation from "../components/Navigation";
 import { getEntitiesQuery } from "../utils/query";
 import "./EntitiesSearch.css";
+import ListFacet from "../components/ListFacet";
 
 // icon component cache required for dynamically imported EUI icons in Vite;
 // see https://github.com/elastic/eui/issues/5463
@@ -139,7 +139,6 @@ const config = {
 function EntitiesSearch() {
     // TODO: add site navigation, style, componentize better.
     const variables = useSearchkitVariables();
-    const Facets = FacetsList([]);
     const { results, loading } = useSearchkitSDK(config, variables);
     return (
         <>
@@ -152,7 +151,9 @@ function EntitiesSearch() {
                         <EuiPageSideBar>
                             <SearchBar loading={loading} />
                             <EuiHorizontalRule margin="m" />
-                            <Facets data={results} loading={loading} />
+                            {results?.facets.map((facet) => (
+                                <ListFacet key={facet.identifier} facet={facet} loading={loading} />
+                            ))}
                         </EuiPageSideBar>
                     </aside>
                     <EuiPageBody component="section">
