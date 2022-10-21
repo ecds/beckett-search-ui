@@ -9,10 +9,10 @@
         "preview": "vite preview"
     },
     "dependencies": {
+        "@ecds/searchkit-sdk": "^3.0.1-alpha.1",
         "@elastic/eui": "^34.6.0",
         "@searchkit/client": "^3.0.0",
         "@searchkit/elastic-ui": "^3.0.0",
-        "@searchkit/sdk": "^3.0.0",
         "react": "^16.14.0",
         "react-dom": "^16.14.0"
     },

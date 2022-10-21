@@ -1,6 +1,6 @@
-import { RefinementSelectFacet } from "@searchkit/sdk";
+import { RefinementSelectFacet } from "@ecds/searchkit-sdk";
 // eslint-disable-next-line import/no-unresolved
-import { useSearchkitSDK } from "@searchkit/sdk/src/react-hooks";
+import { useSearchkitSDK } from "@ecds/searchkit-sdk/src/react-hooks";
 import { useSearchkitVariables } from "@searchkit/client";
 import {
     FacetsList,
