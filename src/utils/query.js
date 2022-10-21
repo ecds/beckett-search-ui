@@ -1,4 +1,4 @@
-import { CustomQuery } from "@searchkit/sdk";
+import { CustomQuery } from "@ecds/searchkit-sdk";
 
 /**
  * Given a list of Field objects ({ name, boost }), the name of an analyzer for input,
