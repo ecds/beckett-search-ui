@@ -6,10 +6,6 @@ on:
     branches:
       - develop
 
-  merge:
-    branches:
-      - develop
-
 jobs:
   build-and-deploy:
 
