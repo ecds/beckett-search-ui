@@ -1,7 +1,10 @@
 import { RefinementSelectFacet } from "@ecds/searchkit-sdk";
 // eslint-disable-next-line import/no-unresolved
 import { useSearchkitSDK } from "@ecds/searchkit-sdk/src/react-hooks";
-import { useSearchkitVariables, withSearchkit, withSearchkitRouting } from "@searchkit/client";
+import {
+    useSearchkitVariables,
+    withSearchkit,
+} from "@searchkit/client";
 import {
     SearchBar,
     ResetSearchButton,
@@ -34,6 +37,7 @@ import Navigation from "../components/Navigation";
 import { getEntitiesQuery } from "../utils/query";
 import "./EntitiesSearch.css";
 import ListFacet from "../components/ListFacet";
+import withSearchRouting from "../components/withSearchRouting";
 
 // icon component cache required for dynamically imported EUI icons in Vite;
 // see https://github.com/elastic/eui/issues/5463
@@ -53,49 +57,6 @@ const fields = [
 
 const analyzers = ["searchkick_search", "searchkick_search2"];
 
-/**
- * Converts the current search state to a URL route.
- *
- * @param {object} searchState Current search state
- * @returns {object} Route object
- */
-function stateToRoute(searchState) {
-    // console.log(searchState);
-    const routeState = {
-        query: searchState.query,
-        sort: searchState.sortBy,
-        filters: searchState.filters,
-        size: Number(searchState.page?.size) || 25,
-        from: Number(searchState.page?.from),
-    };
-    return Object.keys(routeState).reduce((sum, key) => {
-        const s = sum;
-        if (
-            (Array.isArray(routeState[key]) && routeState[key].length > 0)
-        || (!Array.isArray(routeState[key]) && !!routeState[key])
-        ) {
-            s[key] = routeState[key];
-        }
-        return s;
-    }, {});
-}
-/**
- * Converts the current URL route to a search state.
- *
- * @param {object} route Route object containing query, sort, filters, etc.
- * @returns {object} Search state object
- */
-function routeToState(route) {
-    return {
-        query: route.query || "",
-        sortBy: route.sort,
-        filters: route.filters || [],
-        page: {
-            size: Number(route.size) || 25,
-            from: Number(route.from) || 0,
-        },
-    };
-}
 // Config for Searchkit SDK; see https://searchkit.co/docs/core/reference/searchkit-sdk
 const config = {
     host: import.meta.env.VITE_SEARCHKIT_ENDPOINT,
@@ -125,10 +86,12 @@ const config = {
      * @param {object} body The original request body object
      * @returns The modified request body for ElasticSearch
      */
-    postProcessRequest: (body) => (body?.query ? body : {
-        ...body,
-        query: { bool: { must: [{ term: { published: true } }] } },
-    }),
+    postProcessRequest: (body) => (body?.query
+        ? body
+        : {
+            ...body,
+            query: { bool: { must: [{ term: { published: true } }] } },
+        }),
 };
 
 /**
@@ -152,7 +115,11 @@ function EntitiesSearch() {
                             <SearchBar loading={loading} />
                             <EuiHorizontalRule margin="m" />
                             {results?.facets.map((facet) => (
-                                <ListFacet key={facet.identifier} facet={facet} loading={loading} />
+                                <ListFacet
+                                    key={facet.identifier}
+                                    facet={facet}
+                                    loading={loading}
+                                />
                             ))}
                         </EuiPageSideBar>
                     </aside>
@@ -160,7 +127,10 @@ function EntitiesSearch() {
                         <EuiPageHeader>
                             <EuiPageHeaderSection>
                                 <EuiTitle size="l">
-                                    <SelectedFilters data={results} loading={loading} />
+                                    <SelectedFilters
+                                        data={results}
+                                        loading={loading}
+                                    />
                                 </EuiTitle>
                             </EuiPageHeaderSection>
                             <EuiPageHeaderSection>
@@ -193,7 +163,4 @@ function EntitiesSearch() {
     );
 }
 
-export default withSearchkit(withSearchkitRouting(EntitiesSearch, {
-    stateToRoute,
-    routeToState,
-}));
+export default withSearchkit(withSearchRouting(EntitiesSearch));
