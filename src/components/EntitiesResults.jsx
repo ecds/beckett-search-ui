@@ -1,4 +1,5 @@
 import { EuiFlexGrid, EuiHorizontalRule, EuiFlexItem } from "@elastic/eui";
+import React from "react";
 
 /**
  * List of results for the Entities search view.
@@ -11,15 +12,16 @@ function EntitiesResults({ data }) {
     return (
         <EuiFlexGrid columns={1}>
             {data?.hits.items.map((hit) => (
-                <>
+                <React.Fragment
+                    key={hit.id}
+                >
                     <EuiFlexItem
-                        key={hit.id}
                         dangerouslySetInnerHTML={{
                             __html: hit?.fields?.short_display,
                         }}
                     />
                     <EuiHorizontalRule />
-                </>
+                </React.Fragment>
             ))}
         </EuiFlexGrid>
     );
