@@ -12,13 +12,15 @@ function EntitiesResults({ data, offset }) {
     return (
         <table>
             <thead>
-                <th aria-label="index">#</th>
-                <th>Entity</th>
-                <th>Type</th>
+                <tr>
+                    <th aria-label="index">#</th>
+                    <th>Entity</th>
+                    <th>Type</th>
+                </tr>
             </thead>
             <tbody>
                 {data?.hits?.items?.map((entity, idx) => (
-                    <tr key={entity.id}>
+                    <tr key={entity.id} id={entity.id}>
                         <td>{idx + 1 + (offset || 0)}</td>
                         <td
                             // eslint-disable-next-line react/no-danger
