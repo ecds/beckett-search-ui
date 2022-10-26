@@ -42,7 +42,9 @@ function LettersResults({ data, offset }) {
                                 <ul>
                                     {letter?.fields?.repositories?.map(
                                         (repository) => (
-                                            <li>{repository}</li>
+                                            <li key={repository}>
+                                                {repository}
+                                            </li>
                                         ),
                                     )}
                                 </ul>
