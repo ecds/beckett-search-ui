@@ -80,11 +80,4 @@ function getEntitiesQuery({ analyzers, fields }) {
     });
 }
 
-/**
- * Builds the letters query for Searchkit. Not yet implemented.
- */
-function getLettersQuery() {
-    throw new Error("Not yet implemented");
-}
-
-export { getEntitiesQuery, getLettersQuery };
+export { getEntitiesQuery };
