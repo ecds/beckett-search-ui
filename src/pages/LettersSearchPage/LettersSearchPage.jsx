@@ -31,7 +31,6 @@ import { icon as EuiIconSearch } from "@elastic/eui/es/components/icon/assets/se
 import { lettersSearchConfig } from "./lettersSearchConfig";
 import LettersResults from "../../components/LettersResults";
 import ListFacet from "../../components/ListFacet";
-import Navigation from "../../components/Navigation";
 import withSearchRouting from "../../components/withSearchRouting";
 import "../common/search.css";
 
@@ -56,65 +55,60 @@ function LettersSearch() {
         variables,
     );
     return (
-        <>
-            <header>
-                <Navigation />
-            </header>
-            <main>
-                <EuiPage paddingSize="l">
-                    <aside>
-                        <EuiPageSideBar>
-                            <SearchBar loading={loading} />
-                            <EuiHorizontalRule margin="m" />
-                            {results?.facets.map((facet) => (
-                                <ListFacet
-                                    key={facet.identifier}
-                                    facet={facet}
+        <main>
+            <EuiPage paddingSize="l">
+                <aside>
+                    <EuiPageSideBar>
+                        <SearchBar loading={loading} />
+                        <EuiHorizontalRule margin="m" />
+                        {results?.facets.map((facet) => (
+                            <ListFacet
+                                key={facet.identifier}
+                                facet={facet}
+                                loading={loading}
+                            />
+                        ))}
+                    </EuiPageSideBar>
+                </aside>
+                <EuiPageBody component="section">
+                    <EuiPageHeader>
+                        <EuiPageHeaderSection>
+                            <EuiTitle size="l">
+                                <SelectedFilters
+                                    data={results}
                                     loading={loading}
                                 />
-                            ))}
-                        </EuiPageSideBar>
-                    </aside>
-                    <EuiPageBody component="section">
-                        <EuiPageHeader>
-                            <EuiPageHeaderSection>
-                                <EuiTitle size="l">
-                                    <SelectedFilters
-                                        data={results}
-                                        loading={loading}
-                                    />
+                            </EuiTitle>
+                        </EuiPageHeaderSection>
+                        <EuiPageHeaderSection>
+                            <ResetSearchButton loading={loading} />
+                        </EuiPageHeaderSection>
+                    </EuiPageHeader>
+                    <EuiPageContent>
+                        <EuiPageContentHeader>
+                            <EuiPageContentHeaderSection>
+                                <EuiTitle size="s">
+                                    <h2>
+                                        {results?.summary.total}
+                                        {" "}
+                                        Results
+                                    </h2>
                                 </EuiTitle>
-                            </EuiPageHeaderSection>
-                            <EuiPageHeaderSection>
-                                <ResetSearchButton loading={loading} />
-                            </EuiPageHeaderSection>
-                        </EuiPageHeader>
-                        <EuiPageContent>
-                            <EuiPageContentHeader>
-                                <EuiPageContentHeaderSection>
-                                    <EuiTitle size="s">
-                                        <h2>
-                                            {results?.summary.total}
-                                            {" "}
-                                            Results
-                                        </h2>
-                                    </EuiTitle>
-                                </EuiPageContentHeaderSection>
-                            </EuiPageContentHeader>
-                            <EuiPageContentBody>
-                                <LettersResults
-                                    data={results}
-                                    offset={variables?.page?.from}
-                                />
-                                <EuiFlexGroup justifyContent="spaceAround">
-                                    <Pagination data={results} />
-                                </EuiFlexGroup>
-                            </EuiPageContentBody>
-                        </EuiPageContent>
-                    </EuiPageBody>
-                </EuiPage>
-            </main>
-        </>
+                            </EuiPageContentHeaderSection>
+                        </EuiPageContentHeader>
+                        <EuiPageContentBody>
+                            <LettersResults
+                                data={results}
+                                offset={variables?.page?.from}
+                            />
+                            <EuiFlexGroup justifyContent="spaceAround">
+                                <Pagination data={results} />
+                            </EuiFlexGroup>
+                        </EuiPageContentBody>
+                    </EuiPageContent>
+                </EuiPageBody>
+            </EuiPage>
+        </main>
     );
 }
 

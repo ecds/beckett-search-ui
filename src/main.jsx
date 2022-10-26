@@ -1,18 +1,33 @@
 import React from "react";
 import * as ReactDOM from "react-dom";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import EntitiesSearch from "./pages/EntitiesSearch";
-import { LettersSearchPage } from "./pages";
+import { LettersSearchPage, ErrorPage } from "./pages";
+import { Root } from "./Root";
 import "./assets/index.css";
+
+const router = createBrowserRouter([
+    {
+        path: "/",
+        element: <Root />,
+        errorElement: <ErrorPage />,
+        children: [
+            // { index: true, element: <HomePage /> },
+            {
+                path: "entities",
+                element: <EntitiesSearch />,
+            },
+            {
+                path: "letters",
+                element: <LettersSearchPage />,
+            },
+        ],
+    },
+]);
 
 ReactDOM.render(
     <React.StrictMode>
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<EntitiesSearch />} />
-                <Route path="/letters" element={<LettersSearchPage />} />
-            </Routes>
-        </BrowserRouter>
+        <RouterProvider router={router} />
     </React.StrictMode>,
     document.getElementById("root"),
 );
