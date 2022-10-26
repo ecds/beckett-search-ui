@@ -1,29 +1,40 @@
-import { EuiFlexGrid, EuiHorizontalRule, EuiFlexItem } from "@elastic/eui";
-import React from "react";
+import "./EntitiesResults.css";
 
 /**
  * List of results for the Entities search view.
  *
  * @param {object} props Props for React functional component
  * @param {object} props.data Data returned by ElasticSearch
+ * @param {number} props.offset Offset of results for current page
  * @returns Populated results list React component
  */
-function EntitiesResults({ data }) {
+function EntitiesResults({ data, offset }) {
     return (
-        <EuiFlexGrid columns={1}>
-            {data?.hits.items.map((hit) => (
-                <React.Fragment
-                    key={hit.id}
-                >
-                    <EuiFlexItem
-                        dangerouslySetInnerHTML={{
-                            __html: hit?.fields?.short_display,
-                        }}
-                    />
-                    <EuiHorizontalRule />
-                </React.Fragment>
-            ))}
-        </EuiFlexGrid>
+        <table>
+            <thead>
+                <th aria-label="index">#</th>
+                <th>Entity</th>
+                <th>Type</th>
+            </thead>
+            <tbody>
+                {data?.hits?.items?.map((entity, idx) => (
+                    <tr key={entity.id}>
+                        <td>{idx + 1 + (offset || 0)}</td>
+                        <td
+                            // eslint-disable-next-line react/no-danger
+                            dangerouslySetInnerHTML={{
+                                __html: entity?.fields?.short_display,
+                            }}
+                        />
+                        <td className="capital-label">
+                            {entity?.fields?.e_type
+                                .toString()
+                                .replaceAll("_", " ")}
+                        </td>
+                    </tr>
+                ))}
+            </tbody>
+        </table>
     );
 }
 

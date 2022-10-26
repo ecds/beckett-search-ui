@@ -67,7 +67,7 @@ const config = {
     },
     index: import.meta.env.VITE_SEARCHKIT_ENTITIES_INDEX,
     hits: {
-        fields: ["id", "short_display"],
+        fields: ["id", "short_display", "e_type"],
     },
     query: getEntitiesQuery({ analyzers, fields }),
     facets: [
@@ -150,7 +150,10 @@ function EntitiesSearch() {
                                 </EuiPageContentHeaderSection>
                             </EuiPageContentHeader>
                             <EuiPageContentBody>
-                                <EntitiesResults data={results} />
+                                <EntitiesResults
+                                    data={results}
+                                    offset={variables?.page?.from}
+                                />
                                 <EuiFlexGroup justifyContent="spaceAround">
                                     <Pagination data={results} />
                                 </EuiFlexGroup>
