@@ -1,1 +1,1 @@
-export * from "./EntitiesSearch";
+export * from "./EntitiesSearchPage";
