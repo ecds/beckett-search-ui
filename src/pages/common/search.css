@@ -1,0 +1,17 @@
+th,
+td {
+    padding: 10px;
+    border: 1px solid #d3dae6;
+}
+th {
+    background: #f5f7fa;
+    text-align: left;
+}
+table {
+    margin-bottom: 2rem;
+    line-height: 1.25;
+    width: 100%;
+}
+ul li:not(:last-of-type) {
+    margin-bottom: 2px;
+}
