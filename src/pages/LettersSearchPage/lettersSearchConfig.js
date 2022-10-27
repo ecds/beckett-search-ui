@@ -44,6 +44,7 @@ export const lettersSearchConfig = {
             multipleSelect: true,
             order: "value",
             size: 100,
+            display: "CustomListFacet",
         }),
         new RefinementSelectFacet({
             field: "repositories",
@@ -52,6 +53,7 @@ export const lettersSearchConfig = {
             multipleSelect: true,
             order: "count",
             size: 200,
+            display: "CustomListFacet",
         }),
     ],
     sortOptions: [

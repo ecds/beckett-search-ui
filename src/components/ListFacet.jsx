@@ -60,4 +60,7 @@ function ListFacet({ facet, loading }) {
     );
 }
 
+// Disambiguate from Searchkit builtin ListFacet
+ListFacet.DISPLAY = "CustomListFacet";
+
 export default ListFacet;

@@ -6,10 +6,11 @@ import {
     withSearchkit,
 } from "@searchkit/client";
 import {
-    SearchBar,
-    ResetSearchButton,
-    SelectedFilters,
+    FacetsList,
     Pagination,
+    ResetSearchButton,
+    SearchBar,
+    SelectedFilters,
 } from "@searchkit/elastic-ui";
 import {
     EuiPage,
@@ -30,11 +31,13 @@ import { appendIconComponentCache } from "@elastic/eui/es/components/icon/icon";
 import { icon as EuiIconArrowLeft } from "@elastic/eui/es/components/icon/assets/arrow_left";
 import { icon as EuiIconArrowRight } from "@elastic/eui/es/components/icon/assets/arrow_right";
 import { icon as EuiIconCross } from "@elastic/eui/es/components/icon/assets/cross";
+import { icon as EuiIconCalendar } from "@elastic/eui/es/components/icon/assets/calendar";
 import { icon as EuiIconSearch } from "@elastic/eui/es/components/icon/assets/search";
 
 import { lettersSearchConfig } from "./lettersSearchConfig";
 import LettersResults from "../../components/LettersResults";
 import ListFacet from "../../components/ListFacet";
+import ValueFilter from "../../components/ValueFilter";
 import withSearchRouting from "../../components/withSearchRouting";
 import "../common/search.css";
 
@@ -43,6 +46,7 @@ import "../common/search.css";
 appendIconComponentCache({
     arrowLeft: EuiIconArrowLeft,
     arrowRight: EuiIconArrowRight,
+    calendar: EuiIconCalendar,
     cross: EuiIconCross,
     search: EuiIconSearch,
 });
@@ -58,6 +62,7 @@ function LettersSearch() {
         lettersSearchConfig,
         variables,
     );
+    const Facets = FacetsList([ListFacet]);
     return (
         <main>
             <EuiPage paddingSize="l">
@@ -65,13 +70,7 @@ function LettersSearch() {
                     <EuiPageSideBar>
                         <SearchBar loading={loading} />
                         <EuiHorizontalRule margin="m" />
-                        {results?.facets.map((facet) => (
-                            <ListFacet
-                                key={facet.identifier}
-                                facet={facet}
-                                loading={loading}
-                            />
-                        ))}
+                        <Facets data={results} loading={loading} />
                     </EuiPageSideBar>
                 </aside>
                 <EuiPageBody component="section">
@@ -81,6 +80,9 @@ function LettersSearch() {
                                 <SelectedFilters
                                     data={results}
                                     loading={loading}
+                                    customFilterComponents={{
+                                        CustomListFacet: ValueFilter,
+                                    }}
                                 />
                             </EuiTitle>
                         </EuiPageHeaderSection>
