@@ -51,12 +51,12 @@ function ListFacet({ facet, loading }) {
     }
 
     return (
-        <>
+        <div className="list-facet">
             <EuiTitle size="xxs">
                 <h3>{facet.label}</h3>
             </EuiTitle>
             <EuiFacetGroup className="facet-group">{entries}</EuiFacetGroup>
-        </>
+        </div>
     );
 }
 

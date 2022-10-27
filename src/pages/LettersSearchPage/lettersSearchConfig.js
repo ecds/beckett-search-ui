@@ -28,13 +28,30 @@ export const lettersSearchConfig = {
     },
     query: buildQuery({ analyzers, fields }),
     facets: [
+        // TODO: Add this facet (and modify searchkit if necessary) when vaild values are determined
+        // new RefinementSelectFacet({
+        //     field: "volume",
+        //     identifier: "volume",
+        //     label: "Published Volume",
+        //     multipleSelect: true,
+        //     order: "value",
+        //     size: 100,
+        // }),
         new RefinementSelectFacet({
             field: "language",
             identifier: "language",
             label: "Language",
             multipleSelect: true,
             order: "value",
-            size: 100, // Show at most 100 facets (there won't be that many!)
+            size: 100,
+        }),
+        new RefinementSelectFacet({
+            field: "repositories",
+            identifier: "repository",
+            label: "Repository",
+            multipleSelect: true,
+            order: "count",
+            size: 200,
         }),
     ],
     sortOptions: [
