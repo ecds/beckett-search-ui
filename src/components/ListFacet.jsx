@@ -41,7 +41,7 @@ function ListFacet({ facet, loading }) {
                 }}
                 filter={{ identifier: facet.identifier, value: entry.label }}
             >
-                {entry.label.toString().replaceAll("_", " ")}
+                {entry.label.toString().trim().replaceAll("_", " ") || "[blank]"}
             </FilterLink>
         </EuiFacetButton>
     ));
