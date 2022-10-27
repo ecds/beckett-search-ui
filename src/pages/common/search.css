@@ -20,3 +20,6 @@ aside {
     width: 25%;
     max-width: 25%;
 }
+div.active-facet-group .euiFlexGroup {
+    flex-flow: row wrap;
+}
