@@ -1,7 +1,7 @@
 import "./LettersResults.css";
 
 /**
- * List of results for the Entities search view.
+ * List of results for the Letters search view.
  *
  * @param {object} props Props for React functional component
  * @param {object} props.data Data returned by ElasticSearch
