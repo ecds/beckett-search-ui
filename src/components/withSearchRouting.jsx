@@ -1,5 +1,6 @@
 import { withSearchkitRouting } from "@searchkit/client";
 import React from "react";
+import { format } from "date-fns";
 
 /**
  * Higher-order component (HOC) for Searchkit routing. Just acts as a module for configuring
@@ -26,10 +27,20 @@ function withSearchRouting(component) {
         };
         searchState.filters.forEach((filter) => {
             // simplify filter representation
-            if (Object.hasOwn(routeState, filter.identifier)) {
-                routeState[filter.identifier].push(filter.value);
-            } else {
-                routeState[filter.identifier] = [filter.value];
+            // date filter is formatted differently
+            if (filter.dateMin || filter.dateMax) {
+                routeState.dateMin = filter.dateMin
+                    ? format(new Date(filter.dateMin), "yyyy-MM-dd")
+                    : undefined;
+                routeState.dateMax = filter.dateMax
+                    ? format(new Date(filter.dateMax), "yyyy-MM-dd")
+                    : undefined;
+            } else if (filter.value) {
+                if (Object.hasOwn(routeState, filter.identifier)) {
+                    routeState[filter.identifier].push(filter.value);
+                } else {
+                    routeState[filter.identifier] = [filter.value];
+                }
             }
         });
         // transform into the object to pass to createURL (adapted from Searchkit docs)
@@ -65,7 +76,16 @@ function withSearchRouting(component) {
         };
         // get filters state back into format expected by Searchkit
         Object.entries(route)
-            .filter(([key]) => !["query", "sort", "size", "from"].includes(key))
+            .filter(
+                ([key, _val]) => ![
+                    "query", // only process filters, not query/sort/size/from
+                    "sort",
+                    "size",
+                    "from",
+                    "dateMin", // handle date filters separately
+                    "dateMax",
+                ].includes(key),
+            )
             .forEach(([identifier, val]) => {
                 // map each value of each filter to objects
                 if (Array.isArray(val)) {
@@ -75,8 +95,17 @@ function withSearchRouting(component) {
                             value,
                         });
                     });
+                } else {
+                    searchState.filters.push({
+                        identifier,
+                        value: val,
+                    });
                 }
             });
+        if (route.dateMin || route.dateMax) {
+            const { dateMin, dateMax } = route;
+            searchState.filters.push({ identifier: "date", dateMin, dateMax });
+        }
         return searchState;
     }
 

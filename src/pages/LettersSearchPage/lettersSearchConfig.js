@@ -1,4 +1,4 @@
-import { RefinementSelectFacet } from "@ecds/searchkit-sdk";
+import { DateRangeFacet, RefinementSelectFacet } from "@ecds/searchkit-sdk";
 import { buildQuery } from "../common/queryBuilder";
 
 // kewyord field names to search on
@@ -28,6 +28,11 @@ export const lettersSearchConfig = {
     },
     query: buildQuery({ analyzers, fields }),
     facets: [
+        new DateRangeFacet({
+            field: "date",
+            identifier: "date",
+            label: "Date",
+        }),
         // TODO: Add this facet (and modify searchkit if necessary) when vaild values are determined
         // new RefinementSelectFacet({
         //     field: "volume",
