@@ -1,17 +1,3 @@
-th,
-td {
-    padding: 10px;
-    border: 1px solid #d3dae6;
-}
-th {
-    background: #f5f7fa;
-    text-align: left;
-}
-th:last-child {
+table#entities-results th:last-child {
     width: 15%;
-}
-table {
-    margin-bottom: 2rem;
-    line-height: 1.25;
-    width: 100%;
 }

@@ -1,4 +1,10 @@
 /* search results table style */
+table.search-results {
+    margin-bottom: 2rem;
+    line-height: 1.25;
+    width: 100%;
+    position: relative;
+}
 table.search-results th,
 table.search-results td {
     padding: 10px;
@@ -7,12 +13,6 @@ table.search-results td {
 table.search-results th {
     background: #f5f7fa;
     text-align: left;
-}
-table.search-results {
-    margin-bottom: 2rem;
-    line-height: 1.25;
-    width: 100%;
-    position: relative;
 }
 table.search-results tr {
     position: relative;
@@ -34,7 +34,7 @@ div.active-facet-group .euiFlexGroup {
 }
 
 /* link to individual record: cover entire table row */
-tr:hover td {
+table.search-results tr:hover td {
     text-decoration: underline;
 }
 a.to-record {

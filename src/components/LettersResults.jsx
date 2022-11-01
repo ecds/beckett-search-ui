@@ -11,7 +11,7 @@ import "./LettersResults.css";
  */
 function LettersResults({ data, offset }) {
     return (
-        <table className="search-results">
+        <table id="letters-results" className="search-results">
             <thead>
                 <tr>
                     <th aria-label="index">#</th>

@@ -1,0 +1,8 @@
+div.entity-details table {
+    text-align: left;
+    line-height: 1.5;
+    margin-top: 1rem;
+}
+div.entity-details table th {
+    padding-right: 2rem;
+}

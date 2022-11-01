@@ -4,6 +4,8 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { EuiProvider } from "@elastic/eui";
 import {
     EntitiesSearchPage,
+    EntityPage,
+    entityLoader,
     ErrorPage,
     LetterPage,
     letterLoader,
@@ -22,6 +24,11 @@ const router = createBrowserRouter([
             {
                 path: "entities",
                 element: <EntitiesSearchPage />,
+            },
+            {
+                path: "entities/:entityId",
+                element: <EntityPage />,
+                loader: entityLoader,
             },
             {
                 path: "letters",

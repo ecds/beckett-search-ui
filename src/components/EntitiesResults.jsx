@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./EntitiesResults.css";
 
 /**
@@ -10,7 +11,7 @@ import "./EntitiesResults.css";
  */
 function EntitiesResults({ data, offset }) {
     return (
-        <table>
+        <table id="entities-results" className="search-results">
             <thead>
                 <tr>
                     <th aria-label="index">#</th>
@@ -21,7 +22,14 @@ function EntitiesResults({ data, offset }) {
             <tbody>
                 {data?.hits?.items?.map((entity, idx) => (
                     <tr key={entity.id} id={entity.id}>
-                        <td>{idx + 1 + (offset || 0)}</td>
+                        <td>
+                            <Link
+                                className="to-record"
+                                to={`/entities/${entity.id}`}
+                            >
+                                <span>{idx + 1 + (offset || 0)}</span>
+                            </Link>
+                        </td>
                         <td
                             // eslint-disable-next-line react/no-danger
                             dangerouslySetInnerHTML={{
