@@ -2,12 +2,12 @@ import React from "react";
 import * as ReactDOM from "react-dom";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { EuiProvider } from "@elastic/eui";
-import EntitiesSearch from "./pages/EntitiesSearch";
 import {
+    EntitiesSearchPage,
+    ErrorPage,
     LetterPage,
     letterLoader,
     LettersSearchPage,
-    ErrorPage,
 } from "./pages";
 import { Root } from "./Root";
 import "./assets/index.css";
@@ -21,7 +21,7 @@ const router = createBrowserRouter([
             // { index: true, element: <HomePage /> },
             {
                 path: "entities",
-                element: <EntitiesSearch />,
+                element: <EntitiesSearchPage />,
             },
             {
                 path: "letters",

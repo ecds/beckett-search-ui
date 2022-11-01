@@ -1,7 +1,5 @@
 import { CustomQuery } from "@ecds/searchkit-sdk";
 
-// TODO: Organize this in a better place, utils is non-descriptive.
-
 /**
  * Given a list of Field objects ({ name, boost }), the name of an analyzer for input,
  * and a search query term, returns a list of ElasticSearch match queries.
@@ -80,11 +78,4 @@ function getEntitiesQuery({ analyzers, fields }) {
     });
 }
 
-/**
- * Builds the letters query for Searchkit. Not yet implemented.
- */
-function getLettersQuery() {
-    throw new Error("Not yet implemented");
-}
-
-export { getEntitiesQuery, getLettersQuery };
+export { getEntitiesQuery };

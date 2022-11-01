@@ -8,7 +8,7 @@ import {
 } from "@elastic/eui";
 import React from "react";
 import { useLoaderData } from "react-router-dom";
-import { getFromApi } from "../../utils";
+import { getFromApi } from "../common";
 import "../common/result.css";
 
 /**
