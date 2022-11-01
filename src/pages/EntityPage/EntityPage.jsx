@@ -35,7 +35,7 @@ export function EntityPage() {
             <EuiPage paddingSize="l">
                 <EuiPageBody component="section">
                     <EuiPageContent>
-                        <EuiPageContentHeader className="result-header">
+                        <EuiPageContentHeader className="result-name">
                             <EuiPageContentHeaderSection>
                                 <EuiTitle size="l">
                                     <h1
@@ -48,7 +48,7 @@ export function EntityPage() {
                             </EuiPageContentHeaderSection>
                         </EuiPageContentHeader>
                         <EuiTitle>
-                            <h2 className="capital-label">
+                            <h2 className="capital-label result-heading">
                                 {entity.e_type.toString().replaceAll("_", " ")}
                                 {" "}
                                 Information

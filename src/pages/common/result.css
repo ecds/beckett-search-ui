@@ -1,6 +1,7 @@
-.result-header {
+.result-name {
     justify-content: center;
 }
-h3.referenced-label {
-    text-transform: capitalize;
+.result-heading {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
 }

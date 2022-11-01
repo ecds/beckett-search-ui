@@ -7,9 +7,10 @@ import {
     EuiTitle,
 } from "@elastic/eui";
 import React from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import { getFromApi } from "../common";
 import "../common/result.css";
+import "./LetterPage.css";
 
 /**
  * Loader for individual letter records.
@@ -20,6 +21,17 @@ import "../common/result.css";
  */
 export function letterLoader({ params }) {
     return getFromApi(`/letters/${params.letterId}`);
+}
+
+/**
+ * Convenience function to parse URI-formatted IDs into UUIDs.
+ *
+ * @param {string} uri URI to parse
+ * @returns {string} Parsed UUID
+ */
+function parseId(uri) {
+    const split = uri.split("/");
+    return split[split.length - 1].replace(".json", "");
 }
 
 /**
@@ -40,7 +52,7 @@ export function LetterPage() {
             <EuiPage paddingSize="l">
                 <EuiPageBody component="section">
                     <EuiPageContent>
-                        <EuiPageContentHeader className="result-header">
+                        <EuiPageContentHeader className="result-name">
                             <EuiPageContentHeaderSection>
                                 <EuiTitle size="l">
                                     <h1>
@@ -66,23 +78,32 @@ export function LetterPage() {
                                     ([key, value]) => (
                                         <React.Fragment key={key}>
                                             <EuiTitle size="s">
-                                                <h3 className="referenced-label">
+                                                <h3 className="capital-label result-heading">
                                                     {key
                                                         .toString()
                                                         .trim()
                                                         .replaceAll("_", " ")}
                                                 </h3>
                                             </EuiTitle>
-                                            <ul>
-                                                {value.map((e) => (
-                                                    <li
-                                                        key={e.id}
-                                                        // eslint-disable-next-line react/no-danger
-                                                        dangerouslySetInnerHTML={{
-                                                            __html: e.label,
-                                                        }}
-                                                    />
-                                                ))}
+                                            <ul className="entities-list">
+                                                {value
+                                                    .sort((a, b) => a.label.localeCompare(
+                                                        b.label,
+                                                    ))
+                                                    .map((e) => (
+                                                        <li key={e.id}>
+                                                            <Link
+                                                                to={`/entities/${parseId(
+                                                                    e.id,
+                                                                )}`}
+                                                                // eslint-disable-next-line max-len
+                                                                // eslint-disable-next-line react/no-danger
+                                                                dangerouslySetInnerHTML={{
+                                                                    __html: e.label,
+                                                                }}
+                                                            />
+                                                        </li>
+                                                    ))}
                                             </ul>
                                         </React.Fragment>
                                     ),
