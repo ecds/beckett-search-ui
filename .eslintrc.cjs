@@ -51,5 +51,6 @@ module.exports = {
             },
         ],
         "jsdoc/require-returns-type": [0],
+        "import/prefer-default-export": "off",
     },
 };

@@ -1,4 +1,3 @@
-import { RefinementSelectFacet } from "@ecds/searchkit-sdk";
 // eslint-disable-next-line import/no-unresolved
 import { useSearchkitSDK } from "@ecds/searchkit-sdk/src/react-hooks";
 import { useSearchkitVariables, withSearchkit } from "@searchkit/client";
@@ -29,12 +28,12 @@ import { icon as EuiIconArrowRight } from "@elastic/eui/es/components/icon/asset
 import { icon as EuiIconCross } from "@elastic/eui/es/components/icon/assets/cross";
 import { icon as EuiIconSearch } from "@elastic/eui/es/components/icon/assets/search";
 
-import EntitiesResults from "../components/EntitiesResults";
-import Navigation from "../components/Navigation";
-import { getEntitiesQuery } from "../utils/query";
-import "./EntitiesSearch.css";
-import ListFacet from "../components/ListFacet";
-import withSearchRouting from "../components/withSearchRouting";
+import { entitiesSearchConfig } from "./entitiesSearchConfig";
+import EntitiesResults from "../../components/EntitiesResults";
+import ListFacet from "../../components/ListFacet";
+import Navigation from "../../components/Navigation";
+import withSearchRouting from "../../components/withSearchRouting";
+import "./EntitiesSearchPage.css";
 
 // icon component cache required for dynamically imported EUI icons in Vite;
 // see https://github.com/elastic/eui/issues/5463
@@ -45,58 +44,6 @@ appendIconComponentCache({
     search: EuiIconSearch,
 });
 
-const fields = [
-    { name: "clean_label", boost: 10 },
-    { name: "clean_description", boost: 5 },
-    { name: "alternate_names", boost: 9 },
-    { name: "alternate_spellings", boost: 8 },
-];
-
-const analyzers = ["searchkick_search", "searchkick_search2"];
-
-// Config for Searchkit SDK; see https://searchkit.co/docs/core/reference/searchkit-sdk
-const config = {
-    host: import.meta.env.VITE_SEARCHKIT_ENDPOINT,
-    connectionOptions: {
-        headers: {
-            authorization: `ApiKey ${import.meta.env.VITE_SEARCHKIT_API_KEY}`,
-        },
-    },
-    index: import.meta.env.VITE_SEARCHKIT_ENTITIES_INDEX,
-    hits: {
-        fields: ["id", "short_display", "e_type"],
-    },
-    query: getEntitiesQuery({ analyzers, fields }),
-    facets: [
-        new RefinementSelectFacet({
-            field: "e_type",
-            identifier: "e_type",
-            label: "Entity Type",
-            multipleSelect: true,
-            order: "value",
-            size: 100, // Show at most 100 facets (there won't be that many!)
-        }),
-    ],
-    /**
-     * Appends { published: true } filter when there is no query term.
-     * Also removes "generic" type from facet list.
-     *
-     * @param {object} body The original request body object
-     * @returns The modified request body for ElasticSearch
-     */
-    postProcessRequest: (body) => (body?.query
-        ? body
-        : {
-            ...body,
-            query: {
-                bool: {
-                    must: [{ term: { published: true } }],
-                    must_not: [{ term: { e_type: "generic" } }],
-                },
-            },
-        }),
-};
-
 /**
  * Entities search page.
  *
@@ -105,7 +52,10 @@ const config = {
 function EntitiesSearch() {
     // TODO: add site navigation, style, componentize better.
     const variables = useSearchkitVariables();
-    const { results, loading } = useSearchkitSDK(config, variables);
+    const { results, loading } = useSearchkitSDK(
+        entitiesSearchConfig,
+        variables,
+    );
     return (
         <>
             <header>
@@ -169,4 +119,6 @@ function EntitiesSearch() {
     );
 }
 
-export default withSearchkit(withSearchRouting(EntitiesSearch));
+export const EntitiesSearchPage = withSearchkit(
+    withSearchRouting(EntitiesSearch),
+);
