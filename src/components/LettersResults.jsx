@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./LettersResults.css";
 
 /**
@@ -10,7 +11,7 @@ import "./LettersResults.css";
  */
 function LettersResults({ data, offset }) {
     return (
-        <table>
+        <table className="search-results">
             <thead>
                 <tr>
                     <th aria-label="index">#</th>
@@ -28,7 +29,14 @@ function LettersResults({ data, offset }) {
                     const dateString = `${date.getDate()} ${month} ${date.getFullYear()}`;
                     return (
                         <tr key={letter.id} id={letter.id}>
-                            <td>{idx + 1 + (offset || 0)}</td>
+                            <td>
+                                <Link
+                                    className="to-record"
+                                    to={`/letters/${letter.id}`}
+                                >
+                                    <span>{idx + 1 + (offset || 0)}</span>
+                                </Link>
+                            </td>
                             <td>
                                 <ul>
                                     {letter?.fields?.recipients?.map(
