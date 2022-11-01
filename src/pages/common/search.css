@@ -19,10 +19,21 @@ table.search-results tr {
 }
 
 /* search filters panel style */
+
 aside {
-    min-width: 25%;
-    width: 25%;
-    max-width: 25%;
+    align-self: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+@media (min-width: 768px) {
+    aside {
+        align-self: flex-start;
+        width: 25%;
+        min-width: 25%;
+        max-width: 25%;
+        margin: auto;
+    }
 }
 aside ul li:not(:last-of-type) {
     margin-bottom: 2px;
