@@ -1,2 +1,3 @@
-export * from "./LettersSearchPage";
+export * from "./EntitiesSearchPage";
 export * from "./ErrorPage";
+export * from "./LettersSearchPage";
