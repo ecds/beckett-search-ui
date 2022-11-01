@@ -41,7 +41,10 @@ function ListFacet({ facet, loading }) {
                 }}
                 filter={{ identifier: facet.identifier, value: entry.label }}
             >
-                {entry.label.toString().trim().replaceAll("_", " ") || "[blank]"}
+                <span className="capital-label">
+                    {entry.label.toString().trim().replaceAll("_", " ")
+                        || "[blank]"}
+                </span>
             </FilterLink>
         </EuiFacetButton>
     ));

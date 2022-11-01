@@ -1,10 +1,7 @@
 import { RefinementSelectFacet } from "@ecds/searchkit-sdk";
 // eslint-disable-next-line import/no-unresolved
 import { useSearchkitSDK } from "@ecds/searchkit-sdk/src/react-hooks";
-import {
-    useSearchkitVariables,
-    withSearchkit,
-} from "@searchkit/client";
+import { useSearchkitVariables, withSearchkit } from "@searchkit/client";
 import {
     SearchBar,
     ResetSearchButton,
@@ -66,7 +63,7 @@ const config = {
     },
     index: import.meta.env.VITE_SEARCHKIT_ENTITIES_INDEX,
     hits: {
-        fields: ["id", "short_display"],
+        fields: ["id", "short_display", "e_type"],
     },
     query: getEntitiesQuery({ analyzers, fields }),
     facets: [
@@ -81,6 +78,7 @@ const config = {
     ],
     /**
      * Appends { published: true } filter when there is no query term.
+     * Also removes "generic" type from facet list.
      *
      * @param {object} body The original request body object
      * @returns The modified request body for ElasticSearch
@@ -89,7 +87,12 @@ const config = {
         ? body
         : {
             ...body,
-            query: { bool: { must: [{ term: { published: true } }] } },
+            query: {
+                bool: {
+                    must: [{ term: { published: true } }],
+                    must_not: [{ term: { e_type: "generic" } }],
+                },
+            },
         }),
 };
 
@@ -145,7 +148,10 @@ function EntitiesSearch() {
                             </EuiPageContentHeaderSection>
                         </EuiPageContentHeader>
                         <EuiPageContentBody>
-                            <EntitiesResults data={results} />
+                            <EntitiesResults
+                                data={results}
+                                offset={variables?.page?.from}
+                            />
                             <EuiFlexGroup justifyContent="spaceAround">
                                 <Pagination data={results} />
                             </EuiFlexGroup>
