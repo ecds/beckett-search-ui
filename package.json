@@ -13,6 +13,8 @@
         "@elastic/eui": "^34.6.0",
         "@searchkit/client": "^3.0.0",
         "@searchkit/elastic-ui": "^3.0.0",
+        "@searchkit/schema": "^3.0.0",
+        "moment": "^2.29.4",
         "react": "^16.14.0",
         "react-dom": "^16.14.0",
         "react-router-dom": "^6.4.2"

@@ -1,6 +1,7 @@
 import { Fragment, useRef, useEffect } from "react";
 import { EuiFacetButton, EuiFacetGroup, EuiTitle } from "@elastic/eui";
 import { useSearchkit, FilterLink } from "@searchkit/client";
+import { volumeLabels } from "../pages/common";
 import "./ListFacet.css";
 
 /**
@@ -21,45 +22,62 @@ function ListFacet({ facet, loading }) {
         ref.current = ref.current.slice(0, facet?.entries.length);
     }, [facet?.entries]);
 
-    const entries = facet?.entries?.map((entry, i) => (
-        <EuiFacetButton
-            className="facet-button"
-            key={entry.label}
-            quantity={entry.count}
-            isSelected={api.isFilterSelected({
-                identifier: facet.identifier,
-                value: entry.label,
-            })}
-            isLoading={loading}
-            onClick={(e) => {
-                ref.current[i].onClick(e);
-            }}
-        >
-            <FilterLink
-                ref={(el) => {
-                    ref.current[i] = el;
-                }}
-                filter={{ identifier: facet.identifier, value: entry.label }}
-            >
-                <span className="capital-label">
-                    {entry.label.toString().replaceAll("_", " ")}
-                </span>
-            </FilterLink>
-        </EuiFacetButton>
-    ));
+    const entries = facet?.entries?.map((entry, i) => {
+        let label = entry.label.toString().trim().replaceAll("_", " ");
+        // special handling for volume labels
+        if (
+            label
+            && facet.identifier === "volume"
+            && Object.keys(volumeLabels).includes(label)
+        ) {
+            label = volumeLabels[label];
+        }
+        return (
+            label && (
+                <EuiFacetButton
+                    className="facet-button"
+                    key={entry.label}
+                    quantity={entry.count}
+                    isSelected={api.isFilterSelected({
+                        identifier: facet.identifier,
+                        value: entry.label,
+                    })}
+                    isLoading={loading}
+                    onClick={(e) => {
+                        ref.current[i].onClick(e);
+                    }}
+                >
+                    <FilterLink
+                        ref={(el) => {
+                            ref.current[i] = el;
+                        }}
+                        filter={{
+                            identifier: facet.identifier,
+                            value: entry.label,
+                        }}
+                    >
+                        <span className="capital-label">{label}</span>
+                    </FilterLink>
+                </EuiFacetButton>
+            )
+        );
+    });
 
     if (!facet) {
         return null;
     }
 
     return (
-        <>
+        <div className="list-facet">
             <EuiTitle size="xxs">
                 <h3>{facet.label}</h3>
             </EuiTitle>
             <EuiFacetGroup className="facet-group">{entries}</EuiFacetGroup>
-        </>
+        </div>
     );
 }
+
+// Disambiguate from Searchkit builtin ListFacet
+ListFacet.DISPLAY = "CustomListFacet";
 
 export default ListFacet;

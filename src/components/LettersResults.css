@@ -1,0 +1,6 @@
+th:first-child {
+    width: 3%;
+}
+th:not(:first-child) {
+    width: 33%;
+}

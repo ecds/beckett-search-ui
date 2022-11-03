@@ -1,11 +1,15 @@
 // eslint-disable-next-line import/no-unresolved
 import { useSearchkitSDK } from "@ecds/searchkit-sdk/src/react-hooks";
-import { useSearchkitVariables, withSearchkit } from "@searchkit/client";
 import {
-    SearchBar,
-    ResetSearchButton,
-    SelectedFilters,
+    SearchkitClient,
+    useSearchkitVariables,
+    withSearchkit,
+} from "@searchkit/client";
+import {
     Pagination,
+    ResetSearchButton,
+    SearchBar,
+    SelectedFilters,
 } from "@searchkit/elastic-ui";
 import {
     EuiPage,
@@ -20,37 +24,44 @@ import {
     EuiTitle,
     EuiHorizontalRule,
     EuiFlexGroup,
+    EuiSpacer,
 } from "@elastic/eui";
 import "@elastic/eui/dist/eui_theme_light.css";
 import { appendIconComponentCache } from "@elastic/eui/es/components/icon/icon";
 import { icon as EuiIconArrowLeft } from "@elastic/eui/es/components/icon/assets/arrow_left";
 import { icon as EuiIconArrowRight } from "@elastic/eui/es/components/icon/assets/arrow_right";
 import { icon as EuiIconCross } from "@elastic/eui/es/components/icon/assets/cross";
+import { icon as EuiIconCalendar } from "@elastic/eui/es/components/icon/assets/calendar";
 import { icon as EuiIconSearch } from "@elastic/eui/es/components/icon/assets/search";
 
-import { entitiesSearchConfig } from "./entitiesSearchConfig";
-import EntitiesResults from "../../components/EntitiesResults";
+import { lettersSearchConfig } from "./lettersSearchConfig";
+import LettersResults from "../../components/LettersResults";
 import ListFacet from "../../components/ListFacet";
+import ValueFilter from "../../components/ValueFilter";
+import DateRangeFacet from "../../components/DateRangeFacet";
+import DateRangeFilter from "../../components/DateRangeFilter";
 import withSearchRouting from "../../components/withSearchRouting";
+import "../common/search.css";
 
 // icon component cache required for dynamically imported EUI icons in Vite;
 // see https://github.com/elastic/eui/issues/5463
 appendIconComponentCache({
     arrowLeft: EuiIconArrowLeft,
     arrowRight: EuiIconArrowRight,
+    calendar: EuiIconCalendar,
     cross: EuiIconCross,
     search: EuiIconSearch,
 });
 
 /**
- * Entities search page.
+ * Letters search page.
  *
- * @returns React entities search page component
+ * @returns React letters search page component
  */
-function EntitiesSearch() {
+function LettersSearch() {
     const variables = useSearchkitVariables();
     const { results, loading } = useSearchkitSDK(
-        entitiesSearchConfig,
+        lettersSearchConfig,
         variables,
     );
     return (
@@ -60,22 +71,34 @@ function EntitiesSearch() {
                     <EuiPageSideBar>
                         <SearchBar loading={loading} />
                         <EuiHorizontalRule margin="m" />
-                        {results?.facets.map((facet) => (
-                            <ListFacet
-                                key={facet.identifier}
-                                facet={facet}
-                                loading={loading}
-                            />
-                        ))}
+                        {results?.facets.filter((facet) => facet.display).map((facet) => {
+                            const Component = facet.display === "CustomDateFacet"
+                                ? DateRangeFacet
+                                : ListFacet;
+                            return (
+                                <div key={facet.identifier}>
+                                    <Component
+                                        data={results}
+                                        facet={facet}
+                                        loading={loading}
+                                    />
+                                    <EuiSpacer size="l" />
+                                </div>
+                            );
+                        })}
                     </EuiPageSideBar>
                 </aside>
                 <EuiPageBody component="section">
                     <EuiPageHeader>
-                        <EuiPageHeaderSection>
+                        <EuiPageHeaderSection className="active-facet-group">
                             <EuiTitle size="l">
                                 <SelectedFilters
                                     data={results}
                                     loading={loading}
+                                    customFilterComponents={{
+                                        CustomDateFacet: DateRangeFilter,
+                                        CustomListFacet: ValueFilter,
+                                    }}
                                 />
                             </EuiTitle>
                         </EuiPageHeaderSection>
@@ -96,7 +119,7 @@ function EntitiesSearch() {
                             </EuiPageContentHeaderSection>
                         </EuiPageContentHeader>
                         <EuiPageContentBody>
-                            <EntitiesResults
+                            <LettersResults
                                 data={results}
                                 offset={variables?.page?.from}
                             />
@@ -111,6 +134,7 @@ function EntitiesSearch() {
     );
 }
 
-export const EntitiesSearchPage = withSearchkit(
-    withSearchRouting(EntitiesSearch),
+export const LettersSearchPage = withSearchkit(
+    withSearchRouting(LettersSearch),
+    () => new SearchkitClient({ itemsPerPage: 25 }),
 );
