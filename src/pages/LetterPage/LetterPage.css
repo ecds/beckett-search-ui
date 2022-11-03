@@ -1,4 +1,24 @@
-ul.entities-list {
+main.result a:hover {
+    text-decoration: underline;
+}
+dl.letter-metadata {
     line-height: 1.5;
-    list-style: inside;
+    display: grid;
+    grid-template-columns: fit-content(500px) 1fr;
+}
+dl.letter-metadata dt,
+dl.letter-metadata dd {
+    display: inline;
+}
+dl.letter-metadata dt {
+    font-weight: bold;
+    margin-right: 2rem;
+    grid-column: 1;
+}
+dl.letter-metadata dd {
+    grid-column: 2;
+}
+dl.letter-mentions dt:not(:first-of-type),
+dl.letter-mentions dt + dd:not(:first-of-type) {
+    margin-top: 0.5rem;
 }

@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 import {
     EuiPage,
     EuiPageBody,
@@ -7,8 +8,10 @@ import {
     EuiTitle,
 } from "@elastic/eui";
 import React from "react";
-import { Link, useLoaderData } from "react-router-dom";
-import { getFromApi } from "../common";
+import { Navigate, useLoaderData } from "react-router-dom";
+import { LetterMentions } from "../../components/LetterMentions";
+import { LetterMetadata } from "../../components/LetterMetadata";
+import { formatDate, getFromApi } from "../common";
 import "../common/result.css";
 import "./LetterPage.css";
 
@@ -24,33 +27,23 @@ export function letterLoader({ params }) {
 }
 
 /**
- * Convenience function to parse URI-formatted IDs into UUIDs.
- *
- * @param {string} uri URI to parse
- * @returns {string} Parsed UUID
- */
-function parseId(uri) {
-    const split = uri.split("/");
-    return split[split.length - 1].replace(".json", "");
-}
-
-/**
  * Page for individual letter records.
  *
  * @returns {React.Component} Letter page component.
  */
 export function LetterPage() {
     const letter = useLoaderData();
-    const date = new Date(letter?.date);
-    const month = new Intl.DateTimeFormat("en-US", { month: "long" }).format(
-        date,
-    );
-    const recipients = letter?.recipients.map((r) => r.label).join(", ");
-    const dateString = `${date.getDate()} ${month} ${date.getFullYear()}`;
+    if (letter.status === 404) {
+        return <Navigate replace to="/404" />;
+    }
+    const dateString = letter?.metadata?.date
+        ? formatDate(letter.metadata.date)
+        : "";
+    const excludedMeta = ["id", "date", "label"];
     return (
-        <main>
+        <main className="result">
             <EuiPage paddingSize="l">
-                <EuiPageBody component="section">
+                <EuiPageBody>
                     <EuiPageContent>
                         <EuiPageContentHeader className="result-name">
                             <EuiPageContentHeaderSection>
@@ -60,55 +53,19 @@ export function LetterPage() {
                                         {" "}
                                         Letter to
                                         {" "}
-                                        {recipients}
+                                        {letter?.metadata?.recipient}
                                     </h1>
                                 </EuiTitle>
                             </EuiPageContentHeaderSection>
                         </EuiPageContentHeader>
-                        <EuiTitle>
-                            <h2>Letter Information</h2>
-                        </EuiTitle>
-
+                        {letter.metadata && (
+                            <LetterMetadata
+                                metadata={letter.metadata}
+                                excluded={excludedMeta}
+                            />
+                        )}
                         {letter.mentions && (
-                            <>
-                                <EuiTitle>
-                                    <h2>Entities Mentioned in the Letter</h2>
-                                </EuiTitle>
-                                {Object.entries(letter.mentions).map(
-                                    ([key, value]) => (
-                                        <React.Fragment key={key}>
-                                            <EuiTitle size="s">
-                                                <h3 className="capital-label result-heading">
-                                                    {key
-                                                        .toString()
-                                                        .trim()
-                                                        .replaceAll("_", " ")}
-                                                </h3>
-                                            </EuiTitle>
-                                            <ul className="entities-list">
-                                                {value
-                                                    .sort((a, b) => a.label.localeCompare(
-                                                        b.label,
-                                                    ))
-                                                    .map((e) => (
-                                                        <li key={e.id}>
-                                                            <Link
-                                                                to={`/entities/${parseId(
-                                                                    e.id,
-                                                                )}`}
-                                                                // eslint-disable-next-line max-len
-                                                                // eslint-disable-next-line react/no-danger
-                                                                dangerouslySetInnerHTML={{
-                                                                    __html: e.label,
-                                                                }}
-                                                            />
-                                                        </li>
-                                                    ))}
-                                            </ul>
-                                        </React.Fragment>
-                                    ),
-                                )}
-                            </>
+                            <LetterMentions mentions={letter.mentions} />
                         )}
                     </EuiPageContent>
                 </EuiPageBody>

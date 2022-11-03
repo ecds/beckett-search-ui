@@ -7,7 +7,7 @@ import {
     EuiTitle,
 } from "@elastic/eui";
 import React from "react";
-import { useLoaderData } from "react-router-dom";
+import { Navigate, useLoaderData } from "react-router-dom";
 import { getFromApi } from "../common";
 import "../common/result.css";
 import "./EntityPage.css";
@@ -30,10 +30,13 @@ export function entityLoader({ params }) {
  */
 export function EntityPage() {
     const entity = useLoaderData();
+    if (entity.status === 404) {
+        return <Navigate replace to="/404" />;
+    }
     return (
-        <main>
+        <main className="result">
             <EuiPage paddingSize="l">
-                <EuiPageBody component="section">
+                <EuiPageBody>
                     <EuiPageContent>
                         <EuiPageContentHeader className="result-name">
                             <EuiPageContentHeaderSection>
@@ -47,20 +50,24 @@ export function EntityPage() {
                                 </EuiTitle>
                             </EuiPageContentHeaderSection>
                         </EuiPageContentHeader>
-                        <EuiTitle>
-                            <h2 className="capital-label result-heading">
-                                {entity.e_type.toString().replaceAll("_", " ")}
-                                {" "}
-                                Information
-                            </h2>
-                        </EuiTitle>
-                        <div
-                            // eslint-disable-next-line react/no-danger
-                            dangerouslySetInnerHTML={{
-                                __html: entity.full_display,
-                            }}
-                            className="entity-details"
-                        />
+                        <section>
+                            <EuiTitle>
+                                <h2 className="capital-label result-heading">
+                                    {entity?.e_type
+                                        .toString()
+                                        .replaceAll("_", " ")}
+                                    {" "}
+                                    Information
+                                </h2>
+                            </EuiTitle>
+                            <div
+                                // eslint-disable-next-line react/no-danger
+                                dangerouslySetInnerHTML={{
+                                    __html: entity.full_display,
+                                }}
+                                className="entity-details"
+                            />
+                        </section>
                     </EuiPageContent>
                 </EuiPageBody>
             </EuiPage>
