@@ -10,10 +10,11 @@
     },
     "dependencies": {
         "@ecds/searchkit-sdk": "^3.0.1-alpha.1",
+        "@ecds/searchkit-elastic-ui": "^3.0.1-alpha.2",
         "@elastic/eui": "^42.1.0",
         "@searchkit/client": "^3.0.0",
-        "@ecds/searchkit-elastic-ui": "^3.0.1-alpha.2",
-        "date-fns": "^2.29.3",
+        "@searchkit/schema": "^3.0.0",
+        "moment": "^2.29.4",
         "react": "^16.14.0",
         "react-dom": "^16.14.0",
         "react-router-dom": "^6.4.2"

@@ -6,7 +6,6 @@ import {
     withSearchkit,
 } from "@searchkit/client";
 import {
-    FacetsList,
     Pagination,
     ResetSearchButton,
     SearchBar,
@@ -25,6 +24,7 @@ import {
     EuiTitle,
     EuiHorizontalRule,
     EuiFlexGroup,
+    EuiSpacer,
 } from "@elastic/eui";
 import "@elastic/eui/dist/eui_theme_light.css";
 import { appendIconComponentCache } from "@elastic/eui/es/components/icon/icon";
@@ -38,6 +38,8 @@ import { lettersSearchConfig } from "./lettersSearchConfig";
 import LettersResults from "../../components/LettersResults";
 import ListFacet from "../../components/ListFacet";
 import ValueFilter from "../../components/ValueFilter";
+import DateRangeFacet from "../../components/DateRangeFacet";
+import DateRangeFilter from "../../components/DateRangeFilter";
 import withSearchRouting from "../../components/withSearchRouting";
 import "../common/search.css";
 
@@ -62,7 +64,6 @@ function LettersSearch() {
         lettersSearchConfig,
         variables,
     );
-    const Facets = FacetsList([ListFacet]);
     return (
         <main>
             <EuiPage paddingSize="l">
@@ -70,7 +71,21 @@ function LettersSearch() {
                     <EuiPageSideBar>
                         <SearchBar loading={loading} />
                         <EuiHorizontalRule margin="m" />
-                        <Facets data={results} loading={loading} />
+                        {results?.facets.filter((facet) => facet.display).map((facet) => {
+                            const Component = facet.display === "CustomDateFacet"
+                                ? DateRangeFacet
+                                : ListFacet;
+                            return (
+                                <div key={facet.identifier}>
+                                    <Component
+                                        data={results}
+                                        facet={facet}
+                                        loading={loading}
+                                    />
+                                    <EuiSpacer size="l" />
+                                </div>
+                            );
+                        })}
                     </EuiPageSideBar>
                 </aside>
                 <EuiPageBody component="section">
@@ -81,6 +96,7 @@ function LettersSearch() {
                                     data={results}
                                     loading={loading}
                                     customFilterComponents={{
+                                        CustomDateFacet: DateRangeFilter,
                                         CustomListFacet: ValueFilter,
                                     }}
                                 />

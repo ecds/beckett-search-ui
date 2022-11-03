@@ -1,5 +1,6 @@
 import { DateRangeFacet, RefinementSelectFacet } from "@ecds/searchkit-sdk";
 import { buildQuery } from "../common/queryBuilder";
+import { MinMaxDateFacet } from "./MinMaxDateFacet";
 
 // kewyord field names to search on
 const fields = [
@@ -32,16 +33,29 @@ export const lettersSearchConfig = {
             field: "date",
             identifier: "date",
             label: "Date",
+            display: "CustomDateFacet",
         }),
-        // TODO: Add this facet (and modify searchkit if necessary) when vaild values are determined
-        // new RefinementSelectFacet({
-        //     field: "volume",
-        //     identifier: "volume",
-        //     label: "Published Volume",
-        //     multipleSelect: true,
-        //     order: "value",
-        //     size: 100,
-        // }),
+        new MinMaxDateFacet({
+            field: "date",
+            identifier: "min_date",
+            label: "Minimum Date",
+            minMax: "min",
+        }),
+        new MinMaxDateFacet({
+            field: "date",
+            identifier: "max_date",
+            label: "Maximum Date",
+            minMax: "max",
+        }),
+        new RefinementSelectFacet({
+            field: "volume",
+            identifier: "volume",
+            label: "Published Volume",
+            multipleSelect: true,
+            order: "value",
+            size: 100,
+            display: "CustomListFacet",
+        }),
         new RefinementSelectFacet({
             field: "language",
             identifier: "language",
