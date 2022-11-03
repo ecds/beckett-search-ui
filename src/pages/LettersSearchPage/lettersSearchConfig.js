@@ -80,7 +80,7 @@ export const lettersSearchConfig = {
         { id: "date", label: "Date", field: { date: "asc" } },
     ],
     /**
-     * Appends { published: true } filter and sorts by date when there is no query term.
+     * Sorts by date when there is no query term.
      *
      * @param {object} body The original request body object
      * @returns The modified request body for ElasticSearch
@@ -89,11 +89,6 @@ export const lettersSearchConfig = {
         ? body
         : {
             ...body,
-            query: {
-                bool: {
-                    must: [{ term: { published: true } }],
-                },
-            },
             sort: [{ date: "asc" }],
         }),
 };

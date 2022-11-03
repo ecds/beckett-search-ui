@@ -37,7 +37,7 @@ function buildQuery({ analyzers, fields }) {
     return new CustomQuery({
         /**
          * Given a query string, returns the bool object for ElasticSearch containing
-         * the query with the published filter applied.
+         * the query.
          *
          * @param {string} query The query string
          * @returns {object} The resulting query bool object for ElasticSearch.
@@ -62,16 +62,6 @@ function buildQuery({ analyzers, fields }) {
                             },
                         },
                     ],
-                    // filter to only "published" records
-                    filter: {
-                        term: {
-                            published: {
-                                value: true,
-                            },
-                        },
-                    },
-                    // ensure at least one "should", not only the filter, is applied
-                    minimum_should_match: 1,
                 },
             };
         },
