@@ -1,3 +1,4 @@
+import { formatDate } from "../pages/common";
 import "./LettersResults.css";
 
 /**
@@ -21,11 +22,7 @@ function LettersResults({ data, offset }) {
             </thead>
             <tbody>
                 {data?.hits?.items?.map((letter, idx) => {
-                    const date = new Date(letter?.fields?.date);
-                    const month = new Intl.DateTimeFormat("en-US", {
-                        month: "long",
-                    }).format(date);
-                    const dateString = `${date.getDate()} ${month} ${date.getFullYear()}`;
+                    const dateString = formatDate(letter?.fields?.date);
                     return (
                         <tr key={letter.id} id={letter.id}>
                             <td>{idx + 1 + (offset || 0)}</td>

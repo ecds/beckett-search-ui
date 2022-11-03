@@ -21,33 +21,35 @@ function ListFacet({ facet, loading }) {
         ref.current = ref.current.slice(0, facet?.entries.length);
     }, [facet?.entries]);
 
-    const entries = facet?.entries?.map((entry, i) => (
-        <EuiFacetButton
-            className="facet-button"
-            key={entry.label}
-            quantity={entry.count}
-            isSelected={api.isFilterSelected({
-                identifier: facet.identifier,
-                value: entry.label,
-            })}
-            isLoading={loading}
-            onClick={(e) => {
-                ref.current[i].onClick(e);
-            }}
-        >
-            <FilterLink
-                ref={(el) => {
-                    ref.current[i] = el;
+    const entries = facet?.entries?.map((entry, i) => {
+        const label = entry.label.toString().trim().replaceAll("_", " ");
+        return label && (
+            <EuiFacetButton
+                className="facet-button"
+                key={entry.label}
+                quantity={entry.count}
+                isSelected={api.isFilterSelected({
+                    identifier: facet.identifier,
+                    value: entry.label,
+                })}
+                isLoading={loading}
+                onClick={(e) => {
+                    ref.current[i].onClick(e);
                 }}
-                filter={{ identifier: facet.identifier, value: entry.label }}
             >
-                <span className="capital-label">
-                    {entry.label.toString().trim().replaceAll("_", " ")
-                        || "[blank]"}
-                </span>
-            </FilterLink>
-        </EuiFacetButton>
-    ));
+                <FilterLink
+                    ref={(el) => {
+                        ref.current[i] = el;
+                    }}
+                    filter={{ identifier: facet.identifier, value: entry.label }}
+                >
+                    <span className="capital-label">
+                        {label}
+                    </span>
+                </FilterLink>
+            </EuiFacetButton>
+        );
+    });
 
     if (!facet) {
         return null;

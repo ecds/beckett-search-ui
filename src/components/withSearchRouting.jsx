@@ -1,6 +1,6 @@
 import { withSearchkitRouting } from "@searchkit/client";
 import React from "react";
-import { format } from "date-fns";
+import moment from "moment";
 
 /**
  * Higher-order component (HOC) for Searchkit routing. Just acts as a module for configuring
@@ -30,10 +30,10 @@ function withSearchRouting(component) {
             // date filter is formatted differently
             if (filter.dateMin || filter.dateMax) {
                 routeState.dateMin = filter.dateMin
-                    ? format(new Date(filter.dateMin), "yyyy-MM-dd")
+                    ? moment(new Date(filter.dateMin)).format("yyyy-MM-DD")
                     : undefined;
                 routeState.dateMax = filter.dateMax
-                    ? format(new Date(filter.dateMax), "yyyy-MM-dd")
+                    ? moment(new Date(filter.dateMax)).format("yyyy-MM-DD")
                     : undefined;
             } else if (filter.value) {
                 if (Object.hasOwn(routeState, filter.identifier)) {
