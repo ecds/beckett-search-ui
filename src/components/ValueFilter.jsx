@@ -1,6 +1,7 @@
 import { EuiButton, EuiFlexItem } from "@elastic/eui";
 import { FilterLink } from "@searchkit/client";
 import { useRef } from "react";
+import { volumeLabels } from "../pages/common";
 
 // eslint-disable-next-line jsdoc/require-param, jsdoc/require-returns
 /**
@@ -9,6 +10,15 @@ import { useRef } from "react";
  */
 function ValueFilter({ filter, loading }) {
     const ref = useRef();
+    let valueLabel = filter.value;
+    // special handling for volume labels
+    if (
+        filter.value
+        && filter.identifier === "volume"
+        && Object.keys(volumeLabels).includes(filter.value)
+    ) {
+        valueLabel = volumeLabels[filter.value];
+    }
     return (
         <EuiFlexItem grow={false}>
             <EuiButton
@@ -20,7 +30,7 @@ function ValueFilter({ filter, loading }) {
                 }}
             >
                 <FilterLink ref={ref} filter={filter}>
-                    {`${filter.label}: ${filter.value}`}
+                    {`${filter.label}: ${valueLabel}`}
                 </FilterLink>
             </EuiButton>
         </EuiFlexItem>
