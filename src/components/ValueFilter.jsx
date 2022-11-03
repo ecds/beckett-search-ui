@@ -5,7 +5,7 @@ import { volumeLabels } from "../pages/common";
 
 // eslint-disable-next-line jsdoc/require-param, jsdoc/require-returns
 /**
- * copied directly from @ecds/searchkit-elastic-ui; needed, but not exported!
+ * copied directly from @searchkit/elastic-ui; needed, but not exported!
  * https://github.com/searchkit/searchkit/blob/a67420cb1e16d2a459f473c904cde10b3cfd5858/packages/searchkit-elastic-ui/src/SelectedFilters/index.tsx#L46
  */
 function ValueFilter({ filter, loading }) {
