@@ -1,6 +1,6 @@
-th:first-child {
+table#letters-results th:first-child {
     width: 3%;
 }
-th:not(:first-child) {
+table#letters-results th:not(:first-child) {
     width: 33%;
 }

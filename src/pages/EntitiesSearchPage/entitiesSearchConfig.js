@@ -1,5 +1,5 @@
 import { RefinementSelectFacet } from "@ecds/searchkit-sdk";
-import { getEntitiesQuery } from "./entitiesQueryBuilder";
+import { buildQuery } from "../common";
 
 // kewyord field names to search on
 const fields = [
@@ -25,7 +25,7 @@ export const entitiesSearchConfig = {
     hits: {
         fields: ["id", "short_display", "e_type"],
     },
-    query: getEntitiesQuery({ analyzers, fields }),
+    query: buildQuery({ analyzers, fields }),
     facets: [
         new RefinementSelectFacet({
             field: "e_type",
@@ -36,22 +36,4 @@ export const entitiesSearchConfig = {
             size: 100, // Show at most 100 facets (there won't be that many!)
         }),
     ],
-    /**
-     * Appends { published: true } filter when there is no query term.
-     * Also removes "generic" type from facet list.
-     *
-     * @param {object} body The original request body object
-     * @returns The modified request body for ElasticSearch
-     */
-    postProcessRequest: (body) => (body?.query
-        ? body
-        : {
-            ...body,
-            query: {
-                bool: {
-                    must: [{ term: { published: true } }],
-                    must_not: [{ term: { e_type: "generic" } }],
-                },
-            },
-        }),
 };

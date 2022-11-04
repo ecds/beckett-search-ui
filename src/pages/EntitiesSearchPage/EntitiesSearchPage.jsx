@@ -6,7 +6,7 @@ import {
     ResetSearchButton,
     SelectedFilters,
     Pagination,
-} from "@searchkit/elastic-ui";
+} from "@ecds/searchkit-elastic-ui";
 import {
     EuiPage,
     EuiPageBody,

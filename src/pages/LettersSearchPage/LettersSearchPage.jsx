@@ -10,7 +10,7 @@ import {
     ResetSearchButton,
     SearchBar,
     SelectedFilters,
-} from "@searchkit/elastic-ui";
+} from "@ecds/searchkit-elastic-ui";
 import {
     EuiPage,
     EuiPageBody,

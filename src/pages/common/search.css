@@ -1,25 +1,71 @@
-th,
-td {
-    padding: 10px;
-    border: 1px solid #d3dae6;
-}
-th {
-    background: #f5f7fa;
-    text-align: left;
-}
-table {
+/* search results table style */
+table.search-results {
     margin-bottom: 2rem;
     line-height: 1.25;
     width: 100%;
+    position: relative;
 }
-ul li:not(:last-of-type) {
+table.search-results th,
+table.search-results td {
+    padding: 10px;
+    border: 1px solid #d3dae6;
+}
+table.search-results th {
+    background: #f5f7fa;
+    text-align: left;
+}
+table.search-results tr {
+    position: relative;
+}
+
+/* search filters panel style */
+
+aside {
+    align-self: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+@media (min-width: 768px) {
+    aside {
+        align-self: flex-start;
+        width: 25%;
+        min-width: 25%;
+        max-width: 25%;
+        margin: auto;
+    }
+}
+aside ul li:not(:last-of-type) {
     margin-bottom: 2px;
 }
-aside {
-    min-width: 25%;
-    width: 25%;
-    max-width: 25%;
-}
+
+/* prevent multiple applied facets from causing horizontal scroll */
 div.active-facet-group .euiFlexGroup {
     flex-flow: row wrap;
+}
+
+/* link to individual record: cover entire table row */
+table.search-results tr:hover td {
+    text-decoration: underline;
+}
+a.to-record {
+    color: inherit;
+}
+a.to-record::before {
+    content: "";
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 2;
+}
+a.to-record:hover {
+    text-decoration: underline;
+}
+a.to-record:hover::before,
+a.to-record:focus::before {
+    background-color: rgba(0,119,204,0.1);
 }

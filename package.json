@@ -10,9 +10,9 @@
     },
     "dependencies": {
         "@ecds/searchkit-sdk": "^3.0.1-alpha.1",
-        "@elastic/eui": "^34.6.0",
+        "@ecds/searchkit-elastic-ui": "^3.0.1-alpha.2",
+        "@elastic/eui": "^42.1.0",
         "@searchkit/client": "^3.0.0",
-        "@searchkit/elastic-ui": "^3.0.0",
         "@searchkit/schema": "^3.0.0",
         "moment": "^2.29.4",
         "react": "^16.14.0",

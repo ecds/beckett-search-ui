@@ -1,0 +1,11 @@
+.result-name {
+    justify-content: center;
+    text-align: center;
+}
+.result-heading {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+.euiTitle + .euiTitle {
+    margin-top: 1rem;
+}
