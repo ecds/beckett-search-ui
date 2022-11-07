@@ -10,6 +10,7 @@ import {
 } from "@elastic/eui";
 import { useHref } from "react-router-dom";
 import "./HomePage.css";
+import bannerImg from "./home-banner.png";
 
 /**
  * Home page component.
@@ -32,7 +33,7 @@ export function HomePage() {
                         <EuiPageContentBody>
                             <img
                                 alt="Samuel Beckett Letters banner"
-                                src="http://english.emory.edu/beckettletters/images/hero/Banner1.jpg"
+                                src={bannerImg}
                             />
                             <div className="description">
                                 <p>
