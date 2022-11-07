@@ -71,7 +71,7 @@ function EntitiesSearch() {
                 </aside>
                 <EuiPageBody component="section">
                     <EuiPageHeader>
-                        <EuiPageHeaderSection>
+                        <EuiPageHeaderSection className="active-facet-group">
                             <EuiTitle size="l">
                                 <SelectedFilters
                                     data={results}
