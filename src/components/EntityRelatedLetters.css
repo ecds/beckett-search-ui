@@ -1,0 +1,12 @@
+table.related-letters.search-results {
+    margin-bottom: 0.5rem;
+}
+table.related-letters th {
+    width: 33%;
+}
+.related-letters-header {
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

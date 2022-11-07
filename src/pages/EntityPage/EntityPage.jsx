@@ -8,6 +8,7 @@ import {
 } from "@elastic/eui";
 import React from "react";
 import { Navigate, useLoaderData } from "react-router-dom";
+import { EntityRelatedLetters } from "../../components/EntityRelatedLetters";
 import { getFromApi } from "../common";
 import "../common/result.css";
 import "./EntityPage.css";
@@ -22,6 +23,14 @@ import "./EntityPage.css";
 export function entityLoader({ params }) {
     return getFromApi(`/entities/${params.entityId}`);
 }
+
+const relatedLettersMapping = {
+    recived: "Letters Received",
+    sent: "Letters Sent",
+    sent_to: "Destination Of",
+    sent_from: "Origin Of",
+    mentioned_in: "Mentioned In",
+};
 
 /**
  * Page for individual entity records.
@@ -68,6 +77,16 @@ export function EntityPage() {
                                 className="entity-details"
                             />
                         </section>
+                        {entity.letters
+                            && Object.entries(entity.letters).map(
+                                ([key, value]) => (
+                                    <EntityRelatedLetters
+                                        key={key}
+                                        title={relatedLettersMapping[key]}
+                                        letters={value}
+                                    />
+                                ),
+                            )}
                     </EuiPageContent>
                 </EuiPageBody>
             </EuiPage>
