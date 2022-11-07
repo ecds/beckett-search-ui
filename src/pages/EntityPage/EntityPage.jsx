@@ -1,4 +1,5 @@
 import {
+    EuiButtonEmpty,
     EuiPage,
     EuiPageBody,
     EuiPageContent,
@@ -8,7 +9,7 @@ import {
     EuiTitle,
 } from "@elastic/eui";
 import React from "react";
-import { Navigate, useLoaderData } from "react-router-dom";
+import { Navigate, useLoaderData, useNavigate } from "react-router-dom";
 import { EntityRelatedLetters } from "../../components/EntityRelatedLetters";
 import { getFromApi } from "../common";
 import "../common/result.css";
@@ -43,12 +44,23 @@ export function EntityPage() {
     if (entity.status === 404) {
         return <Navigate replace to="/404" />;
     }
+    const navigate = useNavigate();
     return (
         <main className="result">
             <EuiPage paddingSize="l">
                 <EuiPageBody>
                     <EuiPageHeader className="result-name">
                         <EuiPageHeaderSection>
+                            <EuiButtonEmpty
+                                type="button"
+                                color="text"
+                                iconType="arrowLeft"
+                                onClick={() => {
+                                    navigate(-1);
+                                }}
+                            >
+                                Back
+                            </EuiButtonEmpty>
                             <EuiTitle size="l">
                                 <h1
                                     // eslint-disable-next-line react/no-danger

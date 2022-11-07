@@ -1,5 +1,6 @@
 /* eslint-disable react/no-danger */
 import {
+    EuiButtonEmpty,
     EuiPage,
     EuiPageBody,
     EuiPageContent,
@@ -8,7 +9,7 @@ import {
     EuiTitle,
 } from "@elastic/eui";
 import React from "react";
-import { Navigate, useLoaderData } from "react-router-dom";
+import { Navigate, useLoaderData, useNavigate } from "react-router-dom";
 import { LetterMentions } from "../../components/LetterMentions";
 import { LetterMetadata } from "../../components/LetterMetadata";
 import { formatDate, getFromApi } from "../common";
@@ -40,12 +41,23 @@ export function LetterPage() {
         ? formatDate(letter.metadata.date)
         : "";
     const excludedMeta = ["id", "date", "label"];
+    const navigate = useNavigate();
     return (
         <main className="result">
             <EuiPage paddingSize="l">
                 <EuiPageBody>
                     <EuiPageHeader className="result-name">
                         <EuiPageHeaderSection>
+                            <EuiButtonEmpty
+                                type="button"
+                                color="text"
+                                iconType="arrowLeft"
+                                onClick={() => {
+                                    navigate(-1);
+                                }}
+                            >
+                                Back
+                            </EuiButtonEmpty>
                             <EuiTitle size="l">
                                 <h1>
                                     {dateString}

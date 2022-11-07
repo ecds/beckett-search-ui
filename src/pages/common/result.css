@@ -2,6 +2,10 @@
     justify-content: center;
     text-align: center;
 }
+.result-name button {
+    position: absolute;
+    left: 24px;
+}
 .result-meta-heading,
 .result-heading {
     margin-bottom: 0.5rem;
