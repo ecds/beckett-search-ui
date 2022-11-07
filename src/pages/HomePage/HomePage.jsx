@@ -36,11 +36,12 @@ export function HomePage() {
                             />
                             <div className="description">
                                 <p>
-                                    Welcome to the data portal for The Letters of
-                                    Samuel Beckett. Here you can find information on
-                                    all Beckett letters held in public archives. You
-                                    can also research entities: people, places and
-                                    things mentioned by Beckett in his letters.
+                                    Welcome to the data portal for The Letters
+                                    of Samuel Beckett. Here you can find
+                                    information on all Beckett letters held in
+                                    public archives. You can also research
+                                    entities: people, places and things
+                                    mentioned by Beckett in his letters.
                                 </p>
                                 <EuiButton fill href={useHref("/letters")}>
                                     Search Letters

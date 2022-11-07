@@ -9,3 +9,6 @@
 .euiTitle + .euiTitle {
     margin-top: 1rem;
 }
+main.result a:not(.to-record) {
+    color: var(--primary-dark);
+}

@@ -10,6 +10,7 @@ import { icon as EuiIconArrowEnd } from "@elastic/eui/es/components/icon/assets/
 import { icon as EuiIconArrowStart } from "@elastic/eui/es/components/icon/assets/arrowStart";
 import { icon as EuiIconApps } from "@elastic/eui/es/components/icon/assets/apps";
 import { NavLink } from "react-router-dom";
+import "./Navigation.css";
 
 // icon component cache required for dynamically imported EUI icons in Vite;
 // see https://github.com/elastic/eui/issues/5463

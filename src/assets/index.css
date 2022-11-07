@@ -1,15 +1,15 @@
 :root {
-  font-weight: 400;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+    --primary: rgb(95, 155, 175);
+    --primary-dark: #27738c;
+    --primary-transparent: rgba(99, 178, 205, 0.15);
+    --primary-dark-transparent: rgba(99, 178, 205, 0.25);
+    font-weight: 400;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
 }
 .capital-label {
-  text-transform: capitalize;
-}
-header a button.home {
-  font-size: 1.25rem;
-  font-weight: bold;
+    text-transform: capitalize;
 }

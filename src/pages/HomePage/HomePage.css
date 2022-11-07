@@ -22,4 +22,5 @@ main#home .description p {
 main#home a {
     font-size: 1.25rem;
     margin: 0 0 0.5rem;
+    background-color: var(--primary);
 }
