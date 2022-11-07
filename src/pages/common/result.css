@@ -2,9 +2,12 @@
     justify-content: center;
     text-align: center;
 }
+.result-meta-heading,
+.result-heading {
+    margin-bottom: 0.5rem;
+}
 .result-heading {
     margin-top: 1rem;
-    margin-bottom: 0.5rem;
 }
 .euiTitle + .euiTitle {
     margin-top: 1rem;

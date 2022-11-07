@@ -3,8 +3,8 @@ import {
     EuiPage,
     EuiPageBody,
     EuiPageContent,
-    EuiPageContentHeader,
-    EuiPageContentHeaderSection,
+    EuiPageHeader,
+    EuiPageHeaderSection,
     EuiTitle,
 } from "@elastic/eui";
 import React from "react";
@@ -44,20 +44,20 @@ export function LetterPage() {
         <main className="result">
             <EuiPage paddingSize="l">
                 <EuiPageBody>
+                    <EuiPageHeader className="result-name">
+                        <EuiPageHeaderSection>
+                            <EuiTitle size="l">
+                                <h1>
+                                    {dateString}
+                                    {" "}
+                                    Letter to
+                                    {" "}
+                                    {letter?.metadata?.recipient}
+                                </h1>
+                            </EuiTitle>
+                        </EuiPageHeaderSection>
+                    </EuiPageHeader>
                     <EuiPageContent>
-                        <EuiPageContentHeader className="result-name">
-                            <EuiPageContentHeaderSection>
-                                <EuiTitle size="l">
-                                    <h1>
-                                        {dateString}
-                                        {" "}
-                                        Letter to
-                                        {" "}
-                                        {letter?.metadata?.recipient}
-                                    </h1>
-                                </EuiTitle>
-                            </EuiPageContentHeaderSection>
-                        </EuiPageContentHeader>
                         {letter.metadata && (
                             <LetterMetadata
                                 metadata={letter.metadata}
