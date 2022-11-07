@@ -26,7 +26,6 @@ import {
     EuiFlexGroup,
     EuiSpacer,
 } from "@elastic/eui";
-import "@elastic/eui/dist/eui_theme_light.css";
 import { appendIconComponentCache } from "@elastic/eui/es/components/icon/icon";
 import { icon as EuiIconArrowLeft } from "@elastic/eui/es/components/icon/assets/arrow_left";
 import { icon as EuiIconArrowRight } from "@elastic/eui/es/components/icon/assets/arrow_right";

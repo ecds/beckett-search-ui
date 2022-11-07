@@ -10,6 +10,7 @@ import { icon as EuiIconArrowEnd } from "@elastic/eui/es/components/icon/assets/
 import { icon as EuiIconArrowStart } from "@elastic/eui/es/components/icon/assets/arrowStart";
 import { icon as EuiIconApps } from "@elastic/eui/es/components/icon/assets/apps";
 import { NavLink } from "react-router-dom";
+import "./Navigation.css";
 
 // icon component cache required for dynamically imported EUI icons in Vite;
 // see https://github.com/elastic/eui/issues/5463
@@ -21,7 +22,6 @@ appendIconComponentCache({
 
 /**
  * Site navigation functional component.
- * TODO: - Update style for site name
  *
  * @returns React component
  */
@@ -33,7 +33,7 @@ function Navigation() {
                     <EuiHeaderSectionItem border="none">
                         <EuiHeaderLinks popoverBreakpoints="none">
                             <NavLink to="/" end>
-                                <EuiHeaderLink>
+                                <EuiHeaderLink className="home">
                                     Samuel Beckett Letters
                                 </EuiHeaderLink>
                             </NavLink>
@@ -41,9 +41,6 @@ function Navigation() {
                     </EuiHeaderSectionItem>
                     <EuiHeaderSectionItem border="none">
                         <EuiHeaderLinks>
-                            <NavLink to="/about">
-                                <EuiHeaderLink>About</EuiHeaderLink>
-                            </NavLink>
                             <NavLink to="/letters">
                                 {({ isActive }) => (
                                     <EuiHeaderLink isActive={isActive}>

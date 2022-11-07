@@ -1,14 +1,16 @@
 import moment from "moment";
 import { EuiDatePicker, EuiDatePickerRange, EuiTitle } from "@elastic/eui";
-import { useState } from "react";
+import React, { useState } from "react";
 import "./EntityRelatedLetters.css";
 import { Link } from "react-router-dom";
 
 /**
+ * Component for related letters on a single entity result page.
  *
- * @param props
- * @param props.title
- * @param props.letters
+ * @param {object} props React functional component props
+ * @param {string} props.title Type of relationship between entity and letters
+ * @param {Array<object>} props.letters Array of related letters
+ * @returns {React.Component} React functional component for related letters
  */
 export function EntityRelatedLetters({ title, letters }) {
     const [startDate, setStartDate] = useState(null);

@@ -1,0 +1,10 @@
+header a button.home {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+header a.active button {
+    color: var(--primary-dark);
+}
+header a button.euiButtonEmpty--primary:enabled:focus {
+    background-color: var(--primary-transparent);
+}

@@ -38,10 +38,24 @@ aside {
 aside ul li:not(:last-of-type) {
     margin-bottom: 2px;
 }
+aside a,
+section header button:not(:disabled) span {
+    color: var(--primary-dark);
+}
 
 /* prevent multiple applied facets from causing horizontal scroll */
 div.active-facet-group .euiFlexGroup {
     flex-flow: row wrap;
+}
+div.active-facet-group button {
+    background-color: var(--primary-transparent);
+}
+div.active-facet-group button.euiButton--primary:not([class*='isDisabled']):hover {
+    background-color: var(--primary-dark-transparent);
+}
+div.active-facet-group button a,
+div.active-facet-group button svg {
+    color: var(--primary-dark);
 }
 
 /* link to individual record: cover entire table row */
@@ -67,5 +81,5 @@ a.to-record:hover {
 }
 a.to-record:hover::before,
 a.to-record:focus::before {
-    background-color: rgba(0,119,204,0.1);
+    background-color: var(--primary-transparent);
 }

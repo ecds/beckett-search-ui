@@ -1,0 +1,26 @@
+main#home {
+    text-align: center;
+}
+main#home img {
+    max-width: 100%;
+}
+main#home .description {
+    display: grid;
+    margin-top: 1.5rem;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    gap: 1.5rem;
+}
+main#home .description p {
+    text-align: left;
+    line-height: 1.5;
+    width: 60ch;
+    max-width: 60ch;
+    font-size: 1.25rem;
+    grid-column: span 2;
+}
+main#home a {
+    font-size: 1.25rem;
+    margin: 0 0 0.5rem;
+    background-color: var(--primary);
+}

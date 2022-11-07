@@ -7,6 +7,7 @@ import {
     EntityPage,
     entityLoader,
     ErrorPage,
+    HomePage,
     LetterPage,
     letterLoader,
     LettersSearchPage,
@@ -20,7 +21,7 @@ const router = createBrowserRouter([
         element: <Root />,
         errorElement: <ErrorPage />,
         children: [
-            // { index: true, element: <HomePage /> },
+            { index: true, element: <HomePage /> },
             {
                 path: "entities",
                 element: <EntitiesSearchPage />,
