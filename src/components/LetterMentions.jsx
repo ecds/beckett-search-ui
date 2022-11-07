@@ -3,6 +3,17 @@ import { EuiTitle } from "@elastic/eui";
 import { Link } from "react-router-dom";
 
 /**
+ * Convenience function to parse URI-formatted IDs into UUIDs.
+ *
+ * @param {string} uri URI to parse
+ * @returns {string} Parsed UUID
+ */
+function parseId(uri) {
+    const split = uri.split("/");
+    return split[split.length - 1].replace(".json", "");
+}
+
+/**
  * Letter mentions section component
  *
  * @param {object} props React functional component props object
@@ -27,9 +38,11 @@ export function LetterMentions({ mentions }) {
                             .sort((a, b) => a.label.localeCompare(b.label))
                             .map(
                                 (e) => e.label && (
-                                    <dd key={e.id}>
+                                    <dd key={parseId(e.id)}>
                                         <Link
-                                            to={`/entities/${e.id}`}
+                                            to={`/entities/${parseId(
+                                                e.id,
+                                            )}`}
                                             dangerouslySetInnerHTML={{
                                                 __html: e.label,
                                             }}
