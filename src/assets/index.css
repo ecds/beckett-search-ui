@@ -9,3 +9,7 @@
 .capital-label {
   text-transform: capitalize;
 }
+header a button.home {
+  font-size: 1.25rem;
+  font-weight: bold;
+}

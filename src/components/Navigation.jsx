@@ -21,7 +21,6 @@ appendIconComponentCache({
 
 /**
  * Site navigation functional component.
- * TODO: - Update style for site name
  *
  * @returns React component
  */
@@ -33,7 +32,7 @@ function Navigation() {
                     <EuiHeaderSectionItem border="none">
                         <EuiHeaderLinks popoverBreakpoints="none">
                             <NavLink to="/" end>
-                                <EuiHeaderLink>
+                                <EuiHeaderLink className="home">
                                     Samuel Beckett Letters
                                 </EuiHeaderLink>
                             </NavLink>
@@ -41,9 +40,6 @@ function Navigation() {
                     </EuiHeaderSectionItem>
                     <EuiHeaderSectionItem border="none">
                         <EuiHeaderLinks>
-                            <NavLink to="/about">
-                                <EuiHeaderLink>About</EuiHeaderLink>
-                            </NavLink>
                             <NavLink to="/letters">
                                 {({ isActive }) => (
                                     <EuiHeaderLink isActive={isActive}>
