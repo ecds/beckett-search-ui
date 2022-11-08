@@ -1,6 +1,10 @@
 // eslint-disable-next-line import/no-unresolved
 import { useSearchkitSDK } from "@ecds/searchkit-sdk/src/react-hooks";
-import { useSearchkitVariables, withSearchkit } from "@searchkit/client";
+import {
+    SearchkitClient,
+    useSearchkitVariables,
+    withSearchkit,
+} from "@searchkit/client";
 import {
     SearchBar,
     ResetSearchButton,
@@ -113,4 +117,5 @@ function EntitiesSearch() {
 
 export const EntitiesSearchPage = withSearchkit(
     withSearchRouting(EntitiesSearch),
+    () => new SearchkitClient({ itemsPerPage: 25 }),
 );
