@@ -5,22 +5,45 @@ main#home img {
     max-width: 100%;
 }
 main#home .description {
-    display: grid;
     margin-top: 1.5rem;
-    grid-template-columns: auto auto;
     justify-content: center;
     gap: 1.5rem;
 }
 main#home .description p {
     text-align: left;
     line-height: 1.5;
-    width: 60ch;
     max-width: 60ch;
-    font-size: 1.25rem;
+    padding: 0 2rem;
+    font-size: 1.33rem;
     grid-column: span 2;
 }
 main#home a {
-    font-size: 1.25rem;
-    margin: 0 0 0.5rem;
+    font-size: 1.5rem;
+    padding: 1.75rem;
+    margin: 2rem;
     background-color: var(--primary);
+    width: calc(100% - 4rem);
+}
+main#home a:first-of-type {
+    margin-bottom: -1rem;
+}
+main#home .home-container {
+    background-color: #fafbfd;
+}
+
+@media (min-width: 768px) {
+    main#home .description {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    main#home .description p {
+        padding: 0;
+    }
+    main#home a {
+        margin: 0 0 0.5rem;
+        width: auto;
+    }
+    main#home a:first-of-type {
+        margin-bottom: 0;
+    }
 }
