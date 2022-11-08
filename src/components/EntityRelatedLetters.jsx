@@ -1,5 +1,10 @@
 import moment from "moment";
-import { EuiDatePicker, EuiDatePickerRange, EuiTitle } from "@elastic/eui";
+import {
+    EuiButtonEmpty,
+    EuiDatePicker,
+    EuiDatePickerRange,
+    EuiTitle,
+} from "@elastic/eui";
 import React, { useState } from "react";
 import "./EntityRelatedLetters.css";
 import { Link } from "react-router-dom";
@@ -21,40 +26,79 @@ export function EntityRelatedLetters({ title, letters }) {
     const minDate = moment(Math.min(...dates));
     const maxDate = moment(Math.max(...dates));
 
+    /**
+     * Click event handler to reset start and end date filter.
+     */
+    const resetFilter = () => {
+        setStartDate(null);
+        setEndDate(null);
+    };
+    /**
+     * Validation for entered dates.
+     *
+     * @returns {boolean} True if invalid, false if valid.
+     */
+    const isInvalid = () => {
+        if (startDate && endDate) {
+            return startDate > endDate;
+        }
+        if (startDate) {
+            return startDate > maxDate;
+        }
+        if (endDate) {
+            return endDate < minDate;
+        }
+        return false;
+    };
+
     return (
         <section>
             <div className="related-letters-header">
                 <EuiTitle>
                     <h2 className="result-heading">{title}</h2>
                 </EuiTitle>
-                <EuiDatePickerRange
-                    startDateControl={(
-                        <EuiDatePicker
-                            selected={startDate}
-                            onChange={setStartDate}
-                            startDate={startDate}
-                            value={startDate || minDate.format("L")}
-                            endDate={endDate}
-                            placeholder="from"
-                            isInvalid={startDate > endDate}
-                            aria-label="Start date"
-                            openToDate={startDate || minDate}
-                        />
-                    )}
-                    endDateControl={(
-                        <EuiDatePicker
-                            selected={endDate}
-                            onChange={setEndDate}
-                            startDate={startDate}
-                            value={endDate || maxDate.format("L")}
-                            endDate={endDate}
-                            isInvalid={startDate > endDate}
-                            placeholder="to"
-                            aria-label="End date"
-                            openToDate={endDate || maxDate}
-                        />
-                    )}
-                />
+                <div className="date-picker-container">
+                    <EuiButtonEmpty
+                        iconType="cross"
+                        disabled={!(startDate || endDate)}
+                        onClick={resetFilter}
+                    >
+                        Reset
+                    </EuiButtonEmpty>
+                    <EuiDatePickerRange
+                        className={`date-picker${
+                            startDate && endDate ? " both-active" : ""
+                        }`}
+                        startDateControl={(
+                            <EuiDatePicker
+                                selected={startDate}
+                                onChange={setStartDate}
+                                startDate={startDate}
+                                value={startDate || minDate.format("L")}
+                                endDate={endDate}
+                                placeholder="from"
+                                isInvalid={isInvalid()}
+                                aria-label="Start date"
+                                openToDate={startDate || minDate}
+                                className={startDate ? "active" : ""}
+                            />
+                        )}
+                        endDateControl={(
+                            <EuiDatePicker
+                                selected={endDate}
+                                onChange={setEndDate}
+                                startDate={startDate}
+                                value={endDate || maxDate.format("L")}
+                                endDate={endDate}
+                                isInvalid={isInvalid()}
+                                placeholder="to"
+                                aria-label="End date"
+                                openToDate={endDate || maxDate}
+                                className={endDate ? "active" : ""}
+                            />
+                        )}
+                    />
+                </div>
             </div>
             <table className="related-letters search-results">
                 <thead>
