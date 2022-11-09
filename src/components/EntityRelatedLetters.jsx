@@ -34,7 +34,7 @@ export function EntityRelatedLetters({ title, uri }) {
                 setFilterState((prevState) => ({
                     ...prevState,
                     ...dateRange,
-                    page: 1, // Always restart at page 1 if dates change
+                    page: 0, // Always restart at page 1 if dates change
                 }));
             }
         }
