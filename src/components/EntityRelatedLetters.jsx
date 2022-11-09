@@ -27,8 +27,8 @@ export function EntityRelatedLetters({ title, uri }) {
             if (
                 datesValid({
                     ...dateRange,
-                    min: data.min_date,
-                    max: data.max_date,
+                    min: moment(data.min_date),
+                    max: moment(data.max_date),
                 })
             ) {
                 setFilterState((prevState) => ({
@@ -68,7 +68,8 @@ export function EntityRelatedLetters({ title, uri }) {
                 </EuiTitle>
                 {data && (
                     <LetterDateFilter
-                        data={data}
+                        minDate={moment(data.min_date)}
+                        maxDate={moment(data.max_date)}
                         loading={loading}
                         dateRange={dateRange}
                         onChangeStart={(d) => {
@@ -126,11 +127,11 @@ export function EntityRelatedLetters({ title, uri }) {
                         ))}
                 </tbody>
             </table>
-            {data && data?.total_pages > 1 && (
+            {data?.total_pages > 1 && (
                 <div className="related-letters-pagination">
                     <EuiPagination
                         aria-label={`Pagination for ${title}`}
-                        pageCount={data?.total_pages}
+                        pageCount={data.total_pages}
                         activePage={filterState?.page}
                         onPageClick={(page) => setFilterState((prevState) => ({
                             ...prevState,

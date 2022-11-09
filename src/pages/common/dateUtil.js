@@ -21,12 +21,12 @@ export const formatDate = (date) => {
  * @param {object} dates Destructured arguments object
  * @param {moment.Moment} dates.startDate Moment object for start date from date picker
  * @param {moment.Moment} dates.endDate Moment object for end date from date picker
- * @param {string} dates.min Min date returned from API
- * @param {string} dates.max Max date returned from API
+ * @param {moment.Moment} dates.min Min date returned from API, converted to Moment object
+ * @param {moment.Moment} dates.max Max date returned from API, converted to Moment object
  * @returns True if no start/end dates are present or if all dates are valid
  */
 export const datesValid = ({
     startDate, endDate, min, max,
 }) => (startDate && endDate ? startDate < endDate : true)
-    && (startDate ? startDate <= moment(max) : true)
-    && (endDate ? endDate >= moment(min) : true);
+    && (startDate ? startDate <= max : true)
+    && (endDate ? endDate >= min : true);
