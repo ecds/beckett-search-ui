@@ -10,3 +10,10 @@ table.related-letters th {
     align-items: center;
     justify-content: space-between;
 }
+.related-letters-pagination {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: 0rem 0 0.5rem;
+}
