@@ -45,7 +45,7 @@ export function EntityRelatedLetters({ title, uri }) {
         const fetchData = async () => {
             const response = await getRelatedLetters({
                 uri,
-                page: filterState?.page,
+                page: filterState?.page ? filterState.page + 1 : 1,
                 startDate: filterState?.startDate
                     ? moment(filterState.startDate).format(dateFormat)
                     : undefined,
