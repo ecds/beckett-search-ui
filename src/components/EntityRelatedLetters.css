@@ -10,18 +10,10 @@ table.related-letters th {
     align-items: center;
     justify-content: space-between;
 }
-.date-picker-container {
+.related-letters-pagination {
     display: flex;
+    width: 100%;
     align-items: center;
-}
-.date-picker-container button {
-    margin-right: 1rem;
-    color: var(--primary);
-}
-.date-picker-container button:enabled:focus {
-    background-color: var(--primary-transparent);
-}
-.date-picker.both-active,
-.date-picker:not(.both-active) .active {
-    outline: solid 2px var(--primary);
+    justify-content: center;
+    margin: 0rem 0 0.5rem;
 }

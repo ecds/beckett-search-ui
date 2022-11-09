@@ -5,3 +5,7 @@ div.entity-details table {
 div.entity-details table th {
     padding-right: 2rem;
 }
+div.entity-details table td + th {
+    padding-left: 2rem;
+    padding-right: 0.5rem;
+}

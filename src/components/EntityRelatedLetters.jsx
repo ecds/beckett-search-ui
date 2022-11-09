@@ -1,55 +1,64 @@
 import moment from "moment";
-import {
-    EuiButtonEmpty,
-    EuiDatePicker,
-    EuiDatePickerRange,
-    EuiTitle,
-} from "@elastic/eui";
-import React, { useState } from "react";
+import { EuiLoadingContent, EuiPagination, EuiTitle } from "@elastic/eui";
+import React, { useEffect, useState } from "react";
 import "./EntityRelatedLetters.css";
 import { Link } from "react-router-dom";
+import { LetterDateFilter } from "./LetterDateFilter";
+import { datesValid, getRelatedLetters } from "../pages/common";
+
+const dateFormat = "YYYY-MM-DD";
 
 /**
  * Component for related letters on a single entity result page.
  *
  * @param {object} props React functional component props
  * @param {string} props.title Type of relationship between entity and letters
- * @param {Array<object>} props.letters Array of related letters
+ * @param {string} props.uri URI for related letters endpoint
  * @returns {React.Component} React functional component for related letters
  */
-export function EntityRelatedLetters({ title, letters }) {
-    const [startDate, setStartDate] = useState(null);
-    const [endDate, setEndDate] = useState(null);
+export function EntityRelatedLetters({ title, uri }) {
+    const [loading, setLoading] = useState(true);
+    const [data, setData] = useState({});
+    const [filterState, setFilterState] = useState({});
+    const [dateRange, setDateRange] = useState({});
 
-    // min and max date for initial range
-    const dates = letters.map((l) => new Date(l.date).getTime());
-    const minDate = moment(Math.min(...dates));
-    const maxDate = moment(Math.max(...dates));
+    useEffect(() => {
+        if (dateRange && data?.min_date && data.max_date) {
+            if (
+                datesValid({
+                    ...dateRange,
+                    min: data.min_date,
+                    max: data.max_date,
+                })
+            ) {
+                setFilterState((prevState) => ({
+                    ...prevState,
+                    ...dateRange,
+                    page: 0, // Always restart at page 1 if dates change
+                }));
+            }
+        }
+    }, [dateRange]);
 
-    /**
-     * Click event handler to reset start and end date filter.
-     */
-    const resetFilter = () => {
-        setStartDate(null);
-        setEndDate(null);
-    };
-    /**
-     * Validation for entered dates.
-     *
-     * @returns {boolean} True if invalid, false if valid.
-     */
-    const isInvalid = () => {
-        if (startDate && endDate) {
-            return startDate > endDate;
-        }
-        if (startDate) {
-            return startDate > maxDate;
-        }
-        if (endDate) {
-            return endDate < minDate;
-        }
-        return false;
-    };
+    useEffect(() => {
+        setLoading(true);
+        // eslint-disable-next-line jsdoc/require-jsdoc
+        const fetchData = async () => {
+            const response = await getRelatedLetters({
+                uri,
+                page: filterState?.page ? filterState.page + 1 : 1,
+                startDate: filterState?.startDate
+                    ? moment(filterState.startDate).format(dateFormat)
+                    : undefined,
+                endDate: filterState?.endDate
+                    ? moment(filterState.endDate).format(dateFormat)
+                    : undefined,
+            });
+            setData(response);
+            setLoading(false);
+        };
+        fetchData();
+    }, [filterState]);
 
     return (
         <section>
@@ -57,48 +66,25 @@ export function EntityRelatedLetters({ title, letters }) {
                 <EuiTitle>
                     <h2 className="result-heading">{title}</h2>
                 </EuiTitle>
-                <div className="date-picker-container">
-                    <EuiButtonEmpty
-                        iconType="cross"
-                        disabled={!(startDate || endDate)}
-                        onClick={resetFilter}
-                    >
-                        Reset
-                    </EuiButtonEmpty>
-                    <EuiDatePickerRange
-                        className={`date-picker${
-                            startDate && endDate ? " both-active" : ""
-                        }`}
-                        startDateControl={(
-                            <EuiDatePicker
-                                selected={startDate}
-                                onChange={setStartDate}
-                                startDate={startDate}
-                                value={startDate || minDate.format("L")}
-                                endDate={endDate}
-                                placeholder="from"
-                                isInvalid={isInvalid()}
-                                aria-label="Start date"
-                                openToDate={startDate || minDate}
-                                className={startDate ? "active" : ""}
-                            />
-                        )}
-                        endDateControl={(
-                            <EuiDatePicker
-                                selected={endDate}
-                                onChange={setEndDate}
-                                startDate={startDate}
-                                value={endDate || maxDate.format("L")}
-                                endDate={endDate}
-                                isInvalid={isInvalid()}
-                                placeholder="to"
-                                aria-label="End date"
-                                openToDate={endDate || maxDate}
-                                className={endDate ? "active" : ""}
-                            />
-                        )}
+                {data && (
+                    <LetterDateFilter
+                        data={data}
+                        loading={loading}
+                        dateRange={dateRange}
+                        onChangeStart={(d) => {
+                            setDateRange((prevState) => ({
+                                ...prevState,
+                                startDate: d instanceof moment ? d : null,
+                            }));
+                        }}
+                        onChangeEnd={(d) => {
+                            setDateRange((prevState) => ({
+                                ...prevState,
+                                endDate: d instanceof moment ? d : null,
+                            }));
+                        }}
                     />
-                </div>
+                )}
             </div>
             <table className="related-letters search-results">
                 <thead>
@@ -109,14 +95,22 @@ export function EntityRelatedLetters({ title, letters }) {
                     </tr>
                 </thead>
                 <tbody>
-                    {letters
-                        .filter(
-                            (l) => (startDate
-                                ? moment(l.date) >= startDate
-                                : true)
-                                && (endDate ? moment(l.date) <= endDate : true),
-                        )
-                        .map((letter) => (
+                    {loading
+                        && [
+                            ...Array(
+                                data && data?.total_pages > 1 ? 9 : 1,
+                            ).keys(),
+                        ].map((key) => (
+                            <tr key={key}>
+                                {[...Array(3).keys()].map((tdKey) => (
+                                    <td key={tdKey}>
+                                        <EuiLoadingContent lines={1} />
+                                    </td>
+                                ))}
+                            </tr>
+                        ))}
+                    {!loading
+                        && data?.letters?.map((letter) => (
                             <tr key={letter.id}>
                                 <td>
                                     <Link
@@ -132,6 +126,19 @@ export function EntityRelatedLetters({ title, letters }) {
                         ))}
                 </tbody>
             </table>
+            {data && data?.total_pages > 1 && (
+                <div className="related-letters-pagination">
+                    <EuiPagination
+                        aria-label={`Pagination for ${title}`}
+                        pageCount={data?.total_pages}
+                        activePage={filterState?.page}
+                        onPageClick={(page) => setFilterState((prevState) => ({
+                            ...prevState,
+                            page,
+                        }))}
+                    />
+                </div>
+            )}
         </section>
     );
 }

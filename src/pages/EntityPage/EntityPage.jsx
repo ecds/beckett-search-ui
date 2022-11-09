@@ -1,5 +1,6 @@
 import {
     EuiButtonEmpty,
+    EuiHorizontalRule,
     EuiPage,
     EuiPageBody,
     EuiPageContent,
@@ -27,11 +28,11 @@ export function entityLoader({ params }) {
 }
 
 const relatedLettersMapping = {
-    recived: "Letters Received",
+    received: "Letters Received",
     sent: "Letters Sent",
-    sent_to: "Destination Of",
-    sent_from: "Origin Of",
-    mentioned_in: "Mentioned In",
+    destination: "Destination Of",
+    origin: "Origin Of",
+    mention: "Mentioned In",
 };
 
 /**
@@ -94,11 +95,15 @@ export function EntityPage() {
                             {entity.letters
                                 && Object.entries(entity.letters).map(
                                     ([key, value]) => (
-                                        <EntityRelatedLetters
-                                            key={key}
-                                            title={relatedLettersMapping[key]}
-                                            letters={value}
-                                        />
+                                        <React.Fragment key={key}>
+                                            <EuiHorizontalRule />
+                                            <EntityRelatedLetters
+                                                title={
+                                                    relatedLettersMapping[key]
+                                                }
+                                                uri={value}
+                                            />
+                                        </React.Fragment>
                                     ),
                                 )}
                         </EuiPageContentBody>
