@@ -1,5 +1,6 @@
 import {
     EuiButtonEmpty,
+    EuiHorizontalRule,
     EuiPage,
     EuiPageBody,
     EuiPageContent,
@@ -92,16 +93,19 @@ export function EntityPage() {
                                 />
                             </section>
                             {entity.letters
-                                && Object.entries(entity.letters)
-                                    .map(([key, value]) => (
-                                        <EntityRelatedLetters
-                                            key={key}
-                                            title={
-                                                relatedLettersMapping[key]
-                                            }
-                                            uri={value}
-                                        />
-                                    ))}
+                                && Object.entries(entity.letters).map(
+                                    ([key, value]) => (
+                                        <React.Fragment key={key}>
+                                            <EuiHorizontalRule />
+                                            <EntityRelatedLetters
+                                                title={
+                                                    relatedLettersMapping[key]
+                                                }
+                                                uri={value}
+                                            />
+                                        </React.Fragment>
+                                    ),
+                                )}
                         </EuiPageContentBody>
                     </EuiPageContent>
                 </EuiPageBody>

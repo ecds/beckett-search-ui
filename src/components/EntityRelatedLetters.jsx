@@ -85,19 +85,6 @@ export function EntityRelatedLetters({ title, uri }) {
                     />
                 )}
             </div>
-            {data && data?.total_pages > 1 && (
-                <div className="related-letters-pagination">
-                    <EuiPagination
-                        aria-label={`Pagination for ${title}`}
-                        pageCount={data?.total_pages}
-                        activePage={filterState?.page}
-                        onPageClick={(page) => setFilterState((prevState) => ({
-                            ...prevState,
-                            page,
-                        }))}
-                    />
-                </div>
-            )}
             <table className="related-letters search-results">
                 <thead>
                     <tr>
@@ -138,6 +125,19 @@ export function EntityRelatedLetters({ title, uri }) {
                         ))}
                 </tbody>
             </table>
+            {data && data?.total_pages > 1 && (
+                <div className="related-letters-pagination">
+                    <EuiPagination
+                        aria-label={`Pagination for ${title}`}
+                        pageCount={data?.total_pages}
+                        activePage={filterState?.page}
+                        onPageClick={(page) => setFilterState((prevState) => ({
+                            ...prevState,
+                            page,
+                        }))}
+                    />
+                </div>
+            )}
         </section>
     );
 }
