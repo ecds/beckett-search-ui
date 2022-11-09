@@ -32,7 +32,7 @@ function Navigation() {
                 <EuiHeaderSection>
                     <EuiHeaderSectionItem border="none">
                         <EuiHeaderLinks popoverBreakpoints="none">
-                            <NavLink to="/" end>
+                            <NavLink to="/" tabIndex="-1" end>
                                 <EuiHeaderLink className="home">
                                     Samuel Beckett Letters
                                 </EuiHeaderLink>
@@ -41,14 +41,14 @@ function Navigation() {
                     </EuiHeaderSectionItem>
                     <EuiHeaderSectionItem border="none">
                         <EuiHeaderLinks>
-                            <NavLink to="/letters">
+                            <NavLink to="/letters" tabIndex="-1">
                                 {({ isActive }) => (
                                     <EuiHeaderLink isActive={isActive}>
                                         Search Letters
                                     </EuiHeaderLink>
                                 )}
                             </NavLink>
-                            <NavLink to="/entities">
+                            <NavLink to="/entities" tabIndex="-1">
                                 {({ isActive }) => (
                                     <EuiHeaderLink isActive={isActive}>
                                         Search Entities

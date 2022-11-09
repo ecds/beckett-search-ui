@@ -9,15 +9,15 @@
         "preview": "vite preview"
     },
     "dependencies": {
-        "@ecds/searchkit-sdk": "^3.0.1-alpha.1",
         "@ecds/searchkit-elastic-ui": "^3.0.1-alpha.2",
+        "@ecds/searchkit-sdk": "^3.0.1-alpha.1",
         "@elastic/eui": "^42.1.0",
         "@searchkit/client": "^3.0.0",
         "@searchkit/schema": "^3.0.0",
         "moment": "^2.29.4",
         "react": "^16.14.0",
         "react-dom": "^16.14.0",
-        "react-router-dom": "^6.4.2"
+        "react-router-dom": "^6.4.3"
     },
     "devDependencies": {
         "@types/react": "^16.9.49",

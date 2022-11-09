@@ -13,7 +13,7 @@ export function LetterMetadata({ metadata, excluded }) {
     return (
         <section>
             <EuiTitle>
-                <h2 className="result-heading">Letter Information</h2>
+                <h2 className="result-meta-heading">Letter Information</h2>
             </EuiTitle>
             <dl className="letter-metadata">
                 {Object.entries(metadata).map(

@@ -1,13 +1,15 @@
 import {
+    EuiButtonEmpty,
     EuiPage,
     EuiPageBody,
     EuiPageContent,
-    EuiPageContentHeader,
-    EuiPageContentHeaderSection,
+    EuiPageContentBody,
+    EuiPageHeader,
+    EuiPageHeaderSection,
     EuiTitle,
 } from "@elastic/eui";
 import React from "react";
-import { Navigate, useLoaderData } from "react-router-dom";
+import { Navigate, useLoaderData, useNavigate } from "react-router-dom";
 import { EntityRelatedLetters } from "../../components/EntityRelatedLetters";
 import { getFromApi } from "../common";
 import "../common/result.css";
@@ -42,51 +44,64 @@ export function EntityPage() {
     if (entity.status === 404) {
         return <Navigate replace to="/404" />;
     }
+    const navigate = useNavigate();
     return (
         <main className="result">
             <EuiPage paddingSize="l">
                 <EuiPageBody>
-                    <EuiPageContent>
-                        <EuiPageContentHeader className="result-name">
-                            <EuiPageContentHeaderSection>
-                                <EuiTitle size="l">
-                                    <h1
-                                        // eslint-disable-next-line react/no-danger
-                                        dangerouslySetInnerHTML={{
-                                            __html: entity.label,
-                                        }}
-                                    />
-                                </EuiTitle>
-                            </EuiPageContentHeaderSection>
-                        </EuiPageContentHeader>
-                        <section>
-                            <EuiTitle>
-                                <h2 className="capital-label result-heading">
-                                    {entity?.e_type
-                                        .toString()
-                                        .replaceAll("_", " ")}
-                                    {" "}
-                                    Information
-                                </h2>
-                            </EuiTitle>
-                            <div
-                                // eslint-disable-next-line react/no-danger
-                                dangerouslySetInnerHTML={{
-                                    __html: entity.full_display,
+                    <EuiPageHeader className="result-name">
+                        <EuiPageHeaderSection>
+                            <EuiButtonEmpty
+                                type="button"
+                                color="text"
+                                iconType="arrowLeft"
+                                onClick={() => {
+                                    navigate(-1);
                                 }}
-                                className="entity-details"
-                            />
-                        </section>
-                        {entity.letters
-                            && Object.entries(entity.letters).map(
-                                ([key, value]) => (
-                                    <EntityRelatedLetters
-                                        key={key}
-                                        title={relatedLettersMapping[key]}
-                                        letters={value}
-                                    />
-                                ),
-                            )}
+                            >
+                                Back
+                            </EuiButtonEmpty>
+                            <EuiTitle size="l">
+                                <h1
+                                    // eslint-disable-next-line react/no-danger
+                                    dangerouslySetInnerHTML={{
+                                        __html: entity.label,
+                                    }}
+                                />
+                            </EuiTitle>
+                        </EuiPageHeaderSection>
+                    </EuiPageHeader>
+                    <EuiPageContent>
+                        <EuiPageContentBody>
+                            <section>
+                                <EuiTitle>
+                                    <h2 className="capital-label result-meta-heading">
+                                        {entity?.e_type
+                                            .toString()
+                                            .replaceAll("_", " ")}
+                                        {" "}
+                                        Information
+                                    </h2>
+                                </EuiTitle>
+                                <div
+                                    // eslint-disable-next-line react/no-danger
+                                    dangerouslySetInnerHTML={{
+                                        __html: entity.full_display,
+                                    }}
+                                    className="entity-details"
+                                />
+                            </section>
+                            {entity.letters
+                                && Object.entries(entity.letters).map(
+                                    ([key, value]) => (
+                                        <EntityRelatedLetters
+                                            key={key}
+                                            title={relatedLettersMapping[key]}
+                                            letters={value}
+                                        />
+                                    ),
+                                )}
+                        </EuiPageContentBody>
                     </EuiPageContent>
                 </EuiPageBody>
             </EuiPage>
