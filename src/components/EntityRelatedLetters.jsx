@@ -73,13 +73,13 @@ export function EntityRelatedLetters({ title, uri }) {
                         onChangeStart={(d) => {
                             setDateRange((prevState) => ({
                                 ...prevState,
-                                startDate: d,
+                                startDate: d instanceof moment ? d : null,
                             }));
                         }}
                         onChangeEnd={(d) => {
                             setDateRange((prevState) => ({
                                 ...prevState,
-                                endDate: d,
+                                endDate: d instanceof moment ? d : null,
                             }));
                         }}
                     />

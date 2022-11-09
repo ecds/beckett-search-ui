@@ -26,6 +26,7 @@ export function LetterDateFilter({
             startDateControl={(
                 <EuiDatePicker
                     selected={dateRange?.startDate}
+                    onClear={onChangeStart}
                     onChange={onChangeStart}
                     isLoading={loading}
                     startDate={dateRange?.startDate}
@@ -46,6 +47,7 @@ export function LetterDateFilter({
                 <EuiDatePicker
                     isLoading={loading}
                     selected={dateRange?.endDate}
+                    onClear={onChangeEnd}
                     onChange={onChangeEnd}
                     startDate={dateRange?.startDate}
                     endDate={dateRange?.endDate}
