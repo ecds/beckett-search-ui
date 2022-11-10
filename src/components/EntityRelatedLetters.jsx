@@ -23,20 +23,21 @@ export function EntityRelatedLetters({ title, uri }) {
     const [dateRange, setDateRange] = useState({});
 
     useEffect(() => {
-        if (dateRange && data?.min_date && data.max_date) {
-            if (
-                datesValid({
-                    ...dateRange,
-                    min: moment(data.min_date),
-                    max: moment(data.max_date),
-                })
-            ) {
-                setFilterState((prevState) => ({
-                    ...prevState,
-                    ...dateRange,
-                    page: 0, // Always restart at page 1 if dates change
-                }));
-            }
+        if (
+            dateRange
+            && data?.min_date
+            && data.max_date
+            && datesValid({
+                ...dateRange,
+                min: moment(data.min_date),
+                max: moment(data.max_date),
+            })
+        ) {
+            setFilterState((prevState) => ({
+                ...prevState,
+                ...dateRange,
+                page: 0, // Always restart at page 1 if dates change
+            }));
         }
     }, [dateRange]);
 
@@ -70,6 +71,11 @@ export function EntityRelatedLetters({ title, uri }) {
                     <LetterDateFilter
                         minDate={moment(data.min_date)}
                         maxDate={moment(data.max_date)}
+                        isValid={datesValid({
+                            ...dateRange,
+                            min: moment(data.min_date),
+                            max: moment(data.max_date),
+                        })}
                         loading={loading}
                         dateRange={dateRange}
                         onChangeStart={(d) => {

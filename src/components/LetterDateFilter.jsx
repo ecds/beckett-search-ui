@@ -1,7 +1,6 @@
 import { EuiDatePicker, EuiDatePickerRange } from "@elastic/eui";
 import moment from "moment";
 import React from "react";
-import { datesValid } from "../pages/common";
 
 /**
  * Date picker component for filtering letters related to a single entity.
@@ -13,10 +12,12 @@ import { datesValid } from "../pages/common";
  * @param {moment.Moment} props.minDate Min date returned from API, as a moment object
  * @param {Function} props.onChangeEnd Change handler for end date input
  * @param {Function} props.onChangeStart Change handler for start date input
+ * @param {boolean} props.isValid Validation for the data passed to this component
  * @returns {React.Component} React functional component for the entity related letters date picker.
  */
 export function LetterDateFilter({
     dateRange,
+    isValid,
     loading,
     maxDate,
     minDate,
@@ -34,13 +35,7 @@ export function LetterDateFilter({
                     startDate={dateRange?.startDate}
                     endDate={dateRange?.endDate}
                     placeholder="from"
-                    isInvalid={
-                        !datesValid({
-                            ...dateRange,
-                            min: minDate,
-                            max: maxDate,
-                        })
-                    }
+                    isInvalid={!isValid}
                     aria-label="Start date"
                     openToDate={dateRange?.startDate || minDate}
                 />
@@ -53,13 +48,7 @@ export function LetterDateFilter({
                     onChange={onChangeEnd}
                     startDate={dateRange?.startDate}
                     endDate={dateRange?.endDate}
-                    isInvalid={
-                        !datesValid({
-                            ...dateRange,
-                            min: minDate,
-                            max: maxDate,
-                        })
-                    }
+                    isInvalid={!isValid}
                     placeholder="to"
                     aria-label="End date"
                     openToDate={dateRange?.endDate || maxDate}
