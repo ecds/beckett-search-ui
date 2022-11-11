@@ -41,7 +41,12 @@ aside a,
 section header button:not(:disabled) span {
     color: var(--primary-dark);
 }
-
+aside .operator-icon {
+    margin-left: 0.5rem;
+}
+.operator-tooltip {
+    text-align: center;
+}
 /* ensure search button flush with right of search form */
 aside .search-button-container {
     text-align: right;

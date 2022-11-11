@@ -31,6 +31,7 @@ import { icon as EuiIconArrowLeft } from "@elastic/eui/es/components/icon/assets
 import { icon as EuiIconArrowRight } from "@elastic/eui/es/components/icon/assets/arrow_right";
 import { icon as EuiIconCross } from "@elastic/eui/es/components/icon/assets/cross";
 import { icon as EuiIconSearch } from "@elastic/eui/es/components/icon/assets/search";
+import { icon as EuiIconQuestion } from "@elastic/eui/es/components/icon/assets/question_in_circle";
 import {
     analyzers,
     entitiesSearchConfig,
@@ -49,6 +50,7 @@ appendIconComponentCache({
     arrowRight: EuiIconArrowRight,
     cross: EuiIconCross,
     search: EuiIconSearch,
+    questionInCircle: EuiIconQuestion,
 });
 
 /**

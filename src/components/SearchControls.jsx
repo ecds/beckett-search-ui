@@ -5,6 +5,7 @@ import {
     EuiFieldSearch,
     EuiFlexGroup,
     EuiFlexItem,
+    EuiIconTip,
     EuiSpacer,
 } from "@elastic/eui";
 
@@ -60,6 +61,16 @@ export function SearchControls({
                                     label: "AND",
                                 },
                             ]}
+                        />
+                        <EuiIconTip
+                            className="operator-tooltip"
+                            position="bottom"
+                            type="questionInCircle"
+                            color="subdued"
+                            content="Choose OR to match any entered keyword, choose AND to match all keywords."
+                            iconProps={{
+                                className: "operator-icon",
+                            }}
                         />
                     </div>
                 </EuiFlexItem>
