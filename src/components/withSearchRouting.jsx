@@ -28,12 +28,13 @@ function withSearchRouting(component) {
         searchState.filters.forEach((filter) => {
             // simplify filter representation
             // date filter is formatted differently
-            if (filter.dateMin || filter.dateMax) {
+            if (filter.identifier === "start_date") {
                 routeState.dateMin = filter.dateMin
-                    ? moment(new Date(filter.dateMin)).format("yyyy-MM-DD")
+                    ? moment(filter.dateMin).format("YYYY-MM-DD")
                     : undefined;
+            } else if (filter.identifier === "end_date") {
                 routeState.dateMax = filter.dateMax
-                    ? moment(new Date(filter.dateMax)).format("yyyy-MM-DD")
+                    ? moment(filter.dateMax).format("YYYY-MM-DD")
                     : undefined;
             } else if (filter.value) {
                 if (Object.hasOwn(routeState, filter.identifier)) {
@@ -102,9 +103,17 @@ function withSearchRouting(component) {
                     });
                 }
             });
-        if (route.dateMin || route.dateMax) {
-            const { dateMin, dateMax } = route;
-            searchState.filters.push({ identifier: "date", dateMin, dateMax });
+        if (route.dateMin) {
+            searchState.filters.push({
+                identifier: "start_date",
+                dateMin: moment(route.dateMin).toISOString(),
+            });
+        }
+        if (route.dateMax) {
+            searchState.filters.push({
+                identifier: "end_date",
+                dateMax: moment(route.dateMax).toISOString(),
+            });
         }
         return searchState;
     }
