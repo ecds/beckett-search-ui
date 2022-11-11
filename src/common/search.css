@@ -19,7 +19,6 @@ table.search-results tr {
 }
 
 /* search filters panel style */
-
 aside {
     align-self: center;
     width: 100%;
@@ -41,6 +40,11 @@ aside ul li:not(:last-of-type) {
 aside a,
 section header button:not(:disabled) span {
     color: var(--primary-dark);
+}
+
+/* ensure search button flush with right of search form */
+aside .search-button-container {
+    text-align: right;
 }
 
 /* prevent multiple applied facets from causing horizontal scroll */

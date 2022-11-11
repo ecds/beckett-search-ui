@@ -8,16 +8,19 @@ import { CustomQuery } from "@ecds/searchkit-sdk";
  * @param {string} kwargs.analyzer Analyzer name
  * @param {Array<object>} kwargs.fields Field objects ({ name, boost })
  * @param {string} kwargs.query Query string
+ * @param {string} kwargs.operator Search operator
  * @returns {Array<object>} Array of ElasticSearch "match" query objects
  */
-export function buildMatchQueries({ analyzer, fields, query }) {
+export function buildMatchQueries({
+    analyzer, fields, operator, query,
+}) {
     // match query adapted from searchkick rails library
     return fields.map((field) => ({
         match: {
             [`${field.name}.analyzed`]: {
                 query,
                 boost: field.boost * 10,
-                operator: "or", // TODO: support "and" operator
+                operator,
                 analyzer,
             },
         },
@@ -31,9 +34,10 @@ export function buildMatchQueries({ analyzer, fields, query }) {
  * @param {object} kwargs Object of keyword arguments
  * @param {Array<string>} kwargs.analyzers List of input analyzer names
  * @param {Array<object>} kwargs.fields List of Field objects ({ name, boost })
+ * @param {string} kwargs.operator Search operator
  * @returns {CustomQuery} Custom query to pass back to Searchkit config
  */
-function buildQuery({ analyzers, fields }) {
+function buildQuery({ analyzers, fields, operator }) {
     return new CustomQuery({
         /**
          * Given a query string, returns the bool object for ElasticSearch containing
@@ -49,6 +53,7 @@ function buildQuery({ analyzers, fields }) {
                 .map((analyzer) => buildMatchQueries({
                     analyzer,
                     fields,
+                    operator: operator || "or",
                     query,
                 }))
                 .flat();
