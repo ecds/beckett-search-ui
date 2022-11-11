@@ -1,6 +1,15 @@
 import React from "react";
-import { EuiTitle } from "@elastic/eui";
+import { EuiIconTip, EuiTitle } from "@elastic/eui";
+import { appendIconComponentCache } from "@elastic/eui/es/components/icon/icon";
+import { icon as EuiIconiInCircle } from "@elastic/eui/es/components/icon/assets/iInCircle";
 import { Link } from "react-router-dom";
+import { entityTypes } from "../common";
+
+// icon component cache required for dynamically imported EUI icons in Vite;
+// see https://github.com/elastic/eui/issues/5463
+appendIconComponentCache({
+    iInCircle: EuiIconiInCircle,
+});
 
 /**
  * Convenience function to parse URI-formatted IDs into UUIDs.
@@ -33,6 +42,19 @@ export function LetterMentions({ mentions }) {
                     <React.Fragment key={key}>
                         <dt className="capital-label">
                             {key.toString().trim().replaceAll("_", " ")}
+                            <EuiIconTip
+                                type="iInCircle"
+                                color="subdued"
+                                content={
+                                    entityTypes[key]
+                                    // handle plurals
+                                    || entityTypes[key.slice(0, -1)]
+                                    || key
+                                }
+                                iconProps={{
+                                    className: "eui-alignTop",
+                                }}
+                            />
                         </dt>
                         {value
                             .sort((a, b) => a.label.localeCompare(b.label))

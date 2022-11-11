@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { formatDate } from "../pages/common";
+import { formatDate } from "../common";
 import "./LettersResults.css";
 
 /**

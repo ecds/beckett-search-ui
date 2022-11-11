@@ -5,6 +5,9 @@
     margin-bottom: 0;
     margin-right: 5px;
 }
+.list-facet .facet-group .facet-button:hover a {
+    text-decoration: underline;
+}
 .list-facet:not(:first-child) {
     margin-top: 1rem;
 }

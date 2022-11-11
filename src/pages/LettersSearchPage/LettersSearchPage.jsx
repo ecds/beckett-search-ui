@@ -38,7 +38,7 @@ import ListFacet from "../../components/ListFacet";
 import ValueFilter from "../../components/ValueFilter";
 import DateRangeFacet from "../../components/DateRangeFacet";
 import withSearchRouting from "../../components/withSearchRouting";
-import "../common/search.css";
+import "../../common/search.css";
 
 // icon component cache required for dynamically imported EUI icons in Vite;
 // see https://github.com/elastic/eui/issues/5463

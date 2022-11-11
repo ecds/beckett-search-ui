@@ -1,7 +1,7 @@
 import { EuiButton, EuiFlexItem } from "@elastic/eui";
 import { FilterLink } from "@searchkit/client";
 import { useRef } from "react";
-import { volumeLabels } from "../pages/common";
+import { volumeLabels } from "../common";
 
 // eslint-disable-next-line jsdoc/require-param, jsdoc/require-returns
 /**

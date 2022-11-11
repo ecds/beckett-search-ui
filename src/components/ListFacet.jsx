@@ -1,7 +1,12 @@
 import { Fragment, useRef, useEffect } from "react";
-import { EuiFacetButton, EuiFacetGroup, EuiTitle } from "@elastic/eui";
+import {
+    EuiFacetButton,
+    EuiFacetGroup,
+    EuiTitle,
+    EuiToolTip,
+} from "@elastic/eui";
 import { useSearchkit, FilterLink } from "@searchkit/client";
-import { volumeLabels } from "../pages/common";
+import { entityTypes, volumeLabels } from "../common";
 import "./ListFacet.css";
 
 /**
@@ -32,6 +37,17 @@ function ListFacet({ facet, loading }) {
         ) {
             label = volumeLabels[label];
         }
+        // add tooltip for entity type facets
+        const ToolTipComponent = facet.identifier === "e_type"
+            ? ({ children }) => (
+                <EuiToolTip
+                    className="tooltip"
+                    content={entityTypes[entry.label] || entry.label}
+                >
+                    {children}
+                </EuiToolTip>
+            ) // eslint-disable-next-line react/jsx-no-useless-fragment
+            : ({ children }) => <>{children}</>;
         return (
             label && (
                 <EuiFacetButton
@@ -47,17 +63,19 @@ function ListFacet({ facet, loading }) {
                         ref.current[i].onClick(e);
                     }}
                 >
-                    <FilterLink
-                        ref={(el) => {
-                            ref.current[i] = el;
-                        }}
-                        filter={{
-                            identifier: facet.identifier,
-                            value: entry.label,
-                        }}
-                    >
-                        <span className="capital-label">{label}</span>
-                    </FilterLink>
+                    <ToolTipComponent>
+                        <FilterLink
+                            ref={(el) => {
+                                ref.current[i] = el;
+                            }}
+                            filter={{
+                                identifier: facet.identifier,
+                                value: entry.label,
+                            }}
+                        >
+                            <span className="capital-label">{label}</span>
+                        </FilterLink>
+                    </ToolTipComponent>
                 </EuiFacetButton>
             )
         );

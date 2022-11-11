@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import "./EntityRelatedLetters.css";
 import { Link } from "react-router-dom";
 import { LetterDateFilter } from "./LetterDateFilter";
-import { datesValid, getRelatedLetters } from "../pages/common";
+import { datesValid, getRelatedLetters } from "../common";
 
 const dateFormat = "YYYY-MM-DD";
 

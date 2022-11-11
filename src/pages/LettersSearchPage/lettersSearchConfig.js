@@ -1,5 +1,5 @@
 import { RefinementSelectFacet } from "@ecds/searchkit-sdk";
-import { buildQuery } from "../common/queryBuilder";
+import { buildQuery } from "../../common/queryBuilder";
 import { CustomDateRangeFacet } from "./CustomDateRangeFacet";
 import { MinMaxDateFacet } from "./MinMaxDateFacet";
 

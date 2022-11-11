@@ -3,7 +3,7 @@ import { EuiTitle } from "@elastic/eui";
 import { useSearchkit } from "@searchkit/client";
 import moment from "moment";
 import { LetterDateFilter } from "./LetterDateFilter";
-import { datesValid } from "../pages/common";
+import { datesValid } from "../common";
 
 /**
  * DateRange facet display component, adapted from @searchkit/elastic-ui but with the
