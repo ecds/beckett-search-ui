@@ -1,5 +1,5 @@
 import { RefinementSelectFacet } from "@ecds/searchkit-sdk";
-import { buildQuery } from "../common";
+import { buildQuery } from "../../common";
 
 // kewyord field names to search on
 const fields = [

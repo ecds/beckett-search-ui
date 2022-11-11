@@ -12,8 +12,8 @@ import React from "react";
 import { Navigate, useLoaderData, useNavigate } from "react-router-dom";
 import { LetterMentions } from "../../components/LetterMentions";
 import { LetterMetadata } from "../../components/LetterMetadata";
-import { formatDate, getFromApi } from "../common";
-import "../common/result.css";
+import { formatDate, getFromApi } from "../../common";
+import "../../common/result.css";
 import "./LetterPage.css";
 
 /**

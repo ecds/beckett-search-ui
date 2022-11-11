@@ -1,5 +1,5 @@
 import { DateRangeFacet, RefinementSelectFacet } from "@ecds/searchkit-sdk";
-import { buildQuery } from "../common/queryBuilder";
+import { buildQuery } from "../../common/queryBuilder";
 import { MinMaxDateFacet } from "./MinMaxDateFacet";
 
 // kewyord field names to search on

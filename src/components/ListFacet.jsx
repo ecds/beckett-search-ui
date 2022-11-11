@@ -1,7 +1,7 @@
 import { Fragment, useRef, useEffect } from "react";
 import { EuiFacetButton, EuiFacetGroup, EuiTitle } from "@elastic/eui";
 import { useSearchkit, FilterLink } from "@searchkit/client";
-import { volumeLabels } from "../pages/common";
+import { volumeLabels } from "../common";
 import "./ListFacet.css";
 
 /**

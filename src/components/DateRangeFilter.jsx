@@ -1,6 +1,6 @@
 import { EuiButton, EuiFlexItem } from "@elastic/eui";
 import { useSearchkit } from "@searchkit/client";
-import { formatDate } from "../pages/common";
+import { formatDate } from "../common";
 
 // eslint-disable-next-line jsdoc/require-param, jsdoc/require-returns
 /**

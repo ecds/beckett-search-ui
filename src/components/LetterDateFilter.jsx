@@ -1,7 +1,7 @@
 import { EuiDatePicker, EuiDatePickerRange } from "@elastic/eui";
 import moment from "moment";
 import React from "react";
-import { datesValid } from "../pages/common";
+import { datesValid } from "../common";
 
 /**
  * Date picker component for filtering letters related to a single entity.

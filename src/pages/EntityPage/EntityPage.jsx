@@ -12,8 +12,8 @@ import {
 import React from "react";
 import { Navigate, useLoaderData, useNavigate } from "react-router-dom";
 import { EntityRelatedLetters } from "../../components/EntityRelatedLetters";
-import { getFromApi } from "../common";
-import "../common/result.css";
+import { getFromApi } from "../../common";
+import "../../common/result.css";
 import "./EntityPage.css";
 
 /**
