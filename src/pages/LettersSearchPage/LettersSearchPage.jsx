@@ -9,7 +9,6 @@ import {
     Pagination,
     ResetSearchButton,
     SearchBar,
-    SelectedFilters,
 } from "@ecds/searchkit-elastic-ui";
 import {
     EuiPage,
@@ -38,7 +37,6 @@ import LettersResults from "../../components/LettersResults";
 import ListFacet from "../../components/ListFacet";
 import ValueFilter from "../../components/ValueFilter";
 import DateRangeFacet from "../../components/DateRangeFacet";
-import DateRangeFilter from "../../components/DateRangeFilter";
 import withSearchRouting from "../../components/withSearchRouting";
 import "../../common/search.css";
 
@@ -70,35 +68,48 @@ function LettersSearch() {
                     <EuiPageSideBar>
                         <SearchBar loading={loading} />
                         <EuiHorizontalRule margin="m" />
-                        {results?.facets.filter((facet) => facet.display).map((facet) => {
-                            const Component = facet.display === "CustomDateFacet"
-                                ? DateRangeFacet
-                                : ListFacet;
-                            return (
+                        <DateRangeFacet
+                            data={results}
+                            loading={loading}
+                        />
+                        <EuiSpacer size="l" />
+                        {results?.facets
+                            .filter(
+                                (facet) => facet.display
+                                    && facet.display !== "CustomDateFacet",
+                            )
+                            .map((facet) => (
                                 <div key={facet.identifier}>
-                                    <Component
+                                    <ListFacet
                                         data={results}
                                         facet={facet}
                                         loading={loading}
                                     />
                                     <EuiSpacer size="l" />
                                 </div>
-                            );
-                        })}
+                            ))}
                     </EuiPageSideBar>
                 </aside>
                 <EuiPageBody component="section">
                     <EuiPageHeader>
                         <EuiPageHeaderSection className="active-facet-group">
                             <EuiTitle size="l">
-                                <SelectedFilters
-                                    data={results}
-                                    loading={loading}
-                                    customFilterComponents={{
-                                        CustomDateFacet: DateRangeFilter,
-                                        CustomListFacet: ValueFilter,
-                                    }}
-                                />
+                                <EuiFlexGroup
+                                    gutterSize="s"
+                                    alignItems="center"
+                                >
+                                    {results?.summary?.appliedFilters
+                                        .filter(
+                                            (f) => !f.identifier.endsWith("_date"),
+                                        )
+                                        .map((filter) => (
+                                            <ValueFilter
+                                                filter={filter}
+                                                loading={loading}
+                                                key={filter.id}
+                                            />
+                                        ))}
+                                </EuiFlexGroup>
                             </EuiTitle>
                         </EuiPageHeaderSection>
                         <EuiPageHeaderSection>

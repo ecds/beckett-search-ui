@@ -1,5 +1,6 @@
-import { DateRangeFacet, RefinementSelectFacet } from "@ecds/searchkit-sdk";
+import { RefinementSelectFacet } from "@ecds/searchkit-sdk";
 import { buildQuery } from "../../common/queryBuilder";
+import { CustomDateRangeFacet } from "./CustomDateRangeFacet";
 import { MinMaxDateFacet } from "./MinMaxDateFacet";
 
 // kewyord field names to search on
@@ -29,11 +30,15 @@ export const lettersSearchConfig = {
     },
     query: buildQuery({ analyzers, fields }),
     facets: [
-        new DateRangeFacet({
+        new CustomDateRangeFacet({
             field: "date",
-            identifier: "date",
+            identifier: "start_date",
             label: "Date",
-            display: "CustomDateFacet",
+        }),
+        new CustomDateRangeFacet({
+            field: "date",
+            identifier: "end_date",
+            label: "Date",
         }),
         new MinMaxDateFacet({
             field: "date",

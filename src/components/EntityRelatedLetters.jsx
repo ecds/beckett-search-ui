@@ -23,20 +23,21 @@ export function EntityRelatedLetters({ title, uri }) {
     const [dateRange, setDateRange] = useState({});
 
     useEffect(() => {
-        if (dateRange && data?.min_date && data.max_date) {
-            if (
-                datesValid({
-                    ...dateRange,
-                    min: data.min_date,
-                    max: data.max_date,
-                })
-            ) {
-                setFilterState((prevState) => ({
-                    ...prevState,
-                    ...dateRange,
-                    page: 0, // Always restart at page 1 if dates change
-                }));
-            }
+        if (
+            dateRange
+            && data?.min_date
+            && data.max_date
+            && datesValid({
+                ...dateRange,
+                min: moment(data.min_date),
+                max: moment(data.max_date),
+            })
+        ) {
+            setFilterState((prevState) => ({
+                ...prevState,
+                ...dateRange,
+                page: 0, // Always restart at page 1 if dates change
+            }));
         }
     }, [dateRange]);
 
@@ -68,7 +69,13 @@ export function EntityRelatedLetters({ title, uri }) {
                 </EuiTitle>
                 {data && (
                     <LetterDateFilter
-                        data={data}
+                        minDate={moment(data.min_date)}
+                        maxDate={moment(data.max_date)}
+                        isValid={datesValid({
+                            ...dateRange,
+                            min: moment(data.min_date),
+                            max: moment(data.max_date),
+                        })}
                         loading={loading}
                         dateRange={dateRange}
                         onChangeStart={(d) => {
@@ -126,11 +133,11 @@ export function EntityRelatedLetters({ title, uri }) {
                         ))}
                 </tbody>
             </table>
-            {data && data?.total_pages > 1 && (
+            {data?.total_pages > 1 && (
                 <div className="related-letters-pagination">
                     <EuiPagination
                         aria-label={`Pagination for ${title}`}
-                        pageCount={data?.total_pages}
+                        pageCount={data.total_pages}
                         activePage={filterState?.page}
                         onPageClick={(page) => setFilterState((prevState) => ({
                             ...prevState,

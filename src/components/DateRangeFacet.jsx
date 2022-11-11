@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { EuiTitle, EuiDatePickerRange, EuiDatePicker } from "@elastic/eui";
+import { EuiTitle } from "@elastic/eui";
 import { useSearchkit } from "@searchkit/client";
 import moment from "moment";
+import { LetterDateFilter } from "./LetterDateFilter";
+import { datesValid } from "../common";
 
 /**
  * DateRange facet display component, adapted from @searchkit/elastic-ui but with the
@@ -10,82 +12,105 @@ import moment from "moment";
  * @param {object} props React functional component props
  * @param {object} props.data Results from ElasticSearch, which should include min and max date
  * aggregations.
- * @param {object} props.facet Facet Schema object returned from Searchkit
  * @param {boolean} props.loading Loading indicator boolean
  * @returns {React.Component} Date range React component
  */
-function DateRangeFacet({ data, facet, loading }) {
+function DateRangeFacet({ data, loading }) {
     // adapted from @searchkit/elastic-ui
     const api = useSearchkit();
-    const selectedOptions = api.getFiltersByIdentifier(facet.identifier);
-    const selectedOption = selectedOptions && selectedOptions[0];
-    const [startDate, setStartDate] = useState(null);
-    const [endDate, setEndDate] = useState(null);
+    const startDateFilters = api.getFiltersByIdentifier("start_date");
+    const selectedStartDate = startDateFilters && startDateFilters[0];
+    const endDateFilters = api.getFiltersByIdentifier("end_date");
+    const selectedEndDate = endDateFilters && endDateFilters[0];
 
-    useEffect(() => {
-        if (startDate && endDate) {
-            if (selectedOption) {
-                api.removeFilter(selectedOption);
-            }
-            api.addFilter({
-                identifier: facet.identifier,
-                dateMin: startDate.toISOString(),
-                dateMax: endDate.toISOString(),
-            });
-            api.search();
-        }
-    }, [startDate, endDate]);
+    // if a filter already present on mount, set initial state to that range
+    const [dateRange, setDateRange] = useState({
+        startDate: selectedStartDate?.dateMin
+            ? moment(selectedStartDate.dateMin)
+            : null,
+        endDate: selectedEndDate?.dateMax
+            ? moment(selectedEndDate.dateMax)
+            : null,
+    });
 
     // get min and max date facet values
-    const minDate = data?.facets?.find((f) => f.identifier === "min_date")?.value || null;
-    const maxDate = data?.facets?.find((f) => f.identifier === "max_date")?.value || null;
+    const min = data?.facets?.find((f) => f.identifier === "min_date")?.value || null;
+    const minDate = min ? moment(min) : null;
+    const max = data?.facets?.find((f) => f.identifier === "max_date")?.value || null;
+    const maxDate = max ? moment(max) : null;
 
-    const currentMinValue = moment(
-        startDate || selectedOption?.dateMin || minDate,
-    );
-    const currentMaxValue = moment(
-        endDate || selectedOption?.dateMax || maxDate,
-    );
+    // update filters when range is changed
+    useEffect(() => {
+        api.removeFiltersByIdentifier("start_date");
+        api.removeFiltersByIdentifier("end_date");
+        if (
+            dateRange
+            && (dateRange.startDate || dateRange.endDate)
+            && datesValid({ ...dateRange })
+        ) {
+            if (dateRange.startDate) {
+                api.addFilter({
+                    identifier: "start_date",
+                    dateMin: dateRange?.startDate?.toISOString(),
+                });
+            }
+            if (dateRange.endDate) {
+                api.addFilter({
+                    identifier: "end_date",
+                    dateMax: dateRange?.endDate?.toISOString(),
+                });
+            }
+        }
+        api.search();
+    }, [dateRange]);
+
+    useEffect(() => {
+        // handle search state generated from URL query params
+        if (
+            (selectedStartDate?.dateMin && !dateRange.startDate)
+            || (selectedEndDate?.dateMax && !dateRange.endDate)
+        ) {
+            setDateRange(() => ({
+                startDate: selectedStartDate?.dateMin
+                    ? moment(selectedStartDate.dateMin)
+                    : null,
+                endDate: selectedEndDate?.dateMax
+                    ? moment(selectedEndDate.dateMax)
+                    : null,
+            }));
+            api.search();
+        } else if (!api.getFilters().length && (dateRange.startDate || dateRange.endDate)) {
+            // handle "reset search" click
+            setDateRange({ startDate: null, endDate: null });
+        }
+    }, [selectedStartDate, selectedEndDate]);
 
     return (
         <>
             <EuiTitle size="xxs">
-                <h3>{facet.label}</h3>
+                <h3>Date</h3>
             </EuiTitle>
-            <EuiDatePickerRange
-                startDateControl={(
-                    <EuiDatePicker
-                        isLoading={loading}
-                        selected={startDate}
-                        onChange={setStartDate}
-                        startDate={startDate}
-                        value={currentMinValue.format("L")}
-                        endDate={endDate}
-                        placeholder="from"
-                        isInvalid={startDate > endDate}
-                        aria-label="Start date"
-                        openToDate={currentMinValue}
-                    />
-                )}
-                endDateControl={(
-                    <EuiDatePicker
-                        isLoading={loading}
-                        selected={endDate}
-                        onChange={setEndDate}
-                        startDate={startDate}
-                        value={currentMaxValue.format("L")}
-                        endDate={endDate}
-                        isInvalid={startDate > endDate}
-                        aria-label="End date"
-                        placeholder="to"
-                        openToDate={currentMaxValue}
-                    />
-                )}
+            <LetterDateFilter
+                dateRange={dateRange}
+                isValid={datesValid({ ...dateRange })}
+                loading={loading}
+                minDate={minDate}
+                maxDate={maxDate}
+                onChangeStart={(d) => {
+                    setDateRange((prevState) => ({
+                        ...prevState,
+                        startDate: d instanceof moment ? d : null,
+                    }));
+                }}
+                onChangeEnd={(d) => {
+                    setDateRange((prevState) => ({
+                        ...prevState,
+                        endDate: d instanceof moment ? d : null,
+                    }));
+                }}
             />
         </>
     );
 }
-
-DateRangeFacet.DISPLAY = "CustomDateFacet";
 
 export default DateRangeFacet;
