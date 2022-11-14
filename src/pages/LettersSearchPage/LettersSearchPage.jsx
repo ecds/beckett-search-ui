@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
     SearchkitClient,
     useSearchkit,
@@ -28,6 +28,9 @@ import { icon as EuiIconArrowRight } from "@elastic/eui/es/components/icon/asset
 import { icon as EuiIconCross } from "@elastic/eui/es/components/icon/assets/cross";
 import { icon as EuiIconCalendar } from "@elastic/eui/es/components/icon/assets/calendar";
 import { icon as EuiIconSearch } from "@elastic/eui/es/components/icon/assets/search";
+import { icon as EuiIconSortable } from "@elastic/eui/es/components/icon/assets/sortable";
+import { icon as EuiIconSortUp } from "@elastic/eui/es/components/icon/assets/sort_up";
+import { icon as EuiIconSortDown } from "@elastic/eui/es/components/icon/assets/sort_down";
 import { lettersSearchConfig, analyzers, fields } from "./lettersSearchConfig";
 import LettersResults from "../../components/LettersResults";
 import ListFacet from "../../components/ListFacet";
@@ -46,6 +49,9 @@ appendIconComponentCache({
     calendar: EuiIconCalendar,
     cross: EuiIconCross,
     search: EuiIconSearch,
+    sortable: EuiIconSortable,
+    sortUp: EuiIconSortUp,
+    sortDown: EuiIconSortDown,
 });
 
 /**
@@ -56,7 +62,34 @@ appendIconComponentCache({
 function LettersSearch() {
     const [query, setQuery] = useSearchkitQueryValue();
     const [operator, setOperator] = useState("or");
+    const [sortState, setSortState] = useState({
+        field: "date",
+        direction: 1,
+    });
+    /**
+     * Curried event listener funciton to set the sort state to a given field.
+     *
+     * @param {string} field The name of the field to sort on.
+     * @returns {Function} The event listner function.
+     */
+    const onSort = (field) => () => {
+        if (sortState.field === field) {
+            setSortState((prevState) => ({
+                field,
+                direction: -1 * prevState.direction,
+            }));
+        } else {
+            setSortState({ field, direction: 1 });
+        }
+    };
     const api = useSearchkit();
+    useEffect(() => {
+        if (sortState) {
+            const dir = sortState.direction === 1 ? "asc" : "desc";
+            api.setSortBy(`${sortState.field}_${dir}`);
+            api.search();
+        }
+    }, [sortState]);
     const variables = useSearchkitVariables();
     const { results, loading } = useCustomSearchkitSDK({
         analyzers,
@@ -140,15 +173,23 @@ function LettersSearch() {
                                 </EuiTitle>
                             </EuiPageContentHeaderSection>
                         </EuiPageContentHeader>
-                        <EuiPageContentBody>
-                            <LettersResults
-                                data={results}
-                                offset={variables?.page?.from}
-                            />
-                            <EuiFlexGroup justifyContent="spaceAround">
-                                <Pagination data={results} />
-                            </EuiFlexGroup>
-                        </EuiPageContentBody>
+                        {results?.summary?.total > 0 ? (
+                            <EuiPageContentBody>
+                                <LettersResults
+                                    data={results}
+                                    offset={variables?.page?.from}
+                                    onSort={onSort}
+                                    sortState={sortState}
+                                />
+                                <EuiFlexGroup justifyContent="spaceAround">
+                                    <Pagination data={results} />
+                                </EuiFlexGroup>
+                            </EuiPageContentBody>
+                        ) : (
+                            <EuiPageContentBody>
+                                Your search did not return any results.
+                            </EuiPageContentBody>
+                        )}
                     </EuiPageContent>
                 </EuiPageBody>
             </EuiPage>
