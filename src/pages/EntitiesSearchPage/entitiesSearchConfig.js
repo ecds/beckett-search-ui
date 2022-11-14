@@ -2,7 +2,7 @@ import { RefinementSelectFacet } from "@ecds/searchkit-sdk";
 import { buildQuery } from "../../common";
 
 // kewyord field names to search on
-const fields = [
+export const fields = [
     { name: "clean_label", boost: 10 },
     { name: "clean_description", boost: 5 },
     { name: "alternate_names", boost: 9 },
@@ -11,7 +11,7 @@ const fields = [
 
 // search analyzers from seachkick, see
 // https://www.rubydoc.info/gems/searchkick/0.1.3/Searchkick%2FSearch:search
-const analyzers = ["searchkick_search", "searchkick_search2"];
+export const analyzers = ["searchkick_search", "searchkick_search2"];
 
 // Config for Searchkit SDK; see https://searchkit.co/docs/core/reference/searchkit-sdk
 export const entitiesSearchConfig = {

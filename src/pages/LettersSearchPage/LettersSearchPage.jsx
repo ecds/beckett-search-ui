@@ -1,15 +1,12 @@
-// eslint-disable-next-line import/no-unresolved
-import { useSearchkitSDK } from "@ecds/searchkit-sdk/src/react-hooks";
+import { useState } from "react";
 import {
     SearchkitClient,
+    useSearchkit,
+    useSearchkitQueryValue,
     useSearchkitVariables,
     withSearchkit,
 } from "@searchkit/client";
-import {
-    Pagination,
-    ResetSearchButton,
-    SearchBar,
-} from "@ecds/searchkit-elastic-ui";
+import { Pagination, ResetSearchButton } from "@ecds/searchkit-elastic-ui";
 import {
     EuiPage,
     EuiPageBody,
@@ -31,14 +28,15 @@ import { icon as EuiIconArrowRight } from "@elastic/eui/es/components/icon/asset
 import { icon as EuiIconCross } from "@elastic/eui/es/components/icon/assets/cross";
 import { icon as EuiIconCalendar } from "@elastic/eui/es/components/icon/assets/calendar";
 import { icon as EuiIconSearch } from "@elastic/eui/es/components/icon/assets/search";
-
-import { lettersSearchConfig } from "./lettersSearchConfig";
+import { lettersSearchConfig, analyzers, fields } from "./lettersSearchConfig";
 import LettersResults from "../../components/LettersResults";
 import ListFacet from "../../components/ListFacet";
 import ValueFilter from "../../components/ValueFilter";
 import DateRangeFacet from "../../components/DateRangeFacet";
 import withSearchRouting from "../../components/withSearchRouting";
 import "../../common/search.css";
+import { SearchControls } from "../../components/SearchControls";
+import { useCustomSearchkitSDK } from "../../common";
 
 // icon component cache required for dynamically imported EUI icons in Vite;
 // see https://github.com/elastic/eui/issues/5463
@@ -56,22 +54,36 @@ appendIconComponentCache({
  * @returns React letters search page component
  */
 function LettersSearch() {
+    const [query, setQuery] = useSearchkitQueryValue();
+    const [operator, setOperator] = useState("or");
+    const api = useSearchkit();
     const variables = useSearchkitVariables();
-    const { results, loading } = useSearchkitSDK(
-        lettersSearchConfig,
+    const { results, loading } = useCustomSearchkitSDK({
+        analyzers,
+        config: lettersSearchConfig,
+        fields,
+        operator,
         variables,
-    );
+    });
     return (
         <main>
             <EuiPage paddingSize="l">
                 <aside>
                     <EuiPageSideBar>
-                        <SearchBar loading={loading} />
-                        <EuiHorizontalRule margin="m" />
-                        <DateRangeFacet
-                            data={results}
+                        <SearchControls
                             loading={loading}
+                            onSearch={(value) => {
+                                setQuery(value);
+                                api.setQuery(value);
+                                api.search();
+                            }}
+                            operator={operator}
+                            setOperator={setOperator}
+                            setQuery={setQuery}
+                            query={query}
                         />
+                        <EuiHorizontalRule margin="m" />
+                        <DateRangeFacet data={results} loading={loading} />
                         <EuiSpacer size="l" />
                         {results?.facets
                             .filter(

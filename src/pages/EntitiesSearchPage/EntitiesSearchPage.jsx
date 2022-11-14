@@ -1,12 +1,12 @@
-// eslint-disable-next-line import/no-unresolved
-import { useSearchkitSDK } from "@ecds/searchkit-sdk/src/react-hooks";
+import { useState } from "react";
 import {
     SearchkitClient,
+    useSearchkit,
+    useSearchkitQueryValue,
     useSearchkitVariables,
     withSearchkit,
 } from "@searchkit/client";
 import {
-    SearchBar,
     ResetSearchButton,
     SelectedFilters,
     Pagination,
@@ -31,11 +31,17 @@ import { icon as EuiIconArrowLeft } from "@elastic/eui/es/components/icon/assets
 import { icon as EuiIconArrowRight } from "@elastic/eui/es/components/icon/assets/arrow_right";
 import { icon as EuiIconCross } from "@elastic/eui/es/components/icon/assets/cross";
 import { icon as EuiIconSearch } from "@elastic/eui/es/components/icon/assets/search";
-
-import { entitiesSearchConfig } from "./entitiesSearchConfig";
+import { icon as EuiIconQuestion } from "@elastic/eui/es/components/icon/assets/question_in_circle";
+import {
+    analyzers,
+    entitiesSearchConfig,
+    fields,
+} from "./entitiesSearchConfig";
 import EntitiesResults from "../../components/EntitiesResults";
 import ListFacet from "../../components/ListFacet";
 import withSearchRouting from "../../components/withSearchRouting";
+import { SearchControls } from "../../components/SearchControls";
+import { useCustomSearchkitSDK } from "../../common";
 
 // icon component cache required for dynamically imported EUI icons in Vite;
 // see https://github.com/elastic/eui/issues/5463
@@ -44,6 +50,7 @@ appendIconComponentCache({
     arrowRight: EuiIconArrowRight,
     cross: EuiIconCross,
     search: EuiIconSearch,
+    questionInCircle: EuiIconQuestion,
 });
 
 /**
@@ -52,17 +59,34 @@ appendIconComponentCache({
  * @returns React entities search page component
  */
 function EntitiesSearch() {
+    const [query, setQuery] = useSearchkitQueryValue();
+    const [operator, setOperator] = useState("or");
+    const api = useSearchkit();
     const variables = useSearchkitVariables();
-    const { results, loading } = useSearchkitSDK(
-        entitiesSearchConfig,
+    const { results, loading } = useCustomSearchkitSDK({
+        analyzers,
+        config: entitiesSearchConfig,
+        fields,
+        operator,
         variables,
-    );
+    });
     return (
         <main>
             <EuiPage paddingSize="l">
                 <aside>
                     <EuiPageSideBar>
-                        <SearchBar loading={loading} />
+                        <SearchControls
+                            loading={loading}
+                            onSearch={(value) => {
+                                setQuery(value);
+                                api.setQuery(value);
+                                api.search();
+                            }}
+                            operator={operator}
+                            setOperator={setOperator}
+                            setQuery={setQuery}
+                            query={query}
+                        />
                         <EuiHorizontalRule margin="m" />
                         {results?.facets.map((facet) => (
                             <ListFacet

@@ -6,6 +6,9 @@
     position: absolute;
     left: 24px;
 }
+.result-name .euiPageHeaderSection {
+    max-width: 80%;
+}
 .result-meta-heading,
 .result-heading {
     margin-bottom: 0.5rem;
