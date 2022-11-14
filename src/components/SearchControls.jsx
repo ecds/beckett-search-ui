@@ -54,11 +54,11 @@ export function SearchControls({
                             options={[
                                 {
                                     id: "or",
-                                    label: "OR",
+                                    label: "Any",
                                 },
                                 {
                                     id: "and",
-                                    label: "AND",
+                                    label: "All",
                                 },
                             ]}
                         />
@@ -67,7 +67,7 @@ export function SearchControls({
                             position="bottom"
                             type="questionInCircle"
                             color="subdued"
-                            content="Choose OR to match any entered keyword, choose AND to match all keywords."
+                            content="Choose Any to match any entered keyword, or All to match all keywords."
                             iconProps={{
                                 className: "operator-icon",
                             }}
