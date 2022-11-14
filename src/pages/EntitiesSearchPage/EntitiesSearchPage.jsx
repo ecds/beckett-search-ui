@@ -123,15 +123,21 @@ function EntitiesSearch() {
                                 </EuiTitle>
                             </EuiPageContentHeaderSection>
                         </EuiPageContentHeader>
-                        <EuiPageContentBody>
-                            <EntitiesResults
-                                data={results}
-                                offset={variables?.page?.from}
-                            />
-                            <EuiFlexGroup justifyContent="spaceAround">
-                                <Pagination data={results} />
-                            </EuiFlexGroup>
-                        </EuiPageContentBody>
+                        {results?.summary?.total > 0 ? (
+                            <EuiPageContentBody>
+                                <EntitiesResults
+                                    data={results}
+                                    offset={variables?.page?.from}
+                                />
+                                <EuiFlexGroup justifyContent="spaceAround">
+                                    <Pagination data={results} />
+                                </EuiFlexGroup>
+                            </EuiPageContentBody>
+                        ) : (
+                            <EuiPageContentBody>
+                                Your search did not return any results.
+                            </EuiPageContentBody>
+                        )}
                     </EuiPageContent>
                 </EuiPageBody>
             </EuiPage>
