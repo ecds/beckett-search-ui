@@ -82,18 +82,36 @@ export const lettersSearchConfig = {
     ],
     sortOptions: [
         { id: "relevance", label: "Relevance", field: "_score" },
-        { id: "date", label: "Date", field: { date: "asc" } },
+        {
+            id: "date_asc",
+            label: "Date (Ascending)",
+            field: { date: "asc" },
+            defaultOption: true,
+        },
+        {
+            id: "date_desc",
+            label: "Date (Descending)",
+            field: { date: "desc" },
+        },
+        {
+            id: "recipient_asc",
+            label: "Recipient (Ascending)",
+            field: { recipients: "asc" },
+        },
+        {
+            id: "recipient_desc",
+            label: "Recipient (Descending)",
+            field: { recipients: "desc" },
+        },
+        {
+            id: "repository_asc",
+            label: "Recipient (Ascending)",
+            field: { repositories: "asc" },
+        },
+        {
+            id: "repository_desc",
+            label: "Recipient (Descending)",
+            field: { repositories: "desc" },
+        },
     ],
-    /**
-     * Sorts by date when there is no query term.
-     *
-     * @param {object} body The original request body object
-     * @returns The modified request body for ElasticSearch
-     */
-    postProcessRequest: (body) => (body?.query
-        ? body
-        : {
-            ...body,
-            sort: [{ date: "asc" }],
-        }),
 };

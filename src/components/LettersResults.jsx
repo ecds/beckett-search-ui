@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { formatDate } from "../common";
 import "./LettersResults.css";
+import { SortableHeader } from "./SortableHeader";
 
 /**
  * List of results for the Letters search view.
@@ -8,17 +9,28 @@ import "./LettersResults.css";
  * @param {object} props Props for React functional component
  * @param {object} props.data Data returned by ElasticSearch
  * @param {number} props.offset Offset of results for current page
+ * @param {Function} props.onSort Sort handler
+ * @param {object} props.sortState Current sort state
  * @returns Populated results list React component
  */
-function LettersResults({ data, offset }) {
+function LettersResults({
+    data, offset, onSort, sortState,
+}) {
+    const sortableColumns = ["recipient", "repository", "date"];
     return (
         <table id="letters-results" className="search-results">
             <thead>
                 <tr>
                     <th aria-label="index">#</th>
-                    <th>Recipient</th>
-                    <th>Repository</th>
-                    <th>Date</th>
+                    {sortableColumns.map((column) => (
+                        <th key={column}>
+                            <SortableHeader
+                                name={column}
+                                onSort={onSort}
+                                sortState={sortState}
+                            />
+                        </th>
+                    ))}
                 </tr>
             </thead>
             <tbody>
