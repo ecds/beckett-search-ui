@@ -31,7 +31,7 @@ main#home .home-container {
     background-color: #fafbfd;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 900px) {
     main#home .description {
         display: grid;
         grid-template-columns: auto auto;

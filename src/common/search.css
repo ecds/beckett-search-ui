@@ -1,3 +1,12 @@
+main.search-page > div.euiPage {
+    flex-flow: row wrap;
+}
+@media (min-width: 900px) {
+    main.search-page > div.euiPage {
+        flex-flow: row nowrap;
+    }
+}
+
 /* search results table style */
 table.search-results {
     margin-bottom: 2rem;
@@ -19,19 +28,18 @@ table.search-results tr {
 }
 
 /* search filters panel style */
-aside {
+main.search-page aside {
     align-self: center;
     width: 100%;
     max-width: 400px;
     margin: 0 auto;
 }
-@media (min-width: 768px) {
-    aside {
+@media (min-width: 900px) {
+    main.search-page aside {
         align-self: flex-start;
         width: 25%;
-        min-width: 25%;
+        min-width: max(25%, 300px);
         max-width: 25%;
-        margin: auto;
     }
 }
 aside ul li:not(:last-of-type) {
@@ -59,7 +67,8 @@ div.active-facet-group .euiFlexGroup {
 div.active-facet-group button {
     background-color: var(--primary-transparent);
 }
-div.active-facet-group button.euiButton--primary:not([class*='isDisabled']):hover {
+div.active-facet-group
+    button.euiButton--primary:not([class*="isDisabled"]):hover {
     background-color: var(--primary-dark-transparent);
 }
 div.active-facet-group button a,

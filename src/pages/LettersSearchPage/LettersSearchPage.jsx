@@ -23,6 +23,7 @@ import {
     EuiSpacer,
 } from "@elastic/eui";
 import { appendIconComponentCache } from "@elastic/eui/es/components/icon/icon";
+import { icon as EuiIconArrowDown } from "@elastic/eui/es/components/icon/assets/arrow_down";
 import { icon as EuiIconArrowLeft } from "@elastic/eui/es/components/icon/assets/arrow_left";
 import { icon as EuiIconArrowRight } from "@elastic/eui/es/components/icon/assets/arrow_right";
 import { icon as EuiIconCross } from "@elastic/eui/es/components/icon/assets/cross";
@@ -31,7 +32,9 @@ import { icon as EuiIconSearch } from "@elastic/eui/es/components/icon/assets/se
 import { icon as EuiIconSortable } from "@elastic/eui/es/components/icon/assets/sortable";
 import { icon as EuiIconSortUp } from "@elastic/eui/es/components/icon/assets/sort_up";
 import { icon as EuiIconSortDown } from "@elastic/eui/es/components/icon/assets/sort_down";
-import { lettersSearchConfig, analyzers, fields } from "./lettersSearchConfig";
+import {
+    lettersSearchConfig, analyzers, fields, scopeOptions,
+} from "./lettersSearchConfig";
 import LettersResults from "../../components/LettersResults";
 import ListFacet from "../../components/ListFacet";
 import ValueFilter from "../../components/ValueFilter";
@@ -46,6 +49,7 @@ import { useCustomSearchkitSDK } from "../../common";
 appendIconComponentCache({
     arrowLeft: EuiIconArrowLeft,
     arrowRight: EuiIconArrowRight,
+    arrowDown: EuiIconArrowDown,
     calendar: EuiIconCalendar,
     cross: EuiIconCross,
     search: EuiIconSearch,
@@ -66,6 +70,7 @@ function LettersSearch() {
         field: "date",
         direction: 1,
     });
+    const [scope, setScope] = useState("keyword");
     /**
      * Curried event listener funciton to set the sort state to a given field.
      *
@@ -97,9 +102,10 @@ function LettersSearch() {
         fields,
         operator,
         variables,
+        scope,
     });
     return (
-        <main>
+        <main className="search-page">
             <EuiPage paddingSize="l">
                 <aside>
                     <EuiPageSideBar>
@@ -114,6 +120,9 @@ function LettersSearch() {
                             setOperator={setOperator}
                             setQuery={setQuery}
                             query={query}
+                            scopeOptions={scopeOptions}
+                            scope={scope}
+                            setScope={setScope}
                         />
                         <EuiHorizontalRule margin="m" />
                         <DateRangeFacet data={results} loading={loading} />

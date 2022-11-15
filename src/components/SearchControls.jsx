@@ -6,8 +6,10 @@ import {
     EuiFlexGroup,
     EuiFlexItem,
     EuiIconTip,
+    EuiSelect,
     EuiSpacer,
 } from "@elastic/eui";
+import "./SearchControls.css";
 
 /**
  * Component for the search bar, the and/or operator picker, and the search submit button.
@@ -19,14 +21,20 @@ import {
  * @param {Function} props.setOperator Event handler function for changing the operator
  * @param {Function} props.setQuery Event handler function for typing in the search bar
  * @param {string} props.query Current query
+ * @param {string} props.scope Current search scope state (keyword, recipient, repository)
+ * @param {Array<object>} props.scopeOptions List of label/value pairs for search scope options
+ * @param {Function} props.setScope Function to set the search scope state
  * @returns {React.Component} React functional component for search controls
  */
 export function SearchControls({
     loading,
     onSearch,
     operator,
+    scope,
+    scopeOptions,
     setOperator,
     setQuery,
+    setScope,
     query,
 }) {
     return (
@@ -41,9 +49,22 @@ export function SearchControls({
                 onSearch={onSearch}
                 isClearable
                 aria-label="Search"
+                prepend={
+                    scopeOptions && (
+                        <EuiSelect
+                            className="type-select"
+                            options={scopeOptions}
+                            onChange={(e) => setScope(e.target.value)}
+                            value={scope}
+                        />
+                    )
+                }
             />
             <EuiSpacer size="m" />
-            <EuiFlexGroup justifyContent="spaceBetween">
+            <EuiFlexGroup
+                justifyContent="spaceBetween"
+                className="controls-group"
+            >
                 <EuiFlexItem>
                     <div>
                         <EuiButtonGroup
