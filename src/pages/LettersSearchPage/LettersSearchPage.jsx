@@ -121,7 +121,7 @@ function LettersSearch() {
                         <DateRangeFacet
                             minDate={dateRange?.minDate}
                             maxDate={dateRange?.maxDate}
-                            loading={dateRangeLoading}
+                            loading={dateRangeLoading || loading}
                         />
                         <EuiSpacer size="l" />
                         {results?.facets
