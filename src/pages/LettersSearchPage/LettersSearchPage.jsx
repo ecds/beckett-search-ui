@@ -91,7 +91,9 @@ function LettersSearch() {
         }
     }, [sortState]);
     const variables = useSearchkitVariables();
-    const { results, loading } = useCustomSearchkitSDK({
+    const {
+        results, loading, dateRange, dateRangeLoading,
+    } = useCustomSearchkitSDK({
         analyzers,
         config: lettersSearchConfig,
         fields,
@@ -116,7 +118,11 @@ function LettersSearch() {
                             query={query}
                         />
                         <EuiHorizontalRule margin="m" />
-                        <DateRangeFacet data={results} loading={loading} />
+                        <DateRangeFacet
+                            minDate={dateRange?.minDate}
+                            maxDate={dateRange?.maxDate}
+                            loading={dateRangeLoading}
+                        />
                         <EuiSpacer size="l" />
                         {results?.facets
                             .filter(

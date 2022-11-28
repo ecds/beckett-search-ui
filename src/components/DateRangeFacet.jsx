@@ -10,12 +10,12 @@ import { datesValid } from "../common";
  * ability to use minimum and maximum date aggregations across the dataset.
  *
  * @param {object} props React functional component props
- * @param {object} props.data Results from ElasticSearch, which should include min and max date
- * aggregations.
+ * @param {moment.Moment} props.maxDate Max date returned from API, as a moment object
+ * @param {moment.Moment} props.minDate Min date returned from API, as a moment object
  * @param {boolean} props.loading Loading indicator boolean
  * @returns {React.Component} Date range React component
  */
-function DateRangeFacet({ data, loading }) {
+function DateRangeFacet({ minDate, maxDate, loading }) {
     // adapted from @searchkit/elastic-ui
     const api = useSearchkit();
     const startDateFilters = api.getFiltersByIdentifier("start_date");
@@ -32,12 +32,6 @@ function DateRangeFacet({ data, loading }) {
             ? moment(selectedEndDate.dateMax)
             : null,
     });
-
-    // get min and max date facet values
-    const min = data?.facets?.find((f) => f.identifier === "min_date")?.value || null;
-    const minDate = min ? moment(min) : null;
-    const max = data?.facets?.find((f) => f.identifier === "max_date")?.value || null;
-    const maxDate = max ? moment(max) : null;
 
     // update filters when range is changed
     useEffect(() => {
