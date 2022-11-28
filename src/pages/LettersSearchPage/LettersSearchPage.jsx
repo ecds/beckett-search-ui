@@ -187,7 +187,9 @@ function LettersSearch() {
                             </EuiPageContentBody>
                         ) : (
                             <EuiPageContentBody>
-                                Your search did not return any results.
+                                {loading
+                                    ? "Loading..."
+                                    : "Your search did not return any results."}
                             </EuiPageContentBody>
                         )}
                     </EuiPageContent>
