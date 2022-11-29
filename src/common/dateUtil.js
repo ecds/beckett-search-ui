@@ -27,6 +27,8 @@ export const formatDate = (date) => {
  */
 export const datesValid = ({
     startDate, endDate, min, max,
-}) => (startDate && endDate ? startDate < endDate : true)
+}) => (startDate && endDate ? startDate <= endDate : true)
     && (startDate && max ? startDate <= max : true)
+    && (startDate && min ? startDate >= min : true)
+    && (endDate && max ? endDate <= max : true)
     && (endDate && min ? endDate >= min : true);
