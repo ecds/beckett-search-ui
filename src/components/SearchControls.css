@@ -1,0 +1,32 @@
+/* dropdown style */
+.euiFormControlLayout--group .euiFormControlLayout:first-child {
+    max-width: 122.5px;
+}
+.euiFormControlLayout--group
+    .euiFormControlLayout:first-child
+    .euiFormControlLayout__childrenWrapper {
+    max-height: 99%;
+}
+.euiFormControlLayout--group
+    .euiFormControlLayout__childrenWrapper:last-child
+    select.type-select {
+    border: none;
+    box-shadow: none;
+    outline: none;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: 1px solid rgba(52, 55, 65, 0.2);
+}
+
+/* ensure no wrapping on boolean + search button container on mobile */
+div.controls-group {
+    flex-wrap: nowrap;
+}
+
+@media (min-width: 900px) {
+    div.controls-group {
+        flex-wrap: wrap;
+    }
+}

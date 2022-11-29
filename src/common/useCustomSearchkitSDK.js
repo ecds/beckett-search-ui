@@ -12,6 +12,7 @@ import { buildQuery } from "./queryBuilder";
  * @param {Array<object>} kwargs.fields List of Field objects ({ name, boost })
  * @param {string} kwargs.operator Search operator
  * @param {object} kwargs.variables Search state variables
+ * @param {string?} kwargs.scope An optional argument to limit the search to a single field
  * @returns {object} Response in the form { results: SearchkitResponse; loading: boolean }
  */
 export const useCustomSearchkitSDK = ({
@@ -20,6 +21,7 @@ export const useCustomSearchkitSDK = ({
     fields,
     variables,
     operator,
+    scope,
 }) => {
     const [results, setResponse] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -30,7 +32,14 @@ export const useCustomSearchkitSDK = ({
             setLoading(true);
             const request = createInstance({
                 ...config,
-                query: buildQuery({ analyzers, fields, operator: oper }),
+                query: buildQuery({
+                    analyzers,
+                    fields:
+                        !scope || scope === "keyword"
+                            ? fields
+                            : [{ name: scope, boost: 10 }],
+                    operator: oper,
+                }),
             })
                 .query(vars.query)
                 .setFilters(vars.filters)

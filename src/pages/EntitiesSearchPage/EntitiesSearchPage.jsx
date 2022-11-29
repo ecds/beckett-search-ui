@@ -71,7 +71,7 @@ function EntitiesSearch() {
         variables,
     });
     return (
-        <main>
+        <main className="search-page">
             <EuiPage paddingSize="l">
                 <aside>
                     <EuiPageSideBar>
