@@ -28,30 +28,36 @@ export function LetterDateFilter({
         <EuiDatePickerRange
             startDateControl={(
                 <EuiDatePicker
-                    selected={dateRange?.startDate}
-                    onClear={onChangeStart}
-                    onChange={onChangeStart}
-                    isLoading={loading}
-                    startDate={dateRange?.startDate}
-                    endDate={dateRange?.endDate}
-                    placeholder="from"
-                    isInvalid={!isValid}
                     aria-label="Start date"
+                    endDate={dateRange?.endDate}
+                    dateFormat={["MM/DD/YYYY", "YYYY"]}
+                    isInvalid={!isValid}
+                    isLoading={loading}
+                    minDate={minDate}
+                    maxDate={maxDate}
+                    onChange={onChangeStart}
+                    onClear={onChangeStart}
                     openToDate={dateRange?.startDate || minDate}
+                    placeholder="from"
+                    selected={dateRange?.startDate}
+                    startDate={dateRange?.startDate}
                 />
             )}
             endDateControl={(
                 <EuiDatePicker
-                    isLoading={loading}
-                    selected={dateRange?.endDate}
-                    onClear={onChangeEnd}
-                    onChange={onChangeEnd}
-                    startDate={dateRange?.startDate}
-                    endDate={dateRange?.endDate}
-                    isInvalid={!isValid}
-                    placeholder="to"
                     aria-label="End date"
+                    endDate={dateRange?.endDate}
+                    dateFormat={["MM/DD/YYYY", "YYYY"]}
+                    isInvalid={!isValid}
+                    isLoading={loading}
+                    minDate={minDate}
+                    maxDate={maxDate}
+                    onChange={onChangeEnd}
+                    onClear={onChangeEnd}
                     openToDate={dateRange?.endDate || maxDate}
+                    placeholder="to"
+                    selected={dateRange?.endDate}
+                    startDate={dateRange?.startDate}
                 />
             )}
         />

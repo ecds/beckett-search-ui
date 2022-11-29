@@ -9,7 +9,7 @@
         "preview": "vite preview"
     },
     "dependencies": {
-        "@ecds/searchkit-elastic-ui": "^3.0.1-alpha.2",
+        "@ecds/searchkit-elastic-ui": "^3.0.1-alpha.5",
         "@ecds/searchkit-sdk": "^3.0.1-alpha.1",
         "@elastic/eui": "^42.1.0",
         "@searchkit/client": "^3.0.0",

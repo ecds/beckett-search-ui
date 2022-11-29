@@ -43,6 +43,7 @@ import withSearchRouting from "../../components/withSearchRouting";
 import "../../common/search.css";
 import { SearchControls } from "../../components/SearchControls";
 import { useCustomSearchkitSDK } from "../../common";
+import { useDateFilter } from "./useDateFilter";
 
 // icon component cache required for dynamically imported EUI icons in Vite;
 // see https://github.com/elastic/eui/issues/5463
@@ -66,6 +67,7 @@ appendIconComponentCache({
 function LettersSearch() {
     const [query, setQuery] = useSearchkitQueryValue();
     const [operator, setOperator] = useState("or");
+    const [dateRangeState, setDateRangeState] = useDateFilter();
     const [sortState, setSortState] = useState({
         field: "date",
         direction: 1,
@@ -96,7 +98,9 @@ function LettersSearch() {
         }
     }, [sortState]);
     const variables = useSearchkitVariables();
-    const { results, loading } = useCustomSearchkitSDK({
+    const {
+        results, loading, dateRange, dateRangeLoading,
+    } = useCustomSearchkitSDK({
         analyzers,
         config: lettersSearchConfig,
         fields,
@@ -125,7 +129,13 @@ function LettersSearch() {
                             setScope={setScope}
                         />
                         <EuiHorizontalRule margin="m" />
-                        <DateRangeFacet data={results} loading={loading} />
+                        <DateRangeFacet
+                            minDate={dateRange?.minDate}
+                            maxDate={dateRange?.maxDate}
+                            loading={dateRangeLoading || loading}
+                            dateRange={dateRangeState}
+                            setDateRange={setDateRangeState}
+                        />
                         <EuiSpacer size="l" />
                         {results?.facets
                             .filter(
@@ -167,7 +177,15 @@ function LettersSearch() {
                             </EuiTitle>
                         </EuiPageHeaderSection>
                         <EuiPageHeaderSection>
-                            <ResetSearchButton loading={loading} />
+                            <ResetSearchButton
+                                loading={loading}
+                                onClick={() => {
+                                    // customize reset behavior to also reset date range
+                                    api.setQuery("");
+                                    setDateRangeState({ startDate: null, endDate: null });
+                                    api.search();
+                                }}
+                            />
                         </EuiPageHeaderSection>
                     </EuiPageHeader>
                     <EuiPageContent>
@@ -196,7 +214,9 @@ function LettersSearch() {
                             </EuiPageContentBody>
                         ) : (
                             <EuiPageContentBody>
-                                Your search did not return any results.
+                                {loading
+                                    ? "Loading..."
+                                    : "Your search did not return any results."}
                             </EuiPageContentBody>
                         )}
                     </EuiPageContent>

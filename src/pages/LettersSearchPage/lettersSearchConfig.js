@@ -26,6 +26,7 @@ export const analyzers = ["searchkick_search", "searchkick_search2"];
 
 // Config for Searchkit SDK; see https://searchkit.co/docs/core/reference/searchkit-sdk
 export const lettersSearchConfig = {
+    name: "letters",
     host: import.meta.env.VITE_SEARCHKIT_ENDPOINT,
     connectionOptions: {
         headers: {
