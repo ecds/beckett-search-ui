@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import {
     SearchkitClient,
     useSearchkit,
@@ -39,9 +40,8 @@ import {
 } from "./entitiesSearchConfig";
 import EntitiesResults from "../../components/EntitiesResults";
 import ListFacet from "../../components/ListFacet";
-import withSearchRouting from "../../components/withSearchRouting";
 import { SearchControls } from "../../components/SearchControls";
-import { useCustomSearchkitSDK } from "../../common";
+import { routeToState, stateToRoute, useCustomSearchkitSDK } from "../../common";
 
 // icon component cache required for dynamically imported EUI icons in Vite;
 // see https://github.com/elastic/eui/issues/5463
@@ -70,6 +70,20 @@ function EntitiesSearch() {
         operator,
         variables,
     });
+
+    // Use React Router useSearchParams to translate to and from URL query params
+    const [searchParams, setSearchParams] = useSearchParams();
+    useEffect(() => {
+        if (api && searchParams) {
+            api.setSearchState(routeToState(searchParams));
+            api.search();
+        }
+    }, []);
+    useEffect(() => {
+        if (variables) {
+            setSearchParams(stateToRoute(variables));
+        }
+    }, [variables]);
     return (
         <main className="search-page">
             <EuiPage paddingSize="l">
@@ -148,6 +162,6 @@ function EntitiesSearch() {
 }
 
 export const EntitiesSearchPage = withSearchkit(
-    withSearchRouting(EntitiesSearch),
+    EntitiesSearch,
     () => new SearchkitClient({ itemsPerPage: 25 }),
 );
