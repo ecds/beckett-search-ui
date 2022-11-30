@@ -13,3 +13,6 @@
 .capital-label {
     text-transform: capitalize;
 }
+sup {
+    vertical-align: super !important;
+}
