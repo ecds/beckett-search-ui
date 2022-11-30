@@ -11,8 +11,9 @@ export const formatDate = (date) => {
     const d = new Date(date);
     const month = new Intl.DateTimeFormat("en-US", {
         month: "long",
+        timeZone: "UTC",
     }).format(d);
-    return `${d.getDate()} ${month} ${d.getFullYear()}`;
+    return `${d.getUTCDate()} ${month} ${d.getUTCFullYear()}`;
 };
 
 /**
