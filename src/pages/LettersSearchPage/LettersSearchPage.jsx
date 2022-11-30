@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 import {
     SearchkitClient,
     useSearchkit,
@@ -33,16 +34,18 @@ import { icon as EuiIconSortable } from "@elastic/eui/es/components/icon/assets/
 import { icon as EuiIconSortUp } from "@elastic/eui/es/components/icon/assets/sort_up";
 import { icon as EuiIconSortDown } from "@elastic/eui/es/components/icon/assets/sort_down";
 import {
-    lettersSearchConfig, analyzers, fields, scopeOptions,
+    lettersSearchConfig,
+    analyzers,
+    fields,
+    scopeOptions,
 } from "./lettersSearchConfig";
 import LettersResults from "../../components/LettersResults";
 import ListFacet from "../../components/ListFacet";
 import ValueFilter from "../../components/ValueFilter";
 import DateRangeFacet from "../../components/DateRangeFacet";
-import withSearchRouting from "../../components/withSearchRouting";
 import "../../common/search.css";
 import { SearchControls } from "../../components/SearchControls";
-import { useCustomSearchkitSDK } from "../../common";
+import { routeToState, stateToRoute, useCustomSearchkitSDK } from "../../common";
 import { useDateFilter } from "./useDateFilter";
 
 // icon component cache required for dynamically imported EUI icons in Vite;
@@ -108,6 +111,38 @@ function LettersSearch() {
         variables,
         scope,
     });
+
+    // Use React Router useSearchParams to translate to and from URL query params
+    const [searchParams, setSearchParams] = useSearchParams();
+    useEffect(() => {
+        if (api && searchParams) {
+            api.setSearchState(routeToState(searchParams));
+            if (searchParams.has("scope")) {
+                setScope(searchParams.get("scope"));
+            }
+            api.search();
+        }
+    }, []);
+    useEffect(() => {
+        if (variables) {
+            setSearchParams(stateToRoute({
+                ...variables,
+                scope,
+            }));
+        }
+    }, [variables]);
+
+    // ensure frontend sort state is in sync with search sort state
+    useEffect(() => {
+        if (variables.sortBy) {
+            const [field, dir] = variables.sortBy.split("_");
+            setSortState({
+                field,
+                direction: dir === "asc" ? 1 : -1,
+            });
+        }
+    }, [variables?.sortBy]);
+
     return (
         <main className="search-page">
             <EuiPage paddingSize="l">
@@ -227,6 +262,6 @@ function LettersSearch() {
 }
 
 export const LettersSearchPage = withSearchkit(
-    withSearchRouting(LettersSearch),
+    LettersSearch,
     () => new SearchkitClient({ itemsPerPage: 25 }),
 );
