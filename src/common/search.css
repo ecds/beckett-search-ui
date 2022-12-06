@@ -49,6 +49,10 @@ aside a,
 section header button:not(:disabled) span {
     color: var(--primary-dark);
 }
+aside .operator-group {
+    display: flex;
+    align-items: center;
+}
 aside .operator-icon {
     margin-left: 0.5rem;
 }
