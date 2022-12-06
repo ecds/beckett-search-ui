@@ -122,7 +122,7 @@ function LettersSearch() {
             }
             api.search();
         }
-    }, []);
+    }, [searchParams]);
     useEffect(() => {
         if (variables) {
             setSearchParams(stateToRoute({

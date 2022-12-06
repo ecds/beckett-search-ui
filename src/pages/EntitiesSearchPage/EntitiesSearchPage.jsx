@@ -78,7 +78,7 @@ function EntitiesSearch() {
             api.setSearchState(routeToState(searchParams));
             api.search();
         }
-    }, []);
+    }, [searchParams]);
     useEffect(() => {
         if (variables) {
             setSearchParams(stateToRoute(variables));
