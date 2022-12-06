@@ -101,6 +101,7 @@ export function EntityPage() {
                                                 title={
                                                     relatedLettersMapping[key]
                                                 }
+                                                type={key}
                                                 uri={value}
                                             />
                                         </React.Fragment>
