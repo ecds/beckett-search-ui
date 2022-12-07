@@ -37,6 +37,7 @@ import {
     analyzers,
     entitiesSearchConfig,
     fields,
+    scopeOptions,
 } from "./entitiesSearchConfig";
 import EntitiesResults from "../../components/EntitiesResults";
 import ListFacet from "../../components/ListFacet";
@@ -61,6 +62,7 @@ appendIconComponentCache({
 function EntitiesSearch() {
     const [query, setQuery] = useSearchkitQueryValue();
     const [operator, setOperator] = useState("or");
+    const [scope, setScope] = useState("keyword");
     const api = useSearchkit();
     const variables = useSearchkitVariables();
     const { results, loading } = useCustomSearchkitSDK({
@@ -69,6 +71,7 @@ function EntitiesSearch() {
         fields,
         operator,
         variables,
+        scope,
     });
 
     // Use React Router useSearchParams to translate to and from URL query params
@@ -76,12 +79,18 @@ function EntitiesSearch() {
     useEffect(() => {
         if (api && searchParams) {
             api.setSearchState(routeToState(searchParams));
+            if (searchParams.has("scope")) {
+                setScope(searchParams.get("scope"));
+            }
             api.search();
         }
     }, []);
     useEffect(() => {
         if (variables) {
-            setSearchParams(stateToRoute(variables));
+            setSearchParams(stateToRoute({
+                ...variables,
+                scope,
+            }));
         }
     }, [variables]);
     return (
@@ -100,6 +109,9 @@ function EntitiesSearch() {
                             setOperator={setOperator}
                             setQuery={setQuery}
                             query={query}
+                            scopeOptions={scopeOptions}
+                            scope={scope}
+                            setScope={setScope}
                         />
                         <EuiHorizontalRule margin="m" />
                         {results?.facets.map((facet) => (

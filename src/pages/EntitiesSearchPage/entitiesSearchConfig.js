@@ -10,6 +10,13 @@ export const fields = [
     { name: "alternate_spellings", boost: 8 },
 ];
 
+// search scopes (keyword search, label search)
+// values besides "keyword" must match names of fields in the index
+export const scopeOptions = [
+    { value: "keyword", text: "Keyword" },
+    { value: "clean_label", text: "Label" },
+];
+
 // search analyzers from seachkick, see
 // https://www.rubydoc.info/gems/searchkick/0.1.3/Searchkick%2FSearch:search
 export const analyzers = ["searchkick_search", "searchkick_search2"];
