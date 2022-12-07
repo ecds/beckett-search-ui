@@ -3,8 +3,8 @@ import { buildQuery } from "../../common";
 
 // kewyord field names to search on
 export const fields = [
-    { name: "short_display", boost: 20 },
-    { name: "clean_label", boost: 10 },
+    { name: "clean_label", boost: 20 },
+    { name: "short_display", boost: 10 },
     { name: "clean_description", boost: 5 },
     { name: "alternate_names", boost: 9 },
     { name: "alternate_spellings", boost: 8 },
