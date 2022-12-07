@@ -3,11 +3,18 @@ import { buildQuery } from "../../common";
 
 // kewyord field names to search on
 export const fields = [
-    { name: "short_display", boost: 20 },
-    { name: "clean_label", boost: 10 },
+    { name: "clean_label", boost: 20 },
+    { name: "short_display", boost: 10 },
     { name: "clean_description", boost: 5 },
     { name: "alternate_names", boost: 9 },
     { name: "alternate_spellings", boost: 8 },
+];
+
+// search scopes (keyword search, label search)
+// values besides "keyword" must match names of fields in the index
+export const scopeOptions = [
+    { value: "keyword", text: "Keyword" },
+    { value: "clean_label", text: "Label" },
 ];
 
 // search analyzers from seachkick, see
