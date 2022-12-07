@@ -49,8 +49,13 @@ aside a,
 section header button:not(:disabled) span {
     color: var(--primary-dark);
 }
-aside .operator-icon {
+aside .operator-group {
+    display: flex;
+    align-items: center;
+}
+aside svg.operator-icon {
     margin-left: 0.5rem;
+    fill: var(--primary-dark);
 }
 .operator-tooltip {
     text-align: center;
@@ -58,6 +63,9 @@ aside .operator-icon {
 /* ensure search button flush with right of search form */
 aside .search-button-container {
     text-align: right;
+}
+aside .search-button-container button.euiButton--primary:not([class*='isDisabled']) {
+    background-color: var(--primary-dark);
 }
 
 /* prevent multiple applied facets from causing horizontal scroll */
@@ -74,6 +82,14 @@ div.active-facet-group
 div.active-facet-group button a,
 div.active-facet-group button svg {
     color: var(--primary-dark);
+}
+
+/* reset search button */
+button.reset-search.euiButton:not([class*="isDisabled"]) {
+    background-color: var(--primary-dark);
+}
+button.reset-search.euiButton:not([class*="isDisabled"]) span.euiButton__text {
+    color: white;
 }
 
 /* link to individual record: cover entire table row */

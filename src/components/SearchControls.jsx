@@ -40,6 +40,7 @@ export function SearchControls({
     return (
         <>
             <EuiFieldSearch
+                fullWidth
                 placeholder="Search"
                 value={query}
                 onChange={(e) => {
@@ -66,7 +67,7 @@ export function SearchControls({
                 className="controls-group"
             >
                 <EuiFlexItem>
-                    <div>
+                    <div className="operator-group">
                         <EuiButtonGroup
                             isDisabled={loading}
                             legend="Choose a search operator"
@@ -87,11 +88,11 @@ export function SearchControls({
                             className="operator-tooltip"
                             position="bottom"
                             type="questionInCircle"
-                            color="subdued"
                             content="Choose Any to match any entered keyword, or All to match all keywords."
                             iconProps={{
                                 className: "operator-icon",
                             }}
+                            size="l"
                         />
                     </div>
                 </EuiFlexItem>

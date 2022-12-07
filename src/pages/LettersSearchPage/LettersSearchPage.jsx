@@ -7,7 +7,7 @@ import {
     useSearchkitVariables,
     withSearchkit,
 } from "@searchkit/client";
-import { Pagination, ResetSearchButton } from "@ecds/searchkit-elastic-ui";
+import { Pagination } from "@ecds/searchkit-elastic-ui";
 import {
     EuiPage,
     EuiPageBody,
@@ -22,6 +22,7 @@ import {
     EuiHorizontalRule,
     EuiFlexGroup,
     EuiSpacer,
+    EuiButton,
 } from "@elastic/eui";
 import { appendIconComponentCache } from "@elastic/eui/es/components/icon/icon";
 import { icon as EuiIconArrowDown } from "@elastic/eui/es/components/icon/assets/arrow_down";
@@ -212,15 +213,21 @@ function LettersSearch() {
                             </EuiTitle>
                         </EuiPageHeaderSection>
                         <EuiPageHeaderSection>
-                            <ResetSearchButton
-                                loading={loading}
+                            <EuiButton
+                                fill
+                                color="text"
+                                className="reset-search"
+                                disabled={!api.canResetSearch()}
+                                isLoading={loading}
                                 onClick={() => {
-                                    // customize reset behavior to also reset date range
+                                    // reset query and date range
                                     api.setQuery("");
                                     setDateRangeState({ startDate: null, endDate: null });
                                     api.search();
                                 }}
-                            />
+                            >
+                                Reset Search
+                            </EuiButton>
                         </EuiPageHeaderSection>
                     </EuiPageHeader>
                     <EuiPageContent>
