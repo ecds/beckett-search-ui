@@ -109,3 +109,17 @@ export function routeToState(route) {
     }
     return searchState;
 }
+
+/**
+ * Check if the passed search state is the default search state, so that it does not
+ * overwrite non-default state.
+ *
+ * @param {object} state The search state to check
+ * @returns {boolean} True if the search state is the default, false if not
+ */
+export function isDefault(state) {
+    return !state.query
+    && (!state.filters || state.filters.length === 0)
+    && !state.sortBy
+    && state.page?.from === 0;
+}

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import moment from "moment";
-import { useSearchkit } from "@searchkit/client";
-import { datesValid } from "../../common";
+import { useSearchParams } from "react-router-dom";
+import { datesValid, routeToState, stateToRoute } from "../../common";
 
 /**
  * Hook to abstract date filter state management away from the Letters search page component.
@@ -13,64 +13,68 @@ import { datesValid } from "../../common";
  * the setState function for it.
  */
 export function useDateFilter() {
-    const api = useSearchkit();
-    const startDateFilters = api.getFiltersByIdentifier("start_date");
-    const selectedStartDate = startDateFilters && startDateFilters[0];
-    const endDateFilters = api.getFiltersByIdentifier("end_date");
-    const selectedEndDate = endDateFilters && endDateFilters[0];
+    const [searchParams, setSearchParams] = useSearchParams();
 
     // if a filter already present on initialization, set initial state to that range
     const [dateRange, setDateRange] = useState({
-        startDate: selectedStartDate?.dateMin
-            ? moment(selectedStartDate.dateMin)
+        startDate: searchParams?.has("dateMin")
+            ? moment(searchParams.get("dateMin"))
             : null,
-        endDate: selectedEndDate?.dateMax
-            ? moment(selectedEndDate.dateMax)
+        endDate: searchParams?.has("dateMax")
+            ? moment(searchParams.get("dateMax"))
             : null,
     });
 
     // update filters when range is changed (to a valid range)
     useEffect(() => {
-        api.removeFiltersByIdentifier("start_date");
-        api.removeFiltersByIdentifier("end_date");
         if (
             dateRange
-            && (dateRange.startDate || dateRange.endDate)
+            && ((dateRange.startDate
+                && dateRange.startDate.format("YYYY-MM-DD")
+                    !== searchParams.get("dateMin"))
+                || (dateRange.endDate
+                    && dateRange.endDate.format("YYYY-MM-DD")
+                        !== searchParams.get("dateMax"))
+                || !dateRange.startDate
+                || !dateRange.endDate)
             && datesValid({ ...dateRange })
         ) {
-            if (dateRange.startDate) {
-                api.addFilter({
-                    identifier: "start_date",
-                    dateMin: dateRange?.startDate?.toISOString(),
+            setSearchParams((prevParams) => {
+                // ensure other params don't get lost
+                const state = routeToState(prevParams);
+                // add or remove start date from search params
+                if (dateRange.startDate) {
+                    state.filters.push({
+                        identifier: "start_date",
+                        dateMin: dateRange?.startDate?.toISOString(),
+                    });
+                } else if (prevParams.has("dateMin")) {
+                    state.filters = state.filters.filter(
+                        (f) => f.identifier !== "start_date",
+                    );
+                }
+                // add or remove end date from search params
+                if (dateRange.endDate) {
+                    state.filters.push({
+                        identifier: "end_date",
+                        dateMax: dateRange?.endDate?.toISOString(),
+                    });
+                } else if (prevParams.has("dateMax")) {
+                    state.filters = state.filters.filter(
+                        (f) => f.identifier !== "end_date",
+                    );
+                }
+                return stateToRoute({
+                    ...state,
+                    // reset page to 0 when date filter changes; could filter out all records!
+                    page: {
+                        size: 25,
+                        from: 0,
+                    },
                 });
-            }
-            if (dateRange.endDate) {
-                api.addFilter({
-                    identifier: "end_date",
-                    dateMax: dateRange?.endDate?.toISOString(),
-                });
-            }
+            });
         }
-        api.search();
     }, [dateRange]);
-
-    // handle search state generated from URL query params
-    useEffect(() => {
-        if (
-            (selectedStartDate?.dateMin && !dateRange.startDate)
-            || (selectedEndDate?.dateMax && !dateRange.endDate)
-        ) {
-            setDateRange(() => ({
-                startDate: selectedStartDate?.dateMin
-                    ? moment(selectedStartDate.dateMin)
-                    : null,
-                endDate: selectedEndDate?.dateMax
-                    ? moment(selectedEndDate.dateMax)
-                    : null,
-            }));
-            api.search();
-        }
-    }, [selectedStartDate, selectedEndDate]);
 
     return [dateRange, setDateRange];
 }

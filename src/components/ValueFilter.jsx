@@ -1,7 +1,7 @@
 import { EuiButton, EuiFlexItem } from "@elastic/eui";
-import { FilterLink } from "@searchkit/client";
-import { useRef } from "react";
-import { volumeLabels } from "../common";
+import { useSearchkit, useSearchkitVariables } from "@searchkit/client";
+import { useSearchParams } from "react-router-dom";
+import { stateToRoute, volumeLabels } from "../common";
 
 // eslint-disable-next-line jsdoc/require-param, jsdoc/require-returns
 /**
@@ -9,7 +9,9 @@ import { volumeLabels } from "../common";
  * https://github.com/searchkit/searchkit/blob/a67420cb1e16d2a459f473c904cde10b3cfd5858/packages/searchkit-elastic-ui/src/SelectedFilters/index.tsx#L46
  */
 function ValueFilter({ filter, loading }) {
-    const ref = useRef();
+    const api = useSearchkit();
+    const variables = useSearchkitVariables();
+    const [_, setSearchParams] = useSearchParams();
     let valueLabel = filter.value;
     // special handling for volume labels
     if (
@@ -25,13 +27,26 @@ function ValueFilter({ filter, loading }) {
                 iconSide="right"
                 iconType="cross"
                 isLoading={loading}
-                onClick={(e) => {
-                    ref.current.onClick(e);
+                onClick={() => {
+                    const filters = api
+                        .getFilters()
+                        .filter((f) => !(
+                            f.value === filter.value && f.identifier === filter.identifier
+                        ));
+                    setSearchParams(
+                        stateToRoute({
+                            ...variables,
+                            filters,
+                            page: {
+                                from: 0,
+                            },
+                        }),
+                    );
                 }}
             >
-                <FilterLink ref={ref} filter={filter}>
+                <span>
                     {`${filter.label}: ${valueLabel}`}
-                </FilterLink>
+                </span>
             </EuiButton>
         </EuiFlexItem>
     );

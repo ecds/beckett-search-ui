@@ -1,7 +1,9 @@
 import createInstance from "@ecds/searchkit-sdk";
 import { useEffect, useState } from "react";
 import moment from "moment";
+import { useSearchParams } from "react-router-dom";
 import { buildQuery } from "./queryBuilder";
+import { routeToState } from "./searchRouting";
 
 /**
  * Hook that performs a search using chosen configuration.
@@ -12,28 +14,25 @@ import { buildQuery } from "./queryBuilder";
  * @param {object} kwargs.config Initial search config
  * @param {Array<object>} kwargs.fields List of Field objects ({ name, boost })
  * @param {string} kwargs.operator Search operator
- * @param {object} kwargs.variables Search state variables
- * @param {string?} kwargs.scope An optional argument to limit the search to a single field
  * @returns {object} Response in the form { results: SearchkitResponse; loading: boolean }
  */
 export const useCustomSearchkitSDK = ({
     config,
     analyzers,
     fields,
-    variables,
     operator,
-    scope,
 }) => {
     const [results, setResponse] = useState(null);
     const [loading, setLoading] = useState(true);
     const [dateRange, setDateRange] = useState(null);
     const [dateRangeLoading, setDateRangeLoading] = useState(true);
+    const [searchParams, _] = useSearchParams();
 
     if (config?.name === "letters") {
         // initial request to get global date range with no filters/query
         useEffect(() => {
             // eslint-disable-next-line jsdoc/require-jsdoc
-            async function fetchData() {
+            async function fetchDateData() {
                 setDateRangeLoading(true);
                 const request = createInstance({
                     ...config,
@@ -53,7 +52,7 @@ export const useCustomSearchkitSDK = ({
                 setDateRange({ minDate, maxDate });
                 setDateRangeLoading(false);
             }
-            fetchData();
+            fetchDateData();
         }, []); // (perform once, on page render)
     }
 
@@ -67,9 +66,9 @@ export const useCustomSearchkitSDK = ({
                 query: buildQuery({
                     analyzers,
                     fields:
-                        !scope || scope === "keyword"
+                        !vars.scope || vars.scope === "keyword"
                             ? fields
-                            : [{ name: scope, boost: 10 }],
+                            : [{ name: vars.scope, boost: 10 }],
                     operator: oper,
                 }),
             })
@@ -87,11 +86,10 @@ export const useCustomSearchkitSDK = ({
             setLoading(false);
             setResponse(response);
         }
-
-        if (variables) {
-            fetchData(variables, operator);
+        if (searchParams && operator) {
+            fetchData(routeToState(searchParams), operator);
         }
-    }, [variables, operator]);
+    }, [searchParams, operator]);
 
     return {
         results,

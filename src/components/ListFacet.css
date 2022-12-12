@@ -5,7 +5,10 @@
     margin-bottom: 0;
     margin-right: 5px;
 }
-.list-facet .facet-group .facet-button:hover a {
+.list-facet .facet-group .facet-button span.capital-label {
+    color: var(--primary-dark);
+}
+.list-facet .facet-group .facet-button:hover span.capital-label {
     text-decoration: underline;
 }
 .list-facet:not(:first-child) {
