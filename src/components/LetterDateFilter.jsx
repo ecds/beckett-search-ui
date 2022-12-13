@@ -1,4 +1,6 @@
-import { EuiDatePicker, EuiDatePickerRange } from "@elastic/eui";
+import {
+    EuiDatePicker, EuiDatePickerRange, EuiSpacer, EuiText,
+} from "@elastic/eui";
 import moment from "moment";
 import React from "react";
 
@@ -25,41 +27,50 @@ export function LetterDateFilter({
     onChangeStart,
 }) {
     return (
-        <EuiDatePickerRange
-            startDateControl={(
-                <EuiDatePicker
-                    aria-label="Start date"
-                    endDate={dateRange?.endDate}
-                    dateFormat={["MM/DD/YYYY", "YYYY"]}
-                    isInvalid={!isValid}
-                    isLoading={loading}
-                    minDate={minDate}
-                    maxDate={maxDate}
-                    onChange={onChangeStart}
-                    onClear={onChangeStart}
-                    openToDate={dateRange?.startDate || minDate}
-                    placeholder="from"
-                    selected={dateRange?.startDate}
-                    startDate={dateRange?.startDate}
-                />
+        <div>
+            <EuiDatePickerRange
+                startDateControl={(
+                    <EuiDatePicker
+                        aria-label="Start date"
+                        endDate={dateRange?.endDate}
+                        dateFormat={["MM/DD/YYYY", "YYYY"]}
+                        isInvalid={!isValid}
+                        isLoading={loading}
+                        minDate={minDate}
+                        maxDate={maxDate}
+                        onChange={onChangeStart}
+                        onClear={onChangeStart}
+                        openToDate={dateRange?.startDate || minDate}
+                        placeholder="from"
+                        selected={dateRange?.startDate}
+                        startDate={dateRange?.startDate}
+                    />
+                )}
+                endDateControl={(
+                    <EuiDatePicker
+                        aria-label="End date"
+                        endDate={dateRange?.endDate}
+                        dateFormat={["MM/DD/YYYY", "YYYY"]}
+                        isInvalid={!isValid}
+                        isLoading={loading}
+                        minDate={minDate}
+                        maxDate={maxDate}
+                        onChange={onChangeEnd}
+                        onClear={onChangeEnd}
+                        openToDate={dateRange?.endDate || maxDate}
+                        placeholder="to"
+                        selected={dateRange?.endDate}
+                        startDate={dateRange?.startDate}
+                    />
+                )}
+            />
+            {!isValid && (
+                <>
+                    <EuiSpacer size="s" />
+                    <EuiText color="danger" size="s">Error: Start date cannot be later than end date.</EuiText>
+                    <EuiSpacer size="s" />
+                </>
             )}
-            endDateControl={(
-                <EuiDatePicker
-                    aria-label="End date"
-                    endDate={dateRange?.endDate}
-                    dateFormat={["MM/DD/YYYY", "YYYY"]}
-                    isInvalid={!isValid}
-                    isLoading={loading}
-                    minDate={minDate}
-                    maxDate={maxDate}
-                    onChange={onChangeEnd}
-                    onClear={onChangeEnd}
-                    openToDate={dateRange?.endDate || maxDate}
-                    placeholder="to"
-                    selected={dateRange?.endDate}
-                    startDate={dateRange?.startDate}
-                />
-            )}
-        />
+        </div>
     );
 }

@@ -26,9 +26,7 @@ function DateRangeFacet({
             </EuiTitle>
             <LetterDateFilter
                 dateRange={dateRange}
-                isValid={datesValid({
-                    ...dateRange,
-                })}
+                isValid={datesValid(dateRange)}
                 loading={loading}
                 minDate={minDate}
                 maxDate={maxDate}

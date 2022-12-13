@@ -49,14 +49,7 @@ export function EntityRelatedLetters({ title, type, uri }) {
     // validate date range before actually making a date filter API call
     useEffect(() => {
         if (
-            dateRange
-            && data?.min_date
-            && data.max_date
-            && datesValid({
-                ...dateRange,
-                min: moment(data.min_date),
-                max: moment(data.max_date),
-            })
+            dateRange && datesValid(dateRange)
         ) {
             setFilterState((prevState) => ({
                 ...prevState,
@@ -137,11 +130,7 @@ export function EntityRelatedLetters({ title, type, uri }) {
                     <LetterDateFilter
                         minDate={moment(data.min_date)}
                         maxDate={moment(data.max_date)}
-                        isValid={datesValid({
-                            ...dateRange,
-                            min: moment(data.min_date),
-                            max: moment(data.max_date),
-                        })}
+                        isValid={datesValid(dateRange)}
                         loading={loading}
                         dateRange={dateRange}
                         onChangeStart={(d) => {
