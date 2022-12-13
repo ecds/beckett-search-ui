@@ -48,9 +48,7 @@ export function EntityRelatedLetters({ title, type, uri }) {
 
     // validate date range before actually making a date filter API call
     useEffect(() => {
-        if (
-            dateRange && datesValid(dateRange)
-        ) {
+        if (dateRange && datesValid(dateRange)) {
             setFilterState((prevState) => ({
                 ...prevState,
                 ...dateRange,
@@ -77,9 +75,12 @@ export function EntityRelatedLetters({ title, type, uri }) {
                 ? moment(filterState.endDate).format(dateFormat)
                 : undefined,
         };
-        // remove any undefined key/value pairs
+        // remove (and keep track of) any undefined key/value pairs
+        const deleted = [];
         Object.keys(params).forEach(
-            (key) => params[key] === undefined && delete params[key],
+            (key) => params[key] === undefined
+                && deleted.push(`${type}_${key}`)
+                && delete params[key],
         );
         /**
          * Asynchronously fetch the related letters matching the params
@@ -106,15 +107,12 @@ export function EntityRelatedLetters({ title, type, uri }) {
             const prevParamsObj = {};
             // have to do it like this because URISearchParams can't use spread operator
             prevParams.forEach((value, key) => {
-                if (
-                    !Object.prototype.hasOwnProperty.call(
-                        updatedSearchParams,
-                        key,
-                    )
-                ) {
+                if (!Object.prototype.hasOwnProperty.call(updatedSearchParams, key)) {
                     prevParamsObj[key] = value;
                 }
             });
+            // also remove old params that have been deleted
+            deleted.forEach((del) => delete prevParamsObj[del]);
             // now we can use spread :)
             return { ...prevParamsObj, ...updatedSearchParams };
         }, { replace: true }); // don't push another entry onto the history stack!
