@@ -15,6 +15,7 @@ export function stateToRoute(searchState) {
         size: Number(searchState.page?.size) || 25,
         from: Number(searchState.page?.from),
         scope: searchState.scope,
+        op: searchState.operator,
     };
     searchState.filters.forEach((filter) => {
         // simplify filter representation
@@ -64,19 +65,21 @@ export function routeToState(route) {
             from: Number(route.get("from")) || 0,
         },
         scope: route.get("scope") || "",
+        operator: route.get("op") || "",
         filters: [],
     };
     // get filters state back into format expected by Searchkit
     Array.from(route.entries())
         .filter(
             ([key, _val]) => ![
-                "query", // only process filters, not query/sort/size/from
+                "query", // only process filters, not query/sort/size/from/scope/operator
                 "sort",
                 "size",
                 "from",
-                "dateMin", // handle date filters separately
-                "dateMax",
                 "scope",
+                "op",
+                "dateMin", // also handle date filters separately
+                "dateMax",
             ].includes(key),
         )
         .forEach(([identifier, val]) => {
@@ -120,6 +123,7 @@ export function routeToState(route) {
 export function isDefault(state) {
     return !state.query
     && (!state.filters || state.filters.length === 0)
-    && !state.sortBy
+    && (!state.sortBy || state.sortBy === "date_asc")
+    && (!state.operator || state.operator === "or")
     && state.page?.from === 0;
 }

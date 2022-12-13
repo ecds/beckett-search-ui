@@ -74,10 +74,10 @@ appendIconComponentCache({
  */
 function LettersSearch() {
     const [searchParams, setSearchParams] = useSearchParams();
-    const [operator, setOperator] = useState("or");
+    const [query, setQuery] = useState(() => (searchParams.has("query") ? searchParams.get("query") : ""));
+    const [operator, setOperator] = useState(searchParams.has("op") ? searchParams.get("op") : "or");
     const [dateRangeState, setDateRangeState] = useDateFilter();
     const [scope, setScope] = useScope();
-    const [query, setQuery] = useState(() => (searchParams.has("query") ? searchParams.get("query") : ""));
     const [sortState, setSortState] = useState(() => {
         if (searchParams?.has("sort")) {
             const [field, dir] = searchParams.get("sort").split("_");
@@ -133,13 +133,29 @@ function LettersSearch() {
                 setSearchParams(
                     stateToRoute({
                         ...variables,
-                        scope,
+                        query,
                         sortBy,
+                        scope,
+                        operator,
                     }),
                 );
             }
         }
     }, [sortState]);
+    useEffect(() => {
+        if (operator && searchParams && (!searchParams.has("op") || searchParams.get("op") !== operator)) {
+            setSearchParams(
+                stateToRoute({
+                    ...variables,
+                    scope,
+                    operator,
+                    page: {
+                        from: 0, // reset page to 0 on operator change; could exclude results!
+                    },
+                }),
+            );
+        }
+    }, [operator]);
 
     return (
         <main className="search-page">
@@ -154,6 +170,7 @@ function LettersSearch() {
                                     stateToRoute({
                                         ...variables,
                                         scope,
+                                        operator,
                                         query: value,
                                         page: {
                                             from: 0,

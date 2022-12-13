@@ -20,7 +20,6 @@ export const useCustomSearchkitSDK = ({
     config,
     analyzers,
     fields,
-    operator,
 }) => {
     const [results, setResponse] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -59,7 +58,7 @@ export const useCustomSearchkitSDK = ({
     // other requests with filters applied, if/whenever they change
     useEffect(() => {
         // eslint-disable-next-line jsdoc/require-jsdoc
-        async function fetchData(vars, oper) {
+        async function fetchData(vars) {
             setLoading(true);
             const request = createInstance({
                 ...config,
@@ -69,7 +68,7 @@ export const useCustomSearchkitSDK = ({
                         !vars.scope || vars.scope === "keyword"
                             ? fields
                             : [{ name: vars.scope, boost: 10 }],
-                    operator: oper,
+                    operator: vars.operator || "or",
                 }),
             })
                 .query(vars.query)
@@ -86,10 +85,10 @@ export const useCustomSearchkitSDK = ({
             setLoading(false);
             setResponse(response);
         }
-        if (searchParams && operator) {
-            fetchData(routeToState(searchParams), operator);
+        if (searchParams) {
+            fetchData(routeToState(searchParams));
         }
-    }, [searchParams, operator]);
+    }, [searchParams]);
 
     return {
         results,

@@ -64,7 +64,7 @@ appendIconComponentCache({
 function EntitiesSearch() {
     const [searchParams, setSearchParams] = useSearchParams();
     const [query, setQuery] = useState(() => (searchParams.has("query") ? searchParams.get("query") : ""));
-    const [operator, setOperator] = useState("or");
+    const [operator, setOperator] = useState(searchParams.has("op") ? searchParams.get("op") : "or");
     const [scope, setScope] = useScope();
     const api = useSearchkit();
     const variables = useSearchkitVariables();
@@ -72,7 +72,6 @@ function EntitiesSearch() {
         analyzers,
         config: entitiesSearchConfig,
         fields,
-        operator,
     });
 
     // Use React Router useSearchParams to translate to and from URL query params
@@ -82,6 +81,20 @@ function EntitiesSearch() {
             api.search();
         }
     }, [searchParams]);
+    useEffect(() => {
+        if (operator && searchParams && (!searchParams.has("op") || searchParams.get("op") !== operator)) {
+            setSearchParams(
+                stateToRoute({
+                    ...variables,
+                    scope,
+                    operator,
+                    page: {
+                        from: 0, // reset page to 0 on operator change; could exclude results!
+                    },
+                }),
+            );
+        }
+    }, [operator]);
 
     return (
         <main className="search-page">
@@ -96,6 +109,7 @@ function EntitiesSearch() {
                                     stateToRoute({
                                         ...variables,
                                         scope,
+                                        operator,
                                         query: value,
                                         page: {
                                             from: 0,
