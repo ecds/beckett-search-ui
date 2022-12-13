@@ -28,7 +28,7 @@ export function useDateFilter() {
     // update filters when range is changed (to a valid range)
     useEffect(() => {
         if (
-            dateRange
+            (dateRange?.startDate || dateRange?.endDate)
             && ((dateRange.startDate
                 && dateRange.startDate.format("YYYY-MM-DD")
                     !== searchParams.get("dateMin"))
@@ -42,35 +42,50 @@ export function useDateFilter() {
             setSearchParams((prevParams) => {
                 // ensure other params don't get lost
                 const state = routeToState(prevParams);
-                // add or remove start date from search params
+                let prevStart;
+                let prevEnd;
+                // remove start and end date from search params
+                if (prevParams.has("dateMin")) {
+                    prevStart = prevParams.get("dateMin");
+                    state.filters = state.filters.filter(
+                        (f) => f.identifier !== "start_date",
+                    );
+                }
+                if (prevParams.has("dateMax")) {
+                    prevEnd = prevParams.get("dateMax");
+                    state.filters = state.filters.filter(
+                        (f) => f.identifier !== "end_date",
+                    );
+                }
+                // add each back if selected
                 if (dateRange.startDate) {
                     state.filters.push({
                         identifier: "start_date",
                         dateMin: dateRange?.startDate?.toISOString(),
                     });
-                } else if (prevParams.has("dateMin")) {
-                    state.filters = state.filters.filter(
-                        (f) => f.identifier !== "start_date",
-                    );
                 }
-                // add or remove end date from search params
                 if (dateRange.endDate) {
                     state.filters.push({
                         identifier: "end_date",
                         dateMax: dateRange?.endDate?.toISOString(),
                     });
-                } else if (prevParams.has("dateMax")) {
-                    state.filters = state.filters.filter(
-                        (f) => f.identifier !== "end_date",
-                    );
+                }
+                // reset page to 0 if date filter changed, to avoid empty/nonexistent page
+                let page = {};
+                if (
+                    dateRange?.startDate?.format("YYYY-MM-DD") !== prevStart
+                    || dateRange?.endDate?.format("YYYY-MM-DD") !== prevEnd
+                ) {
+                    page = {
+                        page: {
+                            size: 25,
+                            from: 0,
+                        },
+                    };
                 }
                 return stateToRoute({
                     ...state,
-                    // reset page to 0 when date filter changes; could filter out all records!
-                    page: {
-                        size: 25,
-                        from: 0,
-                    },
+                    ...page,
                 });
             });
         }
