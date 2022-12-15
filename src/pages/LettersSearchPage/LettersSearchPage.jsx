@@ -3,7 +3,6 @@ import { useSearchParams } from "react-router-dom";
 import {
     SearchkitClient,
     useSearchkit,
-    useSearchkitQueryValue,
     useSearchkitVariables,
     withSearchkit,
 } from "@searchkit/client";
@@ -46,7 +45,12 @@ import ValueFilter from "../../components/ValueFilter";
 import DateRangeFacet from "../../components/DateRangeFacet";
 import "../../common/search.css";
 import { SearchControls } from "../../components/SearchControls";
-import { routeToState, stateToRoute, useCustomSearchkitSDK } from "../../common";
+import {
+    routeToState,
+    stateToRoute,
+    useCustomSearchkitSDK,
+    useScope,
+} from "../../common";
 import { useDateFilter } from "./useDateFilter";
 
 // icon component cache required for dynamically imported EUI icons in Vite;
@@ -69,14 +73,23 @@ appendIconComponentCache({
  * @returns React letters search page component
  */
 function LettersSearch() {
-    const [query, setQuery] = useSearchkitQueryValue();
-    const [operator, setOperator] = useState("or");
+    const [searchParams, setSearchParams] = useSearchParams();
+    const [query, setQuery] = useState(() => (searchParams.has("query") ? searchParams.get("query") : ""));
+    const [operator, setOperator] = useState(searchParams.has("op") ? searchParams.get("op") : "or");
     const [dateRangeState, setDateRangeState] = useDateFilter();
-    const [sortState, setSortState] = useState({
-        field: "date",
-        direction: 1,
+    const [scope, setScope] = useScope();
+    const [sortState, setSortState] = useState(() => {
+        if (searchParams?.has("sort")) {
+            const [field, dir] = searchParams.get("sort").split("_");
+            const direction = dir === "asc" ? 1 : -1;
+            return { field, direction };
+        }
+        // default sort: date asc
+        return {
+            field: "date",
+            direction: 1,
+        };
     });
-    const [scope, setScope] = useState("keyword");
     /**
      * Curried event listener funciton to set the sort state to a given field.
      *
@@ -94,13 +107,6 @@ function LettersSearch() {
         }
     };
     const api = useSearchkit();
-    useEffect(() => {
-        if (sortState) {
-            const dir = sortState.direction === 1 ? "asc" : "desc";
-            api.setSortBy(`${sortState.field}_${dir}`);
-            api.search();
-        }
-    }, [sortState]);
     const variables = useSearchkitVariables();
     const {
         results, loading, dateRange, dateRangeLoading,
@@ -109,40 +115,47 @@ function LettersSearch() {
         config: lettersSearchConfig,
         fields,
         operator,
-        variables,
-        scope,
     });
 
     // Use React Router useSearchParams to translate to and from URL query params
-    const [searchParams, setSearchParams] = useSearchParams();
     useEffect(() => {
         if (api && searchParams) {
             api.setSearchState(routeToState(searchParams));
-            if (searchParams.has("scope")) {
-                setScope(searchParams.get("scope"));
-            }
             api.search();
         }
     }, [searchParams]);
     useEffect(() => {
-        if (variables) {
-            setSearchParams(stateToRoute({
-                ...variables,
-                scope,
-            }));
+        // handle sorting separately in order to only update in case of changes
+        if (sortState) {
+            const dir = sortState.direction === 1 ? "asc" : "desc";
+            const sortBy = `${sortState.field}_${dir}`;
+            if (!searchParams.has("sort") || searchParams.get("sort") !== sortBy) {
+                setSearchParams(
+                    stateToRoute({
+                        ...variables,
+                        query,
+                        sortBy,
+                        scope,
+                        operator,
+                    }),
+                );
+            }
         }
-    }, [variables]);
-
-    // ensure frontend sort state is in sync with search sort state
+    }, [sortState]);
     useEffect(() => {
-        if (variables.sortBy) {
-            const [field, dir] = variables.sortBy.split("_");
-            setSortState({
-                field,
-                direction: dir === "asc" ? 1 : -1,
-            });
+        if (operator && searchParams && (!searchParams.has("op") || searchParams.get("op") !== operator)) {
+            setSearchParams(
+                stateToRoute({
+                    ...variables,
+                    scope,
+                    operator,
+                    page: {
+                        from: 0, // reset page to 0 on operator change; could exclude results!
+                    },
+                }),
+            );
         }
-    }, [variables?.sortBy]);
+    }, [operator]);
 
     return (
         <main className="search-page">
@@ -153,8 +166,17 @@ function LettersSearch() {
                             loading={loading}
                             onSearch={(value) => {
                                 setQuery(value);
-                                api.setQuery(value);
-                                api.search();
+                                setSearchParams(
+                                    stateToRoute({
+                                        ...variables,
+                                        scope,
+                                        operator,
+                                        query: value,
+                                        page: {
+                                            from: 0,
+                                        },
+                                    }),
+                                );
                             }}
                             operator={operator}
                             setOperator={setOperator}
@@ -222,8 +244,16 @@ function LettersSearch() {
                                 onClick={() => {
                                     // reset query and date range
                                     api.setQuery("");
-                                    setDateRangeState({ startDate: null, endDate: null });
-                                    api.search();
+                                    setDateRangeState({
+                                        startDate: null,
+                                        endDate: null,
+                                    });
+                                    setSearchParams(
+                                        stateToRoute({
+                                            filters: [],
+                                            query: "",
+                                        }),
+                                    );
                                 }}
                             >
                                 Reset Search

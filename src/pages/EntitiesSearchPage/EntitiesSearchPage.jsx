@@ -3,15 +3,10 @@ import { useSearchParams } from "react-router-dom";
 import {
     SearchkitClient,
     useSearchkit,
-    useSearchkitQueryValue,
     useSearchkitVariables,
     withSearchkit,
 } from "@searchkit/client";
-import {
-    ResetSearchButton,
-    SelectedFilters,
-    Pagination,
-} from "@ecds/searchkit-elastic-ui";
+import { Pagination } from "@ecds/searchkit-elastic-ui";
 import {
     EuiPage,
     EuiPageBody,
@@ -25,6 +20,7 @@ import {
     EuiTitle,
     EuiHorizontalRule,
     EuiFlexGroup,
+    EuiButton,
 } from "@elastic/eui";
 import "@elastic/eui/dist/eui_theme_light.css";
 import { appendIconComponentCache } from "@elastic/eui/es/components/icon/icon";
@@ -42,7 +38,13 @@ import {
 import EntitiesResults from "../../components/EntitiesResults";
 import ListFacet from "../../components/ListFacet";
 import { SearchControls } from "../../components/SearchControls";
-import { routeToState, stateToRoute, useCustomSearchkitSDK } from "../../common";
+import {
+    routeToState,
+    stateToRoute,
+    useCustomSearchkitSDK,
+    useScope,
+} from "../../common";
+import ValueFilter from "../../components/ValueFilter";
 
 // icon component cache required for dynamically imported EUI icons in Vite;
 // see https://github.com/elastic/eui/issues/5463
@@ -60,39 +62,40 @@ appendIconComponentCache({
  * @returns React entities search page component
  */
 function EntitiesSearch() {
-    const [query, setQuery] = useSearchkitQueryValue();
-    const [operator, setOperator] = useState("or");
-    const [scope, setScope] = useState("keyword");
+    const [searchParams, setSearchParams] = useSearchParams();
+    const [query, setQuery] = useState(() => (searchParams.has("query") ? searchParams.get("query") : ""));
+    const [operator, setOperator] = useState(searchParams.has("op") ? searchParams.get("op") : "or");
+    const [scope, setScope] = useScope();
     const api = useSearchkit();
     const variables = useSearchkitVariables();
     const { results, loading } = useCustomSearchkitSDK({
         analyzers,
         config: entitiesSearchConfig,
         fields,
-        operator,
-        variables,
-        scope,
     });
 
     // Use React Router useSearchParams to translate to and from URL query params
-    const [searchParams, setSearchParams] = useSearchParams();
     useEffect(() => {
         if (api && searchParams) {
             api.setSearchState(routeToState(searchParams));
-            if (searchParams.has("scope")) {
-                setScope(searchParams.get("scope"));
-            }
             api.search();
         }
     }, [searchParams]);
     useEffect(() => {
-        if (variables) {
-            setSearchParams(stateToRoute({
-                ...variables,
-                scope,
-            }));
+        if (operator && searchParams && (!searchParams.has("op") || searchParams.get("op") !== operator)) {
+            setSearchParams(
+                stateToRoute({
+                    ...variables,
+                    scope,
+                    operator,
+                    page: {
+                        from: 0, // reset page to 0 on operator change; could exclude results!
+                    },
+                }),
+            );
         }
-    }, [variables]);
+    }, [operator]);
+
     return (
         <main className="search-page">
             <EuiPage paddingSize="l">
@@ -102,8 +105,17 @@ function EntitiesSearch() {
                             loading={loading}
                             onSearch={(value) => {
                                 setQuery(value);
-                                api.setQuery(value);
-                                api.search();
+                                setSearchParams(
+                                    stateToRoute({
+                                        ...variables,
+                                        scope,
+                                        operator,
+                                        query: value,
+                                        page: {
+                                            from: 0,
+                                        },
+                                    }),
+                                );
                             }}
                             operator={operator}
                             setOperator={setOperator}
@@ -127,14 +139,42 @@ function EntitiesSearch() {
                     <EuiPageHeader>
                         <EuiPageHeaderSection className="active-facet-group">
                             <EuiTitle size="l">
-                                <SelectedFilters
-                                    data={results}
-                                    loading={loading}
-                                />
+                                <EuiFlexGroup
+                                    gutterSize="s"
+                                    alignItems="center"
+                                >
+                                    {results?.summary?.appliedFilters.map(
+                                        (filter) => (
+                                            <ValueFilter
+                                                key={filter.id}
+                                                filter={filter}
+                                                loading={loading}
+                                            />
+                                        ),
+                                    )}
+                                </EuiFlexGroup>
                             </EuiTitle>
                         </EuiPageHeaderSection>
                         <EuiPageHeaderSection>
-                            <ResetSearchButton loading={loading} />
+                            <EuiButton
+                                fill
+                                color="text"
+                                className="reset-search"
+                                disabled={!api.canResetSearch()}
+                                isLoading={loading}
+                                onClick={() => {
+                                    // reset query and filters
+                                    setQuery("");
+                                    setSearchParams(
+                                        stateToRoute({
+                                            filters: [],
+                                            query: "",
+                                        }),
+                                    );
+                                }}
+                            >
+                                Reset Search
+                            </EuiButton>
                         </EuiPageHeaderSection>
                     </EuiPageHeader>
                     <EuiPageContent>

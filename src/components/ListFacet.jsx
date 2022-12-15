@@ -1,17 +1,18 @@
-import { Fragment, useRef, useEffect } from "react";
+import { Fragment } from "react";
 import {
     EuiFacetButton,
     EuiFacetGroup,
     EuiTitle,
     EuiToolTip,
 } from "@elastic/eui";
-import { useSearchkit, FilterLink } from "@searchkit/client";
-import { entityTypes, volumeLabels } from "../common";
+import { useSearchkit, useSearchkitVariables } from "@searchkit/client";
+import { useSearchParams } from "react-router-dom";
+import { entityTypes, stateToRoute, volumeLabels } from "../common";
 import "./ListFacet.css";
 
 /**
  * ListFacet override component allowing custom display of facet filters.
- * Adapted almost verbatim from
+ * Adapted from
  * https://github.com/searchkit/searchkit/issues/1107#issuecomment-1185484220
  *
  * @param {object} props React functional component props object
@@ -21,13 +22,9 @@ import "./ListFacet.css";
  */
 function ListFacet({ facet, loading }) {
     const api = useSearchkit();
-    const ref = useRef([]);
-
-    useEffect(() => {
-        ref.current = ref.current.slice(0, facet?.entries.length);
-    }, [facet?.entries]);
-
-    const entries = facet?.entries?.map((entry, i) => {
+    const variables = useSearchkitVariables();
+    const [_, setSearchParams] = useSearchParams();
+    const entries = facet?.entries?.map((entry) => {
         let label = entry.label.toString().trim().replaceAll("_", " ");
         // special handling for volume labels
         if (
@@ -48,33 +45,41 @@ function ListFacet({ facet, loading }) {
                 </EuiToolTip>
             ) // eslint-disable-next-line react/jsx-no-useless-fragment
             : ({ children }) => <>{children}</>;
+        const filter = {
+            identifier: facet.identifier,
+            value: entry.label,
+        };
+        const isSelected = api.isFilterSelected(filter);
         return (
             label && (
                 <EuiFacetButton
                     className="facet-button"
                     key={entry.label}
                     quantity={entry.count}
-                    isSelected={api.isFilterSelected({
-                        identifier: facet.identifier,
-                        value: entry.label,
-                    })}
+                    isSelected={isSelected}
                     isLoading={loading}
-                    onClick={(e) => {
-                        ref.current[i].onClick(e);
+                    onClick={() => {
+                        let { filters } = variables;
+                        if (isSelected) {
+                            // remove on cilck
+                            filters = filters.filter((f) => !(
+                                f.identifier === facet.identifier && f.value === entry.label
+                            ));
+                        } else {
+                            // add on click
+                            filters.push(filter);
+                        }
+                        setSearchParams(stateToRoute({
+                            ...variables,
+                            filters,
+                            page: {
+                                from: 0,
+                            },
+                        }));
                     }}
                 >
                     <ToolTipComponent>
-                        <FilterLink
-                            ref={(el) => {
-                                ref.current[i] = el;
-                            }}
-                            filter={{
-                                identifier: facet.identifier,
-                                value: entry.label,
-                            }}
-                        >
-                            <span className="capital-label">{label}</span>
-                        </FilterLink>
+                        <span className="capital-label">{label}</span>
                     </ToolTipComponent>
                 </EuiFacetButton>
             )
