@@ -1,5 +1,4 @@
 import React from "react";
-import { EuiTitle } from "@elastic/eui";
 
 /**
  * Letter metadata section component
@@ -12,12 +11,9 @@ import { EuiTitle } from "@elastic/eui";
 export function LetterMetadata({ metadata, excluded }) {
     return (
         <section>
-            <EuiTitle>
-                <h2 className="result-meta-heading">Letter Information</h2>
-            </EuiTitle>
             <dl className="letter-metadata">
                 {Object.entries(metadata).map(
-                    ([key, value]) => !excluded.includes(key)
+                    ([key, value]) => !excluded?.includes(key)
                         && value && (
                         <React.Fragment key={key}>
                             <dt className="capital-label">

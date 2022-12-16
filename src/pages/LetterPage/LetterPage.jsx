@@ -1,6 +1,7 @@
 /* eslint-disable react/no-danger */
 import {
     EuiButtonEmpty,
+    EuiHorizontalRule,
     EuiPage,
     EuiPageBody,
     EuiPageContent,
@@ -70,12 +71,30 @@ export function LetterPage() {
                         </EuiPageHeaderSection>
                     </EuiPageHeader>
                     <EuiPageContent>
+                        <EuiTitle>
+                            <h2 className="result-meta-heading">Letter Information</h2>
+                        </EuiTitle>
                         {letter.metadata && (
                             <LetterMetadata
                                 metadata={letter.metadata}
                                 excluded={excludedMeta}
                             />
                         )}
+                        <EuiHorizontalRule />
+                        {letter.repositories && (
+                            <LetterMetadata
+                                metadata={letter.repositories}
+                            />
+                        )}
+                        <EuiHorizontalRule />
+                        {letter.publication_information && (
+                            <LetterMetadata
+                                metadata={{
+                                    publication_information: letter.publication_information,
+                                }}
+                            />
+                        )}
+                        <EuiHorizontalRule />
                         {letter.mentions && (
                             <LetterMentions mentions={letter.mentions} />
                         )}
