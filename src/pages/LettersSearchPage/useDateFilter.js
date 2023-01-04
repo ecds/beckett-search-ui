@@ -37,7 +37,7 @@ export function useDateFilter() {
                         !== searchParams.get("dateMax"))
                 || !dateRange.startDate
                 || !dateRange.endDate)
-            && datesValid({ ...dateRange })
+            && datesValid(dateRange)
         ) {
             setSearchParams((prevParams) => {
                 // ensure other params don't get lost
