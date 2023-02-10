@@ -33,7 +33,7 @@ export function LetterDateFilter({
                     <EuiDatePicker
                         aria-label="Start date"
                         endDate={dateRange?.endDate}
-                        dateFormat={["MM/DD/YYYY", "YYYY"]}
+                        dateFormat={["DD/MM/YYYY", "YYYY"]}
                         isInvalid={!isValid}
                         isLoading={loading}
                         minDate={minDate}
@@ -50,7 +50,7 @@ export function LetterDateFilter({
                     <EuiDatePicker
                         aria-label="End date"
                         endDate={dateRange?.endDate}
-                        dateFormat={["MM/DD/YYYY", "YYYY"]}
+                        dateFormat={["DD/MM/YYYY", "YYYY"]}
                         isInvalid={!isValid}
                         isLoading={loading}
                         minDate={minDate}
