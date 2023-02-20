@@ -118,8 +118,11 @@ function EntitiesSearch() {
     useEffect(() => {
         // handle sorting separately in order to only update in case of changes
         if (sortState) {
-            const dir = sortState.direction === 1 ? "asc" : "desc";
-            const sortBy = `${sortState.field}_${dir}`;
+            let sortBy = sortState.field;
+            if (sortState.direction) {
+                const dir = sortState.direction === 1 ? "asc" : "desc";
+                sortBy = `${sortState.field}_${dir}`;
+            }
             if (!searchParams.has("sort") || searchParams.get("sort") !== sortBy) {
                 setSearchParams(
                     stateToRoute({
