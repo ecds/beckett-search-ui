@@ -160,6 +160,9 @@ function EntitiesSearch() {
                             loading={loading}
                             onSearch={(value) => {
                                 setQuery(value);
+                                if (value == "") {
+                                    setSortState({ field: "entity", direction: 1 })
+                                } else { setSortState({ field: "relevance" }) }
                                 setSearchParams(
                                     stateToRoute({
                                         ...variables,
@@ -169,6 +172,7 @@ function EntitiesSearch() {
                                         page: {
                                             from: 0,
                                         },
+                                        sortBy: value == "" ? "" : "relevance"
                                     }),
                                 );
                             }}
@@ -219,6 +223,7 @@ function EntitiesSearch() {
                                 isLoading={loading}
                                 onClick={() => {
                                     // reset query and filters
+                                    setSortState({ field: "entity", direction: 1 })
                                     setQuery("");
                                     setSearchParams(
                                         stateToRoute({
