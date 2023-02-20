@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { SortableHeader } from "./SortableHeader";
 import "./EntitiesResults.css";
 
 /**
@@ -7,16 +8,28 @@ import "./EntitiesResults.css";
  * @param {object} props Props for React functional component
  * @param {object} props.data Data returned by ElasticSearch
  * @param {number} props.offset Offset of results for current page
+ * @param {Function} props.onSort Sort handler
+ * @param {object} props.sortState Current sort state
  * @returns Populated results list React component
  */
-function EntitiesResults({ data, offset }) {
+function EntitiesResults({
+    data, offset, onSort, sortState,
+}) {
+    const sortableColumns = ["entity", "type"];
     return (
         <table id="entities-results" className="search-results">
             <thead>
                 <tr>
                     <th aria-label="index">#</th>
-                    <th>Entity</th>
-                    <th>Type</th>
+                    {sortableColumns.map((column) => (
+                        <th key={column}>
+                            <SortableHeader
+                                name={column}
+                                onSort={onSort}
+                                sortState={sortState}
+                            />
+                        </th>
+                    ))}
                 </tr>
             </thead>
             <tbody>

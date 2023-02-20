@@ -29,6 +29,9 @@ import { icon as EuiIconArrowRight } from "@elastic/eui/es/components/icon/asset
 import { icon as EuiIconCross } from "@elastic/eui/es/components/icon/assets/cross";
 import { icon as EuiIconSearch } from "@elastic/eui/es/components/icon/assets/search";
 import { icon as EuiIconQuestion } from "@elastic/eui/es/components/icon/assets/question_in_circle";
+import { icon as EuiIconSortable } from "@elastic/eui/es/components/icon/assets/sortable";
+import { icon as EuiIconSortUp } from "@elastic/eui/es/components/icon/assets/sort_up";
+import { icon as EuiIconSortDown } from "@elastic/eui/es/components/icon/assets/sort_down";
 import {
     analyzers,
     entitiesSearchConfig,
@@ -52,8 +55,11 @@ appendIconComponentCache({
     arrowLeft: EuiIconArrowLeft,
     arrowRight: EuiIconArrowRight,
     cross: EuiIconCross,
-    search: EuiIconSearch,
     questionInCircle: EuiIconQuestion,
+    search: EuiIconSearch,
+    sortable: EuiIconSortable,
+    sortUp: EuiIconSortUp,
+    sortDown: EuiIconSortDown,
 });
 
 /**
@@ -73,6 +79,34 @@ function EntitiesSearch() {
         config: entitiesSearchConfig,
         fields,
     });
+    const [sortState, setSortState] = useState(() => {
+        if (searchParams?.has("sort")) {
+            const [field, dir] = searchParams.get("sort").split("_");
+            const direction = dir === "asc" ? 1 : -1;
+            return { field, direction };
+        }
+        // default sort: short_display asc
+        return {
+            field: "entity",
+            direction: 1,
+        };
+    });
+    /**
+     * Curried event listener function to set the sort state to a given field.
+     *
+     * @param {string} field The name of the field to sort on.
+     * @returns {Function} The event listner function.
+     */
+    const onSort = (field) => () => {
+        if (sortState.field === field) {
+            setSortState((prevState) => ({
+                field,
+                direction: -1 * prevState.direction,
+            }));
+        } else {
+            setSortState({ field, direction: 1 });
+        }
+    };
 
     // Use React Router useSearchParams to translate to and from URL query params
     useEffect(() => {
@@ -81,6 +115,27 @@ function EntitiesSearch() {
             api.search();
         }
     }, [searchParams]);
+    useEffect(() => {
+        // handle sorting separately in order to only update in case of changes
+        if (sortState) {
+            let sortBy = sortState.field;
+            if (sortState.direction) {
+                const dir = sortState.direction === 1 ? "asc" : "desc";
+                sortBy = `${sortState.field}_${dir}`;
+            }
+            if (!searchParams.has("sort") || searchParams.get("sort") !== sortBy) {
+                setSearchParams(
+                    stateToRoute({
+                        ...variables,
+                        query,
+                        sortBy,
+                        scope,
+                        operator,
+                    }),
+                );
+            }
+        }
+    }, [sortState]);
     useEffect(() => {
         if (operator && searchParams && (!searchParams.has("op") || searchParams.get("op") !== operator)) {
             setSearchParams(
@@ -105,6 +160,9 @@ function EntitiesSearch() {
                             loading={loading}
                             onSearch={(value) => {
                                 setQuery(value);
+                                if (value == "") {
+                                    setSortState({ field: "entity", direction: 1 })
+                                } else { setSortState({ field: "relevance" }) }
                                 setSearchParams(
                                     stateToRoute({
                                         ...variables,
@@ -114,6 +172,7 @@ function EntitiesSearch() {
                                         page: {
                                             from: 0,
                                         },
+                                        sortBy: value == "" ? "" : "relevance"
                                     }),
                                 );
                             }}
@@ -164,6 +223,7 @@ function EntitiesSearch() {
                                 isLoading={loading}
                                 onClick={() => {
                                     // reset query and filters
+                                    setSortState({ field: "entity", direction: 1 })
                                     setQuery("");
                                     setSearchParams(
                                         stateToRoute({
@@ -194,6 +254,8 @@ function EntitiesSearch() {
                                 <EntitiesResults
                                     data={results}
                                     offset={variables?.page?.from}
+                                    onSort={onSort}
+                                    sortState={sortState}
                                 />
                                 <EuiFlexGroup justifyContent="spaceAround">
                                     <Pagination data={results} />

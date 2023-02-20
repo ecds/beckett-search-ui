@@ -46,4 +46,28 @@ export const entitiesSearchConfig = {
             size: 100, // Show at most 100 facets (there won't be that many!)
         }),
     ],
+    sortOptions: [
+        { id: "relevance", label: "Relevance", field: "_score" },
+        {
+            id: "entity_asc",
+            label: "Entity (Ascending)",
+            field: { short_display: "asc" },
+            defaultOption: true,
+        },
+        {
+            id: "entity_desc",
+            label: "Entity (Descending)",
+            field: { short_display: "desc" },
+        },
+        {
+            id: "type_asc",
+            label: "Type (Ascending)",
+            field: { e_type: "asc" },
+        },
+        {
+            id: "type_desc",
+            label: "Type (Descending)",
+            field: { e_type: "desc" },
+        },
+    ],
 };
