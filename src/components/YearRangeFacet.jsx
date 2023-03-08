@@ -45,7 +45,7 @@ function YearRangeFacet({
                     value={[yearRange.startYear || "", yearRange.endYear || ""]}
                     onChange={onRangeChange}
                     fullWidth
-                    min={minYear}
+                    min={minYear || 1900}
                     max={maxYear}
                     showInput="inputWithPopover"
                     showLabels
