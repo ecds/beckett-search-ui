@@ -89,7 +89,7 @@ export function routeToState(route) {
                 "dateMin", // also handle date filters separately
                 "dateMax",
                 "yearMin",
-                "yearMax"
+                "yearMax",
             ].includes(key),
         )
         .forEach(([identifier, val]) => {

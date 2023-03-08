@@ -13,7 +13,6 @@ import { routeToState } from "./searchRouting";
  * @param {Array<string>} kwargs.analyzers List of input analyzer names
  * @param {object} kwargs.config Initial search config
  * @param {Array<object>} kwargs.fields List of Field objects ({ name, boost })
- * @param {string} kwargs.operator Search operator
  * @returns {object} Response in the form { results: SearchkitResponse; loading: boolean }
  */
 export const useCustomSearchkitSDK = ({
@@ -120,6 +119,6 @@ export const useCustomSearchkitSDK = ({
         loading,
         dateRange,
         dateRangeLoading,
-        yearRange
+        yearRange,
     };
 };
