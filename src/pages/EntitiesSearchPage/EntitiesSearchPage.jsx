@@ -17,6 +17,7 @@ import {
     EuiPageHeader,
     EuiPageHeaderSection,
     EuiPageSideBar,
+    EuiSpacer,
     EuiTitle,
     EuiHorizontalRule,
     EuiFlexGroup,
@@ -41,6 +42,7 @@ import {
 import EntitiesResults from "../../components/EntitiesResults";
 import ListFacet from "../../components/ListFacet";
 import { SearchControls } from "../../components/SearchControls";
+import YearRangeFacet from "../../components/YearRangeFacet";
 import {
     routeToState,
     stateToRoute,
@@ -48,6 +50,7 @@ import {
     useScope,
 } from "../../common";
 import ValueFilter from "../../components/ValueFilter";
+import { useYearFilter } from "./useYearFilter";
 
 // icon component cache required for dynamically imported EUI icons in Vite;
 // see https://github.com/elastic/eui/issues/5463
@@ -71,10 +74,13 @@ function EntitiesSearch() {
     const [searchParams, setSearchParams] = useSearchParams();
     const [query, setQuery] = useState(() => (searchParams.has("query") ? searchParams.get("query") : ""));
     const [operator, setOperator] = useState(searchParams.has("op") ? searchParams.get("op") : "or");
+    const [yearRangeState, setYearRangeState] = useYearFilter();
     const [scope, setScope] = useScope();
     const api = useSearchkit();
     const variables = useSearchkitVariables();
-    const { results, loading } = useCustomSearchkitSDK({
+    const {
+      results, loading, yearRange
+    } = useCustomSearchkitSDK({
         analyzers,
         config: entitiesSearchConfig,
         fields,
@@ -185,13 +191,29 @@ function EntitiesSearch() {
                             setScope={setScope}
                         />
                         <EuiHorizontalRule margin="m" />
-                        {results?.facets.map((facet) => (
-                            <ListFacet
-                                key={facet.identifier}
-                                facet={facet}
-                                loading={loading}
-                            />
-                        ))}
+                        <YearRangeFacet
+                            minYear={yearRange?.minYear}
+                            maxYear={yearRange?.maxYear}
+                            setYearRange={setYearRangeState}
+                            yearRange={yearRangeState}
+                        />
+
+                        <EuiSpacer size="l" />
+                        <EuiHorizontalRule margin="m" />
+                        <EuiSpacer size="l" />
+
+                        {results?.facets.filter(
+                            (facet) => facet.display
+                                && facet.display !== "CustomYearFacet",
+                            )
+                            .map((facet) => (
+                              <ListFacet
+                                  key={facet.identifier}
+                                  facet={facet}
+                                  loading={loading}
+                              />
+                            ))
+                        }
                     </EuiPageSideBar>
                 </aside>
                 <EuiPageBody component="section">
@@ -224,7 +246,11 @@ function EntitiesSearch() {
                                 onClick={() => {
                                     // reset query and filters
                                     setSortState({ field: "entity", direction: 1 })
-                                    setQuery("");
+                                    api.setQuery("");
+                                    setYearRangeState({
+                                      endYear: "",
+                                      startYear: ""
+                                    });
                                     setSearchParams(
                                         stateToRoute({
                                             filters: [],

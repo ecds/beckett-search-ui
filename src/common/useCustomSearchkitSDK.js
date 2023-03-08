@@ -26,6 +26,7 @@ export const useCustomSearchkitSDK = ({
     const [dateRange, setDateRange] = useState(null);
     const [dateRangeLoading, setDateRangeLoading] = useState(true);
     const [searchParams, _] = useSearchParams();
+    const [yearRange, setYearRange] = useState(null);
 
     if (config?.name === "letters") {
         // initial request to get global date range with no filters/query
@@ -52,6 +53,30 @@ export const useCustomSearchkitSDK = ({
                 setDateRangeLoading(false);
             }
             fetchDateData();
+        }, []); // (perform once, on page render)
+    }
+
+    if (config?.name === "entities") {
+        // initial request to get global year range with no filters/query
+        useEffect(() => {
+            // eslint-disable-next-line jsdoc/require-jsdoc
+            async function fetchYearData() {
+                const request = createInstance({
+                    ...config,
+                    query: buildQuery({ analyzers, fields }),
+                });
+                const response = await request.execute({
+                    facets: true,
+                    hits: { size: 0 },
+                });
+                // get min and max year facet values
+                const minYear = response?.facets?.find((f) => f.identifier === "min_year")
+                    ?.value || null;
+                const maxYear = response?.facets?.find((f) => f.identifier === "max_year")
+                    ?.value || null;
+                setYearRange({ minYear, maxYear });
+            }
+            fetchYearData();
         }, []); // (perform once, on page render)
     }
 
@@ -95,5 +120,6 @@ export const useCustomSearchkitSDK = ({
         loading,
         dateRange,
         dateRangeLoading,
+        yearRange
     };
 };

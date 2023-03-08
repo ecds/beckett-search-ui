@@ -1,5 +1,7 @@
 import { RefinementSelectFacet } from "@ecds/searchkit-sdk";
 import { buildQuery } from "../../common";
+import { CustomYearRangeFacet } from "./CustomYearRangeFacet";
+import { MinMaxYearFacet } from "./MinMaxYearFacet";
 
 // kewyord field names to search on
 export const fields = [
@@ -33,10 +35,30 @@ export const entitiesSearchConfig = {
     },
     index: import.meta.env.VITE_SEARCHKIT_ENTITIES_INDEX,
     hits: {
-        fields: ["id", "short_display", "e_type"],
+        fields: ["id", "short_display", "e_type", "years"],
     },
     query: buildQuery({ analyzers, fields }),
     facets: [
+        new CustomYearRangeFacet({
+            field: "years",
+            identifier: "start_year",
+            label: "Start year"
+        }),
+        new CustomYearRangeFacet({
+            field: "years",
+            identifier: "end_year",
+            label: "End year"
+        }),
+        new MinMaxYearFacet({
+            field: "years",
+            identifier: "min_year",
+            minMax: "min",
+        }),
+        new MinMaxYearFacet({
+            field: "years",
+            identifier: "max_year",
+            minMax: "max",
+        }),
         new RefinementSelectFacet({
             field: "e_type",
             identifier: "e_type",

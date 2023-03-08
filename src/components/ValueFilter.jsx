@@ -21,6 +21,18 @@ function ValueFilter({ filter, loading }) {
     ) {
         valueLabel = volumeLabels[filter.value];
     }
+
+    const filtersFilter = (f) => {
+      switch(f.identifier) {
+        case "start_year":
+          return !(f.yearMin === filter.value && f.identifier === filter.identifier)
+        case "end_year":
+          return !(f.identifier === filter.identifier && f.yearMax === filter.value)
+        default:
+          return !(f.value === filter.value && f.identifier === filter.identifier)
+      }
+    }
+
     return (
         <EuiFlexItem grow={false}>
             <EuiButton
@@ -30,9 +42,8 @@ function ValueFilter({ filter, loading }) {
                 onClick={() => {
                     const filters = api
                         .getFilters()
-                        .filter((f) => !(
-                            f.value === filter.value && f.identifier === filter.identifier
-                        ));
+                        .filter((f) => filtersFilter(f)
+                        );
                     setSearchParams(
                         stateToRoute({
                             ...variables,
