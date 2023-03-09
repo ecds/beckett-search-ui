@@ -210,9 +210,7 @@ function EntitiesSearch() {
                             yearRange={yearRangeState}
                         />
 
-                        <EuiSpacer size="l" />
-                        <EuiHorizontalRule margin="m" />
-                        <EuiSpacer size="l" />
+                        <EuiSpacer size="s" />
 
                         {results?.facets
                             .filter(
