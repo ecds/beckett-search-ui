@@ -71,7 +71,7 @@ export class CustomYearRangeFacet {
             yearMin: filterSet.yearMin,
             yearMax: filterSet.yearMax,
             display: this.config.display || "CustomYearFacet",
-            value: filterSet.yearMin || filterSet.yearMax
+            value: filterSet.yearMin || filterSet.yearMax,
         };
     }
 

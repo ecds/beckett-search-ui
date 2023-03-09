@@ -28,17 +28,13 @@ export function useYearFilter() {
     useEffect(() => {
         if (
             (yearRange?.startYear || yearRange?.endYear)
-            && (
-              // only set new year range once all 4 digits of year are entered
-                (!yearRange.startYear || yearRange.startYear > 999)
-                && (!yearRange.endYear || yearRange.endYear > 999)
-              )
-            && (
-                (yearRange?.startYear !== searchParams.get("yearMin"))
-              || (yearRange?.endYear !== searchParams.get("yearMax"))
-              || !yearRange.startYear
-              || !yearRange.endYear
-            )
+            // only set new year range once all 4 digits of year are entered
+            && (!yearRange.startYear || yearRange.startYear > 999)
+            && (!yearRange.endYear || yearRange.endYear > 999)
+            && (yearRange?.startYear !== searchParams.get("yearMin")
+                || yearRange?.endYear !== searchParams.get("yearMax")
+                || !yearRange.startYear
+                || !yearRange.endYear)
             && datesValid(yearRange)
         ) {
             setSearchParams((prevParams) => {
@@ -60,7 +56,7 @@ export function useYearFilter() {
                     );
                 }
                 // add each back if selected
-                if (yearRange.startYear || yearRange.startYear == 0) {
+                if (yearRange.startYear || yearRange.startYear === 0) {
                     state.filters.push({
                         identifier: "start_year",
                         yearMin: yearRange.startYear,

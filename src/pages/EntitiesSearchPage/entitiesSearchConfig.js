@@ -42,12 +42,12 @@ export const entitiesSearchConfig = {
         new CustomYearRangeFacet({
             field: "years",
             identifier: "start_year",
-            label: "Start year"
+            label: "Start year",
         }),
         new CustomYearRangeFacet({
             field: "years",
             identifier: "end_year",
-            label: "End year"
+            label: "End year",
         }),
         new MinMaxYearFacet({
             field: "years",

@@ -45,7 +45,7 @@ export class MinMaxYearFacet {
         return {
             [this.getIdentifier()]: {
                 [this.getMinMax()]: {
-                    field: this.config.field
+                    field: this.config.field,
                 },
             },
         };
@@ -63,7 +63,7 @@ export class MinMaxYearFacet {
             label: this.getLabel(),
             type: "CustomFacet",
             display: this.config.display,
-            value: response.value
+            value: response.value,
         };
     }
 }
