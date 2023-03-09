@@ -28,6 +28,14 @@ export function stateToRoute(searchState) {
             routeState.dateMax = filter.dateMax
                 ? moment(filter.dateMax).format("YYYY-MM-DD")
                 : undefined;
+        } else if (filter.identifier === "start_year") {
+            routeState.yearMin = filter.yearMin
+                ? filter.yearMin
+                : undefined;
+        } else if (filter.identifier === "end_year") {
+            routeState.yearMax = filter.yearMax
+                ? filter.yearMax
+                : undefined;
         } else if (filter.value) {
             if (Object.hasOwn(routeState, filter.identifier)) {
                 routeState[filter.identifier].push(filter.value);
@@ -80,6 +88,8 @@ export function routeToState(route) {
                 "op",
                 "dateMin", // also handle date filters separately
                 "dateMax",
+                "yearMin",
+                "yearMax",
             ].includes(key),
         )
         .forEach(([identifier, val]) => {
@@ -108,6 +118,18 @@ export function routeToState(route) {
         searchState.filters.push({
             identifier: "end_date",
             dateMax: moment(route.get("dateMax")).toISOString(),
+        });
+    }
+    if (route.has("yearMin")) {
+        searchState.filters.push({
+            identifier: "start_year",
+            yearMin: route.get("yearMin"),
+        });
+    }
+    if (route.has("yearMax")) {
+        searchState.filters.push({
+            identifier: "end_year",
+            yearMax: route.get("yearMax"),
         });
     }
     return searchState;

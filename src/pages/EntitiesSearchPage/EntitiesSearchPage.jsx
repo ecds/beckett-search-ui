@@ -17,6 +17,7 @@ import {
     EuiPageHeader,
     EuiPageHeaderSection,
     EuiPageSideBar,
+    EuiSpacer,
     EuiTitle,
     EuiHorizontalRule,
     EuiFlexGroup,
@@ -41,6 +42,7 @@ import {
 import EntitiesResults from "../../components/EntitiesResults";
 import ListFacet from "../../components/ListFacet";
 import { SearchControls } from "../../components/SearchControls";
+import YearRangeFacet from "../../components/YearRangeFacet";
 import {
     routeToState,
     stateToRoute,
@@ -48,6 +50,7 @@ import {
     useScope,
 } from "../../common";
 import ValueFilter from "../../components/ValueFilter";
+import { useYearFilter } from "./useYearFilter";
 
 // icon component cache required for dynamically imported EUI icons in Vite;
 // see https://github.com/elastic/eui/issues/5463
@@ -70,11 +73,14 @@ appendIconComponentCache({
 function EntitiesSearch() {
     const [searchParams, setSearchParams] = useSearchParams();
     const [query, setQuery] = useState(() => (searchParams.has("query") ? searchParams.get("query") : ""));
-    const [operator, setOperator] = useState(searchParams.has("op") ? searchParams.get("op") : "or");
+    const [operator, setOperator] = useState(
+        searchParams.has("op") ? searchParams.get("op") : "or",
+    );
+    const [yearRangeState, setYearRangeState] = useYearFilter();
     const [scope, setScope] = useScope();
     const api = useSearchkit();
     const variables = useSearchkitVariables();
-    const { results, loading } = useCustomSearchkitSDK({
+    const { results, loading, yearRange } = useCustomSearchkitSDK({
         analyzers,
         config: entitiesSearchConfig,
         fields,
@@ -123,7 +129,10 @@ function EntitiesSearch() {
                 const dir = sortState.direction === 1 ? "asc" : "desc";
                 sortBy = `${sortState.field}_${dir}`;
             }
-            if (!searchParams.has("sort") || searchParams.get("sort") !== sortBy) {
+            if (
+                !searchParams.has("sort")
+                || searchParams.get("sort") !== sortBy
+            ) {
                 setSearchParams(
                     stateToRoute({
                         ...variables,
@@ -137,7 +146,11 @@ function EntitiesSearch() {
         }
     }, [sortState]);
     useEffect(() => {
-        if (operator && searchParams && (!searchParams.has("op") || searchParams.get("op") !== operator)) {
+        if (
+            operator
+            && searchParams
+            && (!searchParams.has("op") || searchParams.get("op") !== operator)
+        ) {
             setSearchParams(
                 stateToRoute({
                     ...variables,
@@ -160,9 +173,14 @@ function EntitiesSearch() {
                             loading={loading}
                             onSearch={(value) => {
                                 setQuery(value);
-                                if (value == "") {
-                                    setSortState({ field: "entity", direction: 1 })
-                                } else { setSortState({ field: "relevance" }) }
+                                if (value === "") {
+                                    setSortState({
+                                        field: "entity",
+                                        direction: 1,
+                                    });
+                                } else {
+                                    setSortState({ field: "relevance" });
+                                }
                                 setSearchParams(
                                     stateToRoute({
                                         ...variables,
@@ -172,7 +190,7 @@ function EntitiesSearch() {
                                         page: {
                                             from: 0,
                                         },
-                                        sortBy: value == "" ? "" : "relevance"
+                                        sortBy: value === "" ? "" : "relevance",
                                     }),
                                 );
                             }}
@@ -185,13 +203,27 @@ function EntitiesSearch() {
                             setScope={setScope}
                         />
                         <EuiHorizontalRule margin="m" />
-                        {results?.facets.map((facet) => (
-                            <ListFacet
-                                key={facet.identifier}
-                                facet={facet}
-                                loading={loading}
-                            />
-                        ))}
+                        <YearRangeFacet
+                            minYear={yearRange?.minYear}
+                            maxYear={yearRange?.maxYear}
+                            setYearRange={setYearRangeState}
+                            yearRange={yearRangeState}
+                        />
+
+                        <EuiSpacer size="s" />
+
+                        {results?.facets
+                            .filter(
+                                (facet) => facet.display
+                                    && facet.display !== "CustomYearFacet",
+                            )
+                            .map((facet) => (
+                                <ListFacet
+                                    key={facet.identifier}
+                                    facet={facet}
+                                    loading={loading}
+                                />
+                            ))}
                     </EuiPageSideBar>
                 </aside>
                 <EuiPageBody component="section">
@@ -223,8 +255,15 @@ function EntitiesSearch() {
                                 isLoading={loading}
                                 onClick={() => {
                                     // reset query and filters
-                                    setSortState({ field: "entity", direction: 1 })
-                                    setQuery("");
+                                    setSortState({
+                                        field: "entity",
+                                        direction: 1,
+                                    });
+                                    api.setQuery("");
+                                    setYearRangeState({
+                                        endYear: "",
+                                        startYear: "",
+                                    });
                                     setSearchParams(
                                         stateToRoute({
                                             filters: [],
