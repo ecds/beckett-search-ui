@@ -6,7 +6,8 @@
     "scripts": {
         "dev": "vite",
         "build": "vite build",
-        "preview": "vite preview"
+        "preview": "vite preview",
+        "prepare": "husky install"
     },
     "dependencies": {
         "@ecds/searchkit-elastic-ui": "^3.0.1-alpha.5",
@@ -25,15 +26,23 @@
         "@vitejs/plugin-react": "^2.1.0",
         "eslint": "^8.25.0",
         "eslint-config-airbnb": "^19.0.4",
+        "eslint-config-prettier": "^8.7.0",
         "eslint-plugin-import": "^2.26.0",
         "eslint-plugin-jsdoc": "^39.3.13",
         "eslint-plugin-jsx-a11y": "^6.6.1",
         "eslint-plugin-react": "^7.31.10",
         "eslint-plugin-react-hooks": "^4.6.0",
+        "husky": "^8.0.3",
+        "lint-staged": "^13.2.0",
+        "prettier": "2.8.4",
         "vite": "^3.1.8"
     },
     "volta": {
         "node": "16.18.0",
         "npm": "8.19.2"
+    },
+    "lint-staged": {
+        "**/*.{js,jsx}": "npx eslint --fix",
+        "**/*": "prettier --write --ignore-unknown"
     }
 }
