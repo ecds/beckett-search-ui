@@ -72,7 +72,9 @@ appendIconComponentCache({
  */
 function EntitiesSearch() {
     const [searchParams, setSearchParams] = useSearchParams();
-    const [query, setQuery] = useState(() => (searchParams.has("query") ? searchParams.get("query") : ""));
+    const [query, setQuery] = useState(() =>
+        searchParams.has("query") ? searchParams.get("query") : "",
+    );
     const [operator, setOperator] = useState(
         searchParams.has("op") ? searchParams.get("op") : "or",
     );
@@ -130,8 +132,8 @@ function EntitiesSearch() {
                 sortBy = `${sortState.field}_${dir}`;
             }
             if (
-                !searchParams.has("sort")
-                || searchParams.get("sort") !== sortBy
+                !searchParams.has("sort") ||
+                searchParams.get("sort") !== sortBy
             ) {
                 setSearchParams(
                     stateToRoute({
@@ -147,9 +149,9 @@ function EntitiesSearch() {
     }, [sortState]);
     useEffect(() => {
         if (
-            operator
-            && searchParams
-            && (!searchParams.has("op") || searchParams.get("op") !== operator)
+            operator &&
+            searchParams &&
+            (!searchParams.has("op") || searchParams.get("op") !== operator)
         ) {
             setSearchParams(
                 stateToRoute({
@@ -214,8 +216,9 @@ function EntitiesSearch() {
 
                         {results?.facets
                             .filter(
-                                (facet) => facet.display
-                                    && facet.display !== "CustomYearFacet",
+                                (facet) =>
+                                    facet.display &&
+                                    facet.display !== "CustomYearFacet",
                             )
                             .map((facet) => (
                                 <ListFacet
@@ -280,11 +283,7 @@ function EntitiesSearch() {
                         <EuiPageContentHeader>
                             <EuiPageContentHeaderSection>
                                 <EuiTitle size="s">
-                                    <h2>
-                                        {results?.summary.total}
-                                        {" "}
-                                        Results
-                                    </h2>
+                                    <h2>{results?.summary.total} Results</h2>
                                 </EuiTitle>
                             </EuiPageContentHeaderSection>
                         </EuiPageContentHeader>

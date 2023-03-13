@@ -28,16 +28,16 @@ export function useDateFilter() {
     // update filters when range is changed (to a valid range)
     useEffect(() => {
         if (
-            (dateRange?.startDate || dateRange?.endDate)
-            && ((dateRange.startDate
-                && dateRange.startDate.format("YYYY-MM-DD")
-                    !== searchParams.get("dateMin"))
-                || (dateRange.endDate
-                    && dateRange.endDate.format("YYYY-MM-DD")
-                        !== searchParams.get("dateMax"))
-                || !dateRange.startDate
-                || !dateRange.endDate)
-            && datesValid(dateRange)
+            (dateRange?.startDate || dateRange?.endDate) &&
+            ((dateRange.startDate &&
+                dateRange.startDate.format("YYYY-MM-DD") !==
+                    searchParams.get("dateMin")) ||
+                (dateRange.endDate &&
+                    dateRange.endDate.format("YYYY-MM-DD") !==
+                        searchParams.get("dateMax")) ||
+                !dateRange.startDate ||
+                !dateRange.endDate) &&
+            datesValid(dateRange)
         ) {
             setSearchParams((prevParams) => {
                 // ensure other params don't get lost
@@ -73,8 +73,8 @@ export function useDateFilter() {
                 // reset page to 0 if date filter changed, to avoid empty/nonexistent page
                 let page = {};
                 if (
-                    dateRange?.startDate?.format("YYYY-MM-DD") !== prevStart
-                    || dateRange?.endDate?.format("YYYY-MM-DD") !== prevEnd
+                    dateRange?.startDate?.format("YYYY-MM-DD") !== prevStart ||
+                    dateRange?.endDate?.format("YYYY-MM-DD") !== prevEnd
                 ) {
                     page = {
                         page: {

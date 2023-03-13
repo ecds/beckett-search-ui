@@ -74,8 +74,12 @@ appendIconComponentCache({
  */
 function LettersSearch() {
     const [searchParams, setSearchParams] = useSearchParams();
-    const [query, setQuery] = useState(() => (searchParams.has("query") ? searchParams.get("query") : ""));
-    const [operator, setOperator] = useState(searchParams.has("op") ? searchParams.get("op") : "or");
+    const [query, setQuery] = useState(() =>
+        searchParams.has("query") ? searchParams.get("query") : "",
+    );
+    const [operator, setOperator] = useState(
+        searchParams.has("op") ? searchParams.get("op") : "or",
+    );
     const [dateRangeState, setDateRangeState] = useDateFilter();
     const [scope, setScope] = useScope();
     const [sortState, setSortState] = useState(() => {
@@ -108,14 +112,13 @@ function LettersSearch() {
     };
     const api = useSearchkit();
     const variables = useSearchkitVariables();
-    const {
-        results, loading, dateRange, dateRangeLoading,
-    } = useCustomSearchkitSDK({
-        analyzers,
-        config: lettersSearchConfig,
-        fields,
-        operator,
-    });
+    const { results, loading, dateRange, dateRangeLoading } =
+        useCustomSearchkitSDK({
+            analyzers,
+            config: lettersSearchConfig,
+            fields,
+            operator,
+        });
 
     // Use React Router useSearchParams to translate to and from URL query params
     useEffect(() => {
@@ -132,7 +135,10 @@ function LettersSearch() {
                 const dir = sortState.direction === 1 ? "asc" : "desc";
                 sortBy = `${sortState.field}_${dir}`;
             }
-            if (!searchParams.has("sort") || searchParams.get("sort") !== sortBy) {
+            if (
+                !searchParams.has("sort") ||
+                searchParams.get("sort") !== sortBy
+            ) {
                 setSearchParams(
                     stateToRoute({
                         ...variables,
@@ -146,7 +152,11 @@ function LettersSearch() {
         }
     }, [sortState]);
     useEffect(() => {
-        if (operator && searchParams && (!searchParams.has("op") || searchParams.get("op") !== operator)) {
+        if (
+            operator &&
+            searchParams &&
+            (!searchParams.has("op") || searchParams.get("op") !== operator)
+        ) {
             setSearchParams(
                 stateToRoute({
                     ...variables,
@@ -200,8 +210,9 @@ function LettersSearch() {
                         <EuiSpacer size="l" />
                         {results?.facets
                             .filter(
-                                (facet) => facet.display
-                                    && facet.display !== "CustomDateFacet",
+                                (facet) =>
+                                    facet.display &&
+                                    facet.display !== "CustomDateFacet",
                             )
                             .map((facet) => (
                                 <div key={facet.identifier}>
@@ -225,7 +236,8 @@ function LettersSearch() {
                                 >
                                     {results?.summary?.appliedFilters
                                         .filter(
-                                            (f) => !f.identifier.endsWith("_date"),
+                                            (f) =>
+                                                !f.identifier.endsWith("_date"),
                                         )
                                         .map((filter) => (
                                             <ValueFilter
@@ -267,11 +279,7 @@ function LettersSearch() {
                         <EuiPageContentHeader>
                             <EuiPageContentHeaderSection>
                                 <EuiTitle size="s">
-                                    <h2>
-                                        {results?.summary.total}
-                                        {" "}
-                                        Results
-                                    </h2>
+                                    <h2>{results?.summary.total} Results</h2>
                                 </EuiTitle>
                             </EuiPageContentHeaderSection>
                         </EuiPageContentHeader>

@@ -1,9 +1,5 @@
 import React from "react";
-import {
-    EuiDualRange,
-    EuiFormRow,
-    EuiTitle,
-} from "@elastic/eui";
+import { EuiDualRange, EuiFormRow, EuiTitle } from "@elastic/eui";
 
 /**
  * YearRange facet display component, adapted from @searchkit/elastic-ui but with the
@@ -16,9 +12,7 @@ import {
  * @param {object} props.yearRange - Current year range state
  * @returns {React.Component} Year range React component
  */
-function YearRangeFacet({
-    minYear, maxYear, setYearRange, yearRange,
-}) {
+function YearRangeFacet({ minYear, maxYear, setYearRange, yearRange }) {
     /**
      * Handle change in start/end year of year filtering range
      *

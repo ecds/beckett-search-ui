@@ -29,13 +29,9 @@ export function stateToRoute(searchState) {
                 ? moment(filter.dateMax).format("YYYY-MM-DD")
                 : undefined;
         } else if (filter.identifier === "start_year") {
-            routeState.yearMin = filter.yearMin
-                ? filter.yearMin
-                : undefined;
+            routeState.yearMin = filter.yearMin ? filter.yearMin : undefined;
         } else if (filter.identifier === "end_year") {
-            routeState.yearMax = filter.yearMax
-                ? filter.yearMax
-                : undefined;
+            routeState.yearMax = filter.yearMax ? filter.yearMax : undefined;
         } else if (filter.value) {
             if (Object.hasOwn(routeState, filter.identifier)) {
                 routeState[filter.identifier].push(filter.value);
@@ -48,8 +44,8 @@ export function stateToRoute(searchState) {
     return Object.keys(routeState).reduce((sum, key) => {
         const s = sum;
         if (
-            (Array.isArray(routeState[key]) && routeState[key].length > 0)
-            || (!Array.isArray(routeState[key]) && !!routeState[key])
+            (Array.isArray(routeState[key]) && routeState[key].length > 0) ||
+            (!Array.isArray(routeState[key]) && !!routeState[key])
         ) {
             s[key] = routeState[key];
         }
@@ -79,18 +75,19 @@ export function routeToState(route) {
     // get filters state back into format expected by Searchkit
     Array.from(route.entries())
         .filter(
-            ([key, _val]) => ![
-                "query", // only process filters, not query/sort/size/from/scope/operator
-                "sort",
-                "size",
-                "from",
-                "scope",
-                "op",
-                "dateMin", // also handle date filters separately
-                "dateMax",
-                "yearMin",
-                "yearMax",
-            ].includes(key),
+            ([key, _val]) =>
+                ![
+                    "query", // only process filters, not query/sort/size/from/scope/operator
+                    "sort",
+                    "size",
+                    "from",
+                    "scope",
+                    "op",
+                    "dateMin", // also handle date filters separately
+                    "dateMax",
+                    "yearMin",
+                    "yearMax",
+                ].includes(key),
         )
         .forEach(([identifier, val]) => {
             // map each value of each filter to objects
@@ -143,9 +140,11 @@ export function routeToState(route) {
  * @returns {boolean} True if the search state is the default, false if not
  */
 export function isDefault(state) {
-    return !state.query
-    && (!state.filters || state.filters.length === 0)
-    && (!state.sortBy || state.sortBy === "date_asc")
-    && (!state.operator || state.operator === "or")
-    && state.page?.from === 0;
+    return (
+        !state.query &&
+        (!state.filters || state.filters.length === 0) &&
+        (!state.sortBy || state.sortBy === "date_asc") &&
+        (!state.operator || state.operator === "or") &&
+        state.page?.from === 0
+    );
 }

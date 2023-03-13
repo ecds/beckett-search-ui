@@ -29,7 +29,11 @@ export function HomePage() {
                             </EuiTitle>
                         </EuiPageHeaderSection>
                     </EuiPageHeader>
-                    <EuiPageContent paddingSize="none" hasShadow={false} className="home-container">
+                    <EuiPageContent
+                        paddingSize="none"
+                        hasShadow={false}
+                        className="home-container"
+                    >
                         <EuiPageContentBody>
                             <img
                                 alt="Samuel Beckett Letters banner"

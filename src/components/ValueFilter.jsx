@@ -15,9 +15,9 @@ function ValueFilter({ filter, loading }) {
     let valueLabel = filter.value;
     // special handling for volume labels
     if (
-        filter.value
-        && filter.identifier === "volume"
-        && Object.keys(volumeLabels).includes(filter.value)
+        filter.value &&
+        filter.identifier === "volume" &&
+        Object.keys(volumeLabels).includes(filter.value)
     ) {
         valueLabel = volumeLabels[filter.value];
     }
@@ -31,11 +31,20 @@ function ValueFilter({ filter, loading }) {
     const filtersFilter = (f) => {
         switch (f.identifier) {
             case "start_year":
-                return !(f.yearMin === filter.value && f.identifier === filter.identifier);
+                return !(
+                    f.yearMin === filter.value &&
+                    f.identifier === filter.identifier
+                );
             case "end_year":
-                return !(f.identifier === filter.identifier && f.yearMax === filter.value);
+                return !(
+                    f.identifier === filter.identifier &&
+                    f.yearMax === filter.value
+                );
             default:
-                return !(f.value === filter.value && f.identifier === filter.identifier);
+                return !(
+                    f.value === filter.value &&
+                    f.identifier === filter.identifier
+                );
         }
     };
 
@@ -60,9 +69,7 @@ function ValueFilter({ filter, loading }) {
                     );
                 }}
             >
-                <span>
-                    {`${filter.label}: ${valueLabel}`}
-                </span>
+                <span>{`${filter.label}: ${valueLabel}`}</span>
             </EuiButton>
         </EuiFlexItem>
     );

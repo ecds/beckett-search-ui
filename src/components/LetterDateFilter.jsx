@@ -1,5 +1,8 @@
 import {
-    EuiDatePicker, EuiDatePickerRange, EuiSpacer, EuiText,
+    EuiDatePicker,
+    EuiDatePickerRange,
+    EuiSpacer,
+    EuiText,
 } from "@elastic/eui";
 import moment from "moment";
 import React from "react";
@@ -29,7 +32,7 @@ export function LetterDateFilter({
     return (
         <div>
             <EuiDatePickerRange
-                startDateControl={(
+                startDateControl={
                     <EuiDatePicker
                         aria-label="Start date"
                         endDate={dateRange?.endDate}
@@ -45,8 +48,8 @@ export function LetterDateFilter({
                         selected={dateRange?.startDate}
                         startDate={dateRange?.startDate}
                     />
-                )}
-                endDateControl={(
+                }
+                endDateControl={
                     <EuiDatePicker
                         aria-label="End date"
                         endDate={dateRange?.endDate}
@@ -62,12 +65,14 @@ export function LetterDateFilter({
                         selected={dateRange?.endDate}
                         startDate={dateRange?.startDate}
                     />
-                )}
+                }
             />
             {!isValid && (
                 <>
                     <EuiSpacer size="s" />
-                    <EuiText color="danger" size="s">Error: Start date cannot be later than end date.</EuiText>
+                    <EuiText color="danger" size="s">
+                        Error: Start date cannot be later than end date.
+                    </EuiText>
                     <EuiSpacer size="s" />
                 </>
             )}
