@@ -44,6 +44,7 @@ import ListFacet from "../../components/ListFacet";
 import ValueFilter from "../../components/ValueFilter";
 import DateRangeFacet from "../../components/DateRangeFacet";
 import "../../common/search.css";
+import SaveSearchButton from "../../components/SaveSearchButton";
 import { SearchControls } from "../../components/SearchControls";
 import {
     routeToState,
@@ -261,6 +262,7 @@ function LettersSearch() {
                             >
                                 Reset Search
                             </EuiButton>
+                            <SaveSearchButton />
                         </EuiPageHeaderSection>
                     </EuiPageHeader>
                     <EuiPageContent>

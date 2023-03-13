@@ -19,7 +19,6 @@ import {
     EuiPageSideBar,
     EuiSpacer,
     EuiTitle,
-    EuiToolTip,
     EuiHorizontalRule,
     EuiFlexGroup,
     EuiButton,
@@ -42,6 +41,7 @@ import {
 } from "./entitiesSearchConfig";
 import EntitiesResults from "../../components/EntitiesResults";
 import ListFacet from "../../components/ListFacet";
+import SaveSearchButton from "../../components/SaveSearchButton";
 import { SearchControls } from "../../components/SearchControls";
 import YearRangeFacet from "../../components/YearRangeFacet";
 import {
@@ -77,7 +77,6 @@ function EntitiesSearch() {
     const [operator, setOperator] = useState(
         searchParams.has("op") ? searchParams.get("op") : "or",
     );
-    const [disableSaveSearch, setDisableSaveSearch] = useState(false);
     const [yearRangeState, setYearRangeState] = useYearFilter();
     const [scope, setScope] = useScope();
     const api = useSearchkit();
@@ -165,24 +164,6 @@ function EntitiesSearch() {
             );
         }
     }, [operator]);
-
-    const saveSearch = () => {
-      setDisableSaveSearch(true);
-      navigator.clipboard.writeText(location.href);
-      setTimeout(() => setDisableSaveSearch(false), 1500);
-    };
-
-    const saveSearchButton = () => (
-      <EuiButton
-          color="text"
-          className="save-search"
-          disabled={disableSaveSearch}
-          isLoading={loading}
-          onClick={() => saveSearch()}
-      >
-          {disableSaveSearch ? "Copied!" : "Save Search"}
-      </EuiButton>
-    );
 
     return (
         <main className="search-page">
@@ -294,17 +275,7 @@ function EntitiesSearch() {
                             >
                                 Reset Search
                             </EuiButton>
-
-                            { disableSaveSearch
-                              ? saveSearchButton()
-                              : <EuiToolTip
-                                  className="tooltip"
-                                  content="Copy search parameter URL to clipboard"
-                                  position="top"
-                                >
-                                  {saveSearchButton()}
-                                </EuiToolTip>
-                            }
+                            <SaveSearchButton />
 
                         </EuiPageHeaderSection>
                     </EuiPageHeader>
