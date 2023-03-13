@@ -41,6 +41,7 @@ import {
 } from "./entitiesSearchConfig";
 import EntitiesResults from "../../components/EntitiesResults";
 import ListFacet from "../../components/ListFacet";
+import SaveSearchButton from "../../components/SaveSearchButton";
 import { SearchControls } from "../../components/SearchControls";
 import YearRangeFacet from "../../components/YearRangeFacet";
 import {
@@ -274,6 +275,8 @@ function EntitiesSearch() {
                             >
                                 Reset Search
                             </EuiButton>
+                            <SaveSearchButton />
+
                         </EuiPageHeaderSection>
                     </EuiPageHeader>
                     <EuiPageContent>

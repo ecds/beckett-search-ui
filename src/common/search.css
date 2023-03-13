@@ -117,3 +117,6 @@ a.to-record:hover::before,
 a.to-record:focus::before {
     background-color: var(--primary-transparent);
 }
+.save-search {
+  margin-left: 5px;
+}
