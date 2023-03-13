@@ -64,7 +64,9 @@ aside svg.operator-icon {
 aside .search-button-container {
     text-align: right;
 }
-aside .search-button-container button.euiButton--primary:not([class*='isDisabled']) {
+aside
+    .search-button-container
+    button.euiButton--primary:not([class*="isDisabled"]) {
     background-color: var(--primary-dark);
 }
 

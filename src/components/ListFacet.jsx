@@ -29,23 +29,24 @@ function ListFacet({ displayTitle, facet, loading }) {
         let label = entry.label.toString().trim().replaceAll("_", " ");
         // special handling for volume labels
         if (
-            label
-            && facet.identifier === "volume"
-            && Object.keys(volumeLabels).includes(label)
+            label &&
+            facet.identifier === "volume" &&
+            Object.keys(volumeLabels).includes(label)
         ) {
             label = volumeLabels[label];
         }
         // add tooltip for entity type facets
-        const ToolTipComponent = facet.identifier === "e_type"
-            ? ({ children }) => (
-                <EuiToolTip
-                    className="tooltip"
-                    content={entityTypes[entry.label] || entry.label}
-                >
-                    {children}
-                </EuiToolTip>
-            ) // eslint-disable-next-line react/jsx-no-useless-fragment
-            : ({ children }) => <>{children}</>;
+        const ToolTipComponent =
+            facet.identifier === "e_type"
+                ? ({ children }) => (
+                      <EuiToolTip
+                          className="tooltip"
+                          content={entityTypes[entry.label] || entry.label}
+                      >
+                          {children}
+                      </EuiToolTip>
+                  ) // eslint-disable-next-line react/jsx-no-useless-fragment
+                : ({ children }) => <>{children}</>;
         const filter = {
             identifier: facet.identifier,
             value: entry.label,
@@ -64,20 +65,26 @@ function ListFacet({ displayTitle, facet, loading }) {
                         let { filters } = variables;
                         if (isSelected) {
                             // remove on cilck
-                            filters = filters.filter((f) => !(
-                                f.identifier === facet.identifier && f.value === entry.label
-                            ));
+                            filters = filters.filter(
+                                (f) =>
+                                    !(
+                                        f.identifier === facet.identifier &&
+                                        f.value === entry.label
+                                    ),
+                            );
                         } else {
                             // add on click
                             filters.push(filter);
                         }
-                        setSearchParams(stateToRoute({
-                            ...variables,
-                            filters,
-                            page: {
-                                from: 0,
-                            },
-                        }));
+                        setSearchParams(
+                            stateToRoute({
+                                ...variables,
+                                filters,
+                                page: {
+                                    from: 0,
+                                },
+                            }),
+                        );
                     }}
                 >
                     <ToolTipComponent>

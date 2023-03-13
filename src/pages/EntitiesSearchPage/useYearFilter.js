@@ -27,15 +27,15 @@ export function useYearFilter() {
     // update filters when range is changed (to a valid range)
     useEffect(() => {
         if (
-            (yearRange?.startYear || yearRange?.endYear)
+            (yearRange?.startYear || yearRange?.endYear) &&
             // only set new year range once all 4 digits of year are entered
-            && (!yearRange.startYear || yearRange.startYear > 999)
-            && (!yearRange.endYear || yearRange.endYear > 999)
-            && (yearRange?.startYear !== searchParams.get("yearMin")
-                || yearRange?.endYear !== searchParams.get("yearMax")
-                || !yearRange.startYear
-                || !yearRange.endYear)
-            && datesValid(yearRange)
+            (!yearRange.startYear || yearRange.startYear > 999) &&
+            (!yearRange.endYear || yearRange.endYear > 999) &&
+            (yearRange?.startYear !== searchParams.get("yearMin") ||
+                yearRange?.endYear !== searchParams.get("yearMax") ||
+                !yearRange.startYear ||
+                !yearRange.endYear) &&
+            datesValid(yearRange)
         ) {
             setSearchParams((prevParams) => {
                 // ensure other params don't get lost
@@ -71,8 +71,8 @@ export function useYearFilter() {
                 // reset page to 0 if year filter changed, to avoid empty/nonexistent page
                 let page = {};
                 if (
-                    yearRange?.startYear !== prevStart
-                    || yearRange?.endYear !== prevEnd
+                    yearRange?.startYear !== prevStart ||
+                    yearRange?.endYear !== prevEnd
                 ) {
                     page = {
                         page: {

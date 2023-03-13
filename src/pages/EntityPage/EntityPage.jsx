@@ -79,8 +79,7 @@ export function EntityPage() {
                                     <h2 className="capital-label result-meta-heading">
                                         {entity?.e_type
                                             .toString()
-                                            .replaceAll("_", " ")}
-                                        {" "}
+                                            .replaceAll("_", " ")}{" "}
                                         Information
                                     </h2>
                                 </EuiTitle>
@@ -92,8 +91,8 @@ export function EntityPage() {
                                     className="entity-details"
                                 />
                             </section>
-                            {entity.letters
-                                && Object.entries(entity.letters).map(
+                            {entity.letters &&
+                                Object.entries(entity.letters).map(
                                     ([key, value]) => (
                                         <React.Fragment key={key}>
                                             <EuiHorizontalRule />

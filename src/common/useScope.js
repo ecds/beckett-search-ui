@@ -30,7 +30,10 @@ export const useScope = () => {
             setSearchParams((prevParams) => {
                 let page = {};
                 // reset page to 0 if scope changes; could filter out results
-                if (!prevParams.has("scope") || scope !== prevParams.get("scope")) {
+                if (
+                    !prevParams.has("scope") ||
+                    scope !== prevParams.get("scope")
+                ) {
                     page = {
                         page: {
                             from: 0,

@@ -17,7 +17,11 @@ import { datesValid } from "../common";
  * @returns {React.Component} Date range React component
  */
 function DateRangeFacet({
-    minDate, maxDate, dateRange, setDateRange, loading,
+    minDate,
+    maxDate,
+    dateRange,
+    setDateRange,
+    loading,
 }) {
     return (
         <>
