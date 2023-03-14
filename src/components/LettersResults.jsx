@@ -13,9 +13,7 @@ import { SortableHeader } from "./SortableHeader";
  * @param {object} props.sortState Current sort state
  * @returns Populated results list React component
  */
-function LettersResults({
-    data, offset, onSort, sortState,
-}) {
+function LettersResults({ data, offset, onSort, sortState }) {
     const sortableColumns = ["recipient", "repository", "date"];
     return (
         <table id="letters-results" className="search-results">

@@ -15,11 +15,7 @@ import { routeToState } from "./searchRouting";
  * @param {Array<object>} kwargs.fields List of Field objects ({ name, boost })
  * @returns {object} Response in the form { results: SearchkitResponse; loading: boolean }
  */
-export const useCustomSearchkitSDK = ({
-    config,
-    analyzers,
-    fields,
-}) => {
+export const useCustomSearchkitSDK = ({ config, analyzers, fields }) => {
     const [results, setResponse] = useState(null);
     const [loading, setLoading] = useState(true);
     const [dateRange, setDateRange] = useState(null);
@@ -42,11 +38,13 @@ export const useCustomSearchkitSDK = ({
                     hits: { size: 0 },
                 });
                 // get min and max date facet values
-                const min = response?.facets?.find((f) => f.identifier === "min_date")
-                    ?.value || null;
+                const min =
+                    response?.facets?.find((f) => f.identifier === "min_date")
+                        ?.value || null;
                 const minDate = min ? moment(min) : null;
-                const max = response?.facets?.find((f) => f.identifier === "max_date")
-                    ?.value || null;
+                const max =
+                    response?.facets?.find((f) => f.identifier === "max_date")
+                        ?.value || null;
                 const maxDate = max ? moment(max) : null;
                 setDateRange({ minDate, maxDate });
                 setDateRangeLoading(false);
@@ -69,10 +67,12 @@ export const useCustomSearchkitSDK = ({
                     hits: { size: 0 },
                 });
                 // get min and max year facet values
-                const minYear = response?.facets?.find((f) => f.identifier === "min_year")
-                    ?.value || null;
-                const maxYear = response?.facets?.find((f) => f.identifier === "max_year")
-                    ?.value || null;
+                const minYear =
+                    response?.facets?.find((f) => f.identifier === "min_year")
+                        ?.value || null;
+                const maxYear =
+                    response?.facets?.find((f) => f.identifier === "max_year")
+                        ?.value || null;
                 setYearRange({ minYear, maxYear });
             }
             fetchYearData();

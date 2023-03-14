@@ -19,9 +19,7 @@ export async function getFromApi(path) {
  * @param {string} args.endDate End date filter string, format "YYYY-MM-DD"
  * @returns {Promise<object>} Related letters data response from API
  */
-export async function getRelatedLetters({
-    uri, page, startDate, endDate,
-}) {
+export async function getRelatedLetters({ uri, page, startDate, endDate }) {
     const pageQuery = page ? `&page=${page}` : "";
     const startDateQuery = startDate ? `&start_date=${startDate}` : "";
     const endDateQuery = endDate ? `&end_date=${endDate}` : "";

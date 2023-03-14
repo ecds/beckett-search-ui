@@ -13,20 +13,21 @@ export function LetterMetadata({ metadata, excluded }) {
         <section>
             <dl className="letter-metadata">
                 {Object.entries(metadata).map(
-                    ([key, value]) => !excluded?.includes(key)
-                        && value && (
-                        <React.Fragment key={key}>
-                            <dt className="capital-label">
-                                {key.toString().trim().replaceAll("_", " ")}
-                            </dt>
-                            <dd
-                                // eslint-disable-next-line react/no-danger
-                                dangerouslySetInnerHTML={{
-                                    __html: value,
-                                }}
-                            />
-                        </React.Fragment>
-                    ),
+                    ([key, value]) =>
+                        !excluded?.includes(key) &&
+                        value && (
+                            <React.Fragment key={key}>
+                                <dt className="capital-label">
+                                    {key.toString().trim().replaceAll("_", " ")}
+                                </dt>
+                                <dd
+                                    // eslint-disable-next-line react/no-danger
+                                    dangerouslySetInnerHTML={{
+                                        __html: value,
+                                    }}
+                                />
+                            </React.Fragment>
+                        ),
                 )}
             </dl>
         </section>

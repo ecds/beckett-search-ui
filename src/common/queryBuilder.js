@@ -11,9 +11,7 @@ import { CustomQuery } from "@ecds/searchkit-sdk";
  * @param {string} kwargs.operator Search operator
  * @returns {Array<object>} Array of ElasticSearch "match" query objects
  */
-export function buildMatchQueries({
-    analyzer, fields, operator, query,
-}) {
+export function buildMatchQueries({ analyzer, fields, operator, query }) {
     // match query adapted from searchkick rails library
     return fields.map((field) => ({
         match: {
@@ -50,12 +48,14 @@ function buildQuery({ analyzers, fields, operator }) {
             // build array of match queries for each analyzer,
             // then flatten them into a single array of queries
             const queries = analyzers
-                .map((analyzer) => buildMatchQueries({
-                    analyzer,
-                    fields,
-                    operator: operator || "or",
-                    query,
-                }))
+                .map((analyzer) =>
+                    buildMatchQueries({
+                        analyzer,
+                        fields,
+                        operator: operator || "or",
+                        query,
+                    }),
+                )
                 .flat();
             return {
                 bool: {
