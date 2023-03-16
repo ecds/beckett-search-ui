@@ -18,14 +18,10 @@ function EntitySubtypeFacets({ facets, subtype }) {
             conditionalFacets[subtype].includes(facet.identifier),
     );
 
-    return (
+    return list.length ? (
         <div>
-            <EuiTitle
-                className="capital-label"
-                size="xxs"
-                style={{ marginBottom: "0.25rem" }}
-            >
-                <h3>{subtype} Filters</h3>
+            <EuiTitle className="entity-subtype-label" size="xxs">
+                <h3>{subtype.trim().replaceAll("_", " ")} Filters</h3>
             </EuiTitle>
             {list.map((facet) => (
                 <AccordionFacet
@@ -35,6 +31,8 @@ function EntitySubtypeFacets({ facets, subtype }) {
                 />
             ))}
         </div>
+    ) : (
+        <div> No additional filters </div>
     );
 }
 
