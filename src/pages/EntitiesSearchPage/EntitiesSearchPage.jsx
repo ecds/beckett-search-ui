@@ -211,32 +211,37 @@ function EntitiesSearch() {
 
                         <EuiSpacer size="s" />
 
-                        { results && searchParams.get("e_type")
-                          ? <EntitySubtypeFacets
-                              facets={results.facets}
-                              subtype={searchParams.get("e_type")}
-
+                        {results && searchParams.get("e_type") ? (
+                            <EntitySubtypeFacets
+                                facets={results.facets}
+                                subtype={searchParams.get("e_type")}
                             />
-                          : results?.facets.filter(facet => facet.identifier === "e_type")
-                              .map((facet) => (
-                              <ListFacet
-                                  key={facet.identifier}
-                                  facet={facet}
-                                  loading={loading}
-                              />
-                          ))
-                        }
+                        ) : (
+                            results?.facets
+                                .filter(
+                                    (facet) => facet.identifier === "e_type",
+                                )
+                                .map((facet) => (
+                                    <ListFacet
+                                        key={facet.identifier}
+                                        facet={facet}
+                                        loading={loading}
+                                    />
+                                ))
+                        )}
 
-                        { searchParams.get("e_type") &&  conditionalFacets[searchParams.get("e_type")].includes("years") &&
-                          <YearRangeFacet
-                              accordion={true}
-                              minYear={yearRange?.minYear}
-                              maxYear={yearRange?.maxYear}
-                              setYearRange={setYearRangeState}
-                              yearRange={yearRangeState}
-                          />
-                        }
-
+                        {searchParams.get("e_type") &&
+                            conditionalFacets[
+                                searchParams.get("e_type")
+                            ].includes("years") && (
+                                <YearRangeFacet
+                                    accordion
+                                    minYear={yearRange?.minYear}
+                                    maxYear={yearRange?.maxYear}
+                                    setYearRange={setYearRangeState}
+                                    yearRange={yearRangeState}
+                                />
+                            )}
                     </EuiPageSideBar>
                 </aside>
                 <EuiPageBody component="section">
@@ -288,7 +293,6 @@ function EntitiesSearch() {
                                 Reset Search
                             </EuiButton>
                             <SaveSearchButton />
-
                         </EuiPageHeaderSection>
                     </EuiPageHeader>
                     <EuiPageContent>

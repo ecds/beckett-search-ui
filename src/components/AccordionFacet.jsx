@@ -1,9 +1,5 @@
 import React from "react";
-import {
-    EuiAccordion,
-    EuiPanel,
-    useGeneratedHtmlId,
-} from "@elastic/eui";
+import { EuiAccordion, EuiPanel, useGeneratedHtmlId } from "@elastic/eui";
 import "@elastic/eui/dist/eui_theme_light.css";
 import ListFacet from "./ListFacet";
 import "./AccordionFacet.css";

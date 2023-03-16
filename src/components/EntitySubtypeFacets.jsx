@@ -12,8 +12,11 @@ import { conditionalFacets } from "../common/conditionalFacets";
  * @returns {React.Component} React component for conditionally rendered entity type facets
  */
 function EntitySubtypeFacets({ facets, subtype }) {
-    const list = facets.filter((facet) => facet.entries?.length
-      && conditionalFacets[subtype].includes(facet.identifier));
+    const list = facets.filter(
+        (facet) =>
+            facet.entries?.length &&
+            conditionalFacets[subtype].includes(facet.identifier),
+    );
 
     return (
         <div>
@@ -22,11 +25,7 @@ function EntitySubtypeFacets({ facets, subtype }) {
                 size="xxs"
                 style={{ marginBottom: "0.25rem" }}
             >
-                <h3>
-                    {subtype}
-                    {" "}
-                    Filters
-                </h3>
+                <h3>{subtype} Filters</h3>
             </EuiTitle>
             {list.map((facet) => (
                 <AccordionFacet
