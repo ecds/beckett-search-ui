@@ -9,3 +9,8 @@ div.entity-details table td + th {
     padding-left: 2rem;
     padding-right: 0.5rem;
 }
+
+.entity-subtype-label {
+    text-transform: capitalize;
+    margin-bottom: 0.25rem;
+}
