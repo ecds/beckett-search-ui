@@ -38,19 +38,16 @@ function SaveSearchButton() {
     //  workaround to prevent the tooltip from getting stuck when the button
     //  is disabled
 
-    return (
-        disableSaveSearch
-            ? button()
-            : (
-                <EuiToolTip
-                    className="tooltip"
-                    content="Copy current search URL to clipboard"
-                    position="top"
-                >
-                    {button()}
-                </EuiToolTip>
-            )
-
+    return disableSaveSearch ? (
+        button()
+    ) : (
+        <EuiToolTip
+            className="tooltip"
+            content="Copy current search URL to clipboard"
+            position="top"
+        >
+            {button()}
+        </EuiToolTip>
     );
 }
 

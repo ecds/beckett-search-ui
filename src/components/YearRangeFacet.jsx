@@ -22,7 +22,11 @@ import "./AccordionFacet.css";
  * @returns {React.Component} Year range React component
  */
 function YearRangeFacet({
-    accordion, minYear, maxYear, setYearRange, yearRange,
+    accordion,
+    minYear,
+    maxYear,
+    setYearRange,
+    yearRange,
 }) {
     const accordionId = useGeneratedHtmlId({ prefix: "accordion" });
 
@@ -44,41 +48,21 @@ function YearRangeFacet({
 
     return (
         <div>
-            { accordion
-                ? (
-                    <EuiAccordion
-                        id={accordionId}
-                        arrowDisplay="right"
-                        buttonClassName="accordion-button"
-                        buttonContent="Years"
-                        className="accordion-facet"
-                    >
-                        <EuiPanel color="subdued">
-                            <EuiFormRow>
-                                <EuiDualRange
-                                    value={[yearRange.startYear || "", yearRange.endYear || ""]}
-                                    onChange={onRangeChange}
-                                    fullWidth
-                                    min={minYear || 1900}
-                                    max={maxYear}
-                                    showInput="inputWithPopover"
-                                    showLabels
-                                    aria-label="Year filter input form"
-                                    prepend="From"
-                                    append="To"
-                                />
-                            </EuiFormRow>
-                        </EuiPanel>
-                    </EuiAccordion>
-                )
-                : (
-                    <>
-                        <EuiTitle size="xxs">
-                            <h3>Years</h3>
-                        </EuiTitle>
+            {accordion ? (
+                <EuiAccordion
+                    id={accordionId}
+                    arrowDisplay="right"
+                    buttonClassName="accordion-button"
+                    buttonContent="Years"
+                    className="accordion-facet"
+                >
+                    <EuiPanel color="subdued">
                         <EuiFormRow>
                             <EuiDualRange
-                                value={[yearRange.startYear || "", yearRange.endYear || ""]}
+                                value={[
+                                    yearRange.startYear || "",
+                                    yearRange.endYear || "",
+                                ]}
                                 onChange={onRangeChange}
                                 fullWidth
                                 min={minYear || 1900}
@@ -90,8 +74,32 @@ function YearRangeFacet({
                                 append="To"
                             />
                         </EuiFormRow>
-                    </>
-                )}
+                    </EuiPanel>
+                </EuiAccordion>
+            ) : (
+                <>
+                    <EuiTitle size="xxs">
+                        <h3>Years</h3>
+                    </EuiTitle>
+                    <EuiFormRow>
+                        <EuiDualRange
+                            value={[
+                                yearRange.startYear || "",
+                                yearRange.endYear || "",
+                            ]}
+                            onChange={onRangeChange}
+                            fullWidth
+                            min={minYear || 1900}
+                            max={maxYear}
+                            showInput="inputWithPopover"
+                            showLabels
+                            aria-label="Year filter input form"
+                            prepend="From"
+                            append="To"
+                        />
+                    </EuiFormRow>
+                </>
+            )}
         </div>
     );
 }
