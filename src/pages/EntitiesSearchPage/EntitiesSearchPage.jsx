@@ -40,11 +40,13 @@ import {
     scopeOptions,
 } from "./entitiesSearchConfig";
 import EntitiesResults from "../../components/EntitiesResults";
+import EntitySubtypeFacets from "../../components/EntitySubtypeFacets";
 import ListFacet from "../../components/ListFacet";
 import SaveSearchButton from "../../components/SaveSearchButton";
 import { SearchControls } from "../../components/SearchControls";
 import YearRangeFacet from "../../components/YearRangeFacet";
 import {
+    conditionalFacets,
     routeToState,
     stateToRoute,
     useCustomSearchkitSDK,
@@ -204,27 +206,35 @@ function EntitiesSearch() {
                             setScope={setScope}
                         />
                         <EuiHorizontalRule margin="m" />
-                        <YearRangeFacet
-                            minYear={yearRange?.minYear}
-                            maxYear={yearRange?.maxYear}
-                            setYearRange={setYearRangeState}
-                            yearRange={yearRangeState}
-                        />
 
                         <EuiSpacer size="s" />
 
-                        {results?.facets
-                            .filter(
-                                (facet) => facet.display
-                                    && facet.display !== "CustomYearFacet",
-                            )
-                            .map((facet) => (
-                                <ListFacet
-                                    key={facet.identifier}
-                                    facet={facet}
-                                    loading={loading}
-                                />
-                            ))}
+                        { results && searchParams.get("e_type")
+                          ? <EntitySubtypeFacets
+                              facets={results.facets}
+                              subtype={searchParams.get("e_type")}
+
+                            />
+                          : results?.facets.filter(facet => facet.identifier === "e_type")
+                              .map((facet) => (
+                              <ListFacet
+                                  key={facet.identifier}
+                                  facet={facet}
+                                  loading={loading}
+                              />
+                          ))
+                        }
+
+                        { searchParams.get("e_type") &&  conditionalFacets[searchParams.get("e_type")].includes("years") &&
+                          <YearRangeFacet
+                              accordion={true}
+                              minYear={yearRange?.minYear}
+                              maxYear={yearRange?.maxYear}
+                              setYearRange={setYearRangeState}
+                              yearRange={yearRangeState}
+                          />
+                        }
+
                     </EuiPageSideBar>
                 </aside>
                 <EuiPageBody component="section">

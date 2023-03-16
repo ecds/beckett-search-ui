@@ -16,11 +16,12 @@ import "./ListFacet.css";
  * https://github.com/searchkit/searchkit/issues/1107#issuecomment-1185484220
  *
  * @param {object} props React functional component props object
+ * @param {boolean} props.displayTitle Indicate if title should be displayed
  * @param {object} props.facet The facet to render as a list of options
  * @param {boolean} props.loading Boolean indicating whether or not results are loading
  * @returns {Fragment|null} ListFacet component set
  */
-function ListFacet({ facet, loading }) {
+function ListFacet({ displayTitle, facet, loading }) {
     const api = useSearchkit();
     const variables = useSearchkitVariables();
     const [_, setSearchParams] = useSearchParams();
@@ -50,6 +51,7 @@ function ListFacet({ facet, loading }) {
             value: entry.label,
         };
         const isSelected = api.isFilterSelected(filter);
+
         return (
             label && (
                 <EuiFacetButton
@@ -92,9 +94,11 @@ function ListFacet({ facet, loading }) {
 
     return (
         <div className="list-facet">
-            <EuiTitle size="xxs">
-                <h3>{facet.label}</h3>
-            </EuiTitle>
+            {displayTitle && (
+                <EuiTitle size="xxs">
+                    <h3>{facet.label}</h3>
+                </EuiTitle>
+            )}
             <EuiFacetGroup className="facet-group">{entries}</EuiFacetGroup>
         </div>
     );
@@ -102,5 +106,7 @@ function ListFacet({ facet, loading }) {
 
 // Disambiguate from Searchkit builtin ListFacet
 ListFacet.DISPLAY = "CustomListFacet";
-
+ListFacet.defaultProps = {
+    displayTitle: true,
+};
 export default ListFacet;

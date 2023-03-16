@@ -1,0 +1,15 @@
+.euiAccordion__triggerWrapper {
+  padding: 2px 0;
+}
+
+.accordion-button {
+  color: var(--primary-dark);
+}
+
+.accordion-facet .euiPanel {
+  padding: 10px;
+}
+
+.accordion-facet .euiFormRow {
+  padding: 2px;
+}
