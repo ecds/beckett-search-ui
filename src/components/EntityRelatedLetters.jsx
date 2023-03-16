@@ -34,15 +34,15 @@ export function EntityRelatedLetters({ title, type, uri }) {
     const [filterState, setFilterState] = useState(
         searchParams
             ? Object.fromEntries(
-                Array.from(searchParams.entries())
-                    // each param in the URL is scoped to a relationship like "type_key"
-                    .filter(([key, _]) => key.includes(type))
-                    .map(([key, val]) => [
-                        key.split("_")[1],
-                        // special handling for page numbers
-                        key.includes("page") ? Number(val - 1) : val,
-                    ]),
-            )
+                  Array.from(searchParams.entries())
+                      // each param in the URL is scoped to a relationship like "type_key"
+                      .filter(([key, _]) => key.includes(type))
+                      .map(([key, val]) => [
+                          key.split("_")[1],
+                          // special handling for page numbers
+                          key.includes("page") ? Number(val - 1) : val,
+                      ]),
+              )
             : {},
     );
 
@@ -53,8 +53,8 @@ export function EntityRelatedLetters({ title, type, uri }) {
                 ...prevState,
                 ...dateRange,
                 page:
-                    prevState.startDate === dateRange.startDate
-                    && prevState.endDate === dateRange.endDate
+                    prevState.startDate === dateRange.startDate &&
+                    prevState.endDate === dateRange.endDate
                         ? prevState.page
                         : 0, // Always restart at first page if dates change
             }));
@@ -78,9 +78,10 @@ export function EntityRelatedLetters({ title, type, uri }) {
         // remove (and keep track of) any undefined key/value pairs
         const deleted = [];
         Object.keys(params).forEach(
-            (key) => params[key] === undefined
-                && deleted.push(`${type}_${key}`)
-                && delete params[key],
+            (key) =>
+                params[key] === undefined &&
+                deleted.push(`${type}_${key}`) &&
+                delete params[key],
         );
         /**
          * Asynchronously fetch the related letters matching the params
@@ -103,19 +104,27 @@ export function EntityRelatedLetters({ title, type, uri }) {
             })),
         );
         // update affected search params, but don't clobber unaffected existing ones
-        setSearchParams((prevParams) => {
-            const prevParamsObj = {};
-            // have to do it like this because URISearchParams can't use spread operator
-            prevParams.forEach((value, key) => {
-                if (!Object.prototype.hasOwnProperty.call(updatedSearchParams, key)) {
-                    prevParamsObj[key] = value;
-                }
-            });
-            // also remove old params that have been deleted
-            deleted.forEach((del) => delete prevParamsObj[del]);
-            // now we can use spread :)
-            return { ...prevParamsObj, ...updatedSearchParams };
-        }, { replace: true }); // don't push another entry onto the history stack!
+        setSearchParams(
+            (prevParams) => {
+                const prevParamsObj = {};
+                // have to do it like this because URISearchParams can't use spread operator
+                prevParams.forEach((value, key) => {
+                    if (
+                        !Object.prototype.hasOwnProperty.call(
+                            updatedSearchParams,
+                            key,
+                        )
+                    ) {
+                        prevParamsObj[key] = value;
+                    }
+                });
+                // also remove old params that have been deleted
+                deleted.forEach((del) => delete prevParamsObj[del]);
+                // now we can use spread :)
+                return { ...prevParamsObj, ...updatedSearchParams };
+            },
+            { replace: true },
+        ); // don't push another entry onto the history stack!
     }, [filterState]);
 
     return (
@@ -155,8 +164,8 @@ export function EntityRelatedLetters({ title, type, uri }) {
                     </tr>
                 </thead>
                 <tbody>
-                    {loading
-                        && [
+                    {loading &&
+                        [
                             ...Array(
                                 data && data?.total_pages > 1 ? 9 : 1,
                             ).keys(),
@@ -169,8 +178,8 @@ export function EntityRelatedLetters({ title, type, uri }) {
                                 ))}
                             </tr>
                         ))}
-                    {!loading
-                        && data?.letters?.map((letter) => (
+                    {!loading &&
+                        data?.letters?.map((letter) => (
                             <tr key={letter.id}>
                                 <td>
                                     <Link
@@ -192,10 +201,12 @@ export function EntityRelatedLetters({ title, type, uri }) {
                         aria-label={`Pagination for ${title}`}
                         pageCount={data.total_pages}
                         activePage={filterState?.page}
-                        onPageClick={(page) => setFilterState((prevState) => ({
-                            ...prevState,
-                            page,
-                        }))}
+                        onPageClick={(page) =>
+                            setFilterState((prevState) => ({
+                                ...prevState,
+                                page,
+                            }))
+                        }
                     />
                 </div>
             )}

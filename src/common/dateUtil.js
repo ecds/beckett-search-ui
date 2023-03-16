@@ -24,6 +24,5 @@ export const formatDate = (date) => {
  * @param {moment.Moment} dates.endDate Moment object for end date from date picker
  * @returns True if no start/end dates are present or if all dates are valid
  */
-export const datesValid = ({
-    startDate, endDate,
-}) => (startDate && endDate ? startDate <= endDate : true);
+export const datesValid = ({ startDate, endDate }) =>
+    startDate && endDate ? startDate <= endDate : true;

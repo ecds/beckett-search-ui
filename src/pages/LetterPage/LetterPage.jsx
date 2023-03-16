@@ -61,10 +61,7 @@ export function LetterPage() {
                             </EuiButtonEmpty>
                             <EuiTitle size="l">
                                 <h1>
-                                    {dateString}
-                                    {" "}
-                                    Letter to
-                                    {" "}
+                                    {dateString} Letter to{" "}
                                     {letter?.metadata?.recipient}
                                 </h1>
                             </EuiTitle>
@@ -72,7 +69,9 @@ export function LetterPage() {
                     </EuiPageHeader>
                     <EuiPageContent>
                         <EuiTitle>
-                            <h2 className="result-meta-heading">Letter Information</h2>
+                            <h2 className="result-meta-heading">
+                                Letter Information
+                            </h2>
                         </EuiTitle>
                         {letter.metadata && (
                             <LetterMetadata
@@ -82,15 +81,14 @@ export function LetterPage() {
                         )}
                         <EuiHorizontalRule />
                         {letter.repositories && (
-                            <LetterMetadata
-                                metadata={letter.repositories}
-                            />
+                            <LetterMetadata metadata={letter.repositories} />
                         )}
                         <EuiHorizontalRule />
                         {letter.publication_information && (
                             <LetterMetadata
                                 metadata={{
-                                    publication_information: letter.publication_information,
+                                    publication_information:
+                                        letter.publication_information,
                                 }}
                             />
                         )}

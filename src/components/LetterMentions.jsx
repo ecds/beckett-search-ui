@@ -46,10 +46,10 @@ export function LetterMentions({ mentions }) {
                                 type="iInCircle"
                                 color="subdued"
                                 content={
-                                    entityTypes[key]
+                                    entityTypes[key] ||
                                     // handle plurals
-                                    || entityTypes[key.slice(0, -1)]
-                                    || key
+                                    entityTypes[key.slice(0, -1)] ||
+                                    key
                                 }
                                 iconProps={{
                                     className: "eui-alignTop",
@@ -59,18 +59,19 @@ export function LetterMentions({ mentions }) {
                         {value
                             .sort((a, b) => a.label.localeCompare(b.label))
                             .map(
-                                (e) => e.label && (
-                                    <dd key={parseId(e.id)}>
-                                        <Link
-                                            to={`/entities/${parseId(
-                                                e.id,
-                                            )}`}
-                                            dangerouslySetInnerHTML={{
-                                                __html: e.label,
-                                            }}
-                                        />
-                                    </dd>
-                                ),
+                                (e) =>
+                                    e.label && (
+                                        <dd key={parseId(e.id)}>
+                                            <Link
+                                                to={`/entities/${parseId(
+                                                    e.id,
+                                                )}`}
+                                                dangerouslySetInnerHTML={{
+                                                    __html: e.label,
+                                                }}
+                                            />
+                                        </dd>
+                                    ),
                             )}
                     </React.Fragment>
                 ))}

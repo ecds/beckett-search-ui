@@ -28,7 +28,9 @@ export function ErrorPage() {
                             <EuiPageHeaderSection>
                                 <EuiTitle size="m">
                                     <h1>
-                                        {`${error.status || ""} ${error.statusText || "Error"}`}
+                                        {`${error.status || ""} ${
+                                            error.statusText || "Error"
+                                        }`}
                                     </h1>
                                 </EuiTitle>
                             </EuiPageHeaderSection>

@@ -12,9 +12,7 @@ import "./EntitiesResults.css";
  * @param {object} props.sortState Current sort state
  * @returns Populated results list React component
  */
-function EntitiesResults({
-    data, offset, onSort, sortState,
-}) {
+function EntitiesResults({ data, offset, onSort, sortState }) {
     const sortableColumns = ["entity", "type"];
     return (
         <table id="entities-results" className="search-results">
