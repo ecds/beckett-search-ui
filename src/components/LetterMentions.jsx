@@ -4,6 +4,7 @@ import { appendIconComponentCache } from "@elastic/eui/es/components/icon/icon";
 import { icon as EuiIconiInCircle } from "@elastic/eui/es/components/icon/assets/iInCircle";
 import { Link } from "react-router-dom";
 import { entityTypes } from "../common";
+import MentionQualifier from "./MentionQualifier";
 
 // icon component cache required for dynamically imported EUI icons in Vite;
 // see https://github.com/elastic/eui/issues/5463
@@ -69,6 +70,9 @@ export function LetterMentions({ mentions }) {
                                                 __html: e.label,
                                             }}
                                         />
+                                        {e.tags.map((tag) => (
+                                            <MentionQualifier type={tag} />
+                                        ))}
                                     </dd>
                                 ),
                             )}
