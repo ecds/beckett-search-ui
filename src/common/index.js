@@ -1,3 +1,4 @@
+export * from "./conditionalFacets";
 export * from "./dateUtil";
 export * from "./entityTypes";
 export * from "./fetch";

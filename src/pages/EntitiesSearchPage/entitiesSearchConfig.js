@@ -35,7 +35,26 @@ export const entitiesSearchConfig = {
     },
     index: import.meta.env.VITE_SEARCHKIT_ENTITIES_INDEX,
     hits: {
-        fields: ["id", "short_display", "e_type", "years"],
+        fields: [
+            "artists",
+            "attended_with",
+            "authors",
+            "city",
+            "composers",
+            "country",
+            "date",
+            "date_str",
+            "directors",
+            "e_type",
+            "event_type",
+            "id",
+            "performed_by",
+            "place",
+            "short_display",
+            "translated_into",
+            "translators",
+            "years",
+        ],
     },
     query: buildQuery({ analyzers, fields }),
     facets: [
@@ -63,6 +82,118 @@ export const entitiesSearchConfig = {
             field: "e_type",
             identifier: "e_type",
             label: "Entity Type",
+            multipleSelect: false,
+            order: "value",
+            size: 100, // Show at most 100 facets (there won't be that many!)
+        }),
+        new RefinementSelectFacet({
+            field: "artists",
+            identifier: "artists",
+            label: "Artists",
+            multipleSelect: true,
+            order: "value",
+            size: 100, // Show at most 100 facets (there won't be that many!)
+        }),
+        new RefinementSelectFacet({
+            field: "attended_with",
+            identifier: "attended_with",
+            label: "Attended with",
+            multipleSelect: true,
+            order: "value",
+            size: 100, // Show at most 100 facets (there won't be that many!)
+        }),
+        new RefinementSelectFacet({
+            field: "authors",
+            identifier: "authors",
+            label: "Authors",
+            multipleSelect: true,
+            order: "value",
+            size: 100, // Show at most 100 facets (there won't be that many!)
+        }),
+        new RefinementSelectFacet({
+            field: "city",
+            identifier: "city",
+            label: "City",
+            multipleSelect: true,
+            order: "value",
+            size: 100, // Show at most 100 facets (there won't be that many!)
+        }),
+        new RefinementSelectFacet({
+            field: "composers",
+            identifier: "composers",
+            label: "Composers",
+            multipleSelect: true,
+            order: "value",
+            size: 100, // Show at most 100 facets (there won't be that many!)
+        }),
+        new RefinementSelectFacet({
+            field: "country",
+            identifier: "country",
+            label: "Country",
+            multipleSelect: true,
+            order: "value",
+            size: 100, // Show at most 100 facets (there won't be that many!)
+        }),
+        new RefinementSelectFacet({
+            field: "date",
+            identifier: "date",
+            label: "Date",
+            multipleSelect: true,
+            order: "value",
+            size: 100, // Show at most 100 facets (there won't be that many!)
+        }),
+        new RefinementSelectFacet({
+            field: "date_str",
+            identifier: "date_str",
+            label: "Date string",
+            multipleSelect: true,
+            order: "value",
+            size: 100, // Show at most 100 facets (there won't be that many!)
+        }),
+        new RefinementSelectFacet({
+            field: "directors",
+            identifier: "directors",
+            label: "Directors",
+            multipleSelect: true,
+            order: "value",
+            size: 100, // Show at most 100 facets (there won't be that many!)
+        }),
+        new RefinementSelectFacet({
+            field: "event_type",
+            identifier: "event_type",
+            label: "Event type",
+            multipleSelect: true,
+            order: "value",
+            size: 100, // Show at most 100 facets (there won't be that many!)
+        }),
+        new RefinementSelectFacet({
+            field: "performed_by",
+            identifier: "performed_by",
+            label: "Performed by",
+            multipleSelect: true,
+            order: "value",
+            size: 100, // Show at most 100 facets (there won't be that many!)
+        }),
+        new RefinementSelectFacet({
+            field: "place",
+            identifier: "place",
+            label: "Place",
+            multipleSelect: true,
+            order: "value",
+            size: 100, // Show at most 100 facets (there won't be that many!)
+        }),
+        new RefinementSelectFacet({
+            field: "translated_into",
+            identifier: "translated_into",
+            label: "Language translated into",
+            multipleSelect: true,
+            order: "value",
+            size: 100, // Show at most 100 facets (there won't be that many!)
+        }),
+        new RefinementSelectFacet({
+            field: "translators",
+            identifier: "translators",
+            label: "Translators",
             multipleSelect: true,
             order: "value",
             size: 100, // Show at most 100 facets (there won't be that many!)

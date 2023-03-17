@@ -120,5 +120,5 @@ a.to-record:focus::before {
     background-color: var(--primary-transparent);
 }
 .save-search {
-  margin-left: 5px;
+    margin-left: 5px;
 }
