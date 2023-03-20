@@ -45,28 +45,54 @@ function buildQuery({ analyzers, fields, operator }) {
          * @returns {object} The resulting query bool object for ElasticSearch.
          */
         queryFn: (query) => {
+            const inclusions = [];
+            const exclusions = [];
+
+            // separate query into inclusions and exclusions
+            // based on hyphen indicator
+            if (query.match(/-/g)) {
+                query.split(" ").forEach((q) => {
+                    if (q.match(/^-/g)) {
+                        exclusions.push(q.slice(1));
+                    } else {
+                        inclusions.push(q);
+                    }
+                });
+            } else {
+                inclusions.push(query);
+            }
+
             // build array of match queries for each analyzer,
             // then flatten them into a single array of queries
-            const queries = analyzers
+            const includedQueries = analyzers
                 .map((analyzer) =>
                     buildMatchQueries({
                         analyzer,
                         fields,
                         operator: operator || "or",
-                        query,
+                        query: inclusions.join(" "),
+                    }),
+                )
+                .flat();
+            const excludedQueries = analyzers
+                .map((analyzer) =>
+                    buildMatchQueries({
+                        analyzer,
+                        fields,
+                        operator: "or",
+                        query: exclusions.join(" "),
                     }),
                 )
                 .flat();
             return {
                 bool: {
                     // should: dis_max adapted from searchkick rails library
-                    should: [
-                        {
-                            dis_max: {
-                                queries,
-                            },
+                    should: {
+                        dis_max: {
+                            queries: includedQueries,
                         },
-                    ],
+                    },
+                    must_not: excludedQueries,
                 },
             };
         },
