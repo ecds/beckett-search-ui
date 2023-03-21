@@ -22,3 +22,7 @@ dl.letter-mentions dt:not(:first-of-type),
 dl.letter-mentions dt + dd:not(:first-of-type) {
     margin-top: 0.5rem;
 }
+
+.letter-date-filter .react-datepicker__year-dropdown-container {
+    display: none;
+}

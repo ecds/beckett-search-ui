@@ -35,6 +35,7 @@ export function LetterDateFilter({
                 startDateControl={
                     <EuiDatePicker
                         aria-label="Start date"
+                        calendarClassName="letter-date-filter"
                         endDate={dateRange?.endDate}
                         dateFormat={["DD/MM/YYYY", "YYYY"]}
                         isInvalid={!isValid}
@@ -52,6 +53,7 @@ export function LetterDateFilter({
                 endDateControl={
                     <EuiDatePicker
                         aria-label="End date"
+                        calendarClassName="letter-date-filter"
                         endDate={dateRange?.endDate}
                         dateFormat={["DD/MM/YYYY", "YYYY"]}
                         isInvalid={!isValid}
