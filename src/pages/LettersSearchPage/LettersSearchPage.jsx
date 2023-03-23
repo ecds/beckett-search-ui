@@ -170,6 +170,18 @@ function LettersSearch() {
             );
         }
     }, [operator]);
+    useEffect(() => {
+        setSearchParams(
+            stateToRoute({
+                ...variables,
+                scope,
+                operator,
+                page: {
+                    from: variables.page.from,
+                },
+            }),
+        );
+    }, [variables?.page?.from]);
 
     return (
         <main className="search-page">
