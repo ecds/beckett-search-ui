@@ -3,7 +3,6 @@
 export const conditionalFacets = {
     attendance: [
         "attended_with",
-        "date",
         "directors",
         "event_type",
         "place",
@@ -15,11 +14,11 @@ export const conditionalFacets = {
     person: [],
     people: [],
     place: [],
-    production: ["city", "date_str", "directors", "place"],
-    public_event: ["date_str"],
-    publication: ["authors", "date", "translators"],
-    reading: ["authors", "date"],
+    production: ["city", "directors", "place", "years"],
+    public_event: ["years"],
+    publication: ["authors", "translators", "years"],
+    reading: ["authors", "years"],
     translating: ["translated_into", "translators"],
     work_of_art: ["artists", "country"],
-    writing: ["date_str", "years"],
+    writing: ["years"],
 };

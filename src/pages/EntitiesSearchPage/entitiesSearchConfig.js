@@ -42,8 +42,6 @@ export const entitiesSearchConfig = {
             "city",
             "composers",
             "country",
-            "date",
-            "date_str",
             "directors",
             "e_type",
             "event_type",
@@ -130,22 +128,6 @@ export const entitiesSearchConfig = {
             field: "country",
             identifier: "country",
             label: "Country",
-            multipleSelect: true,
-            order: "value",
-            size: 100, // Show at most 100 facets (there won't be that many!)
-        }),
-        new RefinementSelectFacet({
-            field: "date",
-            identifier: "date",
-            label: "Date",
-            multipleSelect: true,
-            order: "value",
-            size: 100, // Show at most 100 facets (there won't be that many!)
-        }),
-        new RefinementSelectFacet({
-            field: "date_str",
-            identifier: "date_str",
-            label: "Date string",
             multipleSelect: true,
             order: "value",
             size: 100, // Show at most 100 facets (there won't be that many!)
