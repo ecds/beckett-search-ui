@@ -285,10 +285,7 @@ function EntitiesSearch() {
                                 isLoading={loading}
                                 onClick={() => {
                                     // reset query and filters
-                                    setSortState({
-                                        field: "entity",
-                                        direction: 1,
-                                    });
+
                                     api.setQuery("");
                                     setYearRangeState({
                                         endYear: "",
@@ -298,6 +295,10 @@ function EntitiesSearch() {
                                         stateToRoute({
                                             filters: [],
                                             query: "",
+                                            sort: {
+                                                field: "entity",
+                                                direction: 1,
+                                            },
                                         }),
                                     );
                                 }}
