@@ -40,6 +40,7 @@ export const entitiesSearchConfig = {
             "attended_with",
             "authors",
             "city",
+            "clean_label",
             "composers",
             "country",
             "directors",
@@ -186,13 +187,13 @@ export const entitiesSearchConfig = {
         {
             id: "entity_asc",
             label: "Entity (Ascending)",
-            field: { short_display: "asc" },
+            field: { clean_label: "asc" },
             defaultOption: true,
         },
         {
             id: "entity_desc",
             label: "Entity (Descending)",
-            field: { short_display: "desc" },
+            field: { clean_label: "desc" },
         },
         {
             id: "type_asc",
