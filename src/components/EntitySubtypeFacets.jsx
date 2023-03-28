@@ -17,7 +17,6 @@ function EntitySubtypeFacets({ facets, subtype }) {
             facet.entries?.length &&
             conditionalFacets[subtype].includes(facet.identifier),
     );
-
     return list.length ? (
         <div>
             <EuiTitle className="entity-subtype-label" size="xxs">
@@ -32,7 +31,9 @@ function EntitySubtypeFacets({ facets, subtype }) {
             ))}
         </div>
     ) : (
-        <div> No additional filters </div>
+        !conditionalFacets[subtype].includes("years") && (
+            <div> No additional filters </div>
+        )
     );
 }
 
