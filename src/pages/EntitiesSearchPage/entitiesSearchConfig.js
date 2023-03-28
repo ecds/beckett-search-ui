@@ -82,7 +82,7 @@ export const entitiesSearchConfig = {
             label: "Entity Type",
             multipleSelect: false,
             order: "value",
-            size: 100, // Show at most 100 facets (there won't be that many!)
+            size: 100, // Show at most n facets
         }),
         new RefinementSelectFacet({
             field: "artists",
@@ -90,7 +90,7 @@ export const entitiesSearchConfig = {
             label: "Artists",
             multipleSelect: true,
             order: "value",
-            size: 100, // Show at most 100 facets (there won't be that many!)
+            size: 300, // Show at most n facets
         }),
         new RefinementSelectFacet({
             field: "attended_with",
@@ -98,7 +98,7 @@ export const entitiesSearchConfig = {
             label: "Attended with",
             multipleSelect: true,
             order: "value",
-            size: 100, // Show at most 100 facets (there won't be that many!)
+            size: 100, // Show at most n facets
         }),
         new RefinementSelectFacet({
             field: "authors",
@@ -106,7 +106,7 @@ export const entitiesSearchConfig = {
             label: "Authors",
             multipleSelect: true,
             order: "value",
-            size: 100, // Show at most 100 facets (there won't be that many!)
+            size: 900, // Show at most n facets
         }),
         new RefinementSelectFacet({
             field: "city",
@@ -114,7 +114,7 @@ export const entitiesSearchConfig = {
             label: "City",
             multipleSelect: true,
             order: "value",
-            size: 100, // Show at most 100 facets (there won't be that many!)
+            size: 250, // Show at most n facets
         }),
         new RefinementSelectFacet({
             field: "composers",
@@ -122,7 +122,7 @@ export const entitiesSearchConfig = {
             label: "Composers",
             multipleSelect: true,
             order: "value",
-            size: 100, // Show at most 100 facets (there won't be that many!)
+            size: 100, // Show at most n facets
         }),
         new RefinementSelectFacet({
             field: "country",
@@ -130,7 +130,7 @@ export const entitiesSearchConfig = {
             label: "Country",
             multipleSelect: true,
             order: "value",
-            size: 100, // Show at most 100 facets (there won't be that many!)
+            size: 100, // Show at most n facets
         }),
         new RefinementSelectFacet({
             field: "directors",
@@ -138,7 +138,7 @@ export const entitiesSearchConfig = {
             label: "Directors",
             multipleSelect: true,
             order: "value",
-            size: 100, // Show at most 100 facets (there won't be that many!)
+            size: 400, // Show at most n facets
         }),
         new RefinementSelectFacet({
             field: "event_type",
@@ -146,7 +146,7 @@ export const entitiesSearchConfig = {
             label: "Event type",
             multipleSelect: true,
             order: "value",
-            size: 100, // Show at most 100 facets (there won't be that many!)
+            size: 100, // Show at most n facets
         }),
         new RefinementSelectFacet({
             field: "performed_by",
@@ -154,7 +154,7 @@ export const entitiesSearchConfig = {
             label: "Performed by",
             multipleSelect: true,
             order: "value",
-            size: 100, // Show at most 100 facets (there won't be that many!)
+            size: 700, // Show at most n facets
         }),
         new RefinementSelectFacet({
             field: "place",
@@ -162,7 +162,7 @@ export const entitiesSearchConfig = {
             label: "Place",
             multipleSelect: true,
             order: "value",
-            size: 100, // Show at most 100 facets (there won't be that many!)
+            size: 200, // Show at most n facets
         }),
         new RefinementSelectFacet({
             field: "translated_into",
@@ -170,7 +170,7 @@ export const entitiesSearchConfig = {
             label: "Language translated into",
             multipleSelect: true,
             order: "value",
-            size: 100, // Show at most 100 facets (there won't be that many!)
+            size: 100, // Show at most n facets
         }),
         new RefinementSelectFacet({
             field: "translators",
@@ -178,7 +178,7 @@ export const entitiesSearchConfig = {
             label: "Translators",
             multipleSelect: true,
             order: "value",
-            size: 100, // Show at most 100 facets (there won't be that many!)
+            size: 200, // Show at most n facets
         }),
     ],
     sortOptions: [
