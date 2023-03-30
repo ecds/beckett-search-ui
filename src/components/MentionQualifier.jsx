@@ -1,9 +1,9 @@
 import React from "react";
-import { EuiIcon } from "@elastic/eui";
-import { icon as EuiIconStarEmptyIcon } from "@elastic/eui/es/components/icon/assets/star_empty";
-import { icon as EuiIconDocumentEditIcon } from "@elastic/eui/es/components/icon/assets/documentEdit";
-import directingIcon from "./directing.svg";
-
+import { EuiIcon, EuiToolTip } from "@elastic/eui";
+import { AiTwotoneStar } from "react-icons/ai";
+import { TbChairDirector } from "react-icons/tb";
+import { BiEdit } from "react-icons/bi";
+import "./MentionQualifier.css";
 /**
  * Icon based on type.
  *
@@ -13,11 +13,11 @@ import directingIcon from "./directing.svg";
 const getIcon = (type) => {
     switch (type) {
         case "directing":
-            return directingIcon;
+            return TbChairDirector;
         case "star":
-            return EuiIconStarEmptyIcon;
-        case "revising":
-            return EuiIconDocumentEditIcon;
+            return AiTwotoneStar;
+        case "revision":
+            return BiEdit;
         default:
             return undefined;
     }
@@ -31,6 +31,12 @@ const getIcon = (type) => {
  */
 export default function MentionQualifier({ type }) {
     return (
-        <EuiIcon type={getIcon(type)} title={`This mention is ${type}`} />
+        <EuiToolTip content={`This mention is ${type}.`} position="top">
+            <EuiIcon
+                className="qualifier-icon"
+                type={getIcon(type)}
+                alt={`This mention is ${type}`}
+            />
+        </EuiToolTip>
     );
 }
