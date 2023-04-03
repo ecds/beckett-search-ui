@@ -132,7 +132,8 @@ function LettersSearch() {
         // handle sorting separately in order to only update in case of changes
         if (sortState) {
             let sortBy = sortState.field;
-            if (sortState.direction) {
+            // relevance does not use direction
+            if (sortState.direction && sortBy !== "relevance") {
                 const dir = sortState.direction === 1 ? "asc" : "desc";
                 sortBy = `${sortState.field}_${dir}`;
             }
@@ -161,6 +162,7 @@ function LettersSearch() {
             setSearchParams(
                 stateToRoute({
                     ...variables,
+                    query,
                     scope,
                     operator,
                     page: {
@@ -174,6 +176,7 @@ function LettersSearch() {
         setSearchParams(
             stateToRoute({
                 ...variables,
+                query,
                 scope,
                 operator,
                 page: {
