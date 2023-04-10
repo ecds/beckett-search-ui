@@ -39,16 +39,16 @@ export const entitiesSearchConfig = {
             "artists",
             "attended_with",
             "authors",
-            "city",
             "clean_label",
             "composers",
-            "country",
+            "countries",
             "directors",
             "e_type",
             "event_type",
             "id",
             "performed_by",
             "place",
+            "places",
             "short_display",
             "translated_into",
             "translators",
@@ -110,14 +110,6 @@ export const entitiesSearchConfig = {
             size: 900, // Show at most n facets
         }),
         new RefinementSelectFacet({
-            field: "city",
-            identifier: "city",
-            label: "City",
-            multipleSelect: true,
-            order: "value",
-            size: 250, // Show at most n facets
-        }),
-        new RefinementSelectFacet({
             field: "composers",
             identifier: "composers",
             label: "Composers",
@@ -126,9 +118,9 @@ export const entitiesSearchConfig = {
             size: 100, // Show at most n facets
         }),
         new RefinementSelectFacet({
-            field: "country",
-            identifier: "country",
-            label: "Country",
+            field: "countries",
+            identifier: "countries",
+            label: "Countries",
             multipleSelect: true,
             order: "value",
             size: 100, // Show at most n facets
@@ -164,6 +156,14 @@ export const entitiesSearchConfig = {
             multipleSelect: true,
             order: "value",
             size: 200, // Show at most n facets
+        }),
+        new RefinementSelectFacet({
+            field: "places",
+            identifier: "places",
+            label: "Places",
+            multipleSelect: true,
+            order: "value",
+            size: 250, // Show at most n facets
         }),
         new RefinementSelectFacet({
             field: "translated_into",
