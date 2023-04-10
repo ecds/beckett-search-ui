@@ -25,10 +25,10 @@ export function EntityRelatedLetters({ title, type, uri }) {
     // get initial date range and filter states from search params, if possible
     const [dateRange, setDateRange] = useState({
         startDate: searchParams?.get(`${type}_startDate`)
-            ? moment(searchParams?.get(`${type}_startDate`))
+            ? moment.utc(searchParams?.get(`${type}_startDate`))
             : null,
         endDate: searchParams?.get(`${type}_endDate`)
-            ? moment(searchParams?.get(`${type}_endDate`))
+            ? moment.utc(searchParams?.get(`${type}_endDate`))
             : null,
     });
     const [filterState, setFilterState] = useState(
@@ -69,10 +69,10 @@ export function EntityRelatedLetters({ title, type, uri }) {
         const params = {
             page: filterState?.page ? filterState.page + 1 : 1,
             startDate: filterState?.startDate
-                ? moment(filterState.startDate).format(dateFormat)
+                ? moment.utc(filterState.startDate).format(dateFormat)
                 : undefined,
             endDate: filterState?.endDate
-                ? moment(filterState.endDate).format(dateFormat)
+                ? moment.utc(filterState.endDate).format(dateFormat)
                 : undefined,
         };
         // remove (and keep track of) any undefined key/value pairs
@@ -135,8 +135,8 @@ export function EntityRelatedLetters({ title, type, uri }) {
                 </EuiTitle>
                 {data && (
                     <LetterDateFilter
-                        minDate={moment(data.min_date)}
-                        maxDate={moment(data.max_date)}
+                        minDate={moment.utc(data.min_date)}
+                        maxDate={moment.utc(data.max_date)}
                         isValid={datesValid(dateRange)}
                         loading={loading}
                         dateRange={dateRange}

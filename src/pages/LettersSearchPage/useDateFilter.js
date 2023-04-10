@@ -18,10 +18,10 @@ export function useDateFilter() {
     // if a filter already present on initialization, set initial state to that range
     const [dateRange, setDateRange] = useState({
         startDate: searchParams?.has("dateMin")
-            ? moment(searchParams.get("dateMin"))
+            ? moment.utc(searchParams.get("dateMin"))
             : null,
         endDate: searchParams?.has("dateMax")
-            ? moment(searchParams.get("dateMax"))
+            ? moment.utc(searchParams.get("dateMax"))
             : null,
     });
 
