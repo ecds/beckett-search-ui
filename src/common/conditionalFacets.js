@@ -14,11 +14,11 @@ export const conditionalFacets = {
     person: [],
     people: [],
     place: [],
-    production: ["city", "directors", "place", "years"],
+    production: ["directors", "places", "years"],
     public_event: ["years"],
     publication: ["authors", "translators", "years"],
     reading: ["authors", "years"],
     translating: ["translated_into", "translators"],
-    work_of_art: ["artists", "country"],
+    work_of_art: ["artists", "countries"],
     writing: ["years"],
 };
