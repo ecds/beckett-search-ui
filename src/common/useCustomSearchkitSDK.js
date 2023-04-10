@@ -41,11 +41,11 @@ export const useCustomSearchkitSDK = ({ config, analyzers, fields }) => {
                 const min =
                     response?.facets?.find((f) => f.identifier === "min_date")
                         ?.value || null;
-                const minDate = min ? moment(min) : null;
+                const minDate = min ? moment.utc(min) : null;
                 const max =
                     response?.facets?.find((f) => f.identifier === "max_date")
                         ?.value || null;
-                const maxDate = max ? moment(max) : null;
+                const maxDate = max ? moment.utc(max) : null;
                 setDateRange({ minDate, maxDate });
                 setDateRangeLoading(false);
             }

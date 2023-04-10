@@ -22,11 +22,11 @@ export function stateToRoute(searchState) {
         // date filter is formatted differently
         if (filter.identifier === "start_date") {
             routeState.dateMin = filter.dateMin
-                ? moment(filter.dateMin).format("YYYY-MM-DD")
+                ? moment.utc(filter.dateMin).format("YYYY-MM-DD")
                 : undefined;
         } else if (filter.identifier === "end_date") {
             routeState.dateMax = filter.dateMax
-                ? moment(filter.dateMax).format("YYYY-MM-DD")
+                ? moment.utc(filter.dateMax).format("YYYY-MM-DD")
                 : undefined;
         } else if (filter.identifier === "start_year") {
             routeState.yearMin = filter.yearMin ? filter.yearMin : undefined;
@@ -108,13 +108,13 @@ export function routeToState(route) {
     if (route.has("dateMin")) {
         searchState.filters.push({
             identifier: "start_date",
-            dateMin: moment(route.get("dateMin")).toISOString(),
+            dateMin: moment.utc(route.get("dateMin")).toISOString(),
         });
     }
     if (route.has("dateMax")) {
         searchState.filters.push({
             identifier: "end_date",
-            dateMax: moment(route.get("dateMax")).toISOString(),
+            dateMax: moment.utc(route.get("dateMax")).toISOString(),
         });
     }
     if (route.has("yearMin")) {
@@ -147,4 +147,20 @@ export function isDefault(state) {
         (!state.operator || state.operator === "or") &&
         state.page?.from === 0
     );
+}
+
+/**
+ * Convert a sort state to a sortBy string to use in URL routing.
+ *
+ * @param {object} sortState The sort state to convert
+ * @returns {string} String representation of the sort for URL routing
+ */
+export function getSortByFromState(sortState) {
+    let sortBy = sortState?.field;
+    // relevance does not use direction
+    if (sortState.direction && sortBy !== "relevance") {
+        const dir = sortState.direction === 1 ? "asc" : "desc";
+        sortBy = `${sortState.field}_${dir}`;
+    }
+    return sortBy;
 }

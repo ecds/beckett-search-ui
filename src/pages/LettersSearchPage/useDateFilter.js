@@ -18,10 +18,10 @@ export function useDateFilter() {
     // if a filter already present on initialization, set initial state to that range
     const [dateRange, setDateRange] = useState({
         startDate: searchParams?.has("dateMin")
-            ? moment(searchParams.get("dateMin"))
+            ? moment.utc(searchParams.get("dateMin"))
             : null,
         endDate: searchParams?.has("dateMax")
-            ? moment(searchParams.get("dateMax"))
+            ? moment.utc(searchParams.get("dateMax"))
             : null,
     });
 
@@ -86,6 +86,23 @@ export function useDateFilter() {
                 return stateToRoute({
                     ...state,
                     ...page,
+                });
+            });
+        } else if (!(dateRange?.startDate || dateRange?.endDate)) {
+            // handle both dates cleared
+            setSearchParams((prevParams) => {
+                const state = routeToState(prevParams);
+                state.filters = state.filters.filter(
+                    (f) =>
+                        f.identifier !== "end_date" &&
+                        f.identifier !== "start_date",
+                );
+                return stateToRoute({
+                    ...state,
+                    page: {
+                        size: 25,
+                        from: 0,
+                    },
                 });
             });
         }
