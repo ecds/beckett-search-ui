@@ -88,6 +88,23 @@ export function useDateFilter() {
                     ...page,
                 });
             });
+        } else if (!(dateRange?.startDate || dateRange?.endDate)) {
+            // handle both dates cleared
+            setSearchParams((prevParams) => {
+                const state = routeToState(prevParams);
+                state.filters = state.filters.filter(
+                    (f) =>
+                        f.identifier !== "end_date" &&
+                        f.identifier !== "start_date",
+                );
+                return stateToRoute({
+                    ...state,
+                    page: {
+                        size: 25,
+                        from: 0,
+                    },
+                });
+            });
         }
     }, [dateRange]);
 
