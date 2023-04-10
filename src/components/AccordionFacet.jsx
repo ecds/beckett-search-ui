@@ -29,6 +29,7 @@ function AccordionFacet({ facet, label }) {
                         displayTitle={false}
                         facet={facet}
                         loading={false}
+                        textSearchable
                     />
                 </EuiPanel>
             </EuiAccordion>
