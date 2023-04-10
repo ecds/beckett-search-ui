@@ -148,3 +148,19 @@ export function isDefault(state) {
         state.page?.from === 0
     );
 }
+
+/**
+ * Convert a sort state to a sortBy string to use in URL routing.
+ *
+ * @param {object} sortState The sort state to convert
+ * @returns {string} String representation of the sort for URL routing
+ */
+export function getSortByFromState(sortState) {
+    let sortBy = sortState?.field;
+    // relevance does not use direction
+    if (sortState.direction && sortBy !== "relevance") {
+        const dir = sortState.direction === 1 ? "asc" : "desc";
+        sortBy = `${sortState.field}_${dir}`;
+    }
+    return sortBy;
+}

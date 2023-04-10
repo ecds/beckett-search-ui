@@ -47,6 +47,7 @@ import { SearchControls } from "../../components/SearchControls";
 import YearRangeFacet from "../../components/YearRangeFacet";
 import {
     conditionalFacets,
+    getSortByFromState,
     routeToState,
     stateToRoute,
     useCustomSearchkitSDK,
@@ -129,12 +130,7 @@ function EntitiesSearch() {
     useEffect(() => {
         // handle sorting separately in order to only update in case of changes
         if (sortState) {
-            let sortBy = sortState.field;
-            // relevance does not use direction
-            if (sortState.direction && sortBy !== "relevance") {
-                const dir = sortState.direction === 1 ? "asc" : "desc";
-                sortBy = `${sortState.field}_${dir}`;
-            }
+            const sortBy = getSortByFromState(sortState);
             if (
                 !searchParams.has("sort") ||
                 searchParams.get("sort") !== sortBy
@@ -161,6 +157,7 @@ function EntitiesSearch() {
                 stateToRoute({
                     ...variables,
                     query,
+                    sortBy: getSortByFromState(sortState),
                     scope,
                     operator,
                     page: {
@@ -175,6 +172,7 @@ function EntitiesSearch() {
             stateToRoute({
                 ...variables,
                 query,
+                sortBy: getSortByFromState(sortState),
                 scope,
                 operator,
                 page: {
