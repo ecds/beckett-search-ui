@@ -288,7 +288,7 @@ function EntitiesSearch() {
                                 isLoading={loading}
                                 onClick={() => {
                                     // reset query and filters
-
+                                    setQuery("");
                                     api.setQuery("");
                                     setYearRangeState({
                                         endYear: "",

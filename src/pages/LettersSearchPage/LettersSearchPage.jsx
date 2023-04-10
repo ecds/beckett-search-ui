@@ -277,6 +277,7 @@ function LettersSearch() {
                                 isLoading={loading}
                                 onClick={() => {
                                     // reset query and date range
+                                    setQuery("");
                                     api.setQuery("");
                                     setDateRangeState({
                                         startDate: null,
