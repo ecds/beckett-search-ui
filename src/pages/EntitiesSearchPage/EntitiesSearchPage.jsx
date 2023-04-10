@@ -168,18 +168,20 @@ function EntitiesSearch() {
         }
     }, [operator]);
     useEffect(() => {
-        setSearchParams(
-            stateToRoute({
-                ...variables,
-                query,
-                sortBy: getSortByFromState(sortState),
-                scope,
-                operator,
-                page: {
-                    from: variables.page.from,
-                },
-            }),
-        );
+        if (variables?.page?.from) {
+            setSearchParams(
+                stateToRoute({
+                    ...variables,
+                    query,
+                    sortBy: getSortByFromState(sortState),
+                    scope,
+                    operator,
+                    page: {
+                        from: variables.page.from,
+                    },
+                }),
+            );
+        }
     }, [variables?.page?.from]);
 
     return (
