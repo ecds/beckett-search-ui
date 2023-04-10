@@ -15,6 +15,7 @@
         "@elastic/eui": "^42.1.0",
         "@searchkit/client": "^3.0.0",
         "@searchkit/schema": "^3.0.0",
+        "fold-to-ascii": "^5.0.1",
         "moment": "^2.29.4",
         "react": "^16.14.0",
         "react-dom": "^16.14.0",
