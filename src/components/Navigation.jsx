@@ -55,6 +55,13 @@ function Navigation() {
                                     </EuiHeaderLink>
                                 )}
                             </NavLink>
+                            <NavLink to="/timeline" tabIndex="-1">
+                                {({ isActive }) => (
+                                    <EuiHeaderLink isActive={isActive}>
+                                        Timeline
+                                    </EuiHeaderLink>
+                                )}
+                            </NavLink>
                         </EuiHeaderLinks>
                     </EuiHeaderSectionItem>
                 </EuiHeaderSection>

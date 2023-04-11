@@ -11,6 +11,7 @@ import {
     LetterPage,
     letterLoader,
     LettersSearchPage,
+    TimeLinePage,
 } from "./pages";
 import { Root } from "./Root";
 import "./assets/index.css";
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
                 path: "letters/:letterId",
                 element: <LetterPage />,
                 loader: letterLoader,
+            },
+            {
+                path: "timeline",
+                element: <TimeLinePage />,
             },
         ],
     },
