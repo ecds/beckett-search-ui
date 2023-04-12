@@ -76,7 +76,12 @@ export function TimeLinePage() {
                                             className={`timeline-event timeline-event-type-${event.type}`}
                                         >
                                             <h2>{event.date}</h2>
-                                            <p>{event.description}</p>
+                                            <p
+                                                // eslint-disable-next-line react/no-danger
+                                                dangerouslySetInnerHTML={{
+                                                    __html: event.description,
+                                                }}
+                                            />
                                         </VerticalTimelineElement>
                                     );
                                 })}
