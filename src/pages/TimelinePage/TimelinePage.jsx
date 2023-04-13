@@ -31,12 +31,16 @@ export function TimeLinePage() {
         // observer. It get's all wonky/messy when someone is scrolling. This
         // will do for now.
         document.getElementById(id).scrollIntoView({ behavior: "instant" });
-        setCurrentYear(id);
+        setTimeout(() => setCurrentYear(id), 100);
     };
 
     return (
-        <main ref={containerRef}>
-            <EuiPage paddingSize="none">
+        <main>
+            <EuiPage
+                ref={containerRef}
+                paddingSize="none"
+                className="timeline-page"
+            >
                 <EuiPageSideBar sticky paddingSize="l">
                     <nav className="timeline-nav">
                         {years.map((year) => (
@@ -51,7 +55,7 @@ export function TimeLinePage() {
                         ))}
                     </nav>
                 </EuiPageSideBar>
-                <EuiPageBody className="timeline-page">
+                <EuiPageBody>
                     <section style={{ overflow: "auto" }}>
                         {timelineData.map((year) => (
                             <TimelineYear

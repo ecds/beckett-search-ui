@@ -27,7 +27,7 @@ appendIconComponentCache({
  */
 function Navigation() {
     return (
-        <header>
+        <header className="main-nav-header">
             <EuiHeader>
                 <EuiHeaderSection>
                     <EuiHeaderSectionItem border="none">
