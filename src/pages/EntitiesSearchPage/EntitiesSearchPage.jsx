@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import {
     SearchkitClient,
@@ -91,6 +91,7 @@ function EntitiesSearch() {
         config: entitiesSearchConfig,
         fields,
     });
+    const sortStateMounted = useRef(false);
     const [sortState, setSortState] = useState(() => {
         if (searchParams?.has("sort")) {
             const [field, dir] = searchParams.get("sort").split("_");
@@ -129,7 +130,10 @@ function EntitiesSearch() {
     }, [searchParams]);
     useEffect(() => {
         // handle sorting separately in order to only update in case of changes
-        if (sortState) {
+        // use mounted ref to ensure we don't fire this effect on initial value
+        if (!sortStateMounted.current) {
+            sortStateMounted.current = true;
+        } else if (sortState) {
             const sortBy = getSortByFromState(sortState);
             if (
                 !searchParams.has("sort") ||
@@ -151,7 +155,8 @@ function EntitiesSearch() {
         if (
             operator &&
             searchParams &&
-            (!searchParams.has("op") || searchParams.get("op") !== operator)
+            ((!searchParams.has("op") && operator !== "or") ||
+                (searchParams.has("op") && searchParams.get("op") !== operator))
         ) {
             setSearchParams(
                 stateToRoute({
