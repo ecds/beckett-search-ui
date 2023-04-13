@@ -1,7 +1,15 @@
+.timeline-page {
+    height: calc(100vh - 48px);
+}
+
+.timeline-nav button {
+    margin: 0.25rem 0;
+}
+
 .timeline-year-header {
-    background-color: #fff;
+    background-color: #fafbfd;
     position: sticky;
-    top: 0;
+    top: -1px;
     z-index: 1;
 }
 

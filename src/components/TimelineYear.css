@@ -1,0 +1,36 @@
+:root {
+    --default-padding: 16px;
+    --sticky-pos: 10px;
+    --header-height: 3rem;
+}
+
+.sticky-timeline-header {
+    background-color: #fafbfd;
+    display: flex;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+}
+
+.sticky-timeline-header .euiText {
+    width: 100%;
+}
+
+.sticky-bumper {
+    position: absolute;
+    left: 0;
+    right: 0;
+    visibility: hidden;
+}
+
+.sticky-bumper-top {
+    height: var(--header-height);
+    top: calc(var(--header-height) * -1);
+    background-color: deeppink;
+}
+
+.sticky-bumper-bottom {
+    bottom: var(--header-height);
+    height: var(--header-height);
+    background-color: blueviolet;
+}

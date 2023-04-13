@@ -1,19 +1,9 @@
-import {
-    EuiPage,
-    EuiPageBody,
-    EuiPageSideBar,
-    EuiSideNav,
-    EuiText,
-    EuiTextAlign,
-} from "@elastic/eui";
-import {
-    VerticalTimeline,
-    VerticalTimelineElement,
-} from "react-vertical-timeline-component";
-import React from "react";
+import { EuiButton, EuiPage, EuiPageBody, EuiPageSideBar } from "@elastic/eui";
+import React, { useRef, useState } from "react";
 import { timelineData } from "../../data/timelineData";
 import "react-vertical-timeline-component/style.min.css";
 import "./TimelinePage.css";
+import TimelineYear from "../../components/TimelineYear";
 
 /**
  * Page for timeline.
@@ -22,72 +12,57 @@ import "./TimelinePage.css";
  */
 export function TimeLinePage() {
     const years = timelineData.map(({ year }) => ({
-        name: year,
-        id: `nav-${year}`,
+        label: year,
+        id: `year-${year}`,
         href: `#year-${year}`,
     }));
 
+    const [currentYear, setCurrentYear] = useState(years[0].id);
+    const containerRef = useRef();
+
+    /**
+     * Handle navigating to year when button is clicked.
+     *
+     @param {string} id Element ID of year that was clicked.
+     */
+    const handleClick = (id) => {
+        // Ideally, this would be an effect on the TimeLineYear component when
+        // currentYear is updated. But the currentYear is updated by the intersection
+        // observer. It get's all wonky/messy when someone is scrolling. This
+        // will do for now.
+        document.getElementById(id).scrollIntoView({ behavior: "instant" });
+        setCurrentYear(id);
+    };
+
     return (
-        <main>
-            <EuiPage paddingSize="l">
-                <EuiPageSideBar sticky>
-                    <EuiSideNav items={years} />
-                </EuiPageSideBar>
-                <EuiPageBody>
-                    {timelineData.map((year) => (
-                        <section key={year.year} id={`year-${year.year}`}>
-                            <EuiText className="timeline-year-header">
-                                <EuiTextAlign textAlign="center">
-                                    <h1>{year.year}</h1>
-                                </EuiTextAlign>
-                            </EuiText>
-                            <VerticalTimeline
-                                lineColor="#b1b3b3"
-                                animate={false}
+        <main ref={containerRef}>
+            <EuiPage paddingSize="none">
+                <EuiPageSideBar sticky paddingSize="l">
+                    <nav className="timeline-nav">
+                        {years.map((year) => (
+                            <EuiButton
+                                key={year.label}
+                                onClick={() => handleClick(year.id)}
+                                id={`nav-${year.label}`}
+                                fill={year.id === currentYear}
                             >
-                                {year.events.map((event) => {
-                                    const color =
-                                        event.type === "personal"
-                                            ? "#007dba"
-                                            : "#e6b965";
-                                    return (
-                                        <VerticalTimelineElement
-                                            key={event.id}
-                                            position={
-                                                event.type === "personal"
-                                                    ? "left"
-                                                    : "right"
-                                            }
-                                            iconStyle={{
-                                                background: color,
-                                                marginTop: "-10px",
-                                            }}
-                                            contentArrowStyle={{
-                                                borderRight: `7px solid  ${color}`,
-                                                top: "10px",
-                                            }}
-                                            contentStyle={{
-                                                borderColor: color,
-                                                borderStyle: "solid",
-                                                borderWidth: "thin",
-                                                boxShadow: "none",
-                                                padding: "0",
-                                            }}
-                                            className={`timeline-event timeline-event-type-${event.type}`}
-                                        >
-                                            <h2>{event.date}</h2>
-                                            <p
-                                                // eslint-disable-next-line react/no-danger
-                                                dangerouslySetInnerHTML={{
-                                                    __html: event.description,
-                                                }}
-                                            />
-                                        </VerticalTimelineElement>
-                                    );
-                                })}
-                            </VerticalTimeline>
-                        </section>
-                    ))}
+                                {year.label}
+                            </EuiButton>
+                        ))}
+                    </nav>
+                </EuiPageSideBar>
+                <EuiPageBody className="timeline-page">
+                    <section style={{ overflow: "auto" }}>
+                        {timelineData.map((year) => (
+                            <TimelineYear
+                                key={`timeline-${year.year}`}
+                                data={year}
+                                currentYear={currentYear}
+                                setCurrentYear={setCurrentYear}
+                                root={containerRef.current}
+                            />
+                        ))}
+                    </section>
                 </EuiPageBody>
             </EuiPage>
         </main>

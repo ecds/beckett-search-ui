@@ -34,7 +34,7 @@ export const timelineData = [
                 id: "d42773c8-90f3-5a86-bc38-243d91682818",
                 type: "personal",
                 description:
-                    "London literary agent A. P. Watt confirms receipt of Watt, sent to him by Leslie Daiken.",
+                    "London literary agent A. P. Watt confirms receipt of <i>Watt</i>, sent to him by Leslie Daiken.",
                 date: "22 February",
             },
             {
@@ -68,7 +68,7 @@ export const timelineData = [
             {
                 id: "d193f28d-1cb9-5e18-8129-560bcafb268a",
                 type: "personal",
-                description: "Chatto and Windus rejects Watt.",
+                description: "Chatto and Windus rejects <i>Watt</i>.",
                 date: "8 April",
             },
             {
@@ -81,28 +81,28 @@ export const timelineData = [
             {
                 id: "82581b7d-37e4-5043-8eab-5778a77e6798",
                 type: "personal",
-                description: "Beckett begins writing Mercier et Camier.",
+                description: "Beckett begins writing <i>Mercier et Camier</i>.",
                 date: "5 May 1946",
             },
             {
                 id: "a478e2f9-a4fc-58f3-853a-ceff0cb763a7",
                 type: "personal",
                 description:
-                    'The first part of "Suite" accepted by Les Temps Modernes.',
+                    'The first part of "Suite" accepted by <i>Les Temps Modernes</i>.',
                 date: "before 15 May",
             },
             {
                 id: "cbc393e2-0bff-5461-8528-ca04270539e2",
                 type: "personal",
                 description:
-                    "Methuen is considering Watt, and publisher Maurice Fridberg in Dublin is interested in reading Watt.",
+                    "Methuen is considering <i>Watt</i>, and publisher Maurice Fridberg in Dublin is interested in reading <i>Watt</i>.",
                 date: "19 June",
             },
             {
                 id: "5e4a9e85-6bb6-505b-9c9b-955427974cdc",
                 type: "personal",
                 description:
-                    'Beckett\'s  poem "Saint-Lô" published in The Irish Times.',
+                    'Beckett\'s  poem "Saint-Lô" published in <i>The Irish Times</i>.',
                 date: "24 June",
             },
             {
@@ -122,47 +122,48 @@ export const timelineData = [
                 id: "4eccd1d8-f48c-555f-8ec3-1c97c7e275d9",
                 type: "personal",
                 description:
-                    "First part of Suite published in Les Temps Modernes.",
+                    "First part of Suite published in <i>Les Temps Modernes</i>.",
                 date: "July",
             },
             {
                 id: "1aea24ee-28ba-5abe-8c25-a8235b3a2a95",
                 type: "personal",
                 description:
-                    'Samuel Beckett sends second part of "Suite" to Les Temps Modernes.',
+                    'Samuel Beckett sends second part of "Suite" to <i>Les Temps Modernes</i>.',
                 date: "2 July",
             },
             {
                 id: "ede76421-8a44-5cf7-bf4d-36b2908bd3ea",
                 type: "personal",
-                description: "Writes to Routledge requesting copies of Murphy.",
+                description:
+                    "Writes to Routledge requesting copies of <i>Murphy</i>.",
                 date: "28 August",
             },
             {
                 id: "8806fa54-3eeb-5eb2-9635-c50f5040c4f8",
                 type: "personal",
                 description:
-                    "Routledge indicates that Murphy went out of print in 1942.",
+                    "Routledge indicates that <i>Murphy</i> went out of print in 1942.",
                 date: "before 1 September",
             },
             {
                 id: "dcd8256f-8a73-5013-a81e-e09d21ba095f",
                 type: "personal",
-                description: "Methuen rejects Watt.",
+                description: "Methuen rejects <i>Watt</i>.",
                 date: "3 September",
             },
             {
                 id: "0ab88fd5-438d-5d76-8499-e70d91c95396",
                 type: "personal",
                 description:
-                    'Samuel Beckett writes to Simone de Beauvoir protesting her unwillingness to publish the second part of "Suite" in Les Temps Modernes.',
+                    'Samuel Beckett writes to Simone de Beauvoir protesting her unwillingness to publish the second part of "Suite" in <i>Les Temps Modernes</i>.',
                 date: "25 September",
             },
             {
                 id: "6bcca584-0507-5c49-be5f-85a571020a08",
                 type: "personal",
                 description:
-                    "Final date in second notebook of MS of Mercier et Camier.",
+                    "Final date in second notebook of MS of <i>Mercier et Camier</i>.",
                 date: "26 September",
             },
             {
@@ -176,7 +177,7 @@ export const timelineData = [
                 id: "5c3f889d-e91d-5438-a10d-7c1fc0d91480",
                 type: "personal",
                 description:
-                    '"La peinture des van Velde ou le monde et le Pantalon" published in Cahiers d\'Art.',
+                    '"La peinture des van Velde ou le monde et le Pantalon" published in <i>Cahiers d\'Art</i>.',
                 date: "October",
             },
             {
@@ -188,14 +189,14 @@ export const timelineData = [
             {
                 id: "97eb7b17-044a-5159-aa91-6e67ad1866cd",
                 type: "personal",
-                description: "Samuel Beckett revises Mercier et Camier.",
+                description: "Samuel Beckett revises <i>Mercier et Camier</i>.",
                 date: "before 13 October",
             },
             {
                 id: "c4ed9efa-a657-592c-85cb-ca8b571e86bd",
                 type: "personal",
                 description:
-                    'Has received proofs of "Poèmes 38 39" from Les Temps Modernes.',
+                    'Has received proofs of "Poèmes 38 39" from <i>Les Temps Modernes</i>.',
                 date: "by 13 October",
             },
             {
@@ -220,14 +221,14 @@ export const timelineData = [
                 id: "cff2fda6-7e0a-58a2-b6ac-fca4f461eba3",
                 type: "personal",
                 description:
-                    "Pierre Bordas sends Samuel Beckett contract for Murphy and future work.",
+                    "Pierre Bordas sends Samuel Beckett contract for <i>Murphy</i> and future work.",
                 date: " 29 October",
             },
             {
                 id: "af260da6-aab1-50cc-8d6f-814c96e0eae6",
                 type: "personal",
                 description:
-                    'Les Temps Modernes publishes the twelve "Poèmes 38-39."',
+                    '<i>Les Temps Modernes</i> publishes the twelve "Poèmes 38-39."',
                 date: "November",
             },
             {
@@ -266,7 +267,7 @@ export const timelineData = [
                 id: "1160dbe3-a2d1-5315-ae47-be5e5fdcc71b",
                 type: "personal",
                 description:
-                    "Samuel Beckett sends Mercier et Camier to Editions Bordas.",
+                    "Samuel Beckett sends <i>Mercier et Camier</i> to Editions Bordas.",
                 date: "15 December",
             },
             {
@@ -284,7 +285,7 @@ export const timelineData = [
             {
                 id: "bef91045-bd22-530a-a2d0-a06cef9dc58b",
                 type: "personal",
-                description: '"L\'Expulsé" published in Fontaine.',
+                description: '"L\'Expulsé" published in <i>Fontaine</i>.',
                 date: "December",
             },
         ],
@@ -296,20 +297,20 @@ export const timelineData = [
                 id: "8fa40ef1-3a69-55c9-a1dc-3b9d42f3a5af",
                 type: "personal",
                 description:
-                    "Editions Bordas gives Samuel Beckett an advance for Mercier et Camier.",
+                    "Editions Bordas gives Samuel Beckett an advance for <i>Mercier et Camier</i>.",
                 date: "January",
             },
             {
                 id: "7a6dc7ca-2a42-5579-ab17-fb5f68bf4495",
                 type: "personal",
                 description:
-                    "Samuel Beckett begins writing his play Eleutheria.",
+                    "Samuel Beckett begins writing his play <i>Eleutheria</i>.",
                 date: "18 January",
             },
             {
                 id: "cac66f0b-4da1-5d25-80fe-b913f5e58ab4",
                 type: "personal",
-                description: "Finishes Eleutheria.",
+                description: "Finishes <i>Eleutheria</i>.",
                 date: "24 February",
             },
             {
@@ -336,7 +337,7 @@ export const timelineData = [
             {
                 id: "ad2720a6-4849-57d1-bbd4-b61fa6324bc8",
                 type: "personal",
-                description: "Samuel Beckett begins writing Molloy.",
+                description: "Samuel Beckett begins writing <i>Molloy</i>.",
                 date: "2 May",
             },
             {
@@ -349,7 +350,7 @@ export const timelineData = [
                 id: "eed46588-9ac6-5fbb-a533-685e8295820d",
                 type: "personal",
                 description:
-                    "Samuel Beckett and Suzanne Deschevaux-Dumesnil go to Menton. Samuel Beckett works on Molloy there. ",
+                    "Samuel Beckett and Suzanne Deschevaux-Dumesnil go to Menton. Samuel Beckett works on <i>Molloy</i> there. ",
                 date: "23 July ",
             },
             {
@@ -369,14 +370,14 @@ export const timelineData = [
             {
                 id: "4d5ad892-b051-5a2b-9823-14d0cae82f8a",
                 type: "personal",
-                description: "Jean Vilar is reading Eleutheria.",
+                description: "Jean Vilar is reading <i>Eleutheria</i>.",
                 date: "15 August",
             },
             {
                 id: "cc02b0cd-16a3-5634-bf12-81d0d498cfb5",
                 type: "personal",
                 description:
-                    "London publisher Hamish Hamilton is considering Watt.",
+                    "London publisher Hamish Hamilton is considering <i>Watt</i>.",
                 date: "27 August",
             },
             {
@@ -395,7 +396,7 @@ export const timelineData = [
             {
                 id: "2d9e88f6-3f75-54eb-b756-8dc04357d0af",
                 type: "personal",
-                description: "Samuel Beckett finishes Molloy.",
+                description: "Samuel Beckett finishes <i>Molloy</i>.",
                 date: "1 November",
             },
             {
@@ -409,14 +410,14 @@ export const timelineData = [
                 id: "1c54ee36-b15c-5e42-b539-a88d7886f37f",
                 type: "personal",
                 description:
-                    "Hamish Hamilton has rejected Watt. Maria Jolas has asked Samuel Beckett to translate for the new Transition.",
+                    "Hamish Hamilton has rejected <i>Watt</i>. Maria Jolas has asked Samuel Beckett to translate for the new <i>Transition</i>.",
                 date: "by 24 November",
             },
             {
                 id: "6eac80a1-8eeb-592b-a5d6-d87b5cb0fb86",
                 type: "personal",
                 description:
-                    "Samuel Beckett begins Malone meurt. The Grenier-Hussenot theatre, Paris, interested in Eleutheria.",
+                    "Samuel Beckett begins <i>Malone meurt</i>. The Grenier-Hussenot theatre, Paris, interested in <i>Eleutheria</i>.",
                 date: "27 November",
             },
         ],
@@ -435,7 +436,7 @@ export const timelineData = [
                 id: "95f575b8-519e-5e3c-bee5-b57e968ea244",
                 type: "personal",
                 description:
-                    "Pierre Bordas informs Jacoba van Velde, acting as Beckett's agent, that he cannot publish Molloy immediately.",
+                    "Pierre Bordas informs Jacoba van Velde, acting as Beckett's agent, that he cannot publish <i>Molloy</i> immediately.",
                 date: "13 January",
             },
             {
@@ -455,7 +456,7 @@ export const timelineData = [
                 id: "640deb8e-8f31-5079-9a8c-a8d9aae3df89",
                 type: "personal",
                 description:
-                    "Samuel Beckett's \"Peintres de l'empêchement\" published in Derrière le Miroir.",
+                    "Samuel Beckett's \"Peintres de l'empêchement\" published in <i>Derrière le Miroir</i>.",
                 date: "May",
             },
             {
@@ -473,7 +474,7 @@ export const timelineData = [
             },
             {
                 id: "7a37a2e3-9faf-5da2-bb0f-61c9d20f6015",
-                description: "Finishes Malone meurt.",
+                description: "Finishes <i>Malone meurt</i>.",
                 date: "30 May",
                 type: "personal",
             },
@@ -488,7 +489,7 @@ export const timelineData = [
                 id: "34be3b18-206c-53d3-b400-06aa83c56abc",
                 type: "personal",
                 description:
-                    'Samuel Beckett\'s "Three poems" published in Transition Forty-Eight, no. 2.',
+                    'Samuel Beckett\'s "Three poems" published in <i>Transition Forty-Eight</i>, no. 2.',
                 date: "15 June",
             },
             {
@@ -508,7 +509,7 @@ export const timelineData = [
             {
                 id: "497f7358-234a-52e2-b5f6-5aedb9b5c48c",
                 type: "personal",
-                description: "Samuel Beckett retyping Malone meurt.",
+                description: "Samuel Beckett retyping <i>Malone meurt</i>.",
                 date: "8 July",
             },
             {
@@ -540,20 +541,20 @@ export const timelineData = [
             {
                 id: "49e7656a-42d0-5268-9f29-a987f0d01ccd",
                 type: "personal",
-                description: "Finishes retyping Malone meurt.",
+                description: "Finishes retyping <i>Malone meurt</i>.",
                 date: "29 September",
             },
             {
                 id: "d882b656-dfcd-55f5-9a5a-473720576d2b",
                 type: "personal",
                 description:
-                    "Samuel Beckett begins writing En attendant Godot.",
+                    "Samuel Beckett begins writing <i>En attendant Godot</i>.",
                 date: "9 October",
             },
             {
                 id: "086fb591-2057-5295-9c31-944f74f89595",
                 type: "personal",
-                description: "Patrick Waldberg reviews Murphy in Paru.",
+                description: "Patrick Waldberg reviews <i>Murphy in Paru</i>.",
                 date: "November",
             },
             {
@@ -571,7 +572,7 @@ export const timelineData = [
             {
                 id: "d8129ce8-6f4c-59de-bcad-1622eadb1f46",
                 description:
-                    "Samuel Beckett finishes writing En attendant Godot.",
+                    "Samuel Beckett finishes writing <i>En attendant Godot</i>.",
                 date: "29 January",
                 type: "personal",
             },
@@ -585,7 +586,7 @@ export const timelineData = [
             {
                 id: "00055401-cfa2-571b-bdf1-7a6df1eb7711",
                 description:
-                    'Samuel Beckett submits Eleutheria for the Prix Rivarol; the play is being read by director Raymond Rouleau. Begins retyping En attendant Godot. Translates Guillaume Apollinaire\'s poem "Zone."',
+                    'Samuel Beckett submits <i>Eleutheria</i> for the Prix Rivarol; the play is being read by director Raymond Rouleau. Begins retyping <i>En attendant Godot</i>. Translates Guillaume Apollinaire\'s poem "Zone."',
                 date: "before 27 March",
                 type: "personal",
             },
@@ -598,13 +599,15 @@ export const timelineData = [
             },
             {
                 id: "9e14e61f-13ac-51b9-baea-953dd7a25bcf",
-                description: "Samuel Beckett begins writing L'Innommable.",
+                description:
+                    "Samuel Beckett begins writing <i>L'Innommable</i>.",
                 date: "29 March",
                 type: "personal",
             },
             {
                 id: "16d1c0a0-b336-5ce1-8c14-f6da91dc8289",
-                description: '"\'Three poems" published in Poetry Ireland.',
+                description:
+                    '"\'Three poems" published in <i>Poetry Ireland</i>.',
                 date: "April",
                 type: "personal",
             },
@@ -632,7 +635,7 @@ export const timelineData = [
                 id: "dd572afa-b4f4-5c93-9434-32c71b7b3253",
                 type: "personal",
                 decription:
-                    "Samuel Beckett begins translations for Sélection, the French edition of The Reader's Digest.",
+                    "Samuel Beckett begins translations for Sélection, the French edition of <i>The Reader's Digest</i>.",
                 date: "before 1 June",
             },
             {
@@ -663,14 +666,14 @@ export const timelineData = [
             {
                 id: "696e73a1-0561-5c95-929d-be3831a9ca4b",
                 description:
-                    "Beckett sends an extract from Watt to John Ryan, editor of Envoy.",
+                    "Beckett sends an extract from <i>Watt</i> to John Ryan, editor of <i>Envoy</i>.",
                 date: "20 October",
                 type: "personal",
             },
             {
                 id: "f65018fe-34a9-572f-9829-60ecad9efd4d",
                 description:
-                    '"Three Dialogues" published in Transition Forty-Nine, no. 5.',
+                    '"Three Dialogues" published in <i>Transition Forty-Nine</i>, no. 5.',
                 date: "10 December",
                 type: "personal",
             },
@@ -682,20 +685,21 @@ export const timelineData = [
             {
                 id: "f135bd9e-9194-5b17-8965-c23419a0c92c",
                 description:
-                    "Samuel Beckett commissioned by UNESCO to do the English translation of the Anthology of Mexican Poetry edited by Octavio Paz.",
+                    "Samuel Beckett commissioned by UNESCO to do the English translation of the <i>Anthology of Mexican Poetry</i> edited by Octavio Paz.",
                 date: "January",
                 type: "personal",
             },
             {
                 id: "d5065c0e-2375-50fb-ae27-cb915a4660e1",
                 description:
-                    '"An extract from Watt" published in Envoy (Dublin).',
+                    '"An extract from <i>Watt</i>" published in <i>Envoy</i> (Dublin).',
                 date: "January",
                 type: "personal",
             },
             {
                 id: "4d61cce9-d0dd-5af7-bd45-a741b089843d",
-                description: "Samuel Beckett finishes a draft of L'Innommable.",
+                description:
+                    "Samuel Beckett finishes a draft of <i>L'Innommable</i>.",
                 date: "January",
                 type: "personal",
             },
@@ -709,7 +713,7 @@ export const timelineData = [
             {
                 id: "7100be2a-178b-5c3d-9e66-169296fa7f4d",
                 description:
-                    "Samuel Beckett revises Ralph Mannheim's translation of George Duthuit's Les Fauves.",
+                    "Samuel Beckett revises Ralph Mannheim's translation of George Duthuit's <i>Les Fauves</i>.",
                 date: "March",
                 type: "personal",
             },
@@ -769,42 +773,42 @@ export const timelineData = [
             {
                 id: "7387afe1-58c9-5b19-bccc-dacb2f24eb7d",
                 description:
-                    "Extract from Malone meurt accepted by Georges Lambrichs for publication in Editions de Minuit's journal 84: Nouvelle Revue Littéraire.",
+                    "Extract from <i>Malone meurt</i> accepted by Georges Lambrichs for publication in Editions de Minuit's journal <i>84: Nouvelle Revue Littéraire</i>.",
                 date: "4 October",
                 type: "personal",
             },
             {
                 id: "5ad9a290-607e-51c4-8e79-95446e3f5609",
                 description:
-                    "Suzanne Deschevaux-Dumesnil brings Molloy to Georges Lambrichs at Editions de Minuit.",
+                    "Suzanne Deschevaux-Dumesnil brings <i>Molloy</i> to Georges Lambrichs at Editions de Minuit.",
                 date: "6 October",
                 type: "personal",
             },
             {
                 id: "9f95608b-cafe-5594-b6f2-72332a19d7eb",
                 description:
-                    "Jérôme Lindon reads Molloy and writes to Suzanne Deschevaux-Dumesnil that Editions de Minuit will publish the novel.",
+                    "Jérôme Lindon reads <i>Molloy</i> and writes to Suzanne Deschevaux-Dumesnil that Editions de Minuit will publish the novel.",
                 date: "before mid-October",
                 type: "personal",
             },
             {
                 id: "a3e897a5-513c-5d62-8450-bef8affc0c49",
                 description:
-                    'Extracts from Molloy and Malone meurt, translated by Samuel Beckett, are published in Transition Fifty, no. 6 as "Two Fragments."',
+                    'Extracts from <i>Molloy</i> and <i>Malone meurt</i>, translated by Samuel Beckett, are published in Transition Fifty, no. 6 as "Two Fragments."',
                 date: "20 October",
                 type: "personal",
             },
             {
                 id: "fbc42a01-e4e5-5899-a707-3257f2ecd0f9",
                 description:
-                    "Suzanne Deschevaux-Dumensil returns the signed contracts to Editions de Minuit for publication of the three novels Molloy, Malone meurt, L'Innommable.",
+                    "Suzanne Deschevaux-Dumensil returns the signed contracts to Editions de Minuit for publication of the three novels <i>Molloy</i>, <i>Malone meurt</i>, <i>L'Innommable</i>.",
                 date: "15 November",
                 type: "personal",
             },
             {
                 id: "89bb810a-d06b-58fa-b74e-d9366f887203",
                 description:
-                    '"Malone s\'en conte," an extract from Malone meurt, published in 84: Nouvelle Revue Littéraire.',
+                    '"Malone s\'en conte," an extract from <i>Malone meurt</i>, published in <i>84: Nouvelle Revue Littéraire</i>.',
                 date: "December",
                 type: "personal",
             },
@@ -821,7 +825,8 @@ export const timelineData = [
         events: [
             {
                 id: "65a2c165-e820-5411-b90e-2e8ba0c1a886",
-                description: "Samuel Beckett receives proofs for Molloy.",
+                description:
+                    "Samuel Beckett receives proofs for <i>Molloy</i>.",
                 date: "22 January",
                 type: "personal",
             },
@@ -845,7 +850,7 @@ export const timelineData = [
             },
             {
                 id: "192b6223-6150-5171-96d3-e025e8f54641",
-                description: "Molloy published by Editions de Minuit.",
+                description: "<i>Molloy</i> published by Editions de Minuit.",
                 date: "12 March",
                 type: "personal",
             },
@@ -858,7 +863,7 @@ export const timelineData = [
             {
                 id: "787565ba-0a3e-5996-9044-cf7d0033ffe3",
                 description:
-                    "First review of Molloy by Maurice Nadeau in Combat",
+                    "First review of <i>Molloy</i> by Maurice Nadeau in Combat",
                 date: "12 April",
                 type: "personal",
             },
@@ -878,7 +883,7 @@ export const timelineData = [
             {
                 id: "293bba06-8159-5845-9151-ce798c86ad1f",
                 description:
-                    "Georges Bataille publishes an essay on Molloy in Critique.",
+                    "Georges Bataille publishes an essay on <i>Molloy</i> in <i>Critique</i>.",
                 date: "May",
                 type: "personal",
             },
@@ -891,26 +896,27 @@ export const timelineData = [
             {
                 id: "245252c6-7eff-507b-b4a8-957285e80683",
                 description:
-                    "Charles Bensoussan wishes to produce Eleutheria, but Samuel Beckett is uneasy about the play.",
+                    "Charles Bensoussan wishes to produce <i>Eleutheria</i>, but Samuel Beckett is uneasy about the play.",
                 date: "25 May",
                 type: "personal",
             },
             {
                 id: "6dcc5213-5f31-5326-be25-9c6a04a33354",
-                description: "Molloy nominated for the Prix des Critiques.",
+                description:
+                    "<i>Molloy</i> nominated for the Prix des Critiques.",
                 date: "29 May",
                 type: "personal",
             },
             {
                 id: "86ab7ca8-7e27-5a8b-9939-ce58ee0f215b",
-                description: "Samuel Beckett is revising Malone meurt.",
+                description: "Samuel Beckett is revising <i>Malone meurt</i>.",
                 date: "9 June",
                 type: "personal",
             },
             {
                 id: "78adca99-6c94-5eef-8274-9b63433a71c7",
                 description:
-                    "Offers an extract from Malone meurt or from En attendant Godot to Les Temps Modernes in response to a request by Simone de Beauvoir.",
+                    "Offers an extract from <i>Malone meurt</i> or from <i>En attendant Godot</i> to <i>Les Temps Modernes</i> in response to a request by Simone de Beauvoir.",
                 date: "25 June",
                 type: "personal",
             },
@@ -922,14 +928,15 @@ export const timelineData = [
             },
             {
                 id: "05da43ce-cb08-552a-aea6-8a9ca138d867",
-                description: "Delivers Malone meurt to Editions de Minuit. ",
+                description:
+                    "Delivers <i>Malone meurt</i> to Editions de Minuit. ",
                 date: "4 July",
                 type: "personal",
             },
             {
                 id: "9790dde6-6b2a-5545-b6ca-0dd6d6621536",
                 description:
-                    'Sends "Texte pour rien, V" ("torn off the placenta of L\'Innommable") to Jean Wahl for Deucalion.',
+                    'Sends "Texte pour rien, V" ("torn off the placenta of <i>L\'Innommable</i>") to Jean Wahl for Deucalion.',
                 date: "8 July",
                 type: "personal",
             },
@@ -942,7 +949,7 @@ export const timelineData = [
             {
                 id: "5b91577e-05a3-5d93-ad84-c160ec88bf93",
                 description:
-                    "Has corrected proofs of extract from Malone meurt in Les Temps Modernes.",
+                    "Has corrected proofs of extract from <i>Malone meurt</i> in <i>Les Temps Modernes</i>.",
                 date: "by 26 July",
                 type: "personal",
             },
@@ -961,7 +968,7 @@ export const timelineData = [
             {
                 id: "a36bee1a-52e9-5080-9063-6def2a100db3",
                 description:
-                    '"Quel malheur . . . ," an extract from Malone meurt, published in Les Temps Modernes.',
+                    '"Quel malheur . . . ," an extract from <i>Malone meurt</i>, published in <i>Les Temps Modernes</i>.',
                 date: "September",
                 type: "personal",
             },
@@ -981,7 +988,7 @@ export const timelineData = [
             },
             {
                 id: "a994ae62-5558-519c-83fb-be7761e143f9",
-                description: "Publication of Malone meurt.",
+                description: "Publication of <i>Malone meurt</i>.",
                 date: "November",
                 type: "personal",
             },
@@ -994,7 +1001,8 @@ export const timelineData = [
             },
             {
                 id: "cdd07bd7-c36c-5e14-82ff-f508703a7373",
-                description: "Extract from Watt published in Irish Writing.",
+                description:
+                    "Extract from <i>Watt</i> published in <i>Irish Writing</i>.",
                 date: "December",
                 type: "personal",
             },
@@ -1013,14 +1021,14 @@ export const timelineData = [
             {
                 id: "20cc2194-8698-5e6c-a778-89231f072c39",
                 description:
-                    "Director Roger Blin seeks a Paris theatre for En attendant Godot.",
+                    "Director Roger Blin seeks a Paris theatre for <i>En attendant Godot</i>.",
                 date: "January",
                 type: "personal",
             },
             {
                 id: "6353dde3-b93b-5f28-94a3-3cbf1639f32d",
                 description:
-                    "An excerpt of En attendant Godot recorded on 6 February for broadcast on French radio,",
+                    "An excerpt of <i>En attendant Godot</i> recorded on 6 February for broadcast on French radio,",
                 date: "17 February.	6 February",
                 type: "personal",
             },
@@ -1041,7 +1049,7 @@ export const timelineData = [
             {
                 id: "fa5e4777-0a35-5688-967c-c00c5babd70e",
                 description:
-                    'A subvention "pour aider le montage" awarded for the production of En attendant Godot.',
+                    'A subvention "pour aider le montage" awarded for the production of <i>En attendant Godot</i>.',
                 date: "26 February",
                 type: "personal",
             },
@@ -1062,21 +1070,21 @@ export const timelineData = [
             {
                 id: "7d77ea5a-0158-557f-b98d-f48e304136a4",
                 description:
-                    "En attendant Godot in rehearsal: autumn production anticipated.",
+                    "<i>En attendant Godot</i> in rehearsal: autumn production anticipated.",
                 date: "2 June",
                 type: "personal",
             },
             {
                 id: "fa8bf0a5-c26e-568b-a7c9-34200dd3783d",
                 description:
-                    "Agreement signed with France Guy, Théâtre de Poche, to qualify for subvention payment for En attendant Godot.",
+                    "Agreement signed with France Guy, Théâtre de Poche, to qualify for subvention payment for <i>En attendant Godot</i>.",
                 date: "23 July",
                 type: "personal",
             },
             {
                 id: "d945f2e2-cf46-5c9b-b484-ca2d864fb335",
                 description:
-                    "Merlin interested in publishing a work by Samuel Beckett.",
+                    "<i>Merlin</i> interested in publishing a work by Samuel Beckett.",
                 date: "12 August",
                 type: "personal",
             },
@@ -1095,7 +1103,7 @@ export const timelineData = [
             },
             {
                 id: "d82cc63a-280b-52c9-a0b7-62d5e8dd573d",
-                description: "Publication of En attendant Godot.",
+                description: "Publication of <i>En attendant Godot</i>.",
                 date: "17 October",
                 type: "personal",
             },
@@ -1115,19 +1123,20 @@ export const timelineData = [
             {
                 id: "48967fb2-4db2-5558-a282-6003d0d14139",
                 description:
-                    "Subsequent to broken agreement with the Théâtre de Poche, Samuel Beckett signs contract with Théâtre de Babylone for production of En attendant Godot.",
+                    "Subsequent to broken agreement with the Théâtre de Poche, Samuel Beckett signs contract with Théâtre de Babylone for production of <i>En attendant Godot</i>.",
                 date: "2 November",
                 type: "personal",
             },
             {
                 id: "1ce16089-5b05-57c8-b44c-f09abc70ab4b",
-                description: "Rehearsals of En attendant Godot begin.",
+                description: "Rehearsals of <i>En attendant Godot</i> begin.",
                 date: "13 November",
                 type: "personal",
             },
             {
                 id: "b9d81ff6-6fa0-5e34-8e08-a83c2c601876",
-                description: '"Extract from Watt" published in Merlin.',
+                description:
+                    '"Extract from <i>Watt</i>" published in <i>Merlin</i>.',
                 date: "15 December",
                 type: "personal",
             },
@@ -1145,7 +1154,7 @@ export const timelineData = [
             {
                 id: "1a0b53e9-65c3-520c-816a-211545459b62",
                 description:
-                    "Premiere of En attendant Godot, Théâtre de Babylone.",
+                    "Premiere of <i>En attendant Godot</i>, Théâtre de Babylone.",
                 date: "5 January",
                 type: "personal",
             },
@@ -1159,28 +1168,28 @@ export const timelineData = [
             {
                 id: "ffbb7991-768f-5edb-83a5-7c173a1d8154",
                 description:
-                    "Boisterous spectators interrupt performance of En attendant Godot.",
+                    "Boisterous spectators interrupt performance of <i>En attendant Godot</i>.",
                 date: "31 January",
                 type: "personal",
             },
             {
                 id: "38ea3c0b-9849-5013-bd65-8c58bd0bf6c4",
                 description:
-                    '"Mahood," an excerpt from L\'Innommable, published in the Nouvelle Revue Française with unauthorized cuts.',
+                    '"Mahood," an excerpt from <i>L\'Innommable</i>, published in the <i>Nouvelle Revue Française</i> with unauthorized cuts.',
                 date: "February",
                 type: "personal",
             },
             {
                 id: "d3c6c507-1184-5995-8504-6ad63dbff649",
                 description:
-                    "Alain Robbe-Grillet publishes essay on Samuel Beckett's work in Critique.",
+                    "Alain Robbe-Grillet publishes essay on Samuel Beckett's work in <i>Critique</i>.",
                 date: "February",
                 type: "personal",
             },
             {
                 id: "ca4960e2-5f25-5256-898a-50134bd1a443",
                 description:
-                    "Samuel Beckett reads draft of Elmar Tophoven's German translation, Warten auf Godot.",
+                    "Samuel Beckett reads draft of Elmar Tophoven's German translation, <i>Warten auf Godot</i>.",
                 date: "by 19 February",
                 type: "personal",
             },
@@ -1193,14 +1202,14 @@ export const timelineData = [
             {
                 id: "dae8dc96-51fd-54ec-8701-489394d3d61a",
                 description:
-                    'Note of apology published in the Nouvelle Revue Française for cuts made to Samuel Beckett\'s "Mahood."',
+                    'Note of apology published in the <i>Nouvelle Revue Française</i> for cuts made to Samuel Beckett\'s "Mahood."',
                 date: "April",
                 type: "personal",
             },
             {
                 id: "6ada8488-65cd-551b-b8ca-3337c25a221c",
                 description:
-                    '"Trois Textes pour rien [III, VI, X]" published in Les Lettres Nouvelles.',
+                    '"Trois Textes pour rien [III, VI, X]" published in <i>Les Lettres Nouvelles</i>.',
                 date: "May",
                 type: "personal",
             },
@@ -1214,27 +1223,27 @@ export const timelineData = [
             {
                 id: "61e5a82b-7808-5520-a80b-ef5156c8fc22",
                 description:
-                    "Offer received from Mrs. Garson Kanin and Thornton Wilder for an English translation and production in the United States of En attendant Godot.",
+                    "Offer received from Mrs. Garson Kanin and Thornton Wilder for an English translation and production in the United States of <i>En attendant Godot</i>.",
                 date: "15 May",
                 type: "personal",
             },
             {
                 id: "aeb5cb47-915a-5ecc-b8ec-db35bb9f22ef",
-                description: "Publication of L'Innommable.",
+                description: "Publication of <i>L'Innommable</i>.",
                 date: "20 May",
                 type: "personal",
             },
             {
                 id: "58bcc58b-b4a7-5bf6-8f62-be6c596ec35f",
                 description:
-                    "Barney Rosset, Grove Press, offers to publish English translations of En attendant Godot, Molloy, Malone meurt, and takes an option for L'Innommable.",
+                    "Barney Rosset, Grove Press, offers to publish English translations of <i>En attendant Godot</i>, <i>Molloy</i>, <i>Malone meurt</i>, and takes an option for <i>L'Innommable</i>.",
                 date: "before 22 May",
                 type: "personal",
             },
             {
                 id: "308a7dc7-4f6f-50f3-add7-ad8a6520feb0",
                 description:
-                    '"Texte pour rien, XI" published in Arts-Spectacles.',
+                    '"Texte pour rien, XI" published in <i>Arts-Spectacles</i>.',
                 date: "3 July",
                 type: "personal",
             },
@@ -1248,28 +1257,28 @@ export const timelineData = [
             {
                 id: "6daf8e5b-48a9-590a-9d4a-afb11c53679d",
                 description:
-                    "Samuel Beckett working in Paris with Patrick Bowles on the English translation of Molloy.",
+                    "Samuel Beckett working in Paris with Patrick Bowles on the English translation of <i>Molloy</i>.",
                 date: "by 27 July",
                 type: "personal",
             },
             {
                 id: "c164c68f-91d0-5628-826c-d45c710ef0da",
                 description:
-                    "Imprint date of Watt, Collection Merlin, Olympia Press.",
+                    "Imprint date of <i>Watt</i>, Collection <i>Merlin</i>, Olympia Press.",
                 date: "31 August",
                 type: "personal",
             },
             {
                 id: "bbf1acca-aec9-55cc-8b1d-c5a06d8e98a7",
                 description:
-                    "Reprint of En attendant Godot with cuts and changes made for performance.",
+                    "Reprint of <i>En attendant Godot</i> with cuts and changes made for performance.",
                 date: "September",
                 type: "personal",
             },
             {
                 id: "11d22ab9-726a-55fa-8002-ae6be6ee2e52",
                 description:
-                    "Nadeau publishes essay on L'Innommable in Les Lettres Nouvelles.",
+                    "Nadeau publishes essay on <i>L'Innommable</i> in <i>Les Lettres Nouvelles</i>.",
                 date: "September",
                 type: "personal",
             },
@@ -1289,49 +1298,49 @@ export const timelineData = [
             {
                 id: "73dc0458-c68e-5d80-9bfb-222c19c51508",
                 description:
-                    "Samuel Beckett attends premiere of Warten auf Godot, Schauspielhaus, Berlin.",
+                    "Samuel Beckett attends premiere of <i>Warten auf Godot</i>, Schauspielhaus, Berlin.",
                 date: "8 September",
                 type: "personal",
             },
             {
                 id: "3ac3ea12-547d-5a48-b4ff-6e3e66667616",
                 description:
-                    '"Extract from Molloy," translated by Patrick Bowles, published in Merlin.',
+                    '"Extract from <i>Molloy</i>," translated by Patrick Bowles, published in <i>Merlin</i>.',
                 date: "15 September",
                 type: "personal",
             },
             {
                 id: "9878baee-aa36-52e0-b97e-2f571be9fd5a",
                 description:
-                    "Reprise of En attendant Godot, Théâtre de Babylone.",
+                    "Reprise of <i>En attendant Godot</i>, Théâtre de Babylone.",
                 date: "25 September",
                 type: "personal",
             },
             {
                 id: "b27e4077-ee85-5e06-aace-1a8bdd44e777",
                 description:
-                    "Samuel Beckett works on French translation of Watt with Daniel Mauroc.",
+                    "Samuel Beckett works on French translation of <i>Watt</i> with Daniel Mauroc.",
                 date: "by 31 October",
                 type: "personal",
             },
             {
                 id: "10aca531-9f08-5af0-a2c8-da2e89fb3acf",
                 description:
-                    '"Texte pour rien, XIII" published in Le Disque Vert.',
+                    '"Texte pour rien, XIII" published in <i>Le Disque Vert</i>.',
                 date: "November",
                 type: "personal",
             },
             {
                 id: "749e1f96-7329-5e5c-abf4-22a64eb8db61",
                 description:
-                    "Tour of the Théâtre de Babylone production of En attendant Godot: Germany, Italy, and France.",
+                    "Tour of the Théâtre de Babylone production of <i>En attendant Godot</i>: Germany, Italy, and France.",
                 date: "16 November - 12 December",
                 type: "personal",
             },
             {
                 id: "d413446b-0478-5424-9bb0-fa58b24687e3",
                 description:
-                    "Opening performance of Godot, by prisoners, in Lüttringhausen, in a German translation by one of their number.",
+                    "Opening performance of <i>Godot</i>, by prisoners, in Lüttringhausen, in a German translation by one of their number.",
                 date: "29 November",
                 type: "personal",
             },
@@ -1356,14 +1365,14 @@ export const timelineData = [
             {
                 id: "0780edeb-98ae-520a-8ae8-b3e71163b859",
                 description:
-                    "Correcting proofs of Waiting for Godot for Grove Press. Reviewing Trino Martínez Trives's translation Esperando a Godot. Refuses to allow Editions de Minuit to publish Mercier et Camier.",
+                    "Correcting proofs of <i>Waiting for Godot</i> for Grove Press. Reviewing Trino Martínez Trives's translation <i>Esperando a Godot</i>. Refuses to allow Editions de Minuit to publish <i>Mercier et Camier</i>.",
                 date: "20 January",
                 type: "personal",
             },
             {
                 id: "f7652d73-c52c-57e8-945a-a470e978d07f",
                 description:
-                    "Reviews German translation of Molloy by translator Erich Franzen in a series of letters.",
+                    "Reviews German translation of <i>Molloy</i> by translator Erich Franzen in a series of letters.",
                 date: "23 January - 17 February",
                 type: "personal",
             },
@@ -1377,20 +1386,21 @@ export const timelineData = [
             {
                 id: "047e3c32-7370-563e-a52d-8646b3025387",
                 description:
-                    "Blin's production of Warten auf Godot opens in the Schauspielhaus, Zurich.",
+                    "Blin's production of <i>Warten auf Godot</i> opens in the Schauspielhaus, Zurich.",
                 date: "25 February",
                 type: "personal",
             },
             {
                 id: "6c98c942-abe0-5e63-8cea-f250353b3a76",
-                description: '"Extract from Molloy" published in Paris Review.',
+                description:
+                    '"Extract from <i>Molloy</i>" published in Paris Review.',
                 date: "March",
                 type: "personal",
             },
             {
                 id: "e2ec6f28-5a7e-5ad3-a1ae-cf91e6a8e774",
                 description:
-                    "Samuel Beckett asks Jacques Putman, Georges Duthuit, and Pierre Schneider to contribute short essays on the painting of Jack B. Yeats for Les Lettres Nouvelles.",
+                    "Samuel Beckett asks Jacques Putman, Georges Duthuit, and Pierre Schneider to contribute short essays on the painting of Jack B. Yeats for <i>Les Lettres Nouvelles</i>.",
                 date: "March",
                 type: "personal",
             },
@@ -1404,21 +1414,21 @@ export const timelineData = [
             {
                 id: "c154714c-dfc1-5615-9981-f4f355977445",
                 description:
-                    '"Molloy," an excerpt from Molloy, published in New World Writing.',
+                    '"Molloy," an excerpt from <i>Molloy</i>, published in <i>New World Writing</i>.',
                 date: "April",
                 type: "personal",
             },
             {
                 id: "e521d421-f375-519d-91cc-72a359fab648",
                 description:
-                    'Samuel Beckett\'s "Hommage à Jack B Yeats" published in Les Lettres Nouvelles.',
+                    'Samuel Beckett\'s "Hommage à Jack B Yeats" published in <i>Les Lettres Nouvelles</i>.',
                 date: "April",
                 type: "personal",
             },
             {
                 id: "7560db46-d8a5-587b-b17b-2b132f0d1347",
                 description:
-                    "Samuel Beckett responds to Lord Chamberlain's Office censorship of text of Waiting for Godot.",
+                    "Samuel Beckett responds to Lord Chamberlain's Office censorship of text of <i>Waiting for Godot</i>.",
                 date: "14 April",
                 type: "personal",
             },
@@ -1431,7 +1441,7 @@ export const timelineData = [
             {
                 id: "9b02a40b-347d-54cb-9403-aecc5d92d94b",
                 description:
-                    "Two sonnets by Miguel de Guevara, translated by Samuel Beckett for the Anthology of Mexican Poetry, published in Hermathena.",
+                    "Two sonnets by Miguel de Guevara, translated by Samuel Beckett for the <i>Anthology of Mexican Poetry</i>, published in Hermathena.",
                 date: "May",
                 type: "personal",
             },
@@ -1452,35 +1462,35 @@ export const timelineData = [
             {
                 id: "510fc445-0a1f-5321-89de-c7cae2b12788",
                 description:
-                    "Objections of the Lord Chamberlain's Office to the text of Waiting for Godot resolved.",
+                    "Objections of the Lord Chamberlain's Office to the text of <i>Waiting for Godot</i> resolved.",
                 date: "23 June",
                 type: "personal",
             },
             {
                 id: "63fe3dd9-4fab-5a5e-a479-157225786a0f",
                 description:
-                    "Samuel Beckett has begun the English translation of Malone meurt.",
+                    "Samuel Beckett has begun the English translation of <i>Malone meurt</i>.",
                 date: "12 July",
                 type: "personal",
             },
             {
                 id: "2187a6fc-58a0-5197-a6d7-a266a9165899",
                 description:
-                    "Waiting for Godot, translated by the author, published by Grove Press.",
+                    "<i>Waiting for Godot</i>, translated by the author, published by Grove Press.",
                 date: "end of August",
                 type: "personal",
             },
             {
                 id: "1bba601b-ca23-5fd5-839a-44d0134bd3b4",
                 description:
-                    '"The End," translated by Richard Seaver in collaboration with the author, published in Merlin.',
+                    '"The End," translated by Richard Seaver in collaboration with the author, published in <i>Merlin</i>.',
                 date: "Summer-Autumn",
                 type: "personal",
             },
             {
                 id: "3b238ec7-c325-5868-8029-333279da1063",
                 description:
-                    "Samuel Beckett correcting proofs of Pablo Palant's translation of Esperando a Godot.",
+                    "Samuel Beckett correcting proofs of Pablo Palant's translation of <i>Esperando a Godot</i>.",
                 date: "7 September",
                 type: "personal",
             },
@@ -1530,7 +1540,7 @@ export const timelineData = [
             {
                 id: "c805b141-65e8-5e50-b681-5469e5158ba2",
                 description:
-                    "Samuel Beckett gives Patrick Bowles final text of translation of Molloy; Bowles sends to Rosset on 23 January.",
+                    "Samuel Beckett gives Patrick Bowles final text of translation of <i>Molloy</i>; Bowles sends to Rosset on 23 January.",
                 date: "13 January",
                 type: "personal",
             },
@@ -1543,28 +1553,28 @@ export const timelineData = [
             {
                 id: "ed45b393-7547-504e-85e1-18018fed6f2a",
                 description:
-                    "Molloy published in English by Collection Merlin, Olympia Press.",
+                    "<i>Molloy</i> published in English by Collection <i>Merlin</i>, Olympia Press.",
                 date: "March",
                 type: "personal",
             },
             {
                 id: "8461e1a6-0b0a-5141-8a8a-fc3b59fb8743",
                 description:
-                    "Opening of Blin's production of Wachten op Godot, Toneelgroep Theater, Arnhem.",
+                    "Opening of Blin's production of <i>Wachten op Godot</i>, Toneelgroep Theater, Arnhem.",
                 date: "6 March",
                 type: "personal",
             },
             {
                 id: "a74f340d-b770-58de-a767-3ac59d1efa28",
                 description:
-                    "Samuel Beckett completes draft of play eventually entitled Fin de partie.",
+                    "Samuel Beckett completes draft of play eventually entitled <i>Fin de partie</i>.",
                 date: "13 March",
                 type: "personal",
             },
             {
                 id: "f351ce3f-cda3-5410-b436-a92244124149",
                 description:
-                    "Delivers manuscript of Nouvelles et Textes pour rien to Editions de Minuit.",
+                    "Delivers manuscript of <i>Nouvelles et Textes pour rien</i> to Editions de Minuit.",
                 date: "27 March",
                 type: "personal",
             },
@@ -1584,14 +1594,14 @@ export const timelineData = [
             {
                 id: "caa5381f-6a96-5a2f-b904-c084dd92025f",
                 description:
-                    '"Deux textes pour rien [I, IX]" published in Monde Nouveau/Paru.',
+                    '"Deux textes pour rien [I, IX]" published in <i>Monde Nouveau/Paru</i>.',
                 date: "May-June",
                 type: "personal",
             },
             {
                 id: "5494163d-03a9-554b-a5c1-b24f864881c7",
                 description:
-                    "Esperando a Godot performed in Madrid, despite ban on publicity and public performance.",
+                    "<i>Esperando a Godot</i> performed in Madrid, despite ban on publicity and public performance.",
                 date: "28 May",
                 type: "personal",
             },
@@ -1611,48 +1621,48 @@ export const timelineData = [
             {
                 id: "b7955648-3538-5124-bb0e-4699ab836879",
                 description:
-                    "Attends opening of Alan Schneider's production of Thornton Wilder's The Skin of Our Teeth, Théâtre Sarah Bernhardt, Paris.",
+                    "Attends opening of Alan Schneider's production of Thornton Wilder's <i>The Skin of Our Teeth</i>, Théâtre Sarah Bernhardt, Paris.",
                 date: "28 June",
                 type: "personal",
             },
             {
                 id: "ff639200-9df0-5c80-9ed4-c691a94e670a",
-                description: "Molloy published by Grove Press.",
+                description: "<i>Molloy</i> published by Grove Press.",
                 date: "August",
                 type: "personal",
             },
             {
                 id: "8b98564b-c5c6-5e28-a6b1-9ff6fbd369cb",
                 description:
-                    "Opening of Waiting for Godot, Arts Theatre, London, directed by Peter Hall.",
+                    "Opening of <i>Waiting for Godot</i>, Arts Theatre, London, directed by Peter Hall.",
                 date: "3 August",
                 type: "personal",
             },
             {
                 id: "8f746e72-a0d9-57d0-af00-e8fd1525e6e8",
                 description:
-                    "Samuel Beckett completes draft of his translation of Malone meurt. Has written a mime scenario for Deryk Mendel.",
+                    "Samuel Beckett completes draft of his translation of <i>Malone meurt</i>. Has written a mime scenario for Deryk Mendel.",
                 date: "18 August",
                 type: "personal",
             },
             {
                 id: "07b7ded1-6a6f-51e0-bd84-fb890186aae5",
                 description:
-                    "Extract from Watt broadcast on the BBC Third Programme.",
+                    "Extract from <i>Watt</i> broadcast on the BBC Third Programme.",
                 date: "7 September",
                 type: "personal",
             },
             {
                 id: "f7982222-6f7e-57d9-98aa-246216759ea6",
                 description:
-                    "Waiting for Godot transfers to the Criterion Theatre, London.",
+                    "<i>Waiting for Godot</i> transfers to the Criterion Theatre, London.",
                 date: "12 September",
                 type: "personal",
             },
             {
                 id: "9e6c8780-006c-581e-8a58-d237430203b9",
                 description:
-                    '"Trois poèmes" ("Accul," "Mort de A.D.," and "vive morte") published in Cahiers des Saisons, a Minuit journal previously entitled 84: Nouvelle Revue Littéraire.',
+                    '"Trois poèmes" ("Accul," "Mort de A.D.," and "vive morte") published in <i>Cahiers des Saisons</i>, a Minuit journal previously entitled <i>84: Nouvelle Revue Littéraire</i>.',
                 date: "October",
                 type: "personal",
             },
@@ -1667,55 +1677,56 @@ export const timelineData = [
             {
                 id: "763e24e4-f194-5ca3-bc97-5b4032045cef",
                 description:
-                    "Opening of Waiting for Godot at the Pike Theatre, Dublin.",
+                    "Opening of <i>Waiting for Godot</i> at the Pike Theatre, Dublin.",
                 date: "28 October",
                 type: "personal",
             },
             {
                 id: "e459dbf8-a416-5694-87b3-e7f151caaa13",
                 description:
-                    '"Henri Hayden, homme-peintre" published in Arts-documents (Geneva).',
+                    '"Henri Hayden, homme-peintre" published in <i>Arts-documents</i> (Geneva).',
                 date: "November",
                 type: "personal",
             },
             {
                 id: "f1bd676a-5800-5260-9311-c36d50d8169a",
                 description:
-                    "Samuel Beckett meets Donald Albery, London producer of Waiting for Godot, in Paris.",
+                    "Samuel Beckett meets Donald Albery, London producer of <i>Waiting for Godot</i>, in Paris.",
                 date: "3 November",
                 type: "personal",
             },
             {
                 id: "c2fbd348-4b3b-525f-b4ad-d99d6e2a4565",
                 description:
-                    "Composer John Beckett working in Paris with Deryk Mendel on music for a mime (Act Without Words I).",
+                    "Composer John Beckett working in Paris with Deryk Mendel on music for a mime (<i>Act Without Words I</i>).",
                 date: "26 November",
                 type: "personal",
             },
             {
                 id: "96f14e16-1a2f-5e38-a94a-6aef1f5f9fe6",
-                description: "Imprint date of Nouvelles et Textes pour rien.",
+                description:
+                    "Imprint date of <i>Nouvelles et Textes pour rien</i>.",
                 date: "15 November",
                 type: "personal",
             },
             {
                 id: "f8205159-b75e-5ecb-944d-7b6caf106eb7",
                 description:
-                    "Samuel Beckett discusses Waiting for Godot with Alan Schneider in Paris.",
+                    "Samuel Beckett discusses <i>Waiting for Godot</i> with Alan Schneider in Paris.",
                 date: "from 26 November",
                 type: "personal",
             },
             {
                 id: "4a889c26-fe15-5980-93ce-a91a381ab5b3",
                 description:
-                    "Samuel Beckett and Schneider attend several performances of London production of Waiting for Godot. Samuel Beckett meets German actress Elizabeth Bergner in London.",
+                    "Samuel Beckett and Schneider attend several performances of London production of <i>Waiting for Godot</i>. Samuel Beckett meets German actress Elizabeth Bergner in London.",
                 date: "early December",
                 type: "personal",
             },
             {
                 id: "16998334-f5db-52b6-a52a-e7051868e508",
                 description:
-                    "Samuel Beckett attends 100th performance of Waiting for Godot in London.",
+                    "Samuel Beckett attends 100th performance of <i>Waiting for Godot</i> in London.",
                 date: "8 December",
                 type: "personal",
             },
@@ -1727,13 +1738,13 @@ export const timelineData = [
             {
                 id: "a0100873-42b1-55ac-a7af-83cce09f7b6f",
                 description:
-                    "US opening of Waiting for Godot, Coconut Grove Playhouse, Miami, directed by Alan Schneider.",
+                    "US opening of <i>Waiting for Godot</i>, Coconut Grove Playhouse, Miami, directed by Alan Schneider.",
                 date: "3 January",
                 type: "personal",
             },
             {
                 id: "48b50af6-ef06-5fa9-bb82-d21612cce633",
-                description: "All editions of Molloy banned in Ireland.",
+                description: "All editions of <i>Molloy</i> banned in Ireland.",
                 date: "20 January",
                 type: "personal",
             },
@@ -1747,14 +1758,14 @@ export const timelineData = [
             {
                 id: "68f369ab-655c-5223-a510-53538e115b02",
                 description:
-                    "Waiting for Godot published by Faber and Faber, in expurgated version.",
+                    "<i>Waiting for Godot</i> published by Faber and Faber, in expurgated version.",
                 date: "10 February",
                 type: "personal",
             },
             {
                 id: "8633749f-5ff7-57b0-a3b9-ad5569ff9743",
                 description:
-                    "Samuel Beckett begins translation of L'Innommable.",
+                    "Samuel Beckett begins translation of <i>L'Innommable</i>.",
                 date: "27 February",
                 type: "personal",
             },
@@ -1773,21 +1784,21 @@ export const timelineData = [
             {
                 id: "58c362af-8fd3-5791-8b9d-782110cb9e07",
                 description:
-                    "Extract from Malone Dies published in Irish Writing.",
+                    "Extract from <i>Malone Dies</i> published in <i>Irish Writing</i>.",
                 date: "April",
                 type: "personal",
             },
             {
                 id: "6f9caa82-cf58-502b-9ef1-8d5a101b2ab6",
                 description:
-                    "New York opening of Waiting for Godot at the John Golden Theatre, directed by Herbert Bergdorf.",
+                    "New York opening of <i>Waiting for Godot</i> at the John Golden Theatre, directed by Herbert Bergdorf.",
                 date: "19 April",
                 type: "personal",
             },
             {
                 id: "c3cfa174-86a0-5c3c-9da0-b7b964793867",
                 description:
-                    "Samuel Beckett revises Fin de partie for Marseille Festival of the Avant Garde in August.",
+                    "Samuel Beckett revises <i>Fin de partie</i> for Marseille Festival of the Avant Garde in August.",
                 date: "May-June",
                 type: "personal",
             },
@@ -1801,7 +1812,7 @@ export const timelineData = [
             {
                 id: "a78fecca-9698-523d-898b-121996e0ed00",
                 description:
-                    "Reprise of En attendant Godot, Théâtre Hébertot, Paris.",
+                    "Reprise of <i>En attendant Godot</i>, Théâtre Hébertot, Paris.",
                 date: "14 June - 23 September",
                 type: "personal",
             },
@@ -1822,7 +1833,7 @@ export const timelineData = [
             {
                 id: "1412f617-8db1-5990-89c9-045b9da08faa",
                 description:
-                    "Fin de partie and Acte sans paroles will not be produced in Marseille Festival.",
+                    "<i>Fin de partie</i> and <i>Acte sans paroles</i> will not be produced in Marseille Festival.",
                 date: "8 July",
                 type: "personal",
             },
@@ -1848,20 +1859,20 @@ export const timelineData = [
             {
                 id: "87d82dcd-a675-5c72-aae4-5518e0b95680",
                 description:
-                    '"Waiting for Godot" published in Theatre Arts (New York).',
+                    '"<i>Waiting for Godot</i>" published in Theatre Arts (New York).',
                 date: "August",
                 type: "personal",
             },
             {
                 id: "d67bc5ff-ab2d-5d39-94e6-13e49fffa778",
                 description:
-                    "Samuel Beckett meets Goddard Lieberson, director of Columbia Records, New York, who brings him test recording of Waiting for Godot.",
+                    "Samuel Beckett meets Goddard Lieberson, director of Columbia Records, New York, who brings him test recording of <i>Waiting for Godot</i>.",
                 date: "11 August",
                 type: "personal",
             },
             {
                 id: "3bf39cf0-a826-5565-8395-57af93e04cd8",
-                description: "Writing All That Fall for the BBC.",
+                description: "Writing <i>All That Fall</i> for the BBC.",
                 date: "23 August",
                 type: "personal",
             },
@@ -1874,27 +1885,28 @@ export const timelineData = [
             },
             {
                 id: "47a78014-aec5-52f1-9521-225a27b3bfa0",
-                description: "Extract from Watt, the BBC Third Programme.",
+                description:
+                    "Extract from <i>Watt</i>, the BBC Third Programme.",
                 date: "7 September",
                 type: "personal",
             },
             {
                 id: "d6be73ad-99ed-57d2-a4df-ba28cad7d84a",
                 description:
-                    "Samuel Beckett sends his first radio play All That Fall to the BBC.",
+                    "Samuel Beckett sends his first radio play <i>All That Fall</i> to the BBC.",
                 date: "27 September",
                 type: "personal",
             },
             {
                 id: "065a3292-c06c-5eb4-80ec-dbbfec5adb5f",
-                description: "Malone Dies published by Grove Press.",
+                description: "<i>Malone Dies</i> published by Grove Press.",
                 date: "October",
                 type: "personal",
             },
             {
                 id: "1d8e61ea-b058-5e06-83f8-f5c6975dfe33",
                 description:
-                    "Fin de Partie in preliminary rehearsal at the Théâtre de l'Oeuvre, Paris.",
+                    "<i>Fin de Partie</i> in preliminary rehearsal at the Théâtre de l'Oeuvre, Paris.",
                 date: "October",
                 type: "personal",
             },
@@ -1914,7 +1926,7 @@ export const timelineData = [
             {
                 id: "8e3429cf-0123-55c4-9d61-857f7612e587",
                 description:
-                    '"Yellow" from More Pricks Than Kicks published in New World Writing.',
+                    '"Yellow" from <i>More Pricks Than Kicks</i> published in <i>New World Writing</i>.',
                 date: "November",
                 type: "personal",
             },
@@ -1928,14 +1940,14 @@ export const timelineData = [
             {
                 id: "65cb9acd-37ad-5a4d-a947-f7ddbc54a186",
                 description:
-                    "John Calder Ltd proposes to publish Samuel Beckett's three novels (Molloy, Malone Dies, The Unnamable) in a single volume in England.",
+                    "John Calder Ltd proposes to publish Samuel Beckett's three novels (<i>Molloy</i>, <i>Malone Dies</i>, <i>The Unnamable</i>) in a single volume in England.",
                 date: "11 November",
                 type: "personal",
             },
             {
                 id: "e3b7c7a3-11ce-5a9b-bc6d-3334526a2196",
                 description:
-                    'Samuel Beckett "pre-rehearsing" Fin de partie with Jean Martin and Roger Blin for Théâtre de L\'Oeuvre, Paris.',
+                    'Samuel Beckett "pre-rehearsing" <i>Fin de partie</i> with Jean Martin and Roger Blin for Théâtre de L\'Oeuvre, Paris.',
                 date: "28 November",
                 type: "personal",
             },
@@ -1997,7 +2009,7 @@ export const timelineData = [
                 id: "208f3ebc-c219-557a-8f5b-ee4f75b3fa64",
                 date: "c. 11-15 February",
                 description:
-                    "In Paris, John Beckett and Deryk Mendel coordinate music and movements for <i>Acte sans paroles I</i>.",
+                    "In Paris, John Beckett and Deryk Mendel coordinate music and movements for <i>Acte sans paroles</i> I</i>.",
                 type: "personal",
                 additional: "none",
             },
@@ -2013,7 +2025,7 @@ export const timelineData = [
                 id: "94ae1a44-4eed-56f3-8d39-4a86382d4208",
                 date: "March",
                 description:
-                    "<i><i>Tous ceux qui tombent</i></i> published in Les Lettres Nouvelles. ",
+                    "<i>Tous ceux qui tombent</i> published in <i>Les Lettres Nouvelles</i>. ",
                 type: "personal",
                 additional:
                     "https://andalusiabooks.files.wordpress.com/2012/08/les-lettres-nouvelle_0002.jpg",
@@ -2095,7 +2107,7 @@ export const timelineData = [
                 id: "fb3bcf0f-f754-5bc4-82f6-07582388bf15",
                 date: "24 August",
                 description:
-                    "Beckett completes <i>Acte sans paroles II</i>, for Deryk Mendel.",
+                    "Beckett completes <i>Acte sans paroles</i> II</i>, for Deryk Mendel.",
                 type: "personal",
                 additional: "none",
             },
@@ -2232,7 +2244,7 @@ export const timelineData = [
                 id: "d0bf24dc-c995-5fcd-9967-380bb9f00e56",
                 date: "25 April",
                 description:
-                    "<i>Endgame</i>, followed by Act Without Words I, published by Faber and Faber.",
+                    "<i>Endgame</i>, followed by <i>Act Without Words I</i>, published by Faber and Faber.",
                 type: "personal",
                 additional: "image",
             },
@@ -2447,7 +2459,7 @@ export const timelineData = [
                 id: "0e4c7e32-e929-5649-ab44-130ae5c28a2f",
                 date: "4 March",
                 description:
-                    "Les Lettres Nouvelles publishes <i>La dernière bande</i>.",
+                    "<i>Les Lettres Nouvelles</i> publishes <i>La dernière bande</i>.",
                 type: "personal",
                 additional: "none",
             },
@@ -3610,7 +3622,8 @@ export const timelineData = [
             {
                 id: "ce7b8ff8-47b2-55fc-bfb9-3c27f107e48a",
                 date: "June",
-                description: "Comédie published in Les Lettres Nouvelles.",
+                description:
+                    "Comédie published in <i>Les Lettres Nouvelles</i>.",
                 type: "personal",
                 additional: "none",
             },
