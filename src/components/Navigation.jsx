@@ -27,7 +27,7 @@ appendIconComponentCache({
  */
 function Navigation() {
     return (
-        <header>
+        <header className="main-nav-header">
             <EuiHeader>
                 <EuiHeaderSection>
                     <EuiHeaderSectionItem border="none">
@@ -52,6 +52,13 @@ function Navigation() {
                                 {({ isActive }) => (
                                     <EuiHeaderLink isActive={isActive}>
                                         Search Entities
+                                    </EuiHeaderLink>
+                                )}
+                            </NavLink>
+                            <NavLink to="/timeline" tabIndex="-1">
+                                {({ isActive }) => (
+                                    <EuiHeaderLink isActive={isActive}>
+                                        Timeline
                                     </EuiHeaderLink>
                                 )}
                             </NavLink>

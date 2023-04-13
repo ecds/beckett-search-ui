@@ -4,3 +4,4 @@ export * from "./ErrorPage";
 export * from "./HomePage";
 export * from "./LetterPage";
 export * from "./LettersSearchPage";
+export * from "./TimelinePage";

@@ -1,0 +1,36 @@
+.timeline-page {
+    height: calc(100vh - 48px);
+}
+
+.timeline-nav button {
+    margin: 0.25rem 0;
+}
+
+.timeline-year-header {
+    background-color: #fafbfd;
+    position: sticky;
+    top: -1px;
+    z-index: 1;
+}
+
+.vertical-timeline {
+    position: relative;
+}
+
+.timeline-event h2 {
+    padding: 0.75rem 1rem;
+}
+
+.timeline-event-type-personal .vertical-timeline-element-content h2 {
+    background-color: #007dba;
+    color: #fff;
+    text-align: end;
+}
+
+.timeline-event-type-global h2 {
+    background-color: #e6b965;
+}
+
+.timeline-event p {
+    padding: 0 1rem 1rem;
+}

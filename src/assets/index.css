@@ -16,3 +16,13 @@
 sup {
     vertical-align: super !important;
 }
+
+main {
+    /* margin-top: 48px; */
+}
+
+.result-name {
+    background-color: #fafbfd;
+    padding: 1rem 0;
+    top: 48px;
+}
