@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useSearchParams } from "react-router-dom";
 import {
     SearchkitClient,
@@ -84,6 +84,7 @@ function LettersSearch() {
     );
     const [dateRangeState, setDateRangeState] = useDateFilter();
     const [scope, setScope] = useScope();
+    const sortStateMounted = useRef(false);
     const [sortState, setSortState] = useState(() => {
         if (searchParams?.has("sort")) {
             const [field, dir] = searchParams.get("sort").split("_");
@@ -131,7 +132,10 @@ function LettersSearch() {
     }, [searchParams]);
     useEffect(() => {
         // handle sorting separately in order to only update in case of changes
-        if (sortState) {
+        // use mounted ref to ensure we don't fire this effect on initial value
+        if (!sortStateMounted.current) {
+            sortStateMounted.current = true;
+        } else if (sortState) {
             const sortBy = getSortByFromState(sortState);
             if (
                 !searchParams.has("sort") ||
@@ -153,7 +157,8 @@ function LettersSearch() {
         if (
             operator &&
             searchParams &&
-            (!searchParams.has("op") || searchParams.get("op") !== operator)
+            ((!searchParams.has("op") && operator !== "or") ||
+                (searchParams.has("op") && searchParams.get("op") !== operator))
         ) {
             setSearchParams(
                 stateToRoute({
