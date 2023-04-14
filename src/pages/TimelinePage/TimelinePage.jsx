@@ -35,12 +35,8 @@ export function TimeLinePage() {
     };
 
     return (
-        <main>
-            <EuiPage
-                ref={containerRef}
-                paddingSize="none"
-                className="timeline-page"
-            >
+        <main ref={containerRef}>
+            <EuiPage paddingSize="none" className="timeline-page">
                 <EuiPageSideBar sticky paddingSize="l">
                     <nav className="timeline-nav">
                         {years.map((year) => (

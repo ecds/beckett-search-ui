@@ -14,11 +14,11 @@ import "./TimelineYear.css";
  * @param {object} props React functional components props object
  * @param {HTMLElement} props.root Container for all timelines
  * @param {object} props.data Object with all the events for the given year
- * @param {string} props.currentYear Year that is currently in the viewport
+ * @param {number} props.docHeighState Year that is currently in the viewport
  * @param {Function} props.setCurrentYear Function to set the value for currentYear
  * @returns {React.Component} React functional component for a timeline
  */
-function TimelineYear({ data, root, currentYear, setCurrentYear }) {
+function TimelineYear({ data, root, setCurrentYear, docHeighState }) {
     const headerRef = useRef();
     const bumperTopRef = useRef();
     const bumperBottomRef = useRef();
@@ -30,10 +30,7 @@ function TimelineYear({ data, root, currentYear, setCurrentYear }) {
             ([record]) => {
                 const { boundingClientRect, rootBounds } = record;
 
-                if (
-                    boundingClientRect.bottom < rootBounds.top &&
-                    currentYear !== id
-                ) {
+                if (boundingClientRect.bottom < rootBounds.top) {
                     setCurrentYear(id);
                 }
             },
@@ -48,8 +45,7 @@ function TimelineYear({ data, root, currentYear, setCurrentYear }) {
 
                 if (
                     boundingClientRect.bottom > rootBounds.top &&
-                    intersectionRatio === 1 &&
-                    currentYear !== id
+                    intersectionRatio === 1
                 ) {
                     setCurrentYear(id);
                 }
@@ -65,7 +61,7 @@ function TimelineYear({ data, root, currentYear, setCurrentYear }) {
             topObserver.disconnect();
             bottomObserver.disconnect();
         };
-    }, []);
+    }, [docHeighState]);
 
     return (
         <section
