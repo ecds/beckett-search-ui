@@ -1994,8 +1994,7 @@ export const timelineData = [
                 description:
                     "<i>Fin de Partie</i> and <i>Acte sans paroles</i> published, <i>Editions de Minuit</i>.",
                 type: "personal",
-                additional:
-                    "https://www.foldvaribooks.com/pictures/1291.jpg?v=1504617993",
+                image: "https://www.foldvaribooks.com/pictures/1291.jpg?v=1504617993",
             },
             {
                 id: "0a45b69a-adfc-5914-a9a4-220e11fde26b",
@@ -2027,16 +2026,14 @@ export const timelineData = [
                 description:
                     "<i>Tous ceux qui tombent</i> published in <i>Les Lettres Nouvelles</i>. ",
                 type: "personal",
-                additional:
-                    "https://andalusiabooks.files.wordpress.com/2012/08/les-lettres-nouvelle_0002.jpg",
+                image: "https://andalusiabooks.files.wordpress.com/2012/08/les-lettres-nouvelle_0002.jpg",
             },
             {
                 id: "8626222e-b29e-58c1-817d-80dc210ec23b",
                 date: "15 March",
                 description: "<i>Murphy</i> published by Grove Press.",
                 type: "personal",
-                additional:
-                    "https://upload.wikimedia.org/wikipedia/en/0/05/Beckett_Murphy.jpg",
+                image: "https://upload.wikimedia.org/wikipedia/en/0/05/Beckett_Murphy.jpg",
             },
             {
                 id: "a1210988-1770-51cc-a747-522bac6be70a",
@@ -2052,8 +2049,7 @@ export const timelineData = [
                 description:
                     "Death of Jack B. Yeats in Dublin; Samuel Beckett unable to attend the funeral.",
                 type: "global",
-                additional:
-                    "https://upload.wikimedia.org/wikipedia/commons/4/42/Jack_Butler_Yeats.jpg",
+                image: "https://upload.wikimedia.org/wikipedia/commons/4/42/Jack_Butler_Yeats.jpg",
             },
             {
                 id: "9ef43e79-1e30-5c8d-b7db-675d8dc26989",
@@ -2117,8 +2113,7 @@ export const timelineData = [
                 description:
                     "<i>All That Fall</i> published by Faber and Faber.",
                 type: "personal",
-                additional:
-                    "https://upload.wikimedia.org/wikipedia/en/thumb/2/2b/All_That_Fall.jpg/220px-All_That_Fall.jpg",
+                image: "https://upload.wikimedia.org/wikipedia/en/thumb/2/2b/All_That_Fall.jpg/220px-All_That_Fall.jpg",
             },
             {
                 id: "a6841a28-ec7d-535a-ba87-9eb96b266b4e",
@@ -2198,8 +2193,7 @@ export const timelineData = [
                 description:
                     "Launch of the first earth satellite, Explorer 1, by the United States.",
                 type: "global",
-                additional:
-                    "https://upload.wikimedia.org/wikipedia/commons/7/72/JPL_-_Explorer_1_is_test-mated_before_launch.jpg",
+                image: "https://upload.wikimedia.org/wikipedia/commons/7/72/JPL_-_Explorer_1_is_test-mated_before_launch.jpg",
             },
             {
                 id: "38c2cada-6c66-59e1-ac55-540509524ccf",
@@ -2230,8 +2224,7 @@ export const timelineData = [
                 date: "7 March",
                 description: "<i>Malone Dies</i> published by John Calder.",
                 type: "personal",
-                additional:
-                    "https://pictures.abebooks.com/SHAPERO/md/md22841252761.jpg",
+                image: "https://pictures.abebooks.com/SHAPERO/md/md22841252761.jpg",
             },
             {
                 id: "8690462b-c96e-55cf-a197-cd82e66030bb",
@@ -2269,8 +2262,7 @@ export const timelineData = [
                 date: "13 May",
                 description: "“May 1958 Crisis” in Algeria.",
                 type: "global",
-                additional:
-                    "https://upload.wikimedia.org/wikipedia/commons/3/30/Algerian_war_collage_wikipedia.jpg",
+                image: "https://upload.wikimedia.org/wikipedia/commons/3/30/Algerian_war_collage_wikipedia.jpg",
             },
             {
                 id: "7d43e101-0ba5-57fc-9c43-74bbd918e9d0",
@@ -2326,8 +2318,7 @@ export const timelineData = [
                 description:
                     "Boris Pasternak awarded the Nobel Prize in Literature. Soviet authorities require that he refuse it.",
                 type: "global",
-                additional:
-                    "https://upload.wikimedia.org/wikipedia/commons/8/8c/Boris_Pasternak_1928.jpg",
+                image: "https://upload.wikimedia.org/wikipedia/commons/8/8c/Boris_Pasternak_1928.jpg",
             },
             {
                 id: "8b3f2b65-1c8e-5cee-b977-3091da730aa9",
@@ -2414,8 +2405,7 @@ export const timelineData = [
                 description:
                     "Cardinal Roncalli is elected Pope, as John XXIII.",
                 type: "global",
-                additional:
-                    "https://upload.wikimedia.org/wikipedia/en/9/9f/Johnxxiii-color-tiara-sm.jpg",
+                image: "https://upload.wikimedia.org/wikipedia/en/9/9f/Johnxxiii-color-tiara-sm.jpg",
             },
         ],
     },
@@ -2452,8 +2442,7 @@ export const timelineData = [
                 description:
                     "Henri Hayden exhibition, Waddington Galleries, London; catalogue includes Samuel Beckett text “Henri Hayden.”",
                 type: "personal",
-                additional:
-                    "https://upload.wikimedia.org/wikipedia/commons/3/33/Fille_assise_au_bouquet_de_fleurs%2C_1919.jpg",
+                image: "https://upload.wikimedia.org/wikipedia/commons/3/33/Fille_assise_au_bouquet_de_fleurs%2C_1919.jpg",
             },
             {
                 id: "0e4c7e32-e929-5649-ab44-130ae5c28a2f",
@@ -2477,8 +2466,7 @@ export const timelineData = [
                 description:
                     "Death of Peter Suhrkamp, Samuel Beckett's German publisher.",
                 type: "global",
-                additional:
-                    "https://upload.wikimedia.org/wikipedia/commons/d/d0/Suhrkamp_peter.png",
+                image: "https://upload.wikimedia.org/wikipedia/commons/d/d0/Suhrkamp_peter.png",
             },
             {
                 id: "638a11ed-8ee4-5ad5-8230-5ca9f41e3161",
@@ -2517,8 +2505,7 @@ export const timelineData = [
                 description:
                     "Samuel Beckett receives honorary D. Litt. from Trinity College Dublin.",
                 type: "personal",
-                additional:
-                    "https://i.pinimg.com/474x/f4/e7/09/f4e709955fdf3db7747154518ef7ee30.jpg",
+                image: "https://i.pinimg.com/474x/f4/e7/09/f4e709955fdf3db7747154518ef7ee30.jpg",
             },
             {
                 id: "9027f145-c1c4-5094-a58e-982c04c702f9",
@@ -2549,16 +2536,14 @@ export const timelineData = [
                 description:
                     "Olympia Press publish <i>Molloy</i>, <i>Malone Dies</i>, and <i>The Unnamable</i> as a single volume for European market; Grove Press publish the “three in one” in November.",
                 type: "personal",
-                additional:
-                    "https://pictures.abebooks.com/ELLISBKS/15900021036.jpg",
+                image: "https://pictures.abebooks.com/ELLISBKS/15900021036.jpg",
             },
             {
                 id: "dda7ad0e-722e-5608-89e3-ce6ac906a300",
                 date: "before 14 October",
                 description: "Beckett buys a Citroën 2CV.",
                 type: "personal",
-                additional:
-                    "https://upload.wikimedia.org/wikipedia/commons/b/b8/1956_Citro%C3%ABn_2CV_-_Flickr_-_skinnylawyer.jpg",
+                image: "https://upload.wikimedia.org/wikipedia/commons/b/b8/1956_Citro%C3%ABn_2CV_-_Flickr_-_skinnylawyer.jpg",
             },
             {
                 id: "607b11b3-3652-51fe-a240-2ab598bf1fb5",
@@ -2586,8 +2571,7 @@ export const timelineData = [
                 date: "4 January",
                 description: "Death of Albert Camus.",
                 type: "global",
-                additional:
-                    "https://upload.wikimedia.org/wikipedia/commons/9/9a/Albert_Camus2.jpg",
+                image: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Albert_Camus2.jpg",
             },
             {
                 id: "faa9e39e-a461-5b3b-9039-6af37b3af92a",
@@ -2643,8 +2627,7 @@ export const timelineData = [
                 description:
                     "<i>Molloy</i>, <i>Malone Dies</i>, and <i>The Unnamable</i> published by John Calder in a single volume as <i>Three Novels</i>.",
                 type: "personal",
-                additional:
-                    "https://archive.org/services/img/in.ernet.dli.2015.125753",
+                image: "https://archive.org/services/img/in.ernet.dli.2015.125753",
             },
             {
                 id: "1c9e177c-8d58-5420-9727-e12c42e2191c",
@@ -2732,8 +2715,7 @@ export const timelineData = [
                 description:
                     "Robert Pinget's <i>La Manivelle</i> and Samuel Beckett's English text, <i>The Old Tune</i>, published by Editions de Minuit.",
                 type: "personal",
-                additional:
-                    "https://www.williamreesecompany.com/pictures/medium/WRCLIT71623.jpg",
+                image: "https://www.williamreesecompany.com/pictures/medium/WRCLIT71623.jpg",
             },
             {
                 id: "9e69843e-5b74-5445-a03a-dabdfe504018",
@@ -3199,8 +3181,7 @@ export const timelineData = [
                 date: "7-25 August",
                 description: "Beckett holidays with Suzanne in Kitzbühel.",
                 type: "personal",
-                additional:
-                    "https://www.gettyimages.com/detail/photo/wilder-kaiser-mountain-range-royalty-free-image/15727808",
+                image: "https://www.gettyimages.com/detail/photo/wilder-kaiser-mountain-range-royalty-free-image/15727808",
             },
             {
                 id: "ab7a5ec4-fd66-5fdc-9c6e-39bac1c05378",
@@ -3601,8 +3582,7 @@ export const timelineData = [
                 date: "21 April",
                 description: "Gisèle Freund photographs Samuel Beckett.",
                 type: "personal",
-                additional:
-                    "https://upload.wikimedia.org/wikipedia/en/2/22/Self_Portrait_of_Gisele_Freund.jpg",
+                image: "https://upload.wikimedia.org/wikipedia/en/2/22/Self_Portrait_of_Gisele_Freund.jpg",
             },
             {
                 id: "fa5476fd-d891-5cd9-bdaa-f285f05b8d28",
@@ -3641,8 +3621,7 @@ export const timelineData = [
                 description:
                     "Nelson Mandela sentenced to life imprisonment in South Africa.",
                 type: "global",
-                additional:
-                    "https://upload.wikimedia.org/wikipedia/commons/1/11/Young_Mandela.jpg",
+                image: "https://upload.wikimedia.org/wikipedia/commons/1/11/Young_Mandela.jpg",
             },
             {
                 id: "ecef8900-9078-5e09-84df-13513c92e0a3",
@@ -3726,8 +3705,7 @@ export const timelineData = [
                 date: "18 September",
                 description: "Death of Sean O'Casey.",
                 type: "global",
-                additional:
-                    "https://upload.wikimedia.org/wikipedia/commons/9/9a/Sean_ocasey_1924.jpg",
+                image: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Sean_ocasey_1924.jpg",
             },
             {
                 id: "ce27a2cd-2de5-594a-a0bf-eb2a770a8ef6",
@@ -3759,8 +3737,7 @@ export const timelineData = [
                 description:
                     "Jean-Paul Sartre refuses the Nobel Prize in Literature.",
                 type: "global",
-                additional:
-                    "https://upload.wikimedia.org/wikipedia/commons/e/e9/Jean_Paul_Sartre_1965.jpg",
+                image: "https://upload.wikimedia.org/wikipedia/commons/e/e9/Jean_Paul_Sartre_1965.jpg",
             },
             {
                 id: "d7fab0bc-13b7-5872-a068-a1b3974ec851",
@@ -3875,8 +3852,7 @@ export const timelineData = [
                 description:
                     "Unexpurgated edition of <i>Waiting for Godot</i> published by Faber and Faber.",
                 type: "personal",
-                additional:
-                    "https://i2.wp.com/i1083.photobucket.com/albums/j391/bookkarino/13453814_zpsywj532ak.jpg",
+                image: "https://i2.wp.com/i1083.photobucket.com/albums/j391/bookkarino/13453814_zpsywj532ak.jpg",
             },
             {
                 id: "bb46d6c3-8ee9-549b-a270-4a93554408b4",
@@ -3924,8 +3900,7 @@ export const timelineData = [
                 description:
                     "Opening of the Mont Blanc Tunnel between France and Italy.",
                 type: "global",
-                additional:
-                    "https://upload.wikimedia.org/wikipedia/commons/a/a0/Mont_Blanc_Tunnel_French_Side.jpg",
+                image: "https://upload.wikimedia.org/wikipedia/commons/a/a0/Mont_Blanc_Tunnel_French_Side.jpg",
             },
             {
                 id: "b39c584c-ec78-5321-8a9e-584f3f0c5240",
@@ -3980,8 +3955,7 @@ export const timelineData = [
                 description:
                     "Charles de Gaulle is reelected as French President, defeating François Mitterrand.",
                 type: "global",
-                additional:
-                    "https://upload.wikimedia.org/wikipedia/commons/e/e2/Charles_de_Gaulle_Mr_VIE_Isles_sur_Suippe.jpg",
+                image: "https://upload.wikimedia.org/wikipedia/commons/e/e2/Charles_de_Gaulle_Mr_VIE_Isles_sur_Suippe.jpg",
             },
             {
                 id: "ddd7dcaf-2fb1-5b45-9ceb-2f1cf4681051",

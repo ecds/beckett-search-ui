@@ -1,4 +1,4 @@
-import { EuiText, EuiTextAlign } from "@elastic/eui";
+import { EuiImage, EuiText, EuiTextAlign } from "@elastic/eui";
 import {
     VerticalTimeline,
     VerticalTimelineElement,
@@ -58,6 +58,7 @@ function TimelineYear({ data, root, setCurrentYear, docHeightState }) {
             bottomObserver.observe(bumperBottomRef.current);
 
         return () => {
+            console.log("reset intersection observers", data.year);
             topObserver.disconnect();
             bottomObserver.disconnect();
         };
@@ -110,6 +111,15 @@ function TimelineYear({ data, root, setCurrentYear, docHeightState }) {
                                     __html: event.description,
                                 }}
                             />
+                            {event.image && (
+                                <p>
+                                    <EuiImage
+                                        size="l"
+                                        src={event.image}
+                                        alt=""
+                                    />
+                                </p>
+                            )}
                         </VerticalTimelineElement>
                     );
                 })}
