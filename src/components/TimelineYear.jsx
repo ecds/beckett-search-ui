@@ -58,7 +58,6 @@ function TimelineYear({ data, root, setCurrentYear, docHeightState }) {
             bottomObserver.observe(bumperBottomRef.current);
 
         return () => {
-            console.log("reset intersection observers", data.year);
             topObserver.disconnect();
             bottomObserver.disconnect();
         };
@@ -112,13 +111,7 @@ function TimelineYear({ data, root, setCurrentYear, docHeightState }) {
                                 }}
                             />
                             {event.image && (
-                                <p>
-                                    <EuiImage
-                                        size="l"
-                                        src={event.image}
-                                        alt=""
-                                    />
-                                </p>
+                                <EuiImage size="l" src={event.image} alt="" />
                             )}
                         </VerticalTimelineElement>
                     );

@@ -35,6 +35,7 @@
     background-color: #e6b965;
 }
 
-.timeline-event p {
+.timeline-event p,
+.timeline-event figure {
     padding: 0 1rem 1rem;
 }
