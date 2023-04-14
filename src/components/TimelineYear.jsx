@@ -14,17 +14,18 @@ import "./TimelineYear.css";
  * @param {object} props React functional components props object
  * @param {HTMLElement} props.root Container for all timelines
  * @param {object} props.data Object with all the events for the given year
- * @param {number} props.docHeighState Year that is currently in the viewport
+ * @param {number} props.docHeightState State that changes if the document height changes
  * @param {Function} props.setCurrentYear Function to set the value for currentYear
  * @returns {React.Component} React functional component for a timeline
  */
-function TimelineYear({ data, root, setCurrentYear, docHeighState }) {
+function TimelineYear({ data, root, setCurrentYear, docHeightState }) {
     const headerRef = useRef();
     const bumperTopRef = useRef();
     const bumperBottomRef = useRef();
     const id = `year-${data.year}`;
 
     useEffect(() => {
+        console.log("update intersections");
         // Observer for the top bumpers that updates the current year while scrolling down.
         const topObserver = new IntersectionObserver(
             ([record]) => {
@@ -61,12 +62,12 @@ function TimelineYear({ data, root, setCurrentYear, docHeighState }) {
             topObserver.disconnect();
             bottomObserver.disconnect();
         };
-    }, [docHeighState]);
+    }, [docHeightState]);
 
     return (
         <section
             id={`year-${data.year}`}
-            style={{ position: "relative" }}
+            className="timeline-year-container"
             ref={headerRef}
         >
             <header className="sticky-timeline-header">

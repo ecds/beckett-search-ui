@@ -1,5 +1,5 @@
 import { EuiButton, EuiPage, EuiPageBody, EuiPageSideBar } from "@elastic/eui";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { timelineData } from "../../data/timelineData";
 import "react-vertical-timeline-component/style.min.css";
 import "./TimelinePage.css";
@@ -18,7 +18,21 @@ export function TimeLinePage() {
     }));
 
     const [currentYear, setCurrentYear] = useState(years[0].id);
+    const [docHeightState, setDocHeightState] = useState(0);
     const containerRef = useRef();
+
+    useEffect(() => {
+        const resizeObserver = new ResizeObserver(() =>
+            // console.log('Body height changed:', entries[0].target.clientHeight)
+            setDocHeightState(docHeightState + 1),
+        );
+
+        resizeObserver.observe(containerRef?.current);
+
+        return () => {
+            resizeObserver.disconnect();
+        };
+    }, []);
 
     /**
      * Handle navigating to year when button is clicked.
@@ -52,7 +66,7 @@ export function TimeLinePage() {
                     </nav>
                 </EuiPageSideBar>
                 <EuiPageBody>
-                    <section style={{ overflow: "auto" }}>
+                    <section className="timeline-scrolling-container">
                         {timelineData.map((year) => (
                             <TimelineYear
                                 key={`timeline-${year.year}`}
@@ -60,6 +74,7 @@ export function TimeLinePage() {
                                 currentYear={currentYear}
                                 setCurrentYear={setCurrentYear}
                                 root={containerRef.current}
+                                docHeightState={docHeightState}
                             />
                         ))}
                     </section>

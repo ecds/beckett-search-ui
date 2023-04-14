@@ -4,6 +4,10 @@
     --header-height: 3rem;
 }
 
+.timeline-year-container {
+    position: relative;
+}
+
 .sticky-timeline-header {
     background-color: #fafbfd;
     display: flex;

@@ -2,6 +2,10 @@
     height: calc(100vh - 48px);
 }
 
+.timeline-scrolling-container {
+    overflow: auto;
+}
+
 .timeline-nav button {
     margin: 0.25rem 0;
 }
