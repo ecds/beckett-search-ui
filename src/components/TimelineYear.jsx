@@ -25,7 +25,6 @@ function TimelineYear({ data, root, setCurrentYear, docHeightState }) {
     const id = `year-${data.year}`;
 
     useEffect(() => {
-        console.log("update intersections");
         // Observer for the top bumpers that updates the current year while scrolling down.
         const topObserver = new IntersectionObserver(
             ([record]) => {
