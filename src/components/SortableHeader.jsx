@@ -1,4 +1,4 @@
-import { EuiButtonIcon } from "@elastic/eui";
+import { EuiButtonEmpty } from "@elastic/eui";
 import React from "react";
 import "./SortableHeader.css";
 
@@ -29,18 +29,20 @@ export function SortableHeader({ name, onSort, sortState }) {
     return (
         <div className="sortable-header">
             <span>{name}</span>
-            <EuiButtonIcon
-                size="xs"
+            <EuiButtonEmpty
+                size="s"
                 color={
                     getSortIcon(sortState, name) === "sortable"
                         ? "text"
                         : "primary"
                 }
-                display="empty"
                 iconType={getSortIcon(sortState, name)}
+                iconSide="right"
                 onClick={onSort(name)}
                 aria-label={`Sort by ${name}`}
-            />
+            >
+                Sort
+            </EuiButtonEmpty>
         </div>
     );
 }
