@@ -25,21 +25,21 @@ export const timelineData = [
                 id: "111ff32c-3360-555d-8363-7f6c55b26a07",
                 date: "10 August",
                 type: "global",
-                description: "10 August Austria-Hungary invades Russia.",
+                description: "Austria-Hungary invades Russia.",
             },
             {
                 id: "984b9174-c701-54cb-a6a8-f1070f6b420f",
                 date: "9 September",
                 type: "global",
                 description:
-                    "9 September Allied forces halt German advance in France during the First Battle of the Marne.",
+                    "Allied forces halt German advance in France during the First Battle of the Marne.",
             },
             {
                 id: "a6a9e435-0e18-5529-890d-0723a91abe01",
                 date: "18 September",
                 type: "global",
                 description:
-                    "18 September <i>Government of Ireland A</i>ct is passed, providing for Irish Home Rule; but its application is postponed for the duration of World War I.",
+                    "<i>Government of Ireland Act</i> is passed, providing for Irish Home Rule; but its application is postponed for the duration of World War I.",
             },
         ],
     },
