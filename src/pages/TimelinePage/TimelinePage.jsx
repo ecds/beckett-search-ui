@@ -1,4 +1,11 @@
-import { EuiButton, EuiPage, EuiPageBody, EuiPageSideBar } from "@elastic/eui";
+import {
+    EuiFormControlLayout,
+    EuiFormLabel,
+    EuiPage,
+    EuiPageBody,
+    EuiPageSideBar,
+    EuiSelect,
+} from "@elastic/eui";
 import React, { useEffect, useRef, useState } from "react";
 import { timelineData } from "../../data/timelineData";
 import "react-vertical-timeline-component/style.min.css";
@@ -12,18 +19,17 @@ import TimelineYear from "../../components/TimelineYear";
  */
 export function TimeLinePage() {
     const years = timelineData.map(({ year }) => ({
-        label: year,
-        id: `year-${year}`,
-        href: `#year-${year}`,
+        text: year,
+        value: year,
+        id: `select-${year}`,
     }));
 
-    const [currentYear, setCurrentYear] = useState(years[0].id);
+    const [currentYear, setCurrentYear] = useState(`year-${years[0].year}`);
     const [docHeightState, setDocHeightState] = useState(0);
     const containerRef = useRef();
 
     useEffect(() => {
         const resizeObserver = new ResizeObserver(() =>
-            // console.log('Body height changed:', entries[0].target.clientHeight)
             setDocHeightState(docHeightState + 1),
         );
 
@@ -39,7 +45,7 @@ export function TimeLinePage() {
      *
      @param {string} id Element ID of year that was clicked.
      */
-    const handleClick = (id) => {
+    const handleChange = (id) => {
         // Ideally, this would be an effect on the TimeLineYear component when
         // currentYear is updated. But the currentYear is updated by the intersection
         // observer. It get's all wonky/messy when someone is scrolling. This
@@ -53,16 +59,22 @@ export function TimeLinePage() {
             <EuiPage paddingSize="none" className="timeline-page">
                 <EuiPageSideBar sticky paddingSize="l">
                     <nav className="timeline-nav">
-                        {years.map((year) => (
-                            <EuiButton
-                                key={year.label}
-                                onClick={() => handleClick(year.id)}
-                                id={`nav-${year.label}`}
-                                fill={year.id === currentYear}
-                            >
-                                {year.label}
-                            </EuiButton>
-                        ))}
+                        <EuiFormControlLayout
+                            prepend={
+                                <EuiFormLabel htmlFor="year-select">
+                                    Select Year
+                                </EuiFormLabel>
+                            }
+                        >
+                            <EuiSelect
+                                id="year-select"
+                                options={years}
+                                value={currentYear.replace("year-", "")}
+                                onChange={({ target }) =>
+                                    handleChange(`year-${target.value}`)
+                                }
+                            />
+                        </EuiFormControlLayout>
                     </nav>
                 </EuiPageSideBar>
                 <EuiPageBody>
