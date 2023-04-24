@@ -12,10 +12,15 @@ import {
     letterLoader,
     LettersSearchPage,
     TimeLinePage,
+    FaqPage,
+    faqLoader,
+    AboutPages,
 } from "./pages";
 import { Root } from "./Root";
+import { getFromApi } from "./common";
 import "./assets/index.css";
 
+/* eslint-disable jsdoc/require-jsdoc */
 const router = createBrowserRouter([
     {
         path: "/",
@@ -44,6 +49,56 @@ const router = createBrowserRouter([
             {
                 path: "timeline",
                 element: <TimeLinePage />,
+            },
+            {
+                path: "faq",
+                element: <FaqPage />,
+                loader: faqLoader,
+            },
+            // {
+            //     path: "film-interviews",
+            //     element: <FaqPage />,
+            //     loader: faqLoader
+            // },
+            {
+                path: "about",
+                element: <AboutPages />,
+                loader: () =>
+                    getFromApi(
+                        "/about_pages/089a36da-04b2-4f3b-a64b-0b63c5cc2d62",
+                    ),
+            },
+            {
+                path: "about/project-history",
+                element: <AboutPages />,
+                loader: () =>
+                    getFromApi(
+                        "/about_pages/4cea642f-d355-4e6f-aa3e-21534ae8f67d",
+                    ),
+            },
+            {
+                path: "about/letters",
+                element: <AboutPages />,
+                loader: () =>
+                    getFromApi(
+                        "/about_pages/21ab27de-dbc6-403b-b0ac-546164ac1c75",
+                    ),
+            },
+            {
+                path: "about/entities",
+                element: <AboutPages />,
+                loader: () =>
+                    getFromApi(
+                        "/about_pages/4990f98e-6a33-4f86-b1cb-f5e304988f86",
+                    ),
+            },
+            {
+                path: "about/abbreviations",
+                element: <AboutPages />,
+                loader: () =>
+                    getFromApi(
+                        "/about_pages/c98f6be1-1401-4c64-b225-39d39f4f68de",
+                    ),
             },
         ],
     },

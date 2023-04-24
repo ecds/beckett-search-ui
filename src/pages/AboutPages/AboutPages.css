@@ -1,0 +1,28 @@
+.about-page article {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    margin: auto 25%;
+}
+
+.about-page p {
+    margin: 1rem auto;
+}
+
+.about-page h1 {
+    color: #27738c;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    padding-top: 2rem;
+}
+
+.about-page h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    padding-top: 1.5rem;
+}
+
+.about-page h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 1rem 0;
+}

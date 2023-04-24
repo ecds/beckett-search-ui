@@ -8147,7 +8147,7 @@ export const timelineData = [
                     "The Woodstock Festival is held in upstate New York.",
             },
             {
-                id: "df660db5-0bd8-56a9-9b93-df054f931a2b",
+                id: "df660db5-0bd8-56a9-9b93-df054f931a3b",
                 date: "27 August",
                 type: "personal",
                 description:

@@ -5,6 +5,8 @@ import {
     EuiPageBody,
     EuiPageSideBar,
     EuiSelect,
+    EuiSpacer,
+    EuiText,
 } from "@elastic/eui";
 import React, { useEffect, useRef, useState } from "react";
 import { timelineData } from "../../data/timelineData";
@@ -75,6 +77,15 @@ export function TimeLinePage() {
                                 }
                             />
                         </EuiFormControlLayout>
+                        <EuiSpacer size="l" />
+                        <EuiText>
+                            <p className="timeline-key timeline-key-personal">
+                                Beckett work and life events.
+                            </p>
+                            <p className="timeline-key timeline-key-global">
+                                Significant global events.
+                            </p>
+                        </EuiText>
                     </nav>
                 </EuiPageSideBar>
                 <EuiPageBody>
