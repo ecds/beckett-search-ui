@@ -48,7 +48,7 @@ function Navigation() {
                         <EuiHeaderLinks popoverBreakpoints="none">
                             <NavLink to="/" tabIndex="-1" end>
                                 <EuiHeaderLink className="home">
-                                    Samuel Beckett Letters
+                                    Index to Samuel Beckett Letters
                                 </EuiHeaderLink>
                             </NavLink>
                         </EuiHeaderLinks>
