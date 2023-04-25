@@ -5,10 +5,7 @@ import {
     EuiPageBody,
     EuiPageContent,
     EuiPageContentBody,
-    EuiPageHeader,
-    EuiPageHeaderSection,
     EuiText,
-    EuiTitle,
 } from "@elastic/eui";
 import { getFromApi } from "../../common";
 import "./AboutPages.css";
@@ -32,13 +29,6 @@ export function AboutPages() {
         <main id="faq">
             <EuiPage paddingSize="l">
                 <EuiPageBody component="section">
-                    <EuiPageHeader className="static-page-header">
-                        <EuiPageHeaderSection>
-                            <EuiTitle size="m">
-                                <h1>{content.title}</h1>
-                            </EuiTitle>
-                        </EuiPageHeaderSection>
-                    </EuiPageHeader>
                     <EuiPageContent>
                         <EuiText>
                             <EuiPageContentBody className="about-page">
