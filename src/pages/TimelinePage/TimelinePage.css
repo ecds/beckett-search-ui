@@ -36,6 +36,14 @@
     color: #fff;
 }
 
+.timeline-event-type-personal h2 {
+    color: #fff !important;
+}
+
+.timeline-event-type-global h2 {
+    color: #000 !important;
+}
+
 .timeline-event-type-personal .vertical-timeline-element-content h2 {
     text-align: end;
 }

@@ -41,8 +41,8 @@ export function HomePage() {
                             />
                             <div className="description">
                                 <p>
-                                    Welcome to the data portal for The Letters
-                                    of Samuel Beckett. Here you can find
+                                    Welcome to the interactive index for The
+                                    Letters of Samuel Beckett. Here you can find
                                     information on all Beckett letters held in
                                     public archives. You can also research
                                     entities: people, places and things
