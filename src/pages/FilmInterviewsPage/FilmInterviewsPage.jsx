@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
     EuiPage,
     EuiPageBody,
@@ -7,6 +7,7 @@ import {
     EuiText,
     EuiPageSideBar,
     EuiSideNav,
+    EuiHorizontalRule,
 } from "@elastic/eui";
 import { interviews } from "../../data/videoData";
 import "./FilmInterviewsPage.css";
@@ -17,6 +18,15 @@ import "./FilmInterviewsPage.css";
  * @returns {React.Component} film interviews page component.
  */
 export function FilmInterviewsPages() {
+    const [isSideNavOpenOnMobile, setIsSideNavOpenOnMobile] = useState(false);
+
+    /**
+     * Toggle side nav on mobile.
+     */
+    const toggleOpenOnMobile = () => {
+        setIsSideNavOpenOnMobile(!isSideNavOpenOnMobile);
+    };
+
     /**
      * Handle navigating to year when button is clicked.
      *
@@ -50,7 +60,12 @@ export function FilmInterviewsPages() {
                     paddingSize="m"
                     className="film-topic-nav"
                 >
-                    <EuiSideNav items={sideNavItems} />
+                    <EuiSideNav
+                        items={sideNavItems}
+                        mobileTitle="Film Topics"
+                        toggleOpenOnMobile={() => toggleOpenOnMobile()}
+                        isOpenOnMobile={isSideNavOpenOnMobile}
+                    />
                 </EuiPageSideBar>
                 <EuiPageBody component="section">
                     <EuiPageContent>
@@ -109,9 +124,19 @@ export function FilmInterviewsPages() {
                                                     allow="autoplay; fullscreen; picture-in-picture"
                                                     allowFullScreen
                                                 />
+                                                <EuiHorizontalRule margin="xl" />
+                                                {/* <EuiSpacer size="xxl" /> */}
                                             </section>
                                             /* axelinter:enable:empty-heading */
                                         ))}
+                                        <p>
+                                            <a
+                                                href="#film-interviews"
+                                                title="Back to top"
+                                            >
+                                                Back To Top
+                                            </a>
+                                        </p>
                                     </section>
                                 ))}
                             </EuiPageContentBody>

@@ -13,19 +13,9 @@
     background: linear-gradient(45deg, #f7f8fc, #abacad);
 }
 
-.film-topic-heading,
-.film-title-heading {
-    /* font-weight: 600;
-  padding: 16px 0; */
-}
-
 .film-topic-heading {
     background-color: #fff;
     /* font-size: 2rem; */
     position: sticky;
     top: 6rem;
-}
-
-.film-title-heading {
-    /* font-size: 1.25rem; */
 }

@@ -22,3 +22,8 @@ sup {
     padding: 1rem 0;
     top: 48px;
 }
+
+h1,
+h2 {
+    color: #27738c !important;
+}
