@@ -181,13 +181,13 @@ function Navigation() {
                                     </EuiHeaderLink>
                                 )}
                             </NavLink>
-                            {/* <NavLink to="/film-interviews" tabIndex="-1">
+                            <NavLink to="/film-interviews" tabIndex="-1">
                                 {({ isActive }) => (
                                     <EuiHeaderLink isActive={isActive}>
                                         Film Interviews
                                     </EuiHeaderLink>
                                 )}
-                            </NavLink> */}
+                            </NavLink>
                         </EuiHeaderLinks>
                     </EuiHeaderSectionItem>
                 </EuiHeaderSection>

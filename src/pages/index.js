@@ -7,3 +7,4 @@ export * from "./LettersSearchPage";
 export * from "./TimelinePage";
 export * from "./FaqPage";
 export * from "./AboutPages";
+export * from "./FilmInterviewsPage";

@@ -1,0 +1,31 @@
+.film-interviews-page,
+.film-topic-nav {
+    top: 3rem;
+}
+
+.film-interview-page header {
+    background-color: #fff;
+    top: 3rem;
+    z-index: 1;
+}
+
+.film-interview-page iframe {
+    background: linear-gradient(45deg, #f7f8fc, #abacad);
+}
+
+.film-topic-heading,
+.film-title-heading {
+    /* font-weight: 600;
+  padding: 16px 0; */
+}
+
+.film-topic-heading {
+    background-color: #fff;
+    /* font-size: 2rem; */
+    position: sticky;
+    top: 6rem;
+}
+
+.film-title-heading {
+    /* font-size: 1.25rem; */
+}

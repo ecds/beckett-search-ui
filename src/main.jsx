@@ -15,6 +15,7 @@ import {
     FaqPage,
     faqLoader,
     AboutPages,
+    FilmInterviewsPages,
 } from "./pages";
 import { Root } from "./Root";
 import { getFromApi } from "./common";
@@ -55,11 +56,11 @@ const router = createBrowserRouter([
                 element: <FaqPage />,
                 loader: faqLoader,
             },
-            // {
-            //     path: "film-interviews",
-            //     element: <FaqPage />,
-            //     loader: faqLoader
-            // },
+            {
+                path: "film-interviews",
+                element: <FilmInterviewsPages />,
+                loader: faqLoader,
+            },
             {
                 path: "about",
                 element: <AboutPages />,
