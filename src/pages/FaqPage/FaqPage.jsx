@@ -8,11 +8,12 @@ import {
     EuiPageContentBody,
     EuiPageHeader,
     EuiPageHeaderSection,
-    EuiSpacer,
+    EuiPanel,
     EuiText,
     EuiTitle,
 } from "@elastic/eui";
 import { getFromApi } from "../../common";
+import "./FaqPage.css";
 
 /**
  * Loader for all FAQ records.
@@ -48,10 +49,10 @@ function buttonContent(content) {
 export function FaqPage() {
     const faqs = useLoaderData();
     return (
-        <main id="faq">
+        <main id="faq" className="faq-page">
             <EuiPage paddingSize="l">
                 <EuiPageBody component="section">
-                    <EuiPageHeader>
+                    <EuiPageHeader className="static-page-header">
                         <EuiPageHeaderSection>
                             <EuiTitle size="m">
                                 <h1>Frequently Asked Questions</h1>
@@ -59,25 +60,28 @@ export function FaqPage() {
                         </EuiPageHeaderSection>
                     </EuiPageHeader>
                     <EuiPageContent>
-                        <EuiPageContentBody>
-                            {faqs.map((faq) => (
-                                <EuiAccordion
-                                    id="faq-accordion"
-                                    key={faq.position}
-                                    buttonContent={buttonContent(faq.question)}
-                                >
-                                    <EuiText size="m">
-                                        <div
-                                            // eslint-disable-next-line react/no-danger
-                                            dangerouslySetInnerHTML={{
-                                                __html: faq.question,
-                                            }}
-                                        />
-                                    </EuiText>
-                                    <EuiSpacer />
-                                </EuiAccordion>
-                            ))}
-                        </EuiPageContentBody>
+                        <EuiText>
+                            <EuiPageContentBody>
+                                {faqs.map((faq) => (
+                                    <EuiAccordion
+                                        key={faq.position}
+                                        id="faq-accordion"
+                                        buttonContent={buttonContent(
+                                            faq.question,
+                                        )}
+                                    >
+                                        <EuiPanel color="subdued">
+                                            <p
+                                                // eslint-disable-next-line react/no-danger
+                                                dangerouslySetInnerHTML={{
+                                                    __html: faq.answer,
+                                                }}
+                                            />
+                                        </EuiPanel>
+                                    </EuiAccordion>
+                                ))}
+                            </EuiPageContentBody>
+                        </EuiText>
                     </EuiPageContent>
                 </EuiPageBody>
             </EuiPage>

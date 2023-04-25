@@ -7,6 +7,7 @@ import {
     EuiPageContentBody,
     EuiPageHeader,
     EuiPageHeaderSection,
+    EuiText,
     EuiTitle,
 } from "@elastic/eui";
 import { getFromApi } from "../../common";
@@ -31,7 +32,7 @@ export function AboutPages() {
         <main id="faq">
             <EuiPage paddingSize="l">
                 <EuiPageBody component="section">
-                    <EuiPageHeader>
+                    <EuiPageHeader className="static-page-header">
                         <EuiPageHeaderSection>
                             <EuiTitle size="m">
                                 <h1>{content.title}</h1>
@@ -39,14 +40,16 @@ export function AboutPages() {
                         </EuiPageHeaderSection>
                     </EuiPageHeader>
                     <EuiPageContent>
-                        <EuiPageContentBody className="about-page">
-                            <article
-                                // eslint-disable-next-line react/no-danger
-                                dangerouslySetInnerHTML={{
-                                    __html: content.body,
-                                }}
-                            />
-                        </EuiPageContentBody>
+                        <EuiText>
+                            <EuiPageContentBody className="about-page">
+                                <article
+                                    // eslint-disable-next-line react/no-danger
+                                    dangerouslySetInnerHTML={{
+                                        __html: content.body,
+                                    }}
+                                />
+                            </EuiPageContentBody>
+                        </EuiText>
                     </EuiPageContent>
                 </EuiPageBody>
             </EuiPage>
