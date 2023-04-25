@@ -77,8 +77,10 @@ export function FilmInterviewsPages() {
                                     tapes can be consulted in the archive.
                                 </p>
                                 <p>
-                                    These film segments cannot be replicated or
-                                    quoted without express permission.
+                                    <em>
+                                        These film segments cannot be replicated
+                                        or quoted without express permission.
+                                    </em>
                                 </p>
                                 {interviews.map((interview) => (
                                     <section
