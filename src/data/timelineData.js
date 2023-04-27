@@ -2839,6 +2839,8 @@ export const timelineData = [
                 description:
                     "Joyce expects Giorgio Joyce and Samuel Beckett to come to St. Gérand-le-Puy for Stephen Joyce's birthday on 15 February.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/c/cf/MRSSTGerand01.jpg",
+                caption:
+                    "St. Gérand-le-Puy, 2011, by Martine SODAIGUI under CCA-SA 3.0 Unported",
             },
             {
                 id: "95adce93-d876-563f-8376-c0b37ff4c9e7",
@@ -2873,6 +2875,8 @@ export const timelineData = [
                 description:
                     "The Nazi concentration camp at Auschwitz-Birkenau opens in occupied Poland.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/1/13/Selection_on_the_ramp_at_Auschwitz-Birkenau%2C_1944_%28Auschwitz_Album%29_1b.jpg",
+                caption:
+                    "Selection on the ramp at Auschwitz-Birkenau, 1944, unknown photographer. Courtesy of Yad Vashem. Public domain.",
             },
             {
                 id: "c83b187b-6f76-575c-b4ad-4f9b3633577a",
@@ -2934,6 +2938,8 @@ export const timelineData = [
                 description:
                     "Armistice between France and Germany signed at Compiègne; France divided into Occupied and Unoccupied Zones.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/d/d9/Fochs_Railway_Car_Second_Time_Around_1940.jpg",
+                caption:
+                    "Fochs Railway Car Second Time Around, 1940, unknown author. Public domain.",
             },
             {
                 id: "491a5323-124b-5cc9-80a5-572048ddaeb0",
@@ -3062,6 +3068,7 @@ export const timelineData = [
                 description:
                     "Paul Léon arrested by French police, as part of a second mass round-up of Jews in Paris.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/0/0a/Paul_L%C3%A9on_rue_de_Valois-8.jpg",
+                caption: "Paul Léon, Archives familiales. Public domain.",
             },
             {
                 id: "7be2cd83-d283-55f5-a791-d2c3eccd2459",
@@ -3077,6 +3084,8 @@ export const timelineData = [
                 description:
                     "Japanese attack the United States at Pearl Harbor, Hawaii.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/c/c7/Attack_on_Pearl_Harbor_Japanese_planes_view.jpg",
+                caption:
+                    "View of the attack on Pearl Harbor from a Japanese plane, 7 December 1941, by the Imperial Japanese Navy. Official U.S. Navy photograph NH 50930. Public domain.",
             },
             {
                 id: "aaa40a8d-3c9c-5ea8-a985-450055a137a5",
@@ -3136,6 +3145,8 @@ export const timelineData = [
                 description:
                     "Paris Jews over the age of 6 required to wear a Star of David, a law enforced from June.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/8/8d/Bundesarchiv_Bild_183-N0619-506%2C_Paris%2C_J%C3%BCdische_Frauen_mit_Stern.jpg",
+                caption:
+                    "Two Jewish women wearing Star of David badges in Paris, June 1942, Bundesarchiv, Bild 183-N0619-506 / CC-BY-SA 3.0",
             },
             {
                 id: "bff2e156-f370-5fcf-b6ab-87affbdb782d",
@@ -3199,6 +3210,8 @@ export const timelineData = [
                 description:
                     "Le Juif et la France exhibit, organized by the German military administration in occupied France, opens in Paris",
                 image: "https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_146-1975-041-07,_Paris,_Propaganda_gegen_Juden.jpg",
+                caption:
+                    "Paris, anti-Jewish propaganda exhibit, September 1941. Bundesarchiv, Bild 146-1975-041-07 / CC-BY-SA 3.0",
             },
             {
                 id: "b6ad761a-5c28-5f4c-b85a-4986e76db8c8",
@@ -3228,6 +3241,8 @@ export const timelineData = [
                 description:
                     "Samuel Beckett and Suzanne Deschevaux-Dumesnil arrive at Roussillon, where friends of hers live.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/c/c7/Roussillon_%28Vaucluse%29.JPG",
+                caption:
+                    "Roussillon (Vaucluse), June 2007, by Hawobo under CCA-SA 2.0 Germany.",
             },
             {
                 id: "4d418e7b-53b1-5372-b849-611e8e2fd995",
@@ -3315,6 +3330,8 @@ export const timelineData = [
                 type: "personal",
                 description: "Henri and Josette Hayden arrive in Roussillon.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/3/33/Fille_assise_au_bouquet_de_fleurs%2C_1919.jpg",
+                caption:
+                    "Fille assise au bouquet de fleurs, Henry Hayden, 1919. Courtesy of Wikimedia commons, public domain.",
             },
             {
                 id: "11cdb2b3-c067-5224-a00e-123b7adc18a5",
@@ -3375,6 +3392,8 @@ export const timelineData = [
                 description:
                     "De Gaulle proclaims the Gouvernement Provisoire de la République Française (GPRF).",
                 image: "https://upload.wikimedia.org/wikipedia/en/0/0c/De-gaulle-radio.jpg",
+                caption:
+                    "Charles de Gaulle during a radio broadcast, 30 October 1941, BBC Broadcasting House. Public domain",
             },
             {
                 id: "01d91332-bd65-5489-aa2c-49cc31af66c1",
@@ -3467,6 +3486,281 @@ export const timelineData = [
                 type: "personal",
                 description:
                     'Samuel Beckett completes first "end" of <i>Watt</i>, sixth notebook.',
+            },
+        ],
+    },
+    {
+        year: 1945,
+        events: [
+            {
+                id: "1d63f625-57a6-5c87-859e-8e70b0d066a4",
+                description:
+                    "Samuel Beckett sends message to his brother through the Irish Legation; his previous letters have not been received.",
+                date: "17 January",
+                type: "personal",
+            },
+            {
+                id: "9c588b95-310a-55df-b8df-54d384840b44",
+                description:
+                    'Beckett writes "La Peinture des van Velde ou le monde et le pantalon." ',
+                date: "January",
+                type: "personal",
+            },
+            {
+                id: "b1b7b605-aeee-5708-8493-cf81578c0616",
+                description:
+                    "Writes this date in the fifth notebook of Watt, having made revisions to the novel.",
+                date: "18 February",
+                type: "personal",
+            },
+            {
+                id: "647ed3c6-ac6d-5258-8247-38bd77a7e4d8",
+                date: "19 February",
+                type: "global",
+                description: "Battle of Iwo Jima begins.",
+            },
+            {
+                id: "52540c98-3308-5134-b4b2-9da325793dbb",
+                date: "19 March",
+                type: "global",
+                description:
+                    'Adolf Hitler issues the "Nero Degree" ordering the destruction of all industry, military, transportation and communication facilities in Germany be destroyed.',
+            },
+            {
+                id: "b8184c84-6149-5f80-889e-1e7df6380479",
+                description:
+                    "Samuel Beckett awarded the Croix de Guerre. (At an unknown later date he receives the Médaille de la Reconnaissance Française.)",
+                date: "30 March",
+                type: "personal",
+            },
+            {
+                id: "e05139c4-aad3-52b0-8527-6e74c1e3998b",
+                date: "1 April",
+                type: "global",
+                description: "Battle of Okinawa begins.",
+            },
+            {
+                id: "6dd0d9b5-f342-5c24-b071-316c6c159b2c",
+                description:
+                    "Leaves Paris for Dublin. The typescript of Watt is confiscated on entry into England, under suspicion of coded message. Samuel Beckett stays for several days in London. Following interrogation, he retrieves his passport as well as the typescript of Watt. Jeannine Picabia, a member of his Resistance réseaux is in London.",
+                date: "from 8 April",
+                type: "personal",
+            },
+            {
+                id: "83abbf7c-3b13-5383-94cc-cd3cad3904a7",
+                description: "In Dublin.",
+                date: "from 16 April",
+                type: "personal",
+            },
+            {
+                id: "93a405bb-6935-5233-abc8-527446d368e6",
+                description: "Purchases Regatta Evening from Jack B. Yeats.",
+                date: "19 April",
+                type: "personal",
+            },
+            {
+                id: "41776d7a-441d-51ad-b0ff-3fb865475cdf",
+                date: "28 April",
+                type: "global",
+                description: "Benito Mussolini captured and executed.",
+            },
+            {
+                id: "5e0a16a6-0ee4-5484-9645-ab2f2e0b5062",
+                date: "30 April",
+                type: "global",
+                description: "Adolph Hitler commits suicide.",
+            },
+            {
+                id: "f8142dcc-50cf-5095-8d3b-aaf7d9e49d1b",
+                description:
+                    "Death of Alfred Péron in Samedan, Switzerland, in transit from Mauthausen to France.",
+                date: "30 April / 1 May",
+                type: "personal",
+            },
+            {
+                id: "a469491a-9012-5e75-a60b-eb760435e885",
+                date: "2 May",
+                type: "global",
+                description: "Berlin falls to Soviet troops.",
+            },
+            {
+                id: "a77ae8f9-f73f-5d78-882e-287a5a43868d",
+                date: "8 May",
+                type: "global",
+                description: "VE [Victory in Europe] Day.",
+                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Ve_Day_Celebrations_in_London%2C_8_May_1945_HU41808.jpg/1280px-Ve_Day_Celebrations_in_London%2C_8_May_1945_HU41808.jpg",
+                caption:
+                    "VE Day Celebrations in London, 8 May 1945, Imperial War Museums HU 41808. Public domain.",
+            },
+            {
+                id: "a43c5412-48d2-50eb-9848-a4531a58828d",
+                description: "Samuel Beckett sends Watt to Routledge.",
+                date: "25 May",
+                type: "personal",
+            },
+            {
+                id: "d587ab5e-3d52-54df-bf53-277c2a03b6c1",
+                date: "4 June",
+                type: "global",
+                description:
+                    "France issues new franc notes; requires that all old notes be exchanged by 23 June.",
+            },
+            {
+                id: "2d24d5c5-15a1-5dac-9162-3d641ae21ee2",
+                description: "Routledge rejects Watt.",
+                date: "6 June",
+                type: "personal",
+            },
+            {
+                id: "4bad8791-6dcb-59f7-884f-e92122855517",
+                description:
+                    "Robert Desnos dies after liberation from Buchenwald. Samuel Beckett appointed to the Irish Red Cross Hospital in Saint - Lô.",
+                date: "8 June",
+                type: "personal",
+            },
+            {
+                id: "45eaef81-9e48-5164-a267-e0f6597e4f7d",
+                description:
+                    'Samuel Beckett’s poem "Dieppe 193?" [sic] published in The Irish Times.',
+                date: "9 June",
+                type: "personal",
+            },
+            {
+                id: "e8c30f81-0f06-5885-a0c6-6669c2d4cee6",
+                description:
+                    "Opening of the Jack B. Yeats National Loan Exhibition at the National College of Art, Dublin. Thomas MacGreevy publishes Jack B.Yeats: An Appreciation and an Interpretation.",
+                date: "11 June",
+                type: "personal",
+            },
+            {
+                id: "48ab0b7e-92b7-51a6-acc4-e9a26613c99c",
+                date: "9 July",
+                type: "global",
+                description: "The Louvre reopens.",
+            },
+            {
+                id: "89ed4734-0d22-5898-a6f0-22a366f5eb0c",
+                date: "16 July",
+                type: "global",
+                description:
+                    "The French government orders that foreign currency must be exchanged for new French bank notes.",
+            },
+            {
+                id: "f39387db-8f83-57b0-ac28-84721bc3579f",
+                description:
+                    'Samuel Beckett’s review "MacGreevy on Yeats" published in The Irish Times.',
+                date: "4 August",
+                type: "personal",
+            },
+            {
+                id: "6b0ff926-d6e7-52ba-b604-06cc669c9ec3",
+                date: "6 August",
+                type: "global",
+                description:
+                    "United States drops an Atomic bomb on Hiroshima, Japan.",
+            },
+            {
+                id: "498b7fe1-4a89-551c-8c9a-8a811c19dfa1",
+                description:
+                    "Samuel Beckett leaves Dublin for Saint-Lô with the Irish Red Cross Hospital team, via London and Paris.",
+                date: "7 August",
+                type: "personal",
+            },
+            {
+                id: "3911a12d-dd77-5948-880e-196f86accb0c",
+                date: "14 August",
+                type: "global",
+                description: "Japan surrenders.",
+            },
+            {
+                id: "91095ded-678c-5074-9c07-9e50e0b2049b",
+                description: "Samuel Beckett in Paris.",
+                date: "9-12 August",
+                type: "personal",
+            },
+            {
+                id: "f6887bc0-79a7-5ce1-bf8e-87a12fc18de6",
+                description: "Arrives in Saint-Lô",
+                date: "13 August",
+                type: "personal",
+                image: "https://www.wikimanche.fr/images/5/5a/Stlo-hopirlandais1.png",
+                caption:
+                    "Hôpital irlandais de Saint-Lô, 1946. Unknown photographer. Courtesy of Association Shanaghy. Public domain.",
+            },
+            {
+                id: "1d823ca4-568e-5c1e-9137-c6124cc37aa5",
+                date: "15 August,",
+                type: "global",
+                description:
+                    "Emperor Hirohito announces the surrender of Japan.",
+            },
+            {
+                id: "18d30275-d3ef-520a-96cc-1f89326db83e",
+                description:
+                    "Supplies for the Irish Red Cross Hospital reach Saint-Lô.",
+                date: "29 August",
+                type: "personal",
+            },
+            {
+                id: "9d129c6b-f2f6-5d73-9b38-9db3d2e6831e",
+                description: "Samuel Beckett in Paris, briefly.",
+                date: "14 October",
+                type: "personal",
+            },
+            {
+                id: "8a097f01-92a9-5a5b-bff4-7b44d6bd4ecf",
+                date: "1 November",
+                type: "global",
+                description:
+                    "The Louvre closes for the winter because of lack of fuel.",
+            },
+            {
+                id: "f29a06af-4b30-58e6-8d4d-a6d7ec5983a5",
+                date: "13 November",
+                type: "global",
+                description:
+                    "Charles de Gaulle elected Head of the Gouvernement Provisoire de la République Française.",
+            },
+            {
+                id: "33002d3d-7622-5b55-b45c-5139c7f77a15",
+                date: "16 November",
+                type: "global",
+                description: "UNESCO charter signed in London.",
+            },
+            {
+                id: "e3da4fb4-4252-5713-98bf-cf5037ce1ecf",
+                date: "21 November",
+                type: "global",
+                description: "Coalition French government formed.",
+            },
+            {
+                id: "6e03c002-b902-551a-bdec-71e9b2a185a6",
+                description:
+                    "Samuel Beckett drives Colonel McKinney from Saint-Lô to Paris; stays at his Rue des Favorites apartment.",
+                date: "14 December",
+                type: "personal",
+            },
+            {
+                id: "881c18d5-ddf6-5e5f-8a11-05867e0c96ac",
+                description:
+                    "Samuel Beckett in Dieppe, awaiting arrival of Mary Crowley, Matron of the Irish Red Cross Hospital.",
+                date: "21 December",
+                type: "personal",
+                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/2022-07-09_12-19-07_-_Dieppe_-_Vue_g%C3%A9n%C3%A9rale.jpg/1280px-2022-07-09_12-19-07_-_Dieppe_-_Vue_g%C3%A9n%C3%A9rale.jpg",
+                caption:
+                    "View of Dieppe, by Baidax under CCA-SA 4.0 International",
+            },
+            {
+                id: "7210024b-7b82-53ca-a95a-33b900430d2c",
+                description: "Beckett returns to Paris.",
+                date: "25 December",
+                type: "personal",
+            },
+            {
+                id: "a4d29076-d2a0-5ca2-b696-64a6b43cde0f",
+                date: "25 December",
+                type: "global",
+                description: "Devaluation of French currency.",
             },
         ],
     },
@@ -3629,6 +3923,9 @@ export const timelineData = [
                 description:
                     'Samuel Beckett writes to Simone de Beauvoir protesting her unwillingness to publish the second part of "Suite" in <i>Les Temps Modernes</i>.',
                 date: "25 September",
+                image: "https://upload.wikimedia.org/wikipedia/commons/2/2c/Simone_De_Beauvoir2.jpg",
+                caption:
+                    "Simone de Beauvoir, 1950, unknown photographer. Archivio del diario Clarin. Public domain.",
             },
             {
                 id: "12f868da-ae14-5c6c-930f-e6553df271ed",
@@ -3656,6 +3953,9 @@ export const timelineData = [
                 type: "global",
                 date: "1 October",
                 description: "Nazi leaders sentenced at Nuremberg trials.",
+                caption:
+                    "Defendants in the dock at Nuremburg trials, November 1945, by Raymond D’Addario. Public domain.",
+                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Defendants_in_the_dock_at_nuremberg_trials.jpg/1280px-Defendants_in_the_dock_at_nuremberg_trials.jpg",
             },
             {
                 id: "347ea232-4365-5bc5-96a8-0f7250c104f0",
@@ -3822,7 +4122,10 @@ export const timelineData = [
                 type: "personal",
                 description:
                     "Samuel Beckett and Suzanne Deschevaux-Dumesnil go to Menton. Samuel Beckett works on <i>Molloy</i> there. ",
-                date: "23 July ",
+                date: "23 July",
+                caption:
+                    "Menton, 2003, by Gerard cohen under GNU Free Documentation.",
+                image: "https://upload.wikimedia.org/wikipedia/commons/4/46/Menton_vue_de_mer.jpg",
             },
             {
                 id: "3829bcc4-8d0c-5281-8dd2-d898daa60bf6",
@@ -3976,6 +4279,9 @@ export const timelineData = [
                 date: "24 June 1948 - 12 May 1949",
                 description:
                     "Berlin Blockade by the Soviet Union forces in East Germany results in the Berlin Airlift to deliver supplies to West Berlin by Western Allies. ",
+                caption:
+                    "Berliners watching a C-54 land at Berlin Tempelhof Airport, 1948, by Henry Ries/USAF. Public domain.",
+                image: "https://upload.wikimedia.org/wikipedia/commons/d/d8/C-54landingattemplehof.jpg",
             },
             {
                 id: "f0d22fe5-509a-5e06-9027-99575cc15aee",
@@ -4094,6 +4400,16 @@ export const timelineData = [
                 type: "global",
                 date: "12 May",
                 description: "Berlin blockade lifted.",
+            },
+            {
+                id: "44f9e1bf-577e-5fe5-b882-73559d06f54a",
+                type: "global",
+                date: "4 April",
+                description:
+                    "The North Atlantic Treaty is signed (Belgium, Canada, Denmark, France, Great Britain, Iceland, Italy, Luxembourg, the Netherlands, Norway, Portugal, and the United States).",
+                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Truman_signing_North_Atlantic_Treaty.jpg/966px-Truman_signing_North_Atlantic_Treaty.jpg",
+                caption:
+                    "Truman signing the North Atlantic Treaty, 24 August 1949, by Abbie Rowe. Public domain.",
             },
             {
                 id: "d13de471-7727-5221-9064-34e94f388796",
@@ -4240,6 +4556,9 @@ export const timelineData = [
                 description: "Samuel Beckett returns to France.",
                 date: "8 September",
                 type: "personal",
+                caption:
+                    "Yoshida signs San Francisco Peace Treaty, 8 September 1951, unknown photographer. Public domain.",
+                image: "https://upload.wikimedia.org/wikipedia/commons/e/e2/Yoshida_signs_San_Francisco_Peace_Treaty.jpg",
             },
             {
                 id: "d8dbdcb5-e62c-5bc4-a431-07b749af2126",
@@ -4621,6 +4940,9 @@ export const timelineData = [
                 description: "Cottage at Ussy completed.",
                 date: "January",
                 type: "personal",
+                caption:
+                    "Samuel Beckett's Cottage at Ussy, by Lois Overbeck under CCA-SA 4.0 International.",
+                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Samuel_Beckett%27s_Cottage_at_Ussy.jpg/1024px-Samuel_Beckett%27s_Cottage_at_Ussy.jpg",
             },
             {
                 id: "0fc6a83e-265e-53f3-a3d9-2ae93483aa08",
@@ -4832,6 +5154,9 @@ export const timelineData = [
                     "Samuel Beckett attends Cirque Médrano with Jean Martin to see Buster Keaton perform.",
                 date: "12 January",
                 type: "personal",
+                caption:
+                    "Technical drawing of USS Nautilus (SS-168) and USS Nautilus (SSN-571), 1955, by the U.S. Navy. Public domain.",
+                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Technical_drawing_of_USS_Nautilus_%28SS-168%29_and_USS_Nautilus_%28SSN-571%29_1955.jpg/1024px-Technical_drawing_of_USS_Nautilus_%28SS-168%29_and_USS_Nautilus_%28SSN-571%29_1955.jpg",
             },
             {
                 id: "73e4026e-8bc4-57c0-b5da-fd7685baac6e",
@@ -5193,6 +5518,9 @@ export const timelineData = [
                     "Samuel Beckett and Schneider attend several performances of London production of <i>Waiting for Godot</i>. Samuel Beckett meets German actress Elizabeth Bergner in London.",
                 date: "early December",
                 type: "personal",
+                caption:
+                    "Elisabeth Bergner and O.E. Hasse, 20 June 1960, by Joop van Bilsen/Anefo. Public domain.",
+                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Elisabeht_Bergner_en_O_E_Hasse_%28persconferentie%29%2C_Bestanddeelnr_911-3483.jpg/1280px-Elisabeht_Bergner_en_O_E_Hasse_%28persconferentie%29%2C_Bestanddeelnr_911-3483.jpg",
             },
             {
                 id: "99ce2d70-a777-55f2-ad76-0a61f04b8dc9",
@@ -5300,6 +5628,9 @@ export const timelineData = [
                     "Makes acquaintance of Avigdor Arikha at home of Alain Bosquet.",
                 date: "25 June",
                 type: "personal",
+                caption:
+                    "Portrait of Avigdor Arikha, 1980, by Stanley I. Batkin. Gift of the artist to Information Center for Israeli Art at the Israel Museum, Jerusalem. CCA-SA 3.0 Unported.",
+                image: "https://upload.wikimedia.org/wikipedia/commons/b/b5/Avigdor_Arikha_%28Portrait%29.jpg",
             },
             {
                 id: "6db8c244-738c-52ab-a60f-d61f2b60cfb0",
