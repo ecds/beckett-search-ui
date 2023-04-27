@@ -1,4 +1,10 @@
-import { EuiImage, EuiText, EuiTextAlign } from "@elastic/eui";
+import {
+    EuiFlexGroup,
+    EuiFlexItem,
+    EuiImage,
+    EuiText,
+    EuiTextAlign,
+} from "@elastic/eui";
 import {
     VerticalTimeline,
     VerticalTimelineElement,
@@ -111,7 +117,16 @@ function TimelineYear({ data, root, setCurrentYear, docHeightState }) {
                                 }}
                             />
                             {event.image && (
-                                <EuiImage size="l" src={event.image} alt="" />
+                                <EuiFlexGroup justifyContent="spaceEvenly">
+                                    <EuiFlexItem grow={false}>
+                                        <EuiImage
+                                            size="l"
+                                            src={event.image}
+                                            alt=""
+                                            caption={event.caption}
+                                        />
+                                    </EuiFlexItem>
+                                </EuiFlexGroup>
                             )}
                         </VerticalTimelineElement>
                     );

@@ -38,3 +38,11 @@
     height: var(--header-height);
     background-color: blueviolet;
 }
+
+.timeline-event figure {
+    text-align: center;
+}
+
+.timeline-event figcaption {
+    font-size: 0.85rem;
+}
