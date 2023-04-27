@@ -3621,7 +3621,7 @@ export const timelineData = [
             {
                 id: "45eaef81-9e48-5164-a267-e0f6597e4f7d",
                 description:
-                    'Samuel Beckett’s poem "Dieppe 193?" [sic] published in The Irish Times.',
+                    'Samuel Beckett\'s poem "Dieppe 193?" [sic] published in The Irish Times.',
                 date: "9 June",
                 type: "personal",
             },
@@ -3648,7 +3648,7 @@ export const timelineData = [
             {
                 id: "f39387db-8f83-57b0-ac28-84721bc3579f",
                 description:
-                    'Samuel Beckett’s review "MacGreevy on Yeats" published in The Irish Times.',
+                    'Samuel Beckett\'s review "MacGreevy on Yeats" published in The Irish Times.',
                 date: "4 August",
                 type: "personal",
             },
@@ -3954,7 +3954,7 @@ export const timelineData = [
                 date: "1 October",
                 description: "Nazi leaders sentenced at Nuremberg trials.",
                 caption:
-                    "Defendants in the dock at Nuremburg trials, November 1945, by Raymond D’Addario. Public domain.",
+                    "Defendants in the dock at Nuremburg trials, November 1945, by Raymond D'Addario. Public domain.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Defendants_in_the_dock_at_nuremberg_trials.jpg/1280px-Defendants_in_the_dock_at_nuremberg_trials.jpg",
             },
             {
@@ -5764,7 +5764,6 @@ export const timelineData = [
                 description:
                     'Samuel Beckett is writing "The Gloaming" (abandoned, later <i>Rough for Theatre I</i>).',
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "1b1e2541-01db-5a6e-945c-53b3cd47bfca",
@@ -5772,7 +5771,6 @@ export const timelineData = [
                 description:
                     "All police powers in Algiers taken over by General Massu.",
                 type: "global",
-                additional: "headline",
             },
             {
                 id: "fbc9d962-5c1b-5257-8156-7bf76cbe371c",
@@ -5780,7 +5778,6 @@ export const timelineData = [
                 description:
                     "<i>Waiting for Godot</i> with an all black cast at the Shubert Theatre in Boston. It opened on 21 January at the Ethel Barrymore Theatre, New York.",
                 type: "personal",
-                additional: "image  see works file",
             },
             {
                 id: "56964974-e342-591b-9cd0-32490e27ba03",
@@ -5788,7 +5785,6 @@ export const timelineData = [
                 description:
                     "<i>All That Fall</i> broadcast on the BBC Third Programme. ",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "6c26ff32-78f1-5659-a519-dbcc530f4fa5",
@@ -5804,7 +5800,6 @@ export const timelineData = [
                 description:
                     "Beckett begins English translation of <i>L'Innommable</i>.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "f60c4f77-e960-578a-b0ab-448555ebd878",
@@ -5812,7 +5807,6 @@ export const timelineData = [
                 description:
                     "In Paris, John Beckett and Deryk Mendel coordinate music and movements for <i>Acte sans paroles</i> I</i>.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "fa6f7aa6-4296-5cb1-9468-1e64475c42ba",
@@ -5820,7 +5814,6 @@ export const timelineData = [
                 description:
                     "Beckett's first meeting with BBC radio director Donald McWhinnie, in Paris.",
                 type: "personal",
-                additional: "image",
             },
             {
                 id: "93de77d6-a2cf-5c4b-b3bd-055da88aa75f",
@@ -5843,7 +5836,6 @@ export const timelineData = [
                 description:
                     "Beckett supervises rehearsals of <i>Fin de partie</i>, Royal Court Theatre, London.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "89cd85c2-ed31-56d5-aa62-d66885211d0d",
@@ -5859,7 +5851,6 @@ export const timelineData = [
                 description:
                     "Premiere of <i>Fin de partie</i>, as part of the French Festival Week in London.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "910f2f5a-59f4-5622-b6df-da0c25484755",
@@ -5868,6 +5859,8 @@ export const timelineData = [
                     "<i>Fin de partie</i>, Studio des Champs-Elysées, Paris.",
                 type: "personal",
                 image: "https://commons.wikimedia.org/wiki/File:Th%C3%A9%C3%A2tre_des_Champs-%C3%89lys%C3%A9es,_21_April_2013.jpg",
+                caption:
+                    "Théâtre des Champs-Élysées [linked to original image] by Coldcreation under GNU Free Documentation license.",
             },
             {
                 id: "d1d0fe42-e851-5fc8-845c-786a2e26121c",
@@ -5875,7 +5868,6 @@ export const timelineData = [
                 description:
                     "<i>Fin de partie</i>, in French with the original London cast, BBC Third Programme.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "7295ff89-dc48-5d2c-89f9-1102494cead8",
@@ -5883,7 +5875,6 @@ export const timelineData = [
                 description:
                     "Beckett begins English translation of <i>Fin de partie</i>.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "25cdf95d-ff49-579e-9cd9-b0481a1f59ee",
@@ -5891,7 +5882,6 @@ export const timelineData = [
                 description:
                     'The term "Le Nouveau Roman" coined (by Emile Henriot in Le Monde, reviewing works by Alain Robbe-Grillet and Nathalie Sarraute.',
                 type: "global",
-                additional: "image",
             },
             {
                 id: "0cf6f7d4-617a-5e5a-a2b0-d1f8044b7329",
@@ -5899,7 +5889,6 @@ export const timelineData = [
                 description:
                     "Publication of <i>Lieutenant en Algérie</i> by Jean-Jacques Servan-Schreiber; it denounces French military policy in Algeria.",
                 type: "global",
-                additional: "none",
             },
             {
                 id: "d04a6c97-8d11-5ea5-8417-079e069d4f9d",
@@ -5907,7 +5896,6 @@ export const timelineData = [
                 description:
                     "Beckett completes <i>Acte sans paroles</i> II</i>, for Deryk Mendel.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "2d81701d-ea9e-5c65-b8a9-b877b78ccb53",
@@ -5924,6 +5912,7 @@ export const timelineData = [
                     "Launch of the first earth satellite, the Soviet Sputnik.",
                 type: "global",
                 image: "https://upload.wikimedia.org/wikipedia/commons/6/6a/Sputnik-stamp-ussr.jpg",
+                caption: "Sputnik stamp, USSR. Public domain.",
             },
             {
                 id: "22c8bbda-2bb7-5b30-b215-e64c148990f6",
@@ -5931,7 +5920,6 @@ export const timelineData = [
                 description:
                     "Alan Schneider in Paris to discuss <i>Fin de partie</i>; he and Beckett attend the Paris production together, twice.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "1b9a2191-d6f3-5bd6-9994-5d59ca9cee85",
@@ -5939,7 +5927,6 @@ export const timelineData = [
                 description:
                     "<i>Fin de partie</i> closes after 97 performances in Paris.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "846bc182-0a8c-5fb9-a2a3-bf2656f3d08e",
@@ -5947,8 +5934,7 @@ export const timelineData = [
                 description:
                     "<i>Tous ceux qui tombent</i> published by Editions de Minuit.",
                 type: "personal",
-                additional:
-                    "http://www.leseditionsdeminuit.fr/images/livre_galerie_9782707302052.jpg",
+                image: "http://www.leseditionsdeminuit.fr/images/livre_galerie_9782707302052.jpg",
             },
             {
                 id: "3a701d3f-f8d4-5bd2-85a5-a4be1abed4aa",
@@ -5956,7 +5942,6 @@ export const timelineData = [
                 description:
                     "Extracts from <i>Molloy</i> read by Patrick Magee, with music by John Beckett, BBC Third Programme.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "d8fa772a-d99f-5432-ad68-6e763152ab2b",
@@ -5964,7 +5949,6 @@ export const timelineData = [
                 description:
                     "<i>From an Abandoned Work</i> read by Patrick Magee, BBC Third Programme.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "75b6fc9f-f8a4-5750-ad74-91307451471f",
@@ -5972,7 +5956,6 @@ export const timelineData = [
                 description:
                     "Albert Camus awarded the Nobel Prize in Literature.",
                 type: "global",
-                additional: "image",
             },
         ],
     },
@@ -5986,6 +5969,8 @@ export const timelineData = [
                     "Premiere of <i>Endgame</i>, Cherry Lane Theatre, New York.",
                 type: "personal",
                 image: "https://upload.wikimedia.org/wikipedia/commons/8/86/Cherry_Lane_Theatre_%2848072709003%29.jpg",
+                caption:
+                    "Cherry Lane Theatre by Ajay Suresh under Creative Commons Attribution 2.0 Generic license.",
             },
             {
                 id: "fe5e737e-f52e-5562-bdec-15caa33ffe9d",
@@ -5994,6 +5979,8 @@ export const timelineData = [
                     "Launch of the first earth satellite, Explorer 1, by the United States.",
                 type: "global",
                 image: "https://upload.wikimedia.org/wikipedia/commons/7/72/JPL_-_Explorer_1_is_test-mated_before_launch.jpg",
+                caption:
+                    "JPL - Explorer 1 is test-mated before launch, 1 January 1958, by NASA. Public domain.",
             },
             {
                 id: "9ebe8913-e8d5-5987-b790-3c7a743e7673",
@@ -6001,7 +5988,6 @@ export const timelineData = [
                 description:
                     "Samuel Beckett withdraws his two mimes and a reading of <i>All That Fall</i> from the Dublin Theatre Festival.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "815696be-fb25-5c32-a07c-d51c847bd77f",
@@ -6009,7 +5995,6 @@ export const timelineData = [
                 description:
                     "Beckett completes first draft of English translation, <i>The Unnamable</i>.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "0d62a908-c8d9-51bf-8d25-b61203674ded",
@@ -6017,7 +6002,6 @@ export const timelineData = [
                 description:
                     "Samuel Beckett withdraws all his work from Irish production because of censorship.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "90ebaff4-1ddd-5b32-ae1a-90da9a1f0553",
@@ -6031,7 +6015,6 @@ export const timelineData = [
                 date: "17 March",
                 description: "Beckett completes <i>Krapp's Last Tape</i>.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "83ffb005-ce6a-53bc-8d74-085238fd1f9c",
@@ -6039,7 +6022,6 @@ export const timelineData = [
                 description:
                     "<i>Endgame</i>, followed by <i>Act Without Words I</i>, published by Faber and Faber.",
                 type: "personal",
-                additional: "image",
             },
             {
                 id: "2c4f446c-89d7-5553-8055-4bc59967ae1c",
@@ -6047,7 +6029,6 @@ export const timelineData = [
                 description:
                     "Beckett meets Alain Resnais to discuss film of <i>Tous ceux qui tombent</i>. ",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "562d1929-67d9-5b0b-8da4-9629cdf4e0d7",
@@ -6055,7 +6036,6 @@ export const timelineData = [
                 description:
                     "Beckett visits Bern to attend Bram van Velde's retrospective.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "5ca2d210-7ffd-5046-9075-c19c8e2fe71a",
@@ -6063,6 +6043,8 @@ export const timelineData = [
                 description: '"May 1958 Crisis" in Algeria.',
                 type: "global",
                 image: "https://upload.wikimedia.org/wikipedia/commons/3/30/Algerian_war_collage_wikipedia.jpg",
+                caption:
+                    "Chlef 1957 - Guerre d'Algerie, 1957, unknown photographer. Public domain.",
             },
             {
                 id: "76bd45f4-9ea5-509e-b7e9-7c9a34559980",
@@ -6070,7 +6052,6 @@ export const timelineData = [
                 description:
                     "Charles De Gaulle appointed Président du Conseil by President Coty, France.",
                 type: "global",
-                additional: "none",
             },
             {
                 id: "edd1bbca-443d-5aa8-a357-ebf7ba28b98d",
@@ -6078,7 +6059,6 @@ export const timelineData = [
                 description:
                     "De Gaulle's cabinet approved by the Assemblée Nationale.",
                 type: "global",
-                additional: "none",
             },
             {
                 id: "ae54e1ae-0934-5d6a-81e7-c9950e82b577",
@@ -6086,7 +6066,6 @@ export const timelineData = [
                 description:
                     "Extract from <i>Malone Dies</i> read by Patrick Magee, with music composed by John Beckett, BBC Third Programme.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "c4832ee0-91db-5636-a9ca-ceaa78401b5b",
@@ -6094,7 +6073,6 @@ export const timelineData = [
                 description:
                     "Beckett begins a three week holiday with Suzanne in Yugoslavia.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "4c95f41f-f64a-55b3-9278-13bfb833ba53",
@@ -6102,7 +6080,6 @@ export const timelineData = [
                 description:
                     "Beckett dates early draft of an abandoned play (later, <i>Rough for Theatre II</i>).",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "63d092de-d991-5f6f-b6a4-7127cba20a51",
@@ -6110,7 +6087,6 @@ export const timelineData = [
                 description:
                     "Samuel Beckett meets Donald McWhinnie and Patrick Magee in Paris to discuss <i>Krapp's Last Tape</i>.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "46e450f1-663a-5548-9f8d-d6cf82937c1a",
@@ -6119,6 +6095,8 @@ export const timelineData = [
                     "Boris Pasternak awarded the Nobel Prize in Literature. Soviet authorities require that he refuse it.",
                 type: "global",
                 image: "https://upload.wikimedia.org/wikipedia/commons/2/23/Boris_Pasternak_1969.jpg",
+                caption:
+                    "Boris Pasternak, 1959, by unknown photographer. Public domain.",
             },
             {
                 id: "6cef85c9-8367-5561-8a05-e9b94fb1d6cc",
@@ -6126,14 +6104,12 @@ export const timelineData = [
                 description:
                     "New French constitution adopted by referendum (79% in favor).",
                 type: "global",
-                additional: "none",
             },
             {
                 id: "410d1221-424a-5022-b37c-5bf50cc03ba3",
                 date: "29 September",
                 description: "<i>The Unnamable</i> published by Grove Press.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "5c00a507-08f3-5983-9a9e-3506a1694f87",
@@ -6141,7 +6117,6 @@ export const timelineData = [
                 description:
                     "Beckett in London for a week to assist with rehearsals of <i>Krapp's Last Tape</i> and <i>Endgame</i>.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "2f49e847-c8b7-5128-9d64-78304a114a82",
@@ -6149,13 +6124,14 @@ export const timelineData = [
                 description:
                     "Premiere of <i>Krapp's Last Tape</i> as a curtain-raiser for <i>Endgame</i>, Royal Court Theatre, London.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "3629bb2c-32ac-5a64-b281-645f53892c2c",
                 date: "28 October",
                 description: "Pope John XXIII succeeds Pope Pius XII.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/5/5f/Pope_John_XXIII%2C_1958%E2%80%931963.jpg",
+                caption:
+                    "Pope John XXIII, c. 1958-1963, by Fotografia Felici. Public domain.",
             },
             {
                 id: "6c502d0a-1158-58f9-97c7-3b2ec2c050cb",
@@ -6163,7 +6139,6 @@ export const timelineData = [
                 description:
                     'Beckett completes English translation ("Text I") from <i>Textes pour rien</i>.',
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "cf235d4d-6120-5e66-aecb-3d94ee21d054",
@@ -6171,7 +6146,6 @@ export const timelineData = [
                 description:
                     'Beckett asks Barbara Bray and Donald McWhinnie to read his "aborted radio script" (<i>Embers</i>).',
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "d02bbbf5-f457-513a-9f73-27567b3916d4",
@@ -6179,7 +6153,6 @@ export const timelineData = [
                 description:
                     "<i>Anthology of Mexican Poetry</i>, ed. Octavio Paz, translated by Samuel Beckett into English, published by Indiana University Press.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "e796fdea-8e00-56a3-a1b2-ec1c653d03d7",
@@ -6187,7 +6160,6 @@ export const timelineData = [
                 description:
                     "Beckett flies to Dublin for a week. Ethna MacCarthy Leventhal is dying of cancer; Thomas MacGreevy has had a serious heart attack.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "34c09301-a7c2-5065-987a-6e2269190b0d",
@@ -6195,7 +6167,6 @@ export const timelineData = [
                 description:
                     "Boris Pasternak is required by the Soviet authorities to refuse the Nobel Prize in Literature.",
                 type: "global",
-                additional: "image",
             },
             {
                 id: "b70962e8-de70-5703-92be-abeb2abc9497",
@@ -6203,7 +6174,6 @@ export const timelineData = [
                 description:
                     'Samuel Beckett begins "Pim" which eventually becomes part of <i>Comment c\'est</i>.',
                 type: "personal",
-                additional: "none",
             },
             // {
             //     id: "730156f3-b60c-5853-8585-868226089cbf",
@@ -6224,7 +6194,6 @@ export const timelineData = [
                 description:
                     "Overthrow of the government of Cuban President Fulgencio Batista; Fidel Castro assumes power on 16 February. Opening of the European Common Market.",
                 type: "global",
-                additional: "none",
             },
             {
                 id: "72d67937-7198-573b-8c43-9775c5310df0",
@@ -6232,7 +6201,6 @@ export const timelineData = [
                 description:
                     "The BBC Third Programme broadcasts extracts from <i>The Unnamable</i>, read by Patrick Magee, with music by John Beckett.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "a0e40134-7d74-547f-91f3-2a03171cc6a4",
@@ -6240,7 +6208,6 @@ export const timelineData = [
                 description:
                     "André Malraux appointed by De Gaulle as France's first Ministre de la Culture.",
                 type: "global",
-                additional: "image",
             },
             {
                 id: "599515c3-80f6-5e19-9dd5-610a8d274459",
@@ -6256,7 +6223,6 @@ export const timelineData = [
                 description:
                     "<i>Les Lettres Nouvelles</i> publishes <i>La dernière bande</i>.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "ae87abff-dda2-5e50-96bd-9df35cf25c46",
@@ -6264,7 +6230,6 @@ export const timelineData = [
                 description:
                     "Beckett reports that he has given permission to Marcel Mihalovici to make a chamber opera of <i>La dernière bande</i>.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "6a5d0be5-16ce-5db8-a470-85142b528452",
@@ -6273,6 +6238,8 @@ export const timelineData = [
                     "Death of Peter Suhrkamp, Samuel Beckett's German publisher.",
                 type: "global",
                 image: "https://upload.wikimedia.org/wikipedia/commons/d/d0/Suhrkamp_peter.png",
+                caption:
+                    "Peter Suhrkamp, c. 1925, unknown photographer. Public domain.",
             },
             {
                 id: "d4a24cad-e1b6-5585-ae64-b8e1d486405f",
@@ -6281,13 +6248,14 @@ export const timelineData = [
                     "Beckett attends France-Wales rugby match at Colombes Stadium, with Claude Simon.",
                 type: "personal",
                 image: "https://upload.wikimedia.org/wikipedia/commons/8/8c/StadeolympiqueColombesJO1924.jpg",
+                caption:
+                    "Stade olympic Colombes, 9 June 1924, by Agence Rol. Public domain.",
             },
             {
                 id: "d1915937-ece3-599f-84df-d6c4d9ce96e9",
                 date: "24 May",
                 description: "Death of Ethna MacCarthy Leventhal.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "e4edade1-5047-52e9-aa0f-97d281868b86",
@@ -6295,7 +6263,6 @@ export const timelineData = [
                 description:
                     "The BBC Third Programme broadcasts <i>Embers</i>.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "0e81c349-32f1-544c-9f21-f97e26a23622",
@@ -6303,7 +6270,6 @@ export const timelineData = [
                 description:
                     "Limes Verlag, Wiesbaden, publish poems as Gedichte. ",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "c4db1452-de56-5b48-a415-ec007017c3cf",
@@ -6318,7 +6284,6 @@ export const timelineData = [
                 date: "21 August",
                 description: "Death of Denis Devlin",
                 type: "global",
-                additional: "image",
             },
             {
                 id: "229b5a59-ca1c-59f3-ae5d-94bc9b421d07",
@@ -6326,7 +6291,6 @@ export const timelineData = [
                 description:
                     "Samuel Beckett is in Sorrento where Radiotelevisione Italia awards <i>Embers</i> the Italia Prize on 15 September.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "fd611eb6-8db7-570d-9974-5633009dc541",
@@ -6334,7 +6298,6 @@ export const timelineData = [
                 description:
                     "De Gaulle recognizes Algeria's right to self-determination.",
                 type: "global",
-                additional: "none",
             },
             {
                 id: "fd12738e-c543-58db-821d-4db734f9459c",
@@ -6350,6 +6313,7 @@ export const timelineData = [
                 description: "Beckett buys a Citroën 2CV.",
                 type: "personal",
                 image: "https://upload.wikimedia.org/wikipedia/commons/b/b8/1956_Citro%C3%ABn_2CV_-_Flickr_-_skinnylawyer.jpg",
+                caption: "2CV Citroën, 2004, by Pol. Public domain.",
             },
             {
                 id: "de7c8522-0a3e-52a6-a42b-c7916aed0761",
@@ -6357,7 +6321,6 @@ export const timelineData = [
                 description:
                     "Beckett introduces Robert Pinget to friends in the United States.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "a80e0e69-b197-524c-96a4-f3cbda23f177",
@@ -6365,7 +6328,6 @@ export const timelineData = [
                 description:
                     "<i>Krapp's Last Tape</i>, with <i>Embers</i> published by Faber and Faber.",
                 type: "personal",
-                additional: "none",
             },
         ],
     },
@@ -6378,6 +6340,8 @@ export const timelineData = [
                 description: "Death of Albert Camus.",
                 type: "global",
                 image: "https://upload.wikimedia.org/wikipedia/commons/0/08/Albert_Camus%2C_gagnant_de_prix_Nobel%2C_portrait_en_buste%2C_pos%C3%A9_au_bureau%2C_faisant_face_%C3%A0_gauche%2C_cigarette_de_tabagisme.jpg",
+                caption:
+                    "Portrait of Albert Camus, 1957, by United Press International. Public domain.",
             },
             {
                 id: "216d41de-5676-5bb7-955c-c77a2941eca2",
@@ -6385,7 +6349,6 @@ export const timelineData = [
                 description:
                     "Publication of <i>La dernière bande, suivi de Cendres</i> by Editions de Minuit.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "01cbdec7-0e3f-5088-88ed-13f6156559cf",
@@ -6393,7 +6356,6 @@ export const timelineData = [
                 description:
                     "<i>Krapp's Last Tape</i> opens at the Provincetown Playhouse, New York, directed by Alan Schneider.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "ed5c4a7b-daf7-5231-a456-59246c244eea",
@@ -6401,7 +6363,6 @@ export const timelineData = [
                 description:
                     'Insurrection in Algiers, known as "La semaine des barricades."',
                 type: "global",
-                additional: "none",
             },
             {
                 id: "d845a6c6-2a53-5608-aa85-6ea78cc899f3",
@@ -6409,7 +6370,6 @@ export const timelineData = [
                 description:
                     "The French Government takes on emergency powers to deal with the worsening situation in Algeria.",
                 type: "global",
-                additional: "none",
             },
             {
                 id: "a5074fa3-1eaa-5db8-94b9-2b3928ebeeb8",
@@ -6417,7 +6377,6 @@ export const timelineData = [
                 description:
                     "Générale of <i>La dernière bande</i>, directed by Roger Blin, and Lettre morte, directed by Jean Martin, Théâtre Récamier.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "96f13edb-11b9-5719-9081-376280dac3e1",
@@ -6425,7 +6384,6 @@ export const timelineData = [
                 description:
                     "Samuel Beckett's tribute to Sean O'Casey published in The Irish Times.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "2ab66210-bf84-5643-9b40-f5be101de535",
@@ -6441,7 +6399,6 @@ export const timelineData = [
                 description:
                     "The BBC Third Programme broadcasts <i>Waiting For Godot</i>.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "d382596d-1971-5a4c-ba4d-6434ec1e2bcd",
@@ -6449,7 +6406,8 @@ export const timelineData = [
                 description:
                     "Samuel Beckett lifts his embargo on production of his work in Ireland.",
                 type: "personal",
-                additional: "none",
+                caption:
+                    "Theatre de la Ville (Sarah Bernhardt), 2010, by Britchi Mirela, under Creative Commons Attribution-Share Alike 4.0 International license.",
             },
             {
                 id: "e0ca2d15-ebe6-5970-91e1-194798165279",
@@ -6465,7 +6423,6 @@ export const timelineData = [
                 description:
                     "John Calder's edition of <i>Three Novels</i> is seized from Hanna's bookstore in Dublin, under Irish Government order.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "b41672d3-ad87-5459-8c00-efcd7ea86699",
@@ -6473,7 +6430,6 @@ export const timelineData = [
                 description:
                     "Beckett and Alan Schneider attend the Berliner Ensemble production of Brecht's Galileo in Paris.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "c9bae537-7fcb-5e84-8f29-64d60fdb9820",
@@ -6481,7 +6437,6 @@ export const timelineData = [
                 description:
                     "Beckett completes revision  of his new work, which becomes <i>Comment c'est</i>.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "38270e07-26d4-58bf-a895-c2446a1ced1c",
@@ -6489,7 +6444,6 @@ export const timelineData = [
                 description:
                     "Beckett dates a draft of what becomes <i>Happy Days</i>.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "0e078f30-dcd4-5fb3-8c2f-77a38866c82a",
@@ -6498,6 +6452,8 @@ export const timelineData = [
                     "Samuel Beckett writes his first letter to Harold Pinter.",
                 type: "personal",
                 image: "https://upload.wikimedia.org/wikipedia/commons/5/58/Harold_Pinter_1962.jpg",
+                caption:
+                    "Harold Pinter, 1962, by Jack de Nijs/Anefo. Public domain.",
             },
             {
                 id: "136ea32d-2b34-5247-99ed-16b7e19c9c89",
@@ -6505,7 +6461,6 @@ export const timelineData = [
                 description:
                     "The BBC Third Programme broadcasts <i>The Old Tune</i>, produced by Barbara Bray, with Jack MacGowran and Patrick Magee.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "b5d8e91c-6337-591b-a41d-b8d6f61a8ab0",
@@ -6513,7 +6468,6 @@ export const timelineData = [
                 description:
                     "Vérité-Liberté publishes a Déclaration sur le Droit à l'Insoumission dans la Guerre d'Algérie signed by 121 writers and artists; it becomes known as the \"Manifeste des 121.\"",
                 type: "global",
-                additional: "none",
             },
             {
                 id: "78ba69c0-5e7d-561c-9054-ca07c1cf260e",
@@ -6529,7 +6483,6 @@ export const timelineData = [
                 description:
                     "Jérôme Lindon, editor of Editions de Minuit, arrested.",
                 type: "global",
-                additional: "none",
             },
             {
                 id: "dff1ca9b-9f93-5da1-8537-82015e95f821",
@@ -6537,7 +6490,6 @@ export const timelineData = [
                 description:
                     'A letter condemning the "apologists of desertion and disobedience" and defending the army appears in Le Figaro with 185 signatories.',
                 type: "global",
-                additional: "none",
             },
             {
                 id: "1054f9f1-fc66-56c2-ab20-8bacde6e5dcb",
@@ -6546,6 +6498,8 @@ export const timelineData = [
                     "Beckett has begun to move into his new apartment at 38 Boulevard Saint-Jacques, Paris 14",
                 type: "personal",
                 image: "https://upload.wikimedia.org/wikipedia/commons/4/47/Samuel_Beckett%27s_Apartment_at_38_Boulevard_St_Jacques.jpg",
+                caption:
+                    "Samuel Beckett's Apartment at 38 Boulevard St. Jacques, by Lois Overbeck under Creative Commons Attribution-Share Alike 4.0 International license.",
             },
             {
                 id: "68c3b303-adca-5b4f-a2af-06b0dc218ec7",
@@ -6553,7 +6507,6 @@ export const timelineData = [
                 description:
                     'De Gaulle outlines his conception of the "Algerian Republic."',
                 type: "global",
-                additional: "none",
             },
             {
                 id: "8ba8fe27-56aa-5adb-8b26-5c362c995e17",
@@ -6561,7 +6514,6 @@ export const timelineData = [
                 description:
                     "John F. Kennedy is elected President of the United States.",
                 type: "global",
-                additional: "none",
             },
             {
                 id: "de2a796b-50e7-5847-baa4-3c1455e8eb83",
@@ -6569,7 +6521,6 @@ export const timelineData = [
                 description:
                     "Beckett views <i>On the Bowery</i> directed by Lionel Rogosin; and returns for a second time.",
                 type: "personal",
-                additional: "none",
             },
         ],
     },
@@ -6582,7 +6533,6 @@ export const timelineData = [
                 description:
                     "With A. J. Leventhal, Beckett attends Max Frisch's Biedermann et les incendiaires, Théâtre de Lutèce, directed by Jean-Marie Serreau.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "7d5fb676-4fde-580f-a996-6905bb7de38d",
@@ -6590,7 +6540,6 @@ export const timelineData = [
                 description:
                     "The French proposal for Algerian self-determination receives 75% of the votes in a referendum.",
                 type: "global",
-                additional: "none",
             },
             {
                 id: "d2c21be3-e265-5233-8f08-48bf1800a813",
@@ -6598,7 +6547,6 @@ export const timelineData = [
                 description:
                     "<i>Comment c'est</i> published by Editions de Minuit.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "98b58d1d-56f4-53d1-972c-feda99ce7493",
@@ -6606,7 +6554,6 @@ export const timelineData = [
                 description:
                     "Opening of Henri Hayden's exhibition at Waddington Gallery, London.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "0faf2031-bdae-5f65-b597-7087bec13500",
@@ -6614,7 +6561,6 @@ export const timelineData = [
                 description:
                     "Samuel Beckett's first meeting with Harold Pinter.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "1030793e-54aa-5551-b8d9-2cd1561865f5",
@@ -6622,7 +6568,6 @@ export const timelineData = [
                 description:
                     "Beckett dates completion of a draft of <i>Happy Days</i>.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "894f76fa-71ea-5b9c-aa6f-f5382ae428c1",
@@ -6630,7 +6575,6 @@ export const timelineData = [
                 description:
                     "Beckett attends Harold Pinter's <i>Le Gardien</i>.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "9005663d-5e1f-5971-8b4e-f2375032c1b4",
@@ -6638,7 +6582,6 @@ export const timelineData = [
                 description:
                     "Beckett attends concert performance of Mihalovici's opera <i>Krapp</i> at the Théâtre de Chaillot.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "2fc99d9e-02ce-5b4c-b81f-7020862ed439",
@@ -6646,7 +6589,6 @@ export const timelineData = [
                 description:
                     "Beckett attends dress rehearsal of Mihalovici's opera <i>Krapp</i> in Bielefeld, Germany.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "a77a2bb7-bf5c-5ca8-a52e-1e37a1fe248e",
@@ -6654,7 +6596,6 @@ export const timelineData = [
                 description:
                     "Beckett returns to Paris, driving with the Tophovens, having visited Amsterdam, Delft, and Haarlem.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "9d055a2c-9a1b-5f65-b070-309241f14cc6",
@@ -6662,7 +6603,6 @@ export const timelineData = [
                 description:
                     "Samuel Beckett resident in Folkestone prior to his marriage.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "a3fae74f-e97c-5676-aaae-5050da8d14b9",
@@ -6670,7 +6610,6 @@ export const timelineData = [
                 description:
                     "Samuel Beckett and Suzanne Dechevaux-Dumesnil marry in the Folkestone Registry Office, and return to Paris.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "ef5d747e-5cf0-5f26-9504-849ad4fcc44e",
@@ -6678,7 +6617,6 @@ export const timelineData = [
                 description:
                     "WNTA TV (New York) broadcasts <i>Waiting for Godot</i> directed by Alan Schneider.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "d5bfe377-92b2-581b-9ea4-baeddaf6c708",
@@ -6686,14 +6624,12 @@ export const timelineData = [
                 description:
                     "Beckett manages rehearsals of <i>En attendant Godot</i> duirng Roger Blin's absence in London.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "4f526fca-8f83-58bc-8bad-ef1cce66a499",
                 date: "11 April",
                 description: "Trial of Adolf Eichmann begins in Jerusalem.",
                 type: "global",
-                additional: "none",
             },
             {
                 id: "69428165-c776-521a-99c6-5fbe60e24b9f",
@@ -6701,14 +6637,12 @@ export const timelineData = [
                 description:
                     "Yuri Gagarin, aboard the Soviet satellite Vostok 1, becomes the first human in outer space.",
                 type: "global",
-                additional: "none",
             },
             {
                 id: "44fe637e-399e-5efb-b4a5-8d2a939acc2c",
                 date: "17 - 20 April",
                 description: 'Bay of Pigs "invasion" of Cuba by US.',
                 type: "global",
-                additional: "none",
             },
             {
                 id: "d9cefd2a-1d71-52ab-8eb4-2c21f2e9e276",
@@ -6716,7 +6650,6 @@ export const timelineData = [
                 description:
                     "Attempted coup, in Algers, by Generals Challe, Salan, Jouhaud, and Zeller, against De Gaulle's policy of self-determination for Algeria.",
                 type: "global",
-                additional: "none",
             },
             {
                 id: "47dff983-86ad-5d07-b476-7051810dbdbd",
@@ -6724,7 +6657,6 @@ export const timelineData = [
                 description:
                     "Cuba declares itself a Democratic Socialist Republic.",
                 type: "global",
-                additional: "none",
             },
             {
                 id: "76b24db4-0d9a-5749-8bdd-c2184b6f6972",
@@ -6732,7 +6664,6 @@ export const timelineData = [
                 description:
                     "Opening of <i>En attendant Godot</i>, Théâtre de l'Odéon.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "403e1f82-6a4c-52ef-bcd0-6a1fe7f53f9a",
@@ -6740,7 +6671,6 @@ export const timelineData = [
                 description:
                     "Samuel Beckett awarded the first Prix International des Editeurs, (also known later as the Prix Formentor, and the Prix International de littérature) shared with Jorge Luis Borges; Beckett does not attend the ceremony.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "8cd7904e-56d3-5733-adc1-929cd3cceae5",
@@ -6748,7 +6678,6 @@ export const timelineData = [
                 description:
                     "Barbara Bray and her daughters have moved to Paris.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "583db3eb-b348-5ae8-8799-405a036b0a65",
@@ -6756,7 +6685,6 @@ export const timelineData = [
                 description:
                     "Beckett in Surrey with Sheila and Donald Page until 22 or 23 June, then in London.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "b6ee7fd4-2069-50fb-9da7-bfcff85c3666",
@@ -6764,7 +6692,6 @@ export const timelineData = [
                 description:
                     "BBC TV broadcasts <i>Waiting for Godot</i> directed by Donald McWhinnie.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "97b798da-ef7b-5321-8e3b-bd8a0ae9057f",
@@ -6772,7 +6699,6 @@ export const timelineData = [
                 description:
                     "The Bielefeld production of Mihalovici's opera of <i>Krapp</i> performed as part of the Théâtre des Nations, Paris.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "137ba386-c636-5c4d-8e19-4bd4a530742b",
@@ -6780,7 +6706,6 @@ export const timelineData = [
                 description:
                     "Beckett attends John Osborne's <i>Luther</i> performed as part of the Théâtre des Nations, Paris.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "3d8f864f-fe1b-55b0-a796-4f7f15b6f0b9",
@@ -6788,7 +6713,6 @@ export const timelineData = [
                 description:
                     "Beckett begins English translation of <i>Comment c'est</i>.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "b7be8932-be17-5e5f-accd-1694a79e6f7b",
@@ -6796,7 +6720,6 @@ export const timelineData = [
                 description:
                     "Increasingly frequent OAS attacks in many areas of France.",
                 type: "global",
-                additional: "none",
             },
             {
                 id: "21570bb4-3c7d-52dc-bfec-8ab3d38e87df",
@@ -6804,28 +6727,24 @@ export const timelineData = [
                 description:
                     "The German Democratic Republic (GDR) begins construction of the Berlin Wall.",
                 type: "global",
-                additional: "none",
             },
             {
                 id: "b6877d95-964a-5315-b805-511f893922a8",
                 date: "20-23 August",
                 description: "Beckett and Suzanne in Etretat, France.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "d6a23ce7-bd2e-5bc1-ba10-3f18772d099c",
                 date: "1-11 September",
                 description: "Samuel Beckett in England.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "9dcb03a8-8a9a-50dd-ba39-691794761e02",
                 date: "8 September",
                 description: "Failed attempt on the life of General de Gaulle.",
                 type: "global",
-                additional: "none",
             },
             {
                 id: "093d2cf2-a6df-5483-ab30-b9342a902830",
@@ -6833,7 +6752,6 @@ export const timelineData = [
                 description:
                     "World premiere of <i>Happy Days</i> at the Cherry Lane Theatre, New York, directed by Alan Schneider.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "120db1bd-76e2-5d2a-886c-acef4626793c",
@@ -6841,7 +6759,6 @@ export const timelineData = [
                 description:
                     "Opening of Bram van Velde's retrospective, Knoedler Gallery, Paris.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "a09e6063-a9ba-592a-9fea-5dc42fe6dffb",
@@ -6849,7 +6766,6 @@ export const timelineData = [
                 description:
                     "Samuel Beckett's Poems in English published by John Calder.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "81c30dec-1697-53ea-a8c9-99a969847faa",
@@ -6857,7 +6773,6 @@ export const timelineData = [
                 description:
                     "Samuel Beckett sends petition to John Calder and Harold Hobson for signatures to protest against the trial of Jérôme Lindon for his publication of The Deserter and for his anti-torture position on Algeria.",
                 type: "personal",
-                additional: "none",
             },
         ],
     },
@@ -6870,7 +6785,6 @@ export const timelineData = [
                 description:
                     "Samuel Beckett in Ussy to complete draft translation of <i>How It Is</i>.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "374ce137-4386-5390-82a4-2024e6a96782",
@@ -6878,14 +6792,12 @@ export const timelineData = [
                 description:
                     "Demonstration against the O.A.S. at the Charonne Métro Station provokes police response that ends in death of nine persons; this triggers a general strike in Paris on 13 February in Paris.",
                 type: "global",
-                additional: "none",
             },
             {
                 id: "a30ce969-2b98-5be8-9aab-9146c1e5b6fb",
                 date: "11 February",
                 description: "Jean-Jacques Mayoux's home is bombed.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "370f0a78-ad50-5bd4-918e-f177e2473327",
@@ -6893,7 +6805,6 @@ export const timelineData = [
                 description:
                     "Bram van Velde's first New York exhibition opens, Knoedler Gallery.",
                 type: "global",
-                additional: "none",
             },
             {
                 id: "d75fa7f8-b7cf-5445-bbd8-fa77158b3265",
@@ -6901,7 +6812,6 @@ export const timelineData = [
                 description:
                     "With the signing of the Evian Accords, a ceasefire takes effect in Algeria on 19 March.",
                 type: "global",
-                additional: "none",
             },
             {
                 id: "f93ae12d-91db-520d-858d-7ac16b5f778e",
@@ -6909,7 +6819,6 @@ export const timelineData = [
                 description:
                     "Beckett attends Henri Hayden vernissage, Galerie Suillerot.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "db4f63fb-75c1-5345-9c50-5272d03ac57f",
@@ -6917,7 +6826,6 @@ export const timelineData = [
                 description:
                     "Beckett attends vernissage of Joan Mitchell double show, Galerie Jacques Dubourg and Galerie Lawrence, Paris.",
                 type: "personal",
-                additional: "image",
             },
             {
                 id: "7f7617d9-83f4-5ada-88c0-841c296f1d0b",
@@ -6925,7 +6833,6 @@ export const timelineData = [
                 description:
                     "Beckett has begun work on a play for three faces and lights (ultimately <i>Play</i>).",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "d3eefbcc-f165-55cf-93e0-9e582e4ab2b8",
@@ -6933,7 +6840,6 @@ export const timelineData = [
                 description:
                     "Samuel Beckett lunches with Igor and Vera Stravinsky in Paris.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "802646c2-28f2-547c-b84e-a2a911a01c49",
@@ -6941,14 +6847,12 @@ export const timelineData = [
                 description:
                     "The BBC Third Programme broadcasts <i>Endgame</i>, produced by Michael Bakewell.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "adc186be-5aad-55dd-bbdd-fec28b1f2ad0",
                 date: "15 June",
                 description: "<i>Happy Days</i> published by Faber and Faber.",
                 type: "personal",
-                additional: "image",
             },
             {
                 id: "4bb2c942-7516-52dc-9b03-172fd3aa703f",
@@ -6956,7 +6860,6 @@ export const timelineData = [
                 description:
                     "Agreement signed between the Algerian FLN (National Liberation Front) and the OAS effectively ends the Algerian war.",
                 type: "global",
-                additional: "none",
             },
             {
                 id: "41068d1c-ed35-5d85-af2d-2df68a0bb686",
@@ -6964,7 +6867,6 @@ export const timelineData = [
                 description:
                     "After the approval of the Evian Accords by the electorate of Algeria, De Gaulle pronounces Algeria an independent country.",
                 type: "global",
-                additional: "none",
             },
             {
                 id: "04baece2-f93d-576f-8296-795535fc07bb",
@@ -6972,7 +6874,6 @@ export const timelineData = [
                 description:
                     "Beckett finishes draft of new play (<i>Play</i>).",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "8cd4443d-2564-5147-891f-61653f671fce",
@@ -6980,7 +6881,6 @@ export const timelineData = [
                 description:
                     "Beckett attends Pinget double bill of <i>La Manivelle</i> and <i>Architruc</i> at the Comédie de Paris.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "f9d99e8e-d4fa-5d47-aaa1-822927c88d35",
@@ -6994,7 +6894,6 @@ export const timelineData = [
                 date: "22 August",
                 description: "Second attempt on the life of General de Gaulle.",
                 type: "global",
-                additional: "none",
             },
             {
                 id: "155c18ae-bfed-5513-9978-9bfa9a306dd8",
@@ -7002,7 +6901,6 @@ export const timelineData = [
                 description:
                     "De Gaulle dissolves the French National Assembly, now allowing the President to be directly elected by the people.",
                 type: "global",
-                additional: "none",
             },
             {
                 id: "3d15e7ee-85ee-5c8f-8577-f691f8369200",
@@ -7010,7 +6908,6 @@ export const timelineData = [
                 description:
                     "Beckett sends complete manuscripts of <i>Cascando</i> to Herbert Myron for deposit in the Harvard University Theatre Collection.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "16a9d0e9-ac73-5c30-906b-8af22dc0111a",
@@ -7018,7 +6915,6 @@ export const timelineData = [
                 description:
                     "Samuel Beckett arrives in London to begin rehearsals of <i>Happy Days</i> on 8 October.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "a09078ed-ba29-5253-bfa8-7abf75a4a30a",
@@ -7026,14 +6922,12 @@ export const timelineData = [
                 description:
                     "Attends Jack McGowran's runthrough of his one-man Beckett show, End of the Day. The BBC Third Programme broadcasts <i>Words and Music</i>.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "fd2948bc-71e7-5d93-af21-cb5644a85bda",
                 date: "15 October",
                 description: "Start of the Cuban missile crisis.",
                 type: "global",
-                additional: "none",
             },
             {
                 id: "4aa9452c-ce1e-5f6f-b0af-0d2a0e878b44",
@@ -7041,7 +6935,6 @@ export const timelineData = [
                 description:
                     "London opening of <i>Happy Days</i> at the Royal Court Theatre. Samuel Beckett returns to Paris. Grants George Devine and the Royal Court Theatre first option on production of his future work in London.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "c246d51f-6df3-5dad-aa4d-6bed29477458",
@@ -7049,7 +6942,6 @@ export const timelineData = [
                 description:
                     "Samuel Beckett consults an eye specialist in Berne.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "8443024f-be21-52e0-a899-f4e4a57f30fc",
@@ -7057,7 +6949,6 @@ export const timelineData = [
                 description:
                     "The BBC Third Programme broadcasts <i>Words and Music</i>.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "4c73a398-938b-588d-9021-714bf6b732e1",
@@ -7065,7 +6956,6 @@ export const timelineData = [
                 description:
                     "Henri Hayden taken ill and hospitalized in London.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "b5dd4a83-3877-5b61-a341-d885a5ab1782",
@@ -7073,7 +6963,6 @@ export const timelineData = [
                 description:
                     "Samuel Beckett attends Ionesco's <i>Le Roi se meurt</i> with George Devine, Jocelyn Herbert, and her daughter Jenny.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "f863064e-7bf1-5846-b36c-8b55c32f4a47",
@@ -7081,7 +6970,6 @@ export const timelineData = [
                 description:
                     "Samuel Beckett attends with Robert Pinget, Roland Dubillard's <i>La Maison d'os</i>.",
                 type: "personal",
-                additional: "none",
             },
         ],
     },
@@ -7094,7 +6982,6 @@ export const timelineData = [
                 description:
                     "<i>Tous ceux qui tombent</i> broadcast on French Television with an introduction by Georges Belmont.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "11aa4ad4-d30d-50e2-a839-96d6694b6257",
@@ -7102,7 +6989,6 @@ export const timelineData = [
                 description:
                     "Beckett accepts Barney Rosset's commission to write a film.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "6fd4460b-e5f1-5725-8a27-757bbe75c41a",
@@ -7110,7 +6996,6 @@ export const timelineData = [
                 description:
                     "<i>Poems in English</i> published by Grove Press.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "a7e9e05e-fd66-5489-b01a-4b67d091d64b",
@@ -7118,7 +7003,6 @@ export const timelineData = [
                 description:
                     "Attends Ramón Valle-Inclán's play <i>Divines paroles</i> at the Théâtre de l'Odéon, directed by Roger Blin.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "75ea429c-1a05-5aba-baac-14d42d36ef9d",
@@ -7126,14 +7010,12 @@ export const timelineData = [
                 description:
                     "Beckett begins a manuscript notebook of <i>Film</i>.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "5b701ce0-67aa-55eb-92e7-99418c2885b5",
                 date: "13 April",
                 description: "Completes first draft of <i>Film</i>.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "306729d5-56db-5026-a4c9-e201919cd10c",
@@ -7141,7 +7023,6 @@ export const timelineData = [
                 description:
                     "Beckett works with Jean-Marie Serreau on Comédie.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "253ecedd-99e0-5eaa-a72e-d311d7750e9c",
@@ -7149,7 +7030,6 @@ export const timelineData = [
                 description:
                     "Attends King Lear directed by Peter Brook at the Théâtre Sarah-Bernhardt.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "7bea6d5a-c1d5-5144-810e-936e45d40c4b",
@@ -7157,7 +7037,6 @@ export const timelineData = [
                 description:
                     "Samuel Beckett agrees to an embargo against performance of his plays before segregated audiences in South Africa.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "8a6573c3-c99c-5503-86d5-acf2cb1115fb",
@@ -7165,7 +7044,6 @@ export const timelineData = [
                 description:
                     "Beckett attends rehearsals and recordings of <i>Cascando</i>, RTF studios.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "3830efd5-c859-5222-9120-8f687f86760f",
@@ -7173,14 +7051,12 @@ export const timelineData = [
                 description:
                     "With Alan Schneider, Beckett attends two working sessions of Spiel in Ulm, Germany.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "1e5e36a1-2f5d-56ba-aa5e-9b15a1e09fd1",
                 date: "3 June",
                 description: "Death of Pope John XXIII.",
                 type: "global",
-                additional: "image",
             },
             {
                 id: "563d5e8e-edb8-5293-9362-884adf80699a",
@@ -7188,7 +7064,6 @@ export const timelineData = [
                 description:
                     "Premiere of Spiel at the Ulmer-Theater, Ulm-Donau, directed by Deryk Mendel.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "7690ea1b-e853-544d-aebd-397e5f652651",
@@ -7196,7 +7071,6 @@ export const timelineData = [
                 description:
                     "Beckett rehearses Oh Les beaux jours with Madeleine Renaud and Roger Blin.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "fd9676ee-fdae-5817-beb3-d6b70587bc6d",
@@ -7204,21 +7078,18 @@ export const timelineData = [
                 description:
                     "Samuel Beckett holidays with Suzanne in Zell-am-See, Austria.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "42875f37-014d-5fe4-b3f8-db2f23ab9162",
                 date: "21 June",
                 description: "Election of Cardinal Montini as Pope Paul VI.",
                 type: "global",
-                additional: "none",
             },
             {
                 id: "5987ad51-4774-531d-afb8-05740dffa6c2",
                 date: "29 July",
                 description: "A. J. Leventhal moves from Dublin to Paris.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "0edab204-504d-5cec-8346-e1f11e675662",
@@ -7226,7 +7097,6 @@ export const timelineData = [
                 description:
                     "Samuel Beckett writes a brief tribute to Richard Aldington.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "be479f7d-9b89-5509-a014-c070086079bd",
@@ -7234,7 +7104,6 @@ export const timelineData = [
                 description:
                     'Samuel Beckett begins a play for a lit face ("Kilcool"; TCD, MS 4664).',
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "11edfa16-4f5b-50de-a22f-07566aa321f2",
@@ -7242,7 +7111,6 @@ export const timelineData = [
                 description:
                     "Premiere of Oh les beaux jours at the Teatro del Ridotto, as part of the Venice Festival.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "f68ddb84-27f9-5740-b4e8-ada8701b6943",
@@ -7250,14 +7118,12 @@ export const timelineData = [
                 description:
                     "<i>Happy Days</i> opens at the Eblana Theatre, Dublin, directed by John Beary, with Marie Kean.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "3bff99f6-826b-5fc2-b96b-abee3bb73e34",
                 date: "13 October",
                 description: "ORTF-France Culture broadcasts <i>Cascando</i>.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "bb844a7d-83c9-5b24-a920-2b2a00b615b2",
@@ -7265,7 +7131,6 @@ export const timelineData = [
                 description:
                     "Beckett asks Faber and Faber to publish the unexpurgated version of <i>Waiting for Godot</i>.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "9949c629-53a3-5d4a-ba83-d9f5c5a51e20",
@@ -7273,7 +7138,6 @@ export const timelineData = [
                 description:
                     "Assassination of John F. Kennedy. Lyndon B. Johnson becomes President of the United States.",
                 type: "global",
-                additional: "image",
             },
         ],
     },
@@ -7286,7 +7150,6 @@ export const timelineData = [
                 description:
                     "Play opens at the Cherry Lane Theatre, New York, directed by Alan Schneider, on a double bill with Harold Pinter's The Lover.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "a0b05080-aa53-542c-b97d-5d028e7ef0e3",
@@ -7294,7 +7157,6 @@ export const timelineData = [
                 description:
                     "Beckett in London for rehearsals of <i>Endgame</i> with Patrick Magee and Jack MacGowran.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "314bde8c-b161-59ab-ba59-0f059414e4eb",
@@ -7302,7 +7164,6 @@ export const timelineData = [
                 description:
                     "Beckett attends playback of <i>Cascando</i> as recorded in Stuttgart.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "a972a2e1-018a-5c6e-9d62-2d7c82f79344",
@@ -7310,7 +7171,6 @@ export const timelineData = [
                 description:
                     "Attends the opening night of Max Frisch's play Andorra at the Old Vic.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "e38052e6-38d2-593e-b5b6-f1b3406a2956",
@@ -7318,7 +7178,6 @@ export const timelineData = [
                 description:
                     'Attends "Theatre of Cruelty" productions, organized by Charles Marowitz and Peter Brook, at LAMDA.',
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "7be7609e-51c5-54ce-ae57-536bc7c8e9d4",
@@ -7326,7 +7185,6 @@ export const timelineData = [
                 description:
                     "Attends dress rehearsal of Who's Afraid of Virginia Woolf, directed by Alan Schneider, Piccadilly Theatre, London.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "e55193db-55d7-5158-8255-6e53f29c59d5",
@@ -7334,7 +7192,6 @@ export const timelineData = [
                 description:
                     "<i>Endgame</i> with Jack MacGowran and Patrick Magee opens at the Studio des Champs-Elysées.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "9ffbdcbe-83ce-5e6a-ae85-9ed57e4a2823",
@@ -7342,14 +7199,12 @@ export const timelineData = [
                 description:
                     "Goddard Lieberson's invites Beckett to contribute to a Homage for John F. Kennedy. Beckett declines.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "44083099-8bcb-5ae0-b1ef-f45959cbdbb5",
                 date: "14 March - 8 April",
                 description: "Samuel Beckett in London for rehearsals of Play.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "d17f44f1-54ae-597f-b6d8-18257bf49fea",
@@ -7357,7 +7212,6 @@ export const timelineData = [
                 description:
                     'Spends weekend with George Devine and Jocelyn Herbert at their farm, "Andrews," in Hampshire.',
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "cf2b29f3-b8e0-5597-afed-c0e93a1e1984",
@@ -7365,7 +7219,6 @@ export const timelineData = [
                 description:
                     "Play opens at the National Theatre, Old Vic, on a double bill with Sophocles' Philoctetes.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "9a138996-df10-5541-ad62-d37555a290b7",
@@ -7373,7 +7226,6 @@ export const timelineData = [
                 description:
                     "Samuel Beckett writes tribute to Brendan Behan for Theater heute.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "75d32207-f89d-58ec-8997-693a36c20df6",
@@ -7381,7 +7233,6 @@ export const timelineData = [
                 description:
                     "Samuel Beckett resumes rehearsals in Paris for Comédie, directed by Jean-Marie Serreau.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "6b149944-f488-5a85-9cbc-cbcb11b9c2d8",
@@ -7395,7 +7246,6 @@ export const timelineData = [
                 date: "30 April",
                 description: "<i>How It Is</i> published by John Calder.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "f9507b28-d922-56be-93ba-1ac2071832f5",
@@ -7403,7 +7253,6 @@ export const timelineData = [
                 description:
                     "Henri Cartier-Bresson photographs Beckett in Paris.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "ad74fd6b-4ae0-5448-aa52-250a7852a2a0",
@@ -7411,7 +7260,6 @@ export const timelineData = [
                 description:
                     "Comédie published in <i>Les Lettres Nouvelles</i>.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "13504d0a-e6bb-5335-b92f-e1c2268f9134",
@@ -7419,7 +7267,6 @@ export const timelineData = [
                 description:
                     "Comédie opens at the Pavillon de Marsan, as part of the Estival 1964, directed by Jean-Marie Serreau, assisted by Samuel Beckett.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "57244811-e844-5584-98d9-1d56ce535c2a",
@@ -7435,14 +7282,12 @@ export const timelineData = [
                 description:
                     "Samuel Beckett in London to assist Donald McWhinnie with rehearsals of <i>Endgame</i>, with Jack MacGowran and Patrick Magee.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "5b623a03-5a1c-5b8b-89a3-1a00458f860d",
                 date: "9 July",
                 description: "<i>Endgame</i> opens at the Aldwych Theatre.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "9a63027b-4d8f-5dd2-8634-0424527bc35c",
@@ -7450,7 +7295,6 @@ export const timelineData = [
                 description:
                     "Beckett flies from London to New York for work on <i>Film</i>.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "00073cdb-1f65-575a-952a-3eaf00cbd292",
@@ -7458,7 +7302,6 @@ export const timelineData = [
                 description:
                     "Stays at Barney Rosset's home in East Hampton, works with Alan Schneider and cameraman Boris Kaufman on plans for <i>Film</i>.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "739b8926-d1cc-531c-9b1a-25b460444477",
@@ -7466,7 +7309,6 @@ export const timelineData = [
                 description:
                     "Murphy, published by Calder and Boyars, is banned in Ireland.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "601b6a94-f00c-51ec-8d08-f12a05aaed98",
@@ -7474,14 +7316,12 @@ export const timelineData = [
                 description:
                     "Beckett attends Dutchman by LeRoi Jones (later Amiri Baraka) and The American Dream by Edward Albee at Cherry Lane Theatre.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "56e49432-c18f-5636-be5b-59725f03bbde",
                 date: "30 July",
                 description: "Final day of shooting of <i>Film</i>.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "277a57a6-73c3-56d5-b967-0c997a101aab",
@@ -7489,14 +7329,12 @@ export const timelineData = [
                 description:
                     "Beckett works with Sidney Meyers, the editor of <i>Film</i>.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "e4692458-25d8-5fc8-94df-8338f547c0eb",
                 date: "15 August",
                 description: "Death of Leslie Daiken, in London.",
                 type: "global",
-                additional: "none",
             },
             {
                 id: "4ad5b9e9-daf8-5754-9487-971d25924d42",
@@ -7504,7 +7342,6 @@ export const timelineData = [
                 description:
                     'Samuel Beckett has begun to write first of four pieces which will later be called "Faux départs."',
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "843b2c2d-8533-5b82-b9ed-80af27e0a196",
@@ -7512,6 +7349,8 @@ export const timelineData = [
                 description: "Death of Sean O'Casey.",
                 type: "global",
                 image: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Sean_ocasey_1924.jpg",
+                caption:
+                    "Sean O'Casey, 1912, by unknown photographer. Public domain.",
             },
             {
                 id: "f216f669-3cd8-54ea-a8fd-22915f1103e8",
@@ -7519,7 +7358,6 @@ export const timelineData = [
                 description:
                     "<i>Cascando</i> broadcast on the BBC Third Program. ",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "2c5b74d2-7659-52f4-a03b-0b882d5d0c51",
@@ -7527,7 +7365,6 @@ export const timelineData = [
                 description:
                     "Samuel Beckett halts republication of <i>More Pricks Than Kicks</i> by Grove Press and John Calder.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "72f2aaf6-43b3-5346-8699-3f45245a4a54",
@@ -7535,7 +7372,6 @@ export const timelineData = [
                 description:
                     " Beckett in London for rehearsals of <i>Waiting for Godot</i>, directed by Anthony Page at the Royal Court Theatre.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "6fb61707-2fc8-527c-a5f2-0ac3cb569ab9",
@@ -7551,7 +7387,6 @@ export const timelineData = [
                 description:
                     "<i>Waiting for Godot</i> opens at the Royal Court Theatre with Patrick Magee and Nicol Williamson.",
                 type: "personal",
-                additional: "none",
             },
         ],
     },
@@ -7559,12 +7394,24 @@ export const timelineData = [
         year: 1965,
         events: [
             {
+                id: "825e2650-bfb0-593c-9872-1cb898468508",
+                date: "21 January",
+                description:
+                    "Beckett has completed manuscript of <i>Come and Go</i> and sends it to Barbara Bray.",
+                type: "personal",
+            },
+            {
+                id: "70979e77-8a42-5530-b2fd-595cc42240f2",
+                date: "24 January",
+                description: "Death of Winston Churchill, London.",
+                type: "global",
+            },
+            {
                 id: "1a186046-7aea-5b4b-9271-4476eea98161",
                 date: "5 February",
                 description:
                     "Beckett called to Berlin to help with Schiller-Theater production of <i>Warten auf Godot</i>, directed by Deryk Mendel.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "503603ce-4efd-588a-9c4f-a9ac73158429",
@@ -7572,7 +7419,6 @@ export const timelineData = [
                 description:
                     "Beckett flies from Berlin to London to assist with rehearsals of Jack MacGowran's <i>Beginning to End</i>.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "f9df80b5-cf20-5aee-bbd4-a4b1339fbb5c",
@@ -7580,7 +7426,6 @@ export const timelineData = [
                 description:
                     "Attends <i>Marat/Sade</i>, by Peter Weiss, directed by Peter Brook, with Patrick Magee as the Marquis de Sade.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "c59c44d5-f067-5911-88c4-4d0cce56a067",
@@ -7588,14 +7433,12 @@ export const timelineData = [
                 description:
                     "Beckett returns to Berlin from London to resume rehearsals of <i>Warten auf Godot</i>.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "ea60e158-42be-5fee-9bec-5deb69c5e97f",
                 date: "27 February",
                 description: "Beckett flies from Berlin to Paris.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "4cf4178e-7418-5702-bdec-d7a6cc8c96c8",
@@ -7603,7 +7446,6 @@ export const timelineData = [
                 description:
                     "Samuel Beckett learns that Italian actress Clara Colosimo has gone on hunger strike because she cannot get permission to perform Giorni felici (<i>Happy Days</i>).",
                 type: "personal",
-                additional: "image?",
             },
             {
                 id: "fe3b8464-e658-5571-81e4-70ae0a985f5c",
@@ -7611,7 +7453,6 @@ export const timelineData = [
                 description:
                     "Launch of Operation Rolling Thunder, a sustained American bombing campaign of North Vietnam that lasts until 2 November 1968.",
                 type: "global",
-                additional: "none",
             },
             {
                 id: "0ab014d1-5cf5-5839-9764-883c00e5e630",
@@ -7619,14 +7460,12 @@ export const timelineData = [
                 description:
                     "Beckett views latest cut of <i>Film</i> and sends his notes on to Schneider the following day.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "ed996587-2499-5b04-a253-b1d59b01ea30",
                 date: "17 March",
                 description: "Death of Nancy Cunard in Paris.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "60ec45f5-ef9f-5df2-b8af-5c687b268d8a",
@@ -7634,7 +7473,6 @@ export const timelineData = [
                 description:
                     "Beckett completes a draft of <i>Va-et-vient</i>, French translation of <i>Come and Go</i>.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "379ece01-28ce-5a18-8e34-6d528441bf58",
@@ -7642,7 +7480,6 @@ export const timelineData = [
                 description:
                     "Beckett sends third and fourth (final) draft of <i>How It Is</i> to Henry Wenning as a gift to the Boston University Beckett collection.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "2e8bb94c-eea0-5582-bafe-3680ead86d0c",
@@ -7650,7 +7487,6 @@ export const timelineData = [
                 description:
                     "Beckett writes <i>Eh Joe</i> for television, a play for Jack MacGowran.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "22a12737-5608-5918-9e28-1fb58ddad1ba",
@@ -7666,7 +7502,6 @@ export const timelineData = [
                 description:
                     "Beckett completes <i>Eh Joe</i> and sends to Jack MacGowran, Donald McWhinnie, and Curtis Brown.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "6428a18b-1d39-5e44-8d33-255230cd39e5",
@@ -7674,7 +7509,6 @@ export const timelineData = [
                 description:
                     "Beckett and Suzanne fly to Turin, travelling on to Courmayeur on 22 June for a holiday.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "c3f1b124-d669-52bd-8cc4-33a43bc81332",
@@ -7682,7 +7516,6 @@ export const timelineData = [
                 description:
                     "Beckett completes the French translation <i>Dis Joe</i>.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "00646249-4c3d-51ae-946c-7f73e086eae6",
@@ -7690,7 +7523,6 @@ export const timelineData = [
                 description:
                     "Beckett translates <i>Imagination morte imaginez</i> into English.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "a2166128-3ab9-5f24-aedf-3cb32215addb",
@@ -7698,7 +7530,6 @@ export const timelineData = [
                 description:
                     "Beckett returns to Paris from Courmayeur via Turin.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "92770111-125d-51a6-95b9-c3a259772684",
@@ -7707,13 +7538,14 @@ export const timelineData = [
                     "Opening of the Mont Blanc Tunnel between France and Italy.",
                 type: "global",
                 image: "https://upload.wikimedia.org/wikipedia/commons/a/a0/Mont_Blanc_Tunnel_French_Side.jpg",
+                caption:
+                    "Mont Blanc Tunnel in France, 20 August 2011, by Kristoferb, under Creative Commons Attribution-Share Alike 3.0 Unported license.",
             },
             {
                 id: "7948be7f-3e53-59dc-8029-e577d8bb1c10",
                 date: "19 July",
                 description: "Samuel Beckett has surgery on jaw.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "3883cc96-ea87-5b31-9d23-f3d147fb3cb2",
@@ -7721,7 +7553,6 @@ export const timelineData = [
                 description:
                     "Beckett begins French translation of <i>Words and Music</i>; draft translation completed on 14 August.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "5e1a36cd-caa6-5eca-a381-46d5d7a2b72b",
@@ -7729,7 +7560,6 @@ export const timelineData = [
                 description:
                     "Premiere of <i>Film</i> at the Venice <i>Film</i> Festival. Samuel Beckett begins draft of <i>Assez</i>.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "b38f6277-9671-56ab-a1ab-1b7a0209c368",
@@ -7737,7 +7567,6 @@ export const timelineData = [
                 description:
                     "Annales (Toulouse) publishes an extract from <i>Mercier et Camier</i> (as yet unpublished novel, 1946).",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "bc711ace-4212-5df1-9dda-399a39b39d01",
@@ -7745,7 +7574,6 @@ export const timelineData = [
                 description:
                     "Beckett in Ussy, working on <i>Le Dépeupleur</i>. Completes first draft on 28 November.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "895914f0-fdca-5918-bc34-344f8cdac85c",
@@ -7753,7 +7581,6 @@ export const timelineData = [
                 description:
                     "Samuel Beckett begins work with director Marin Karmitz on a film of <i>Comédie in Paris</i>.",
                 type: "personal",
-                additional: "none",
             },
             {
                 id: "95315ddf-7ba1-57e4-b2de-d979adeec2b9",
@@ -7762,14 +7589,8 @@ export const timelineData = [
                     "Charles de Gaulle is reelected as French President, defeating François Mitterrand.",
                 type: "global",
                 image: "https://upload.wikimedia.org/wikipedia/commons/e/e2/Charles_de_Gaulle_Mr_VIE_Isles_sur_Suippe.jpg",
-            },
-            {
-                id: "825e2650-bfb0-593c-9872-1cb898468508",
-                date: "21 January",
-                description:
-                    "Beckett has completed manuscript of <i>Come and Go</i> and sends it to Barbara Bray.",
-                type: "personal",
-                additional: "none",
+                caption:
+                    "Charles de Gaulle, 1961, by Egon Steiner. Bundesarchiv, B 145 Bild-F010324-0002 / Steiner, Egon / CC-BY-SA 3.0.",
             },
         ],
     },
@@ -7810,6 +7631,8 @@ export const timelineData = [
                 description:
                     "A Beckett-Abend directed by Deryk Mendel at the Schiller-Theater Werkstatt, Berlin (<i>Alle, die da fallen</i>, <i>Kommen und Gehen</i>, and <i>Ake ohne Worte II).</i>",
                 image: "https://upload.wikimedia.org/wikipedia/commons/6/67/DBPB_1956_152_Berliner_Stadtbilder.jpg",
+                caption:
+                    "Schiller-Theatre, Berlin, August 1953. Attribution: Bundesarchiv, B 145 Bild-F000894-0009 / Gielow / CC-BY-SA 3.0",
             },
             {
                 id: "b3503ab2-0f59-56e2-98f2-5aa8e7f15a96",
@@ -7873,6 +7696,8 @@ export const timelineData = [
                 description:
                     "Samuel Beckett and Suzanne in Santa Margherita on the Ligurian coast.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/e/ec/GE-Santa-Margherita-Ligure-1955.jpg",
+                caption:
+                    "Santa Margherita Ligure postcard, 1955. Via Wikimedia Commons, Collezione cartoline Albertomos. Public domain.",
             },
             {
                 id: "beb91c6c-8549-54e4-ba9a-e093ccefb21b",
@@ -7997,6 +7822,7 @@ export const timelineData = [
                 description:
                     "Samuel Beckett and Suzanne on holiday in Greece, staying in Vougliagmeni, Athens, and then Rhodes. They return to Paris via Athens.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/6/6e/Rhodes_Old_Town_2.JPG",
+                caption: "Rhodes, Old Town. By G. Larson, 2002. Public domain.",
             },
             {
                 id: "00e2a17d-f74e-50e8-9686-43309a8bb01d",
@@ -8161,6 +7987,8 @@ export const timelineData = [
                 type: "personal",
                 description: "Meets Theodor Adorno in Berlin.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/1/18/Theodor_W._Adorno.jpg",
+                caption:
+                    "Theodor Adorno, 1964. By Jeremy J. Shapiro. CCA-SA 3.0 Unported",
             },
             {
                 id: "bcc9c4a9-cc3d-534f-9c4d-2dccc4978502",
@@ -8270,6 +8098,8 @@ export const timelineData = [
                 description:
                     "Premiere of <i>Come and Go</i>, Abbey's Peacock Theatre, Dublin.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/0/04/Abbey_Theatre_%40_Dublin.jpg",
+                caption:
+                    "Abbey Theatre, Dublin, 20 November 2006. By bjaglin, under CCA 2.0 Generic license",
             },
             {
                 id: "da72b725-f4bf-5f0e-9ab9-e17a38a86ec1",
@@ -8455,7 +8285,7 @@ export const timelineData = [
                 date: "2 November",
                 type: "global",
                 description:
-                    "Death of the artist Estella Solomons (widow of Seumas O’Sullivan) in Dublin.",
+                    "Death of the artist Estella Solomons (widow of Seumas O'Sullivan) in Dublin.",
             },
             {
                 id: "1797dc91-62a5-5d71-be71-505a6e4da7de",
@@ -8590,6 +8420,8 @@ export const timelineData = [
                 description:
                     "Neil Armstrong takes first steps on the moon, as part of the Apollo 11 mission.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/9/98/Aldrin_Apollo_11_original.jpg",
+                caption:
+                    "Astronaut Buzz Aldrin on the moon, 1969. By Neil Armstrong/NASA. Public domain.",
             },
             {
                 id: "43036926-fc4f-59f5-be63-ca288e16b1fb",
@@ -8658,6 +8490,8 @@ export const timelineData = [
                 description:
                     "Samuel Beckett flies from Berlin to Tunis, where he meets Suzanne. They later travel on to Hammamet.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/f/f8/M%C3%A9dina_d%27Hammamet_2022_%282%29.jpg",
+                caption:
+                    "Médina d'Hammamet, 2022, by Mathieu Brossais under CCA-SA 4.0 International",
             },
             {
                 id: "eeb86608-d1fa-580c-b2e0-f64404c85f49",
@@ -8673,6 +8507,8 @@ export const timelineData = [
                 description:
                     "Hundreds of thousands of people across the United States demonstrate in the Moratorium to End the War in Vietnam.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/e/e1/VietnamWar2ndMoratorium-WashDC-19691115a-DrDennisBogdan.jpg",
+                caption:
+                    "Vietnam War Second Moratorium, 1969. By Dr. Dennis Bogdan, under CCA-SA 4.0/GNU Free Documentation",
             },
             {
                 id: "9f155e38-c5f3-5512-9e26-98348f2f2203",
@@ -8794,6 +8630,8 @@ export const timelineData = [
                 description:
                     "Samuel Beckett and Suzanne on holiday in Alghero, Sardinia.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/9/98/Alghero_215DSC_0559_%2849407926743%29.jpg",
+                caption:
+                    "Alghero, 10 October 2019. By János Korom Dr. under CCA-SA 2.0 Generic.",
             },
             {
                 id: "ec112650-3b98-51b9-8fac-04cdb4a212ec",
@@ -8949,6 +8787,8 @@ export const timelineData = [
                 description:
                     "Samuel Beckett and Suzanne in Santa Margherita, Italy.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/5/59/2016_-_Santa_Margherita_Ligure_24.jpg",
+                caption:
+                    "Santa Margherita Ligure: Castello Conquecentesco, 9 August 2016. By Jordiferrer under CCA-SA 4.0 International.",
             },
             {
                 id: "5fe10c08-107a-5417-bf87-a49e899a486d",
@@ -9035,6 +8875,9 @@ export const timelineData = [
                 type: "global",
                 description:
                     "Bloody Sunday massacre, Londonderry, Northern Ireland.",
+                caption:
+                    "Bloody Sunday memorial, Derry, Northern Ireland, 11 August 2003. By Zubro under CCA-SA 3.0 Unported/GNU Free Documentation.",
+                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Bloody_Sunday_memorial.jpg/576px-Bloody_Sunday_memorial.jpg",
             },
             {
                 id: "71c0e08f-63fa-5336-a5b0-e2edeaf6e86a",
@@ -9047,8 +8890,10 @@ export const timelineData = [
                 id: "aef0cc6c-53ba-5fed-9e96-1490fa1099dc",
                 date: "19-28 February",
                 type: "global",
-                description: "Richard Nixon’s 10-day trip to China.",
+                description: "Richard Nixon's 10-day trip to China.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/4/43/President_Richard_Nixon_and_Premier_Chou_En-Lai_Shake_Hands_at_the_Nixons%27_Arrival_in_Peking%2C_China.jpg",
+                caption:
+                    "The Nixons on the Great Wall of China, 24 February 1972. By Bryan E. Schumaker. National Archives and Records Administration, NAID 194421. Public domain",
             },
             {
                 id: "fd44a621-5a81-5103-93b0-5300276c9bd1",
@@ -9088,7 +8933,7 @@ export const timelineData = [
                 date: "17 June",
                 type: "global",
                 description:
-                    "Watergate break-in, Washington, D.C., which ultimately leads to Richard Nixon’s resignation.",
+                    "Watergate break-in, Washington, D.C., which ultimately leads to Richard Nixon's resignation.",
             },
             {
                 id: "46707b17-a6a9-531e-b8ee-d7a3696c0431",
@@ -9118,6 +8963,8 @@ export const timelineData = [
                 description:
                     "Samuel Beckett and Suzanne on holiday in Malta, where he views the <i>Beheading of St. John the Baptist </i>by Caravaggio in St. John's Co-Cathedral, Valletta.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/4/42/Michelangelo_Caravaggio_021.jpg",
+                caption:
+                    "Beheading of St. John the Baptist, 1608, St. John's Co-Cathedral, Malta. By Caravaggio. Public domain.",
             },
             {
                 id: "1d972f31-9e95-58ed-a232-20790da24d7d",
@@ -9192,6 +9039,8 @@ export const timelineData = [
                 description:
                     "Paris Peace Accords signed by the United States, North Vietnam, The Republic of Vietnam, and the Provisional Revolutionary Government of South Vietnam.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/4/44/Secretary_of_State_William_Rogers_Reading_the_Vietnam_Peace_Agreement_Signatures_Page_-_DPLA_-_6661443d5facf03459ddfa008d8370a0.jpg",
+                caption:
+                    "Secretary of State William Rogers Reading the Vietnam Peace Agreement Signatures Page, 27 January 1973. Richard Nixon Library Oral History Collection (NAID 6120059). Public domain.",
             },
             {
                 id: "911a3fa3-be1b-5084-bf45-fea856641ac9",
@@ -9255,6 +9104,8 @@ export const timelineData = [
                 description:
                     "Samuel Beckett refuses to give Estelle Parsons permission to produce <i>Waiting for Godot </i>with an all-female cast.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/5/57/Estelle_Parsons_Love_American_Style_1973.JPG",
+                caption:
+                    "Estelle Parsons on Love, American Style, 10 July 1973, ABC Television. Public domain.",
             },
             {
                 id: "a1cc3b49-dc09-58f3-9b4e-0c791d54e4ac",
@@ -9290,6 +9141,8 @@ export const timelineData = [
                 type: "personal",
                 description: "They travel to El Jadida.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/d/de/Forteresse_Jadida_03.JPG",
+                caption:
+                    "Forteresse d'el Jadida, 25 March 2012. By M. Rais under CCA-SA 3.0 Unported.",
             },
             {
                 id: "930988d0-5c7a-5ff9-beeb-ea31636d82e0",
@@ -9565,6 +9418,8 @@ export const timelineData = [
                 description:
                     "The Suez Canal, closed since Egypt's war with Israel in 1967, reopens.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/8/82/USS_America_%28CV-66%29_in_the_Suez_canal_1981.jpg",
+                caption:
+                    "USS America (CV-66) in the Suez Canal, 1981. By W.M. Welch/US Navy. Public domain.",
             },
             {
                 id: "83a32767-89a3-53f0-a9cc-104a37dd7969",
@@ -9619,6 +9474,8 @@ export const timelineData = [
                 type: "global",
                 description: "Death of Francisco Franco in Madrid.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/9/9e/Jos%C3%A9_Moscard%C3%B3%2C_Francisco_Franco%2C_Ram%C3%B3n_Serrano_S%C3%BA%C3%B1er_%281938%29.jpg",
+                caption:
+                    "José Moscardó, Francisco Franco, and Ramón Serrano Súñer, 1938. Anonymous photographer. Public domain.",
             },
             {
                 id: "3eeddebf-78ef-5923-8ef8-34c3015bab54",
@@ -9666,6 +9523,8 @@ export const timelineData = [
                 type: "global",
                 description: "Death of Max Ernst in Paris.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/8/87/Max_Ernst_1968.jpg",
+                caption:
+                    "Max Ernst, 1968. Dutch National Archives, The Hague, Fotocollectie Algemeen Nederlands Persbureau (ANEFO), 1945-1989 bekijk toegang 2.24.01.04 Bestanddeelnummer 928-4975. Public domain.",
             },
             {
                 id: "405f58e0-7d92-5d78-940e-c9cf4ac3e2e1",
@@ -9766,6 +9625,8 @@ export const timelineData = [
                 type: "global",
                 description: "Death of Mao Zedong in Beijing.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/b/b6/Mao_Zedong_in_front_of_crowd.jpg",
+                caption:
+                    "Mao Zedong, from Quotations from Chairman Mao Tse-Tung. The People's Republic of China Printing Office. Public domain.",
             },
             {
                 id: "a4d51458-1ef8-5d8e-9bba-409f7810d97f",
@@ -9788,6 +9649,8 @@ export const timelineData = [
                 description:
                     "Samuel Beckett meets American composer Morton Feldman.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/3/3c/Persconferentie_componist_Morton_Feldman_in_concertgebouw_Amsterdam_in_verband_m%2C_Bestanddeelnr_928-6142.jpg",
+                caption:
+                    "Morton Feldman (Holland festival 1976). By Rob Bogaerts/Anefo, Fotocollectie Anefo. bekijk toegang 2.24.01.05. CC CC0 1.0 Universal Public Domain Dedication.",
             },
             {
                 id: "639e5e07-f8e3-5a0d-92d3-0787e30f9ff0",
@@ -9880,6 +9743,8 @@ export const timelineData = [
                 type: "global",
                 description: "Opening of the Centre Georges-Pompidou, Paris.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/7/7b/Center_Georges_Pompidou_in_Paris.jpg",
+                caption:
+                    "Centre Georges-Pompidou, Paris, 2022. By CrisCoSe under CCA-SA 4.0 International.",
             },
             {
                 id: "dc7a3781-08ca-50de-b56b-6cf57165d5f8",
@@ -10030,6 +9895,8 @@ export const timelineData = [
                 description:
                     "Death of Charlie Chaplin in Corsier-sur-Vevey, Switzerland.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/6/68/Stamp_of_India_-_1978_-_Colnect_145648_-_1st_Anniversary_Death_of_Charlie_Chaplin.jpeg",
+                caption:
+                    "Stamp commemorating the 1st anniversary of the death of Charlie Chaplin, 1978. Post of India. Government Open Data License – India.",
             },
             {
                 id: "c4a05e19-ef9e-5345-a40a-c8a0886e3128",
@@ -10111,6 +9978,8 @@ export const timelineData = [
                 description:
                     "Endgame by the San Quentin Drama Workshop, in St. Matthäuskirche, Berlin; assisted by Samuel Beckett.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/2/23/Berlin_StMatthew_Tiergarten_asv2021-11_img2.jpg",
+                caption:
+                    "St. Matthäuskirche Tiergarten in Berlin, Deutschland. By A. Savin, WikiCommons.",
             },
             {
                 id: "554d2b6b-e10c-5404-bfd7-87a9af0e3e14",
@@ -10119,6 +9988,8 @@ export const timelineData = [
                 description:
                     "Camp David Accords signed by Egyptian President Anwar Sadat and Israeli Prime Minister Menachem Begin",
                 image: "https://upload.wikimedia.org/wikipedia/commons/b/b0/Sadat_and_Begin_clean3.jpg",
+                caption:
+                    "Anwar Sadat and Menachem Begin in Washington, D.C. 18 September 1978. U.S. News & World Report. Public domain.",
             },
             {
                 id: "c5c7f5e7-2a09-5c49-a07f-93d1dc0ce525",
@@ -10183,6 +10054,8 @@ export const timelineData = [
                 description:
                     "Premiere of <i>Theatre Fragments</i> at the Thalia Theatre, Hamburg, directed by Walter Asmus.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/e/e3/Hamburg_-_Thalia_Theater.jpg",
+                caption:
+                    "Thalia Theater, Hamburg, 2016. By Fred Romero, CCA 2.0 Generic.",
             },
             {
                 id: "4154a7a9-c7ac-554f-9798-a01d2ffd0176",
@@ -10263,6 +10136,8 @@ export const timelineData = [
                 description:
                     "David Warrilow's performance of <i>A Piece of Monologue </i>opens at La Mama, New York.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/7/72/La_MaMa_Annex_66_East_4th_Street.jpg",
+                caption:
+                    "La MaMa Annex, 66 East 4th Street, 2011. By Beyond My Ken, CCA-SA 4.0 International/GNU Free Documentation.",
             },
             {
                 id: "8bd0ece2-af84-5603-99d2-994933cb0082",
@@ -10351,6 +10226,8 @@ export const timelineData = [
                 type: "global",
                 description: "Death of Jean-Paul Sartre in Paris.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/7/71/Jean_Paul_Sartre_1967.jpg",
+                caption:
+                    "Jean-Paul Sartre in Venice, August 1967. From User:T1980, Wikimedia Commons, CCA 3.0 Unported.",
             },
             {
                 id: "066b0890-1d10-5ef5-8c71-4f7d58d4633d",
@@ -10474,6 +10351,8 @@ export const timelineData = [
                 description:
                     "Ronald Reagan inaugurated as President of the United States.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/b/b6/President_Ronald_Reagan_and_Nancy_Reagan_walking_to_the_parade_viewing_stands_from_the_White_House_on_Inauguration_day.jpg",
+                caption:
+                    "President Ronald Reagan and Nancy Reagan walking to the parade viewing stands from the White House on Inauguration day, 20 January 1981. Reagan White House Photographs, White House Photographic Collection. Public domain.",
             },
             {
                 id: "ee415d2f-c502-5225-8c57-bb0a76015511",
@@ -10654,6 +10533,8 @@ export const timelineData = [
                 type: "global",
                 description: "Martial Law declared in Poland.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/9/9b/T-55A_Martial_law_Poland.jpg",
+                caption:
+                    "T-55A during Martial Law in Poland. By J. Żołnierkiewicz. Public domain.",
             },
             {
                 id: "a3e11530-78d1-582c-ab3e-04554de678fe",
@@ -10706,6 +10587,8 @@ export const timelineData = [
                 description:
                     "Samuel Beckett is a signatory of a letter published in the<i> London Times </i>on 9 June to protest the attempts to close Riverside Studios in Hammersmith as a performance venue.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/3/37/Riverside_Studios_plaque_%28Hammersmith_and_Fulham_Historic_Buildings_Group%29.jpg",
+                caption:
+                    "Riverside Studios Historic Building plaque, 2021, by Spudgun67. CCA-SA 4.0 International.",
             },
             {
                 id: "7c28d00a-69f8-5796-be8e-fc0fa689c83e",
@@ -10726,6 +10609,8 @@ export const timelineData = [
                 type: "global",
                 description: "Death of Djuna Barnes in New York.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/7/78/Portrait_of_Djuna_Barnes.jpg",
+                caption:
+                    "Djuna Barnes, 1982. By Berenice Abbott. CCA-SA 4.0 International.",
             },
             {
                 id: "243a404f-0ab9-528a-8808-e3387da802c8",
@@ -10971,6 +10856,8 @@ export const timelineData = [
                 description:
                     "Inauguration of the Samuel Beckett Theatre, New York, by Billie Whitelaw's performances of <i>Footfalls</i>, <i>Rockaby, </i>and a reading of <i>Enough</i>.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/8/8a/Theatre-row.jpg",
+                caption:
+                    "Theatre Row, New York City, 2008. By Americasroof, CCA-SA 3.0 Unported.",
             },
             {
                 id: "bfd35593-c95d-5656-a93c-77c206e49f40",
@@ -11067,6 +10954,8 @@ export const timelineData = [
                 description:
                     "Opening of <i>Compagnie</i> with Pierre Dux at the Théâtre du Rond-Point, directed by Pierre Chabert.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/a/ac/Paris_theatre_du_rond_point.jpg",
+                caption:
+                    "Le théâtre du Rond Point à Paris. By Ralf.treinen via Wikimedia Commons. GNU Free Documentation License/CCA-SA 3.0 Unported.",
             },
             {
                 id: "8572106d-6221-5656-a050-1c650848f78a",
@@ -11163,6 +11052,8 @@ export const timelineData = [
                 type: "global",
                 description: "Musée Picasso opened in Paris.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/2/2b/5_Rue_de_Thorigny%2C_Paris_%2812%29.jpg",
+                caption:
+                    "Stair hall (escalier d'honneur) of the Hôtel Salé, 2022. By Neoclassicism Enthusiast, CC BY-SA 4.0.",
             },
             {
                 id: "1bd76dc5-37b4-55ef-9cc7-84f921ab5bf7",
@@ -11190,6 +11081,8 @@ export const timelineData = [
                 description:
                     "The space shuttle Challenger explodes after launch at Cape Canaveral, Florida, killing all aboard.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/9/9f/Challenger_explosion.jpg",
+                caption:
+                    "Space Shuttle Challenger explodes, 28 January 1986. Kennedy Space Center. Public domain.",
             },
             {
                 id: "2a6d5042-18f1-51d2-a3f2-af99b26ecc12",
@@ -11272,6 +11165,8 @@ export const timelineData = [
                 type: "global",
                 description: "Opening of the Musée d'Orsay, Paris.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/7/7c/Mus%C3%A9e_d%27Orsay%2C_North-West_view%2C_Paris_7e_140402.jpg",
+                caption:
+                    "Musée d'Orsay Clock, Victor Laloux, Main Hall, 2004. By DrSocc, CC BY 3.0 us",
             },
         ],
     },
@@ -11312,6 +11207,8 @@ export const timelineData = [
                 description:
                     "Samuel Beckett has a fall in Parc Montsouris, Paris.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/8/85/Promenade_dans_le_parc_Montsouris_%C3%A0_Paris.jpg",
+                caption:
+                    "Promenade dans le parc Montsouris à Paris, 2010. By besopha, Wikimedia Commons, CC BY-SA 2.0.",
             },
             {
                 id: "18dd11b1-59e8-5a06-a186-7fd2f62b6c6f",
@@ -11354,6 +11251,8 @@ export const timelineData = [
                 description:
                     "Opening of <i>Waiting for Godot</i>, directed by Michael Rudman; Lyttelton, National Theatre, London.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/a/a3/Royal_National_Theatre_London_SouthBankCentre02.jpg",
+                caption:
+                    "Royal National Theatre, London. Wikimedia Commons, CC BY-SA 1.0",
             },
             {
                 id: "9f92f285-1e12-5aef-84e4-2121385d87e6",
@@ -11443,6 +11342,8 @@ export const timelineData = [
                 description:
                     "Terrorist bomb causes plane crash in Lockerbie, Scotland; it kills all on board and 11 on ground.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Pan_Am_Flight_103._Crashed_Lockerbie%2C_Scotland%2C_21_December_1988.jpg",
+                caption:
+                    "Wreckage of Pan Am Flight 103, 21 December 1988. Air Accident Investigation Branch. OGL 2.",
             },
         ],
     },
@@ -11476,6 +11377,8 @@ export const timelineData = [
                 description:
                     "Publication of Salman Rushdie's book <i>The Satanic Verses</i>; it is declared offensive by Iran's Ayatollah Khomeini, who sentences Rushdie to death.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/f/f6/Demonstranten_met_spandoek%2C_Bestanddeelnr_934-4147.jpg",
+                caption:
+                    "Demonstration against Salman Rushdie, 3 March 1989. By Rob C. Croes/Anefo, Fotocollectie Anefo, Dutch National Archives. CCO 1.0 Universal Public Domain.",
             },
             {
                 id: "b04a77f7-c46c-5eac-b2d0-ed1da533c107",
@@ -11547,6 +11450,8 @@ export const timelineData = [
                 description:
                     "US space probe Voyager 2 penetrates outer space passing through the orbit of Neptune.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/d/d2/Voyager.jpg",
+                caption:
+                    "Voyager Space Probe (1 or 2), 1977. NASA/JPL-Caltech. Public domain.",
             },
             {
                 id: "67972b3c-d83c-59b5-92c0-bf62540af15e",
@@ -11569,6 +11474,8 @@ export const timelineData = [
                 description:
                     "Major earthquake in San Francisco Bay area (7.1 magnitude).",
                 image: "https://upload.wikimedia.org/wikipedia/commons/1/18/Cypress_structure.jpeg",
+                caption:
+                    "Loma Prieta earthquake, 1989. H.G. Wilshire, U.S. Geological Survey. Public domain.",
             },
             {
                 id: "d88cb1c7-1f2e-588a-b519-dc34b6e57d9a",
@@ -11584,6 +11491,8 @@ export const timelineData = [
                 description:
                     "The Berlin Wall is open to the West, after 28 years of a divided Germany.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/1/1c/West_and_East_Germans_at_the_Brandenburg_Gate_in_1989.jpg",
+                caption:
+                    "West and East Germans at the Brandenburg Gate in 1989, unknown photographer, reproduced by Lear 21. CC BY-SA 3.0 Unported/GNU Free Documentation",
             },
             {
                 id: "5bc00813-dfe9-56ff-a026-35cd35bb395e",
@@ -11592,6 +11501,8 @@ export const timelineData = [
                 description:
                     "Death of Samuel Beckett in Paris. Burial in Montparnasse cemetery on 26 December.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/4/40/Beckett-grave-paris.jpg",
+                caption:
+                    "Samuel Beckett’s Tombstone ,2007. By Charles Betz, GNU Free Documentation/CC BY-SA 3.0 unported.",
             },
             {
                 id: "4d4bbe2e-b3ec-59bd-ba46-002a5dd4d544",
