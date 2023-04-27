@@ -825,7 +825,7 @@ export const timelineData = [
                 date: "By 8 October",
                 type: "personal",
                 description:
-                    'Sends "Yoke of Liberty" to <i>Everyman</i>. Translates',
+                    'Sends "Yoke of Liberty" to <i>Everyman</i>. Translates René Crevel\'s "Négresse du Bordel" and plans to do more translations for Nancy Cunard\'s <i>Negro, Anthology Made by Nancy Cunard, 1931-1933</i>.',
                 image: "https://upload.wikimedia.org/wikipedia/commons/1/11/Nancy_Cunard_%28um_1928%29.jpg",
                 caption:
                     "Nancy Cunard, 1932. Wikimedia Commons. Public domain.",
