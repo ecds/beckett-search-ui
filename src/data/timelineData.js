@@ -629,13 +629,13 @@ export const timelineData = [
                 date: "15 October",
                 type: "personal",
                 description:
-                    'Bifur issues printer\'s proofs of translation of "Anna Livia Plurabelle" by Samuel Beckett and Péron, but James Joyce withdraws the translation.',
+                    '<i>Bifur</i> issues printer\'s proofs of translation of "Anna Livia Plurabelle" by Samuel Beckett and Péron, but James Joyce withdraws the translation.',
             },
             {
                 id: "c545d8a8-0222-5902-a720-ef61ed3e199a",
                 date: "17 October",
                 type: "personal",
-                description: "Chatto and Windus sends contract for Proust.",
+                description: "Chatto and Windus sends contract for <i>Proust</i>.",
             },
             {
                 id: "aae695a7-095e-5915-9879-77ccc178fa67",
@@ -711,14 +711,14 @@ export const timelineData = [
                 date: "By 11 March",
                 type: "personal",
                 description:
-                    "Dublin Magazine asks Samuel Beckett to review McGreevy's <i>Thomas Stearns Eliot</i> and Thomas Eliot's translation of St.-John Perse's <i>Anabase</i>.",
+                    "<i>Dublin Magazine</i> asks Samuel Beckett to review McGreevy's <i>Thomas Stearns Eliot</i> and Thomas Eliot's translation of St.-John Perse's <i>Anabase</i>.",
             },
             {
                 id: "e860c164-1f7f-5f18-8ab2-24291e298811",
                 date: "12 March",
                 type: "personal",
                 description:
-                    'T.C.D.: A College Miscellany publishes, anonymously, Samuel Beckett\'s "The Possessed," written in reaction to a critical review of "Le Kid."',
+                    '<i>T.C.D.: A College Miscellany</i> publishes, anonymously, Samuel Beckett\'s "The Possessed," written in reaction to a critical review of "Le Kid."',
             },
             {
                 id: "623848ca-87ee-5805-a615-b1672ec2fd30",
@@ -743,7 +743,7 @@ export const timelineData = [
                 date: "1 May",
                 type: "personal",
                 description:
-                    'Nouvelle Revue Française publishes French translation of "Anna Livia Plurabelle," reflecting the first draft by Samuel Beckett and Péron that was revised by Joyce and others.',
+                    '<i>Nouvelle Revue Française</i> publishes French translation of "Anna Livia Plurabelle," reflecting the first draft by Samuel Beckett and Péron that was revised by Joyce and others.',
             },
             {
                 id: "03cc632b-55b1-5892-9002-3c2e38eaa8f6",
@@ -801,7 +801,7 @@ export const timelineData = [
                 date: "August",
                 type: "personal",
                 description:
-                    'New Review publishes <i>"</i>Return to the Vestry."',
+                    '<i>New Review</i> publishes <i>"</i>Return to the Vestry."',
             },
             {
                 id: "9e386ca8-40bd-5d18-84be-be195837e569",
@@ -815,7 +815,7 @@ export const timelineData = [
                 date: "By 22 September",
                 type: "personal",
                 description:
-                    'Dublin Magazine accepts one "Alba" ("the sheet poem"), but not the other. <i>Dublin Magazine </i>rejects "Yoke of Liberty" ("lips of her desire").',
+                    '<i>Dublin Magazine</i> accepts one "Alba" ("the sheet poem"), but not the other. <i>Dublin Magazine </i>rejects "Yoke of Liberty" ("lips of her desire").',
             },
             {
                 id: "4026a916-fc24-5dcd-a58a-b56810bb7e46",
@@ -850,7 +850,7 @@ export const timelineData = [
                 date: "By 20 December",
                 type: "personal",
                 description:
-                    'Dublin Magazine returns "Enueg." Samuel Beckett sends it to Thomas McGreevy.',
+                    '<i>Dublin Magazine</i> returns "Enueg." Samuel Beckett sends it to Thomas McGreevy.',
             },
             {
                 id: "ad2558e6-2d5d-5cd7-9089-31724f5c7d98",
@@ -918,7 +918,7 @@ export const timelineData = [
                 id: "54a7c753-77e3-545c-b4e6-8222a2548dd5",
                 date: "April",
                 type: "personal",
-                description: 'New Review publishes the poem "Text."',
+                description: '<i>New Review</i> publishes the poem "Text."',
             },
             {
                 id: "e0dcc6d1-0e53-58be-8a32-fd9a7374f0a4",
@@ -940,13 +940,7 @@ export const timelineData = [
                 type: "personal",
                 description: 'Samuel Beckett writes poem "Home Olga<i>.</i>"',
             },
-            {
-                id: "5238a127-03c3-5303-804c-c05447b5da65",
-                date: "8 July",
-                type: "global",
-                description:
-                    "The Dow Jones Industrial Average in the United states reaches its lowest level of the Great Depression.",
-            },
+          
             {
                 id: "fd3eb647-0813-55fd-9f02-c6833ee9116f",
                 date: "By 28 June",
@@ -959,7 +953,7 @@ export const timelineData = [
                 date: "By 29 June",
                 type: "personal",
                 description:
-                    "Sends <i>Dream of Fair to Middling Women</i> to Prentice.",
+                    "Sends <i>Dream of Fair to Middling Women</i> to Charles Prentice.",
             },
             {
                 id: "e0da1ea3-7273-5502-8720-fc62b1139e53",
@@ -967,6 +961,13 @@ export const timelineData = [
                 type: "personal",
                 description:
                     "Prentice sends personal comments on <i>Dream of Fair to Middling Women.</i>",
+            },
+              {
+                id: "5238a127-03c3-5303-804c-c05447b5da65",
+                date: "8 July",
+                type: "global",
+                description:
+                    "The Dow Jones Industrial Average in the United states reaches its lowest level of the Great Depression.",
             },
             {
                 id: "a629186a-f596-50bf-bb6b-dcfbcb56c07c",
@@ -1007,7 +1008,7 @@ export const timelineData = [
                 date: "6 August",
                 type: "global",
                 description:
-                    "First Venice Film Festival is held. In Germany, the world's first Autobahn is opened.",
+                    "In Italy, the first Venice Film Festival is held. In Germany, the world's first Autobahn is opened.",
             },
             {
                 id: "fbb89dcf-b20e-5bcc-ba13-5a49c262ab16",
@@ -1069,7 +1070,7 @@ export const timelineData = [
                 id: "fe5aa4c6-3358-5a5a-bf4f-3d4615ec0f62",
                 date: "By 4 November",
                 type: "personal",
-                description: 'Beckett sends McGreevy "Serena 2."',
+                description: 'Beckett sends Thomas McGreevy "Serena 2."',
             },
             {
                 id: "76a3de3e-bc16-59e8-a495-79ce83d5265d",
@@ -1082,7 +1083,7 @@ export const timelineData = [
                 id: "1c858afe-203a-5da9-b861-c3f3ef1cdb8b",
                 date: "December",
                 type: "personal",
-                description: 'This Quarter publishes "Dante and the Lobster."',
+                description: '<i>This Quarter</i> publishes "Dante and the Lobster."',
             },
             {
                 id: "b7179f1b-b6dc-5d4b-bd37-822099c2bea1",
@@ -1150,7 +1151,7 @@ export const timelineData = [
                 date: "By 23 April",
                 type: "personal",
                 description:
-                    'Dublin Magazine returns story. Samuel Beckett writes a poem "Sanies 1" and another story, possibly "Fingal". Takes countryside walk with his father.',
+                    '<i>Dublin Magazine</i> returns story. Samuel Beckett writes a poem "Sanies 1" and another story, possibly "Fingal". Takes countryside walk with his father.',
             },
             {
                 id: "1d9ad749-c720-5cd7-a2c1-0b77ecdc7cf4",
@@ -1164,14 +1165,14 @@ export const timelineData = [
                 date: "3 May",
                 type: "personal",
                 description:
-                    "Has second operation on his neck. Peggy Sinclair dies of tuberculosis in Germany.",
+                    "Has second operation on his neck. <br> Peggy Sinclair dies of tuberculosis in Germany.",
             },
             {
                 id: "f31ef299-28d3-5cec-92dc-14590293e21c",
                 date: "13 May",
                 type: "personal",
                 description:
-                    'Samuel Beckett is introduced to an editor from Methuen. Sends McGreevy "Sanies 1."',
+                    'Samuel Beckett is introduced to an editor from Methuen. Sends Thomas McGreevy "Sanies 1."',
             },
             {
                 id: "c5b4c878-d1a7-55bb-bcc1-e2050e694d5c",
@@ -1239,14 +1240,14 @@ export const timelineData = [
                 date: "By 9 October",
                 type: "personal",
                 description:
-                    'The Beckett family moves to Dalkey for a month. Samuel Beckett sends poem "Serena 3" to McGreevy. Applies for a position with The National Gallery (London).',
+                    'The Beckett family moves to Dalkey for a month. <br> Samuel Beckett sends poem "Serena 3" to Thomas McGreevy. <br> Applies for a position with The National Gallery (London).',
             },
             {
                 id: "ca2db183-4b1c-5355-8224-0bc10934c570",
                 date: "By 1 November",
                 type: "personal",
                 description:
-                    'Tries to write a final story for <i>More Pricks Than Kicks</i>, for which Belacqua must be "revived". The National Gallery rejects application.',
+                    'Tries to write a final story for <i>More Pricks Than Kicks</i>, for which Belacqua must be "revived". <br> The National Gallery rejects application.',
             },
             {
                 id: "16740542-d7bb-5354-9b0a-573e691bcee4",
@@ -1294,7 +1295,7 @@ export const timelineData = [
                 date: "By 18 December",
                 type: "personal",
                 description:
-                    "Prentice sends proofs with McGreevy's notations on them, which Samuel Beckett approves.",
+                    "Prentice sends proofs of <i>More Pricks Than Kicks</i> with Thomas McGreevy's notations on them, which Samuel Beckett approves.",
             },
             {
                 id: "47d873b4-f8dc-5c2e-9ee4-008161a92e36",
@@ -1335,7 +1336,7 @@ export const timelineData = [
                 id: "c216a4cb-1ece-5f3e-b116-4b1cf778fc56",
                 date: "15 February",
                 type: "personal",
-                description: 'Contempo publishes "Home Olga."',
+                description: '<i>Contempo</i> publishes "Home Olga."',
             },
             {
                 id: "42bdf2b1-60e3-5953-a478-861a60a00974",
@@ -1383,7 +1384,7 @@ export const timelineData = [
                 date: "22 June",
                 type: "personal",
                 description:
-                    "The Spectator publishes \"Proust in Pieces,\" Samuel Beckett's review of Albert Feuillerat's <i>Comment Proust a composé son roman.</i>",
+                    "<i>The Spectator</i> publishes \"Proust in Pieces,\" Samuel Beckett's review of Albert Feuillerat's <i>Comment Proust a composé son roman.</i>",
             },
             {
                 id: "8646f2df-a472-5d59-a5ad-66dc72a53ce8",
@@ -1397,21 +1398,21 @@ export const timelineData = [
                 date: "July",
                 type: "personal",
                 description:
-                    'Dublin Magazine publishes poem "Gnome" and "Humanistic Quietism," Samuel Beckett\'s review of McGreevy\'s <i>Poems</i> (Heinemann)',
+                    '<i>Dublin Magazine</i> publishes poem "Gnome" and "Humanistic Quietism," Samuel Beckett\'s review of McGreevy\'s <i>Poems</i> (Heinemann)',
             },
             {
                 id: "59b5313c-7e58-5dad-86e5-7aac3beadaa6",
                 date: "13 July",
                 type: "personal",
                 description:
-                    "The Criterion publishes Samuel Beckett's review of Leishman's translation of <i>Rainer Maria Rilke: Poems</i> (Hogarth).",
+                    "<i>The Criterion</i> publishes Samuel Beckett's review of J.B. Leishman's translation of <i>Rainer Maria Rilke: Poems</i> (Hogarth).",
             },
             {
                 id: "e9a76793-27b5-58c9-90c2-6b0f8217933d",
                 date: "August",
                 type: "personal",
                 description:
-                    'The Bookman publishes Samuel Beckett\'s story "A Case in a Thousand" and, under the pseudonym of Andrew Belis, his critical essay "Recent Irish Poetry."',
+                    '<i>The Bookman</i> publishes Samuel Beckett\'s story "A Case in a Thousand" and, under the pseudonym of Andrew Belis, his critical essay "Recent Irish Poetry."',
             },
             {
                 id: "6c82bb6e-0ad3-5f13-8fce-16258d0f32f3",
@@ -1424,7 +1425,7 @@ export const timelineData = [
                 date: "2 August",
                 type: "global",
                 description:
-                    "On the death of Paul von Hindenburg, Hitler merges the role of chancellor and president, becoming supreme leader of Nazi Germany.",
+                    "Upon the death of Paul von Hindenburg, Hitler merges the role of chancellor and president, becoming supreme leader of Nazi Germany.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/1/1b/Bundesarchiv_Bild_183-C06886%2C_Paul_v._Hindenburg.jpg",
                 caption:
                     "Paul V. Hindenburg, between 1919 and 1928. Bundesarchiv, Bild 183-C06886 / CC-BY-SA 3.0",
@@ -1434,7 +1435,7 @@ export const timelineData = [
                 date: "By 7 August",
                 type: "personal",
                 description:
-                    "The Bookman asks for an article on censorship in Ireland.",
+                    "<i>The Bookman</i> asks for an article on censorship in Ireland.",
             },
             {
                 id: "c42a827d-943b-5602-a6c1-fc69aa052fb1",
@@ -1455,7 +1456,7 @@ export const timelineData = [
                 date: "By 27 August",
                 type: "personal",
                 description:
-                    'The Bookman rejects "Enueg I." Samuel Beckett sends "Censorship in the Saorstat" to <i>The Bookman</i>.',
+                    '<i>The Bookman</i> rejects "Enueg I." Samuel Beckett sends "Censorship in the Saorstat" to <i>The Bookman</i>.',
             },
             {
                 id: "90165bb7-89c8-5122-b038-9c67c4c93230",
@@ -1475,7 +1476,7 @@ export const timelineData = [
                 date: "23 October",
                 type: "personal",
                 description:
-                    'More Pricks Than Kicks is placed on the "Index of Forbidden Books in Ireland."',
+                    '<i>More Pricks Than Kicks</i> is placed on the "Index of Forbidden Books in Ireland."',
             },
             {
                 id: "ba089660-7ada-5e16-aacb-32ac3ea8bc66",
@@ -1692,7 +1693,7 @@ export const timelineData = [
                 date: "29 January",
                 type: "global",
                 description:
-                    "Death of George V of the United Kingdom and the British Dominions and Emperor of India",
+                    "Death of George V, King of the United Kingdom and the British Dominions and Emperor of India",
             },
             {
                 id: "d13f1a95-53f6-523a-9631-5ccdd1899145",
@@ -1712,14 +1713,14 @@ export const timelineData = [
                 date: "2 March",
                 type: "personal",
                 description:
-                    "He applies to study the scenario and editing of film with Sergei Eisenstein.",
+                    "Beckett applies to study the scenario and editing of film with Sergei Eisenstein.",
             },
             {
                 id: "38d2a9dd-7d58-588c-8578-44b6a3ab6054",
                 date: "7 March",
                 type: "global",
                 description:
-                    "Germans occupy the Rhineland in violation of the Treaty of Versailles and Locarno Treaties..",
+                    "Germans occupy the Rhineland in violation of the Treaty of Versailles and Locarno Treaties.",
             },
             {
                 id: "d3b896d5-5cd5-540b-94a6-3613339ceead",
@@ -1750,7 +1751,7 @@ export const timelineData = [
                 date: "By 7 May",
                 type: "personal",
                 description:
-                    'Beckett buys Jack B. Yeats\'s painting "Morning" on the "stuttering system."',
+                    'Beckett buys Jack B. Yeats\'s painting "A Morning" on the "stuttering system."',
             },
             {
                 id: "945bb0fe-5be7-5170-b07e-422d23a8843f",
@@ -1769,21 +1770,21 @@ export const timelineData = [
                 date: "11 June",
                 type: "personal",
                 description:
-                    "Publication of Eluard's <i>Thorns of Thunder</i> with Samuel Beckett's translations.",
+                    "Publication of Paul Éluard's <i>Thorns of Thunder</i> with Samuel Beckett's translations.",
             },
             {
                 id: "482c1a57-d8eb-51b3-8a08-4518c5a2acea",
                 date: "29 June",
                 type: "personal",
                 description:
-                    "Samuel Beckett sends <i>Murphy</i> to Ian Parsons at Chatto and Windus, to Charles Prentice, and to McGreevy.",
+                    "Samuel Beckett sends <i>Murphy</i> to Ian Parsons at Chatto and Windus, to Charles Prentice, and to Thomas McGreevy.",
             },
             {
                 id: "8a7346e3-1852-58bd-aaa1-2896b402638c",
                 date: "July",
                 type: "personal",
                 description:
-                    'Dublin Magazine publishes Samuel Beckett\'s review of <i>The Amaranthers</i> by Jack B. Yeats, "An Imaginative Work!"',
+                    '<i>Dublin Magazine</i> publishes Samuel Beckett\'s review of <i>The Amaranthers</i> by Jack B. Yeats, "An Imaginative Work!"',
             },
             {
                 id: "9aa32bd5-f62f-5782-baa4-afe342e8d6c1",
@@ -1810,7 +1811,7 @@ export const timelineData = [
                 date: "By 17 July",
                 type: "personal",
                 description:
-                    "Beckett sends <i>Murphy</i> to Frere-Reeves at Heinemann.",
+                    "Beckett sends <i>Murphy</i> to Alexander Frere-Reeves at Heinemann.",
             },
             {
                 id: "b0bf03cb-866c-5d73-8ee9-78157b2cd318",
@@ -1842,7 +1843,7 @@ export const timelineData = [
                 id: "de6bd88f-bd8e-5c35-859d-dc5df1c6e6bd",
                 date: "6 September",
                 type: "personal",
-                description: "Reavey visits Dublin from Belfast.",
+                description: "George Reavey visits Dublin from Belfast.",
             },
             {
                 id: "668f6cb8-e68b-544a-8fd2-79fd8a51f2ce",
@@ -1881,7 +1882,7 @@ export const timelineData = [
                 date: "3 November",
                 type: "personal",
                 description: "Visits Lübeck.",
-                image: "https://commons.wikimedia.org/wiki/File:View_over_Lubeck_churches.jpg",
+                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/View_over_Lubeck_churches.jpg/800px-View_over_Lubeck_churches.jpg?20200905212211",
                 caption:
                     "View over Lübeck Churches, 2020. By Adville, Wikimedia Commons, CC BY-SA 4.0 International.",
             },
@@ -2059,7 +2060,7 @@ export const timelineData = [
                 id: "14fd09c0-50cb-56fb-b41d-8b785cf01b6a",
                 date: "3-4 March",
                 type: "personal",
-                description: "travels to Munich",
+                description: "Travels to Munich",
             },
             {
                 id: "9e851341-c49d-50c9-bde5-e855274874b5",
@@ -2110,7 +2111,7 @@ export const timelineData = [
                     "Samuel Beckett walks on the Big Sugarloaf in Co. Wicklow, and notes a Celtic cross near Enniskerry the following day.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Enniskerry_Cross.jpg/461px-Enniskerry_Cross.jpg",
                 caption:
-                    "Stone Celtic Cross near Enniskerry, by Lois Overbeck under CCA-SA 4.0 International.",
+                    "Stone Celtic Cross near Enniskerry, by Lois Overbeck under CC BY-SA 4.0.",
             },
             {
                 id: "d907ec1b-a328-5ada-9b13-9687d681b731",
@@ -2138,7 +2139,7 @@ export const timelineData = [
                 date: "12 May",
                 type: "global",
                 description:
-                    "George VI and Elizabeth are crowed King and queen of the United Kingdom, the Brisih dominions, and Emperor and Empress of India.",
+                    "George VI and Elizabeth are crowed King and Queen of the United Kingdom, the British dominions, and Emperor and Empress of India.",
             },
             {
                 id: "4abe72d6-6c38-51fa-9b45-aad1da3e86e0",
@@ -2155,7 +2156,7 @@ export const timelineData = [
                     "Whitsunday holiday with Frank Beckett to Cahir, Galtee Mountains and Knockmealdowns, Cashel, and Limerick.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Rock_of_Cashel%2C_County_Tipperary_-_geograph.org.uk_-_1889104.jpg/1280px-Rock_of_Cashel%2C_County_Tipperary_-_geograph.org.uk_-_1889104.jpg",
                 caption:
-                    "Rock of Cashel, Co. Tipperary, 2006, by Sarah77 under CCA-SA 2.0 Generic.",
+                    "Rock of Cashel, Co. Tipperary, 2006, by Sarah77 under CC BY-SA 2.0.",
             },
             {
                 id: "00f01e9d-d618-5007-9643-16ddb601107c",
@@ -2186,7 +2187,7 @@ export const timelineData = [
                 date: "1 July",
                 type: "global",
                 description:
-                    "A new Constitution of the Irish Free State is accepted by referendum",
+                    "A new Constitution of the Irish Free State is accepted by referendum.",
             },
             {
                 id: "254f75c1-d318-593e-a6be-334abae8421c",
@@ -2199,14 +2200,14 @@ export const timelineData = [
                 id: "febba1d1-b9b7-5b42-b50f-0ac378112db6",
                 date: "4-6 July",
                 type: "personal",
-                description: "Beckett visits Ussher's home, Cappagh.",
+                description: "Beckett visits Arland Ussher's home, Cappagh.",
             },
             {
                 id: "77b07e86-9020-568d-98c9-a0f0f0e8066c",
                 date: "9 July",
                 type: "personal",
                 description:
-                    'Refuses commission to translate poetory of Ringelnatz; advances his views on "logoclasm" to Axel Kaun.',
+                    'Refuses commission to translate poetory of Joachim Ringelnatz; advances his views on "logoclasm" to Axel Kaun.',
             },
             {
                 id: "ea645f59-5c0a-5045-b733-e46308b5e1ce",
@@ -2270,7 +2271,7 @@ export const timelineData = [
                 date: "27-29 September",
                 type: "personal",
                 description:
-                    "In Waterford with his brother Frank. Beckett. does not plan to return to Cooldrinagh after quarrel with his mother.",
+                    "In Waterford with his brother Frank. Beckett does not plan to return to Cooldrinagh after quarrel with his mother.",
             },
             {
                 id: "95cdcfce-e37c-5a9a-86ba-a54663dca455",
@@ -2303,7 +2304,7 @@ export const timelineData = [
                 date: "22 November",
                 type: "personal",
                 description:
-                    "In London, there awaiting word about when libel action will begin in Dublin. Jack B. Yeats recommends <i>Murphy </i>to his publisher, Routledge.",
+                    "In London, there awaiting word about when libel action will begin in Dublin. <br> Jack B. Yeats recommends <i>Murphy </i>to his publisher, Routledge.",
             },
             {
                 id: "6d8df959-8918-5711-958e-e8369bbcaeeb",
@@ -2344,7 +2345,7 @@ export const timelineData = [
                 date: "22 December",
                 type: "personal",
                 description:
-                    "Encourages McGreevy to come to Paris; urges him to apply for a subvention to write articles about France for British publication.",
+                    "Encourages Thomas McGreevy to come to Paris; urges him to apply for a subvention to write articles about France for British publication.",
             },
             {
                 id: "5b904a8e-1cbc-58a1-887e-4f446a64ddd8",
@@ -2382,7 +2383,7 @@ export const timelineData = [
                 date: "6 January",
                 type: "personal",
                 description:
-                    "Stabbed on the Avenue d'Orléans. Hospitalized at the Hôpital Broussais.",
+                    "Stabbed on the Coeur-de-Vey, a cul-de-sac off the Avenue d'Orléans (now Avenue Général-Leclerc). Hospitalized at the Hôpital Broussais.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Siege-Croix-Rouge-Broussais.jpg/1024px-Siege-Croix-Rouge-Broussais.jpg",
                 caption:
                     "Hôpital Broussais, 2014, by Geralix under GNU Free Documentation License",
@@ -2434,7 +2435,7 @@ export const timelineData = [
                 date: "31 January",
                 type: "personal",
                 description:
-                    "Beckett comments on McGreevy's essay on Jack B. Yeats.",
+                    "Beckett comments on Thomas McGreevy's essay on Jack B. Yeats.",
             },
             {
                 id: "016cb633-d731-54ef-8148-291ec113674d",
@@ -2495,7 +2496,7 @@ export const timelineData = [
                 date: "April",
                 type: "personal",
                 description:
-                    'Péron\'s French translation of "Alba" published in <i>Soutes</i>.',
+                    'Alfred Péron\'s French translation of "Alba" published in <i>Soutes</i>.',
             },
             {
                 id: "e93789ca-c39d-59b4-833b-3dde661f7807",
@@ -2512,7 +2513,7 @@ export const timelineData = [
                     "Moves to apartment, 6 rue des Favorites, Paris 15.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Paris_15e_-_Rue_des_Favorites_depuis_la_place_d%27Alleray.JPG/768px-Paris_15e_-_Rue_des_Favorites_depuis_la_place_d%27Alleray.JPG",
                 caption:
-                    "Rue des Favorites, Paris, 2013, by JohnCream under CCA-SA 3.0 Unported. ",
+                    "Rue des Favorites, Paris, 2013, by JohnCream under CC BY-SA 3.0. ",
             },
             {
                 id: "b8bbe36f-223f-574c-af17-b034c9902983",
@@ -2548,7 +2549,7 @@ export const timelineData = [
                 id: "f123324c-5a6a-5a4e-8e29-5701a379a816",
                 date: "15 June",
                 type: "personal",
-                description: "Sends French poems to McGreevy.",
+                description: "Sends French poems to Thomas McGreevy.",
             },
             {
                 id: "3190f913-a64b-5c64-83e7-a1aa750c090f",
@@ -2569,21 +2570,21 @@ export const timelineData = [
                 date: "July",
                 type: "global",
                 description:
-                    "The Mauthauswen concentration camp is built in Austria",
+                    "The Maulthausen concentration camp is built in Austria",
             },
             {
                 id: "926d4e73-bf76-5caa-bcb6-47c175f43275",
                 date: "July 8",
                 type: "global",
                 description:
-                    'Exhibition of 20<sup>th</sup> c. German art opens in London at the New Burlington Galleries, challenging the Nazi characterization of "Entartete Kunst" (degenerate art) in Germany.',
+                    '<i>Twentieth Century German Art</i> exhibition opens in London at the New Burlington Galleries, challenging the Nazi characterization of "Entartete Kunst" (degenerate art) in Germany.',
             },
             {
                 id: "042cd1a9-fe0d-5714-b837-f9cf88e03d9e",
                 date: "July 10",
                 type: "global",
                 description:
-                    "Second Große Deutsche Kunstausstellung (Great German Art Exhibition) opened by Adolf Hitler in the Haus der deutschen Kunst (House of German Art) in Munich; Hitler spoke against the London exhibition.",
+                    "Second <i>Große Deutsche Kunstausstellung</i> (Great German Art Exhibition) opened by Adolf Hitler in the Haus der deutschen Kunst (House of German Art) in Munich; Hitler spoke against the London exhibition.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/a/a8/Bundesarchiv_Bild_146-1990-073-26%2C_M%C3%BCnchen%2C_Haus_der_Deutschen_Kunst.jpg",
                 caption:
                     "Haus der Deutschen Kunst, c. 1937-40, unknown photographer. Bundesarchiv, Bild 146-1990-073-26 / CC-BY-SA 3.0",
