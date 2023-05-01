@@ -258,9 +258,6 @@ export const timelineData = [
                 type: "personal",
                 description:
                     "Attends Sean O'Casey's <i>Juno and the Paycock</i> at the Abbey Theatre, Dublin.",
-                image: "https://upload.wikimedia.org/wikipedia/commons/2/21/Juno_and_the_Paycock_Movie_Poster.jpg",
-                caption:
-                    "Poster for Juno and the Paycock, 1930. Wikimedia Commons. Public domain.",
             },
         ],
     },
