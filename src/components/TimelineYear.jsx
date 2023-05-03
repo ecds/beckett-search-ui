@@ -135,10 +135,6 @@ function TimelineYear({ data, root, setCurrentYear, docHeightState }) {
                                             caption={event.caption}
                                             allowFullScreen
                                             fullScreenIconColor="dark"
-                                            style={{
-                                                padding: "20px 30px",
-                                                background: "white",
-                                            }}
                                         />
                                     </EuiFlexItem>
                                 </EuiFlexGroup>
