@@ -5795,7 +5795,7 @@ export const timelineData = [
                 description:
                     "<i>Fin de Partie</i> and <i>Acte sans paroles</i> published, <i>Editions de Minuit</i>.",
                 type: "personal",
-                image: "https://www.foldvaribooks.com/pictures/1291.jpg?v=1504617993",
+          //    image: "https://www.foldvaribooks.com/pictures/1291.jpg?v=1504617993",
             },
             {
                 id: "ac672cb7-5aaa-5470-a7a8-8c60b16134dd",
@@ -5824,7 +5824,6 @@ export const timelineData = [
                 description:
                     "<i>Tous ceux qui tombent</i> published in <i>Les Lettres Nouvelles</i>. ",
                 type: "personal",
-                image: "https://andalusiabooks.files.wordpress.com/2012/08/les-lettres-nouvelle_0002.jpg",
             },
             {
                 id: "e37106e0-bfcb-58d2-81d8-470f65fea76b",
@@ -5861,7 +5860,7 @@ export const timelineData = [
                 description:
                     "<i>Fin de partie</i>, Studio des Champs-Elysées, Paris.",
                 type: "personal",
-                image: "https://commons.wikimedia.org/wiki/File:Th%C3%A9%C3%A2tre_des_Champs-%C3%89lys%C3%A9es,_21_April_2013.jpg",
+                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Th%C3%A9%C3%A2tre_des_Champs-%C3%89lys%C3%A9es%2C_21_April_2013.jpg/800px-Th%C3%A9%C3%A2tre_des_Champs-%C3%89lys%C3%A9es%2C_21_April_2013.jpg?20140528115408",
                 caption:
                     "Théâtre des Champs-Élysées [linked to original image] by Coldcreation, GFDL.",
             },
@@ -6092,7 +6091,7 @@ export const timelineData = [
                 id: "46e450f1-663a-5548-9f8d-d6cf82937c1a",
                 date: "23 September",
                 description:
-                    "Boris Pasternak awarded the Nobel Prize in Literature. Soviet authorities require that he refuse it.",
+                    "Boris Pasternak awarded the Nobel Prize in Literature. Soviet authorities required that he refuse it in December.",
                 type: "global",
                 image: "https://upload.wikimedia.org/wikipedia/commons/2/23/Boris_Pasternak_1969.jpg",
                 caption:
@@ -6161,13 +6160,13 @@ export const timelineData = [
                     "Beckett flies to Dublin for a week. Ethna MacCarthy Leventhal is dying of cancer; Thomas MacGreevy has had a serious heart attack.",
                 type: "personal",
             },
-            {
-                id: "34c09301-a7c2-5065-987a-6e2269190b0d",
-                date: "10 December",
-                description:
-                    "Boris Pasternak is required by the Soviet authorities to refuse the Nobel Prize in Literature.",
-                type: "global",
-            },
+            //{
+            //    id: "34c09301-a7c2-5065-987a-6e2269190b0d",
+            //    date: "10 December",
+            //    description:
+            //    "Boris Pasternak is required by the Soviet authorities to refuse the Nobel Prize in Literature.",
+            //    type: "global",
+            // },
             {
                 id: "b70962e8-de70-5703-92be-abeb2abc9497",
                 date: "17 December",
@@ -6211,11 +6210,11 @@ export const timelineData = [
             },
             {
                 id: "599515c3-80f6-5e19-9dd5-610a8d274459",
-                date: "12 February-7",
+                date: "12 February - 7 March",
                 description:
                     'Henri Hayden exhibition, Waddington Galleries, London; catalogue includes Samuel Beckett text "Henri Hayden."',
                 type: "personal",
-                image: "https://upload.wikimedia.org/wikipedia/commons/3/33/Fille_assise_au_bouquet_de_fleurs%2C_1919.jpg",
+          //    image: "https://upload.wikimedia.org/wikipedia/commons/3/33/Fille_assise_au_bouquet_de_fleurs%2C_1919.jpg",
             },
             {
                 id: "4b48c89c-9a4f-5109-b41b-e9818dfcf42a",
@@ -6228,7 +6227,7 @@ export const timelineData = [
                 id: "ae87abff-dda2-5e50-96bd-9df35cf25c46",
                 date: "20 March",
                 description:
-                    "Beckett reports that he has given permission to Marcel Mihalovici to make a chamber opera of <i>La dernière bande</i>.",
+                    "Beckett reports that he has given permission to Marcel Mihalovici to compose a chamber opera based on <i>La dernière bande</i>.",
                 type: "personal",
             },
             {
@@ -6254,7 +6253,7 @@ export const timelineData = [
             {
                 id: "d1915937-ece3-599f-84df-d6c4d9ce96e9",
                 date: "24 May",
-                description: "Death of Ethna MacCarthy Leventhal.",
+                description: "Death of Ethna MacCarthy Leventhal in East Ham, London.",
                 type: "personal",
             },
             {
@@ -6282,7 +6281,7 @@ export const timelineData = [
             {
                 id: "0a3a341d-9022-56c0-b97c-6c087e4f5fba",
                 date: "21 August",
-                description: "Death of Denis Devlin.",
+                description: "Death of Denis Devlin in Dublin.",
                 type: "global",
             },
             {
@@ -6382,7 +6381,7 @@ export const timelineData = [
                 id: "96f13edb-11b9-5719-9081-376280dac3e1",
                 date: "30 March",
                 description:
-                    "Samuel Beckett's tribute to Sean O'Casey published in The Irish Times.",
+                    "Samuel Beckett's tribute to Sean O'Casey published in <i>The Irish Times</i>.",
                 type: "personal",
             },
             {
@@ -6391,13 +6390,12 @@ export const timelineData = [
                 description:
                     "<i>Molloy</i>, <i>Malone Dies</i>, and <i>The Unnamable</i> published by John Calder in a single volume as <i>Three Novels</i>.",
                 type: "personal",
-                image: "https://ia803204.us.archive.org/BookReader/BookReaderPreview.php?id=molloymalonedies00beck&subPrefix=molloymalonedies00beck&itemPath=/13/items/molloymalonedies00beck&server=ia803204.us.archive.org&page=leaf7&fail=preview&&scale=4&rotate=0",
             },
             {
                 id: "8a01cd96-d10f-542d-8d8d-8e9f239c36f0",
                 date: "27 April",
                 description:
-                    "The BBC Third Programme broadcasts <i>Waiting For Godot</i>.",
+                    "The BBC <i>Third Programme</i> broadcasts <i>Waiting For Godot</i>.",
                 type: "personal",
             },
             {
@@ -6428,7 +6426,7 @@ export const timelineData = [
                 id: "b41672d3-ad87-5459-8c00-efcd7ea86699",
                 date: "17 June",
                 description:
-                    "Beckett and Alan Schneider attend the Berliner Ensemble production of Brecht's Galileo in Paris.",
+                    "Beckett and Alan Schneider attend the Berliner Ensemble production of Brecht's <i>Galileo</i> in Paris.",
                 type: "personal",
             },
             {
@@ -6459,7 +6457,7 @@ export const timelineData = [
                 id: "136ea32d-2b34-5247-99ed-16b7e19c9c89",
                 date: "23 August",
                 description:
-                    "The BBC Third Programme broadcasts <i>The Old Tune</i>, produced by Barbara Bray, with Jack MacGowran and Patrick Magee.",
+                    "The BBC <i>Third Programme</i> broadcasts <i>The Old Tune</i>, produced by Barbara Bray, with Jack MacGowran and Patrick Magee.",
                 type: "personal",
             },
             {
@@ -6475,7 +6473,6 @@ export const timelineData = [
                 description:
                     "Robert Pinget's <i>La Manivelle</i> and Samuel Beckett's English text, <i>The Old Tune</i>, published by Editions de Minuit.",
                 type: "personal",
-                image: "https://www.williamreesecompany.com/pictures/medium/WRCLIT71623.jpg",
             },
             {
                 id: "a04a62cc-d0b0-59fb-bacd-7a48a829ad70",
@@ -6531,7 +6528,7 @@ export const timelineData = [
                 id: "c5c4768c-57e3-5a47-846a-e797e08fef9c",
                 date: "1 January",
                 description:
-                    "With A. J. Leventhal, Beckett attends Max Frisch's Biedermann et les incendiaires, Théâtre de Lutèce, directed by Jean-Marie Serreau.",
+                    "With A. J. Leventhal, Beckett attends Max Frisch's <i>Biedermann et les incendiaires</i>, Théâtre de Lutèce, directed by Jean-Marie Serreau.",
                 type: "personal",
             },
             {
@@ -6573,14 +6570,14 @@ export const timelineData = [
                 id: "894f76fa-71ea-5b9c-aa6f-f5382ae428c1",
                 date: "29 January",
                 description:
-                    "Beckett attends Harold Pinter's <i>Le Gardien</i>.",
+                    "Beckett attends Harold Pinter's <i>Le Gardien</i> in Paris.",
                 type: "personal",
             },
             {
                 id: "9005663d-5e1f-5971-8b4e-f2375032c1b4",
                 date: "13 February",
                 description:
-                    "Beckett attends concert performance of Mihalovici's opera <i>Krapp</i> at the Théâtre de Chaillot.",
+                    "Beckett attends concert performance of Mihalovici's opera <i>Krapp</i> at the Théâtre de Chaillot, Paris.",
                 type: "personal",
             },
             {
@@ -6608,7 +6605,7 @@ export const timelineData = [
                 id: "a3fae74f-e97c-5676-aaae-5050da8d14b9",
                 date: "25 March",
                 description:
-                    "Samuel Beckett and Suzanne Dechevaux-Dumesnil marry in the Folkestone Registry Office, and return to Paris.",
+                    "Samuel Beckett and Suzanne Déchevaux-Dumesnil marry in the Folkestone Registry Office, and return to Paris.",
                 type: "personal",
             },
             {
@@ -6662,7 +6659,7 @@ export const timelineData = [
                 id: "76b24db4-0d9a-5749-8bdd-c2184b6f6972",
                 date: "3 May",
                 description:
-                    "Opening of <i>En attendant Godot</i>, Théâtre de l'Odéon.",
+                    "Opening of <i>En attendant Godot</i>, Théâtre de l'Odéon, Paris.",
                 type: "personal",
             },
             {
@@ -6718,7 +6715,7 @@ export const timelineData = [
                 id: "b7be8932-be17-5e5f-accd-1694a79e6f7b",
                 date: "11-22 August",
                 description:
-                    "Increasingly frequent OAS attacks in many areas of France.",
+                    "Increasingly frequent Organisation Armée Secrète (OAS) attacks in many areas of France.",
                 type: "global",
             },
             {
@@ -6731,7 +6728,7 @@ export const timelineData = [
             {
                 id: "b6877d95-964a-5315-b805-511f893922a8",
                 date: "20-23 August",
-                description: "Beckett and Suzanne in Etretat, France.",
+                description: "Beckett and Suzanne in Étretat, France.",
                 type: "personal",
             },
             {
@@ -6771,7 +6768,7 @@ export const timelineData = [
                 id: "81c30dec-1697-53ea-a8c9-99a969847faa",
                 date: "13 December",
                 description:
-                    "Samuel Beckett sends petition to John Calder and Harold Hobson for signatures to protest against the trial of Jérôme Lindon for his publication of The Deserter and for his anti-torture position on Algeria.",
+                    "Samuel Beckett sends petition to John Calder and Harold Hobson for signatures to protest against the trial of Jérôme Lindon for his publication of <i>Le Deserteur</i> (1960) by Maurienne, an anticolonial manifesto, and for his anti-torture position on Algeria.",
                 type: "personal",
             },
         ],
@@ -6790,7 +6787,7 @@ export const timelineData = [
                 id: "374ce137-4386-5390-82a4-2024e6a96782",
                 date: "8 February",
                 description:
-                    "Demonstration against the O.A.S. at the Charonne Métro Station provokes police response that ends in death of nine persons; this triggers a general strike in Paris on 13 February in Paris.",
+                    "Demonstration against the OAS at the Charonne Métro Station provokes police response that ends in death of nine persons; this triggers a general strike in Paris on 13 February.",
                 type: "global",
             },
             {
@@ -6824,7 +6821,7 @@ export const timelineData = [
                 id: "db4f63fb-75c1-5345-9c50-5272d03ac57f",
                 date: "8 May",
                 description:
-                    "Beckett attends vernissage of Joan Mitchell double show, Galerie Jacques Dubourg and Galerie Lawrence, Paris.",
+                    "Beckett attends vernissage of Joan Mitchell's double show, Galerie Jacques Dubourg and Galerie Lawrence, Paris.",
                 type: "personal",
             },
             {
@@ -6845,7 +6842,7 @@ export const timelineData = [
                 id: "802646c2-28f2-547c-b84e-a2a911a01c49",
                 date: "22 May",
                 description:
-                    "The BBC Third Programme broadcasts <i>Endgame</i>, produced by Michael Bakewell.",
+                    "The BBC <i>Third Programme</i> broadcasts <i>Endgame</i>, produced by Michael Bakewell.",
                 type: "personal",
             },
             {
@@ -6887,7 +6884,8 @@ export const timelineData = [
                 date: "7-25 August",
                 description: "Beckett holidays with Suzanne in Kitzbühel.",
                 type: "personal",
-                image: "https://www.gettyimages.com/detail/photo/wilder-kaiser-mountain-range-royalty-free-image/15727808",
+                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Kitzbuhel_Schwarzsee_1.jpg/1280px-Kitzbuhel_Schwarzsee_1.jpg",
+                caption: "The Schwarzsee lake and Wilder Kaiser mountains, 2010. By MartinPutz via Wikimedia Commons, CC-BY-SA 3.0",
             },
             {
                 id: "2b25a0f8-3c7a-5540-b1ad-8130aff85a57",
