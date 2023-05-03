@@ -2828,7 +2828,7 @@ export const timelineData = [
                 date: "13 January",
                 type: "personal",
                 description:
-                    'Lacking "safe-conduct" papers, Samuel Beckett cannot visit the Joyces in St. Gérand-le-Puy, Allier. Joyce has enlisted Rivoallan to review Samuel Beckett\'s French translation of <i>Murphy</i>.',
+                    'Lacking "safe-conduct" papers, Samuel Beckett cannot visit the Joyces in St. Gérand-le-Puy, Allier. Joyce has enlisted Anatole Rivoallan to review Samuel Beckett\'s French translation of <i>Murphy</i>.',
             },
             {
                 id: "c7f4ba5f-33db-5bfe-bb1c-d78675673525",
@@ -2838,7 +2838,7 @@ export const timelineData = [
                     "Joyce expects Giorgio Joyce and Samuel Beckett to come to St. Gérand-le-Puy for Stephen Joyce's birthday on 15 February.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/c/cf/MRSSTGerand01.jpg",
                 caption:
-                    "St. Gérand-le-Puy, 2011, by Martine SODAIGUI under CCA-SA 3.0 Unported",
+                    "St. Gérand-le-Puy, 2011, by Martine SODAIGUI under CC BY-SA 3.0",
             },
             {
                 id: "95adce93-d876-563f-8376-c0b37ff4c9e7",
@@ -2881,7 +2881,7 @@ export const timelineData = [
                 date: "By 21 May",
                 type: "personal",
                 description:
-                    'Samuel Beckett applies to serve as an ambulance driver. Rivoallan\'s revision of Samuel Beckett\'s French translation of Murphy for submission to Jean Paulhan is deferred. Samuel Beckett writes "part of the first act of Johnson." His "sketch" for Paris Mondial is cancelled. Beckett buys paintings by Bram van Velde and encourages Peggy Guggenheim\'s interest in his work.',
+                    'Samuel Beckett applies to serve as an ambulance driver. <br> Anatole Rivoallan\'s revision of Samuel Beckett\'s French translation of <i>Murphy</i> for submission to Jean Paulhan is deferred. <br> Samuel Beckett writes "part of the first act of Johnson." His "sketch" for <i>Paris Mondial</i> is cancelled. <br> Beckett buys paintings by Bram van Velde and encourages Peggy Guggenheim\'s interest in his work.',
             },
             {
                 id: "6a1114f0-d9df-5529-897e-57647db474af",
@@ -2907,7 +2907,7 @@ export const timelineData = [
                 date: "12 June",
                 type: "personal",
                 description:
-                    "Beckett leaves Paris with Suzanne Deschevaux-Dumesnil. They stay at the Hôtel Beaujolais in Vichy where the Joyces are living. Valery Larbaud lends money to Samuel Beckett.",
+                    "Beckett leaves Paris with Suzanne Déchevaux-Dumesnil. They stay at the Hôtel Beaujolais in Vichy where the Joyces are living. Valery Larbaud lends money to Samuel Beckett.",
             },
             {
                 id: "f4e98373-14d0-5e53-ac35-dec2fd4865bc",
@@ -2927,7 +2927,7 @@ export const timelineData = [
                 date: "mid-June",
                 type: "personal",
                 description:
-                    "Samuel Beckett and Suzanne Deschevaux-Dumesnil travel to Toulouse; lacking adequate papers, they go to Cahors, and from there to Arcachon, where Mary Reynolds and Marcel Duchamp help them settle.",
+                    "Samuel Beckett and Suzanne Déchevaux-Dumesnil travel to Toulouse; lacking adequate papers, they go to Cahors, and from there to Arcachon, where Mary Reynolds and Marcel Duchamp help them settle.",
             },
             {
                 id: "895724e0-7c5f-506b-8d68-8c3d269cb3fb",
@@ -2978,7 +2978,7 @@ export const timelineData = [
                 date: "mid- September",
                 type: "personal",
                 description:
-                    "Samuel Beckett and Suzanne return to Paris from Arcachon.",
+                    "Samuel Beckett and Suzanne Déchevaux-Dumesnil return to Paris from Arcachon.",
             },
             {
                 id: "fa12a454-718d-5171-8fa9-1affb08499c5",
@@ -3012,7 +3012,7 @@ export const timelineData = [
                 id: "45ea1231-4e99-5eb3-b8aa-7b7c3367de84",
                 date: "14 December",
                 type: "personal",
-                description: "James, Nora, Giorgio and Stephen Joyce leave",
+                description: "James, Nora, Giorgio and Stephen Joyce leave.",
             },
             {
                 id: "0d4fa04c-5b24-5caf-936b-fb2bbe49a1da",
@@ -3066,7 +3066,7 @@ export const timelineData = [
                 description:
                     "Paul Léon arrested by French police, as part of a second mass round-up of Jews in Paris.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/0/0a/Paul_L%C3%A9on_rue_de_Valois-8.jpg",
-                caption: "Paul Léon, Archives familiales. Public domain.",
+                caption: "Paul Léon, Archives familiales. Via Wikimedia Commons. Public domain.",
             },
             {
                 id: "7be2cd83-d283-55f5-a791-d2c3eccd2459",
@@ -3115,7 +3115,7 @@ export const timelineData = [
                 date: "1 January",
                 type: "global",
                 description:
-                    'A Declaration by the United Nations is singed by China, the United Kingdom, the United States, the Soviet Union and 22 other nations agreeing not to make "any separate peace with the Axis powers."',
+                    'A Declaration by the United Nations is signed by China, the United Kingdom, the United States, the Soviet Union and 22 other nations agreeing not to make "any separate peace with the Axis powers."',
             },
             {
                 id: "1aabe42d-f58d-5e86-b6ca-51c227d7d778",
@@ -3186,7 +3186,7 @@ export const timelineData = [
                 date: "16 August",
                 type: "personal",
                 description:
-                    "Alfred Péron arrested by the Gestapo; Mania Péron alerts Samuel Beckett and Suzanne Deschevaux-Dumesnil by telegram; they warn others and quit their Paris apartment.",
+                    "Alfred Péron arrested by the Gestapo; Mania Péron alerts Samuel Beckett and Suzanne Déchevaux-Dumesnil by telegram; they warn others and quit their Paris apartment.",
             },
             {
                 id: "00a50dbf-dbe7-53d3-aa1a-e120710a09f8",
@@ -3199,7 +3199,7 @@ export const timelineData = [
                 date: "4 September",
                 type: "personal",
                 description:
-                    'Samuel Beckett and Suzanne Deschevaux-Dumesnil arrive at Vanves. Date in second notebook of <i>Watt</i>: "Vanves 4 Sept. 42."',
+                    'Samuel Beckett and Suzanne Déchevaux-Dumesnil arrive at Vanves. Date in second notebook of <i>Watt</i>: "Vanves 4 Sept. 42."',
             },
             {
                 id: "053fc033-9e12-53d4-8220-b4b096a79f51",
@@ -3216,7 +3216,7 @@ export const timelineData = [
                 date: "early to mid-September",
                 type: "personal",
                 description:
-                    "Samuel Beckett and Suzanne Deschevaux-Dumesnil move from Vanves to Janvry, where they stay for ten days with Nathalie Sarraute.",
+                    "Samuel Beckett and Suzanne Déchevaux-Dumesnil move from Vanves to Janvry, where they stay for ten days with Nathalie Sarraute.",
             },
             {
                 id: "c79bbb61-b5c5-5b4b-bda8-292c8f6b11c1",
@@ -3237,7 +3237,7 @@ export const timelineData = [
                 date: "6 October",
                 type: "personal",
                 description:
-                    "Samuel Beckett and Suzanne Deschevaux-Dumesnil arrive at Roussillon, where friends of hers live.",
+                    "Samuel Beckett and Suzanne Déchevaux-Dumesnil arrive at Roussillon, where friends of hers live.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/c/c7/Roussillon_%28Vaucluse%29.JPG",
                 caption:
                     "Roussillon (Vaucluse), June 2007, by Hawobo under CCA-SA 2.0 Germany.",
@@ -3320,7 +3320,7 @@ export const timelineData = [
                 date: "29 August",
                 type: "global",
                 description:
-                    "German Occupation of Denmark. Danish government dissolved.",
+                    "German occupation of Denmark. Danish government dissolved.",
             },
             {
                 id: "f725374b-327b-5b78-a058-0756a4a30626",
@@ -3363,7 +3363,7 @@ export const timelineData = [
                 id: "3503a67b-2af2-5593-8ddd-6c9b82477fbd",
                 date: "22 October",
                 type: "global",
-                description: "British bombing of Kassel",
+                description: "British bombing of Kassel.",
             },
         ],
     },
@@ -3442,7 +3442,9 @@ export const timelineData = [
                 date: "25 August",
                 type: "global",
                 description: "Liberation of Paris.",
-                image: "https://upload.wikimedia.org/wikipedia/commons/7/78/Crowds_of_French_patriots_line_the_Champs_Elysees-edit2.jpg",
+                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/American_troops_march_down_Champs-Elysees_HD-SN-99-02719.JPG/740px-American_troops_march_down_Champs-Elysees_HD-SN-99-02719.JPG?20080110205924",
+                caption:
+                    "American troops march down Champs-Elysees. 29 August 1944. U.S. Army, HD-SN-99-02719. Public domain.",
             },
             {
                 id: "f99c2941-4bb4-5fad-9338-380b04285067",
@@ -3476,7 +3478,7 @@ export const timelineData = [
                 id: "7b2ee3d8-1aa4-528b-a7a4-7d31e2c57538",
                 date: "19 December",
                 type: "global",
-                description: "Le Monde begins publication in Paris.",
+                description: "<i>Le Monde</i> begins publication in Paris.",
             },
             {
                 id: "b713be4a-94f6-5751-9a47-1ef53177806a",
@@ -3507,7 +3509,7 @@ export const timelineData = [
             {
                 id: "b1b7b605-aeee-5708-8493-cf81578c0616",
                 description:
-                    "Writes this date in the fifth notebook of Watt, having made revisions to the novel.",
+                    "Writes this date in the fifth notebook of <i>Watt</i>, having made revisions to the novel.",
                 date: "18 February",
                 type: "personal",
             },
@@ -3522,7 +3524,7 @@ export const timelineData = [
                 date: "19 March",
                 type: "global",
                 description:
-                    'Adolf Hitler issues the "Nero Degree" ordering the destruction of all industry, military, transportation and communication facilities in Germany be destroyed.',
+                    'Adolf Hitler issues the "Nero Degree" ordering the destruction of all industry, military, transportation and communication facilities in Germany.',
             },
             {
                 id: "b8184c84-6149-5f80-889e-1e7df6380479",
@@ -3540,7 +3542,7 @@ export const timelineData = [
             {
                 id: "6dd0d9b5-f342-5c24-b071-316c6c159b2c",
                 description:
-                    "Leaves Paris for Dublin. The typescript of Watt is confiscated on entry into England, under suspicion of coded message. Samuel Beckett stays for several days in London. Following interrogation, he retrieves his passport as well as the typescript of Watt. Jeannine Picabia, a member of his Resistance réseaux is in London.",
+                    "Leaves Paris for Dublin. The typescript of <i>Watt</i> is confiscated on entry into England, under suspicion of coded message. Samuel Beckett stays for several days in London. Following interrogation, he retrieves his passport as well as the typescript of <i>Watt</i>. Jeannine Picabia, a member of his Resistance réseaux, is in London.",
                 date: "from 8 April",
                 type: "personal",
             },
@@ -3552,7 +3554,7 @@ export const timelineData = [
             },
             {
                 id: "93a405bb-6935-5233-abc8-527446d368e6",
-                description: "Purchases Regatta Evening from Jack B. Yeats.",
+                description: "Purchases <i>Regatta</i> Evening from Jack B. Yeats.",
                 date: "19 April",
                 type: "personal",
             },
@@ -3592,7 +3594,7 @@ export const timelineData = [
             },
             {
                 id: "a43c5412-48d2-50eb-9848-a4531a58828d",
-                description: "Samuel Beckett sends Watt to Routledge.",
+                description: "Samuel Beckett sends <i>Watt</i> to Routledge.",
                 date: "25 May",
                 type: "personal",
             },
@@ -3605,28 +3607,28 @@ export const timelineData = [
             },
             {
                 id: "2d24d5c5-15a1-5dac-9162-3d641ae21ee2",
-                description: "Routledge rejects Watt.",
+                description: "Routledge rejects <i>Watt</i>.",
                 date: "6 June",
                 type: "personal",
             },
             {
                 id: "4bad8791-6dcb-59f7-884f-e92122855517",
                 description:
-                    "Robert Desnos dies after liberation from Buchenwald. Samuel Beckett appointed to the Irish Red Cross Hospital in Saint - Lô.",
+                    "Robert Desnos dies after liberation from Buchenwald. <br> Samuel Beckett appointed to the Irish Red Cross Hospital in Saint - Lô.",
                 date: "8 June",
                 type: "personal",
             },
             {
                 id: "45eaef81-9e48-5164-a267-e0f6597e4f7d",
                 description:
-                    'Samuel Beckett\'s poem "Dieppe 193?" [sic] published in The Irish Times.',
+                    'Samuel Beckett\'s poem "Dieppe 193?" [sic] published in <i>The Irish Times</i>.',
                 date: "9 June",
                 type: "personal",
             },
             {
                 id: "e8c30f81-0f06-5885-a0c6-6669c2d4cee6",
                 description:
-                    "Opening of the Jack B. Yeats National Loan Exhibition at the National College of Art, Dublin. Thomas MacGreevy publishes Jack B.Yeats: An Appreciation and an Interpretation.",
+                    "Opening of the <i>Jack B. Yeats National Loan Exhibition</i> at the National College of Art, Dublin. Thomas MacGreevy publishes <i>Jack B.Yeats: An Appreciation and an Interpretation</i>.",
                 date: "11 June",
                 type: "personal",
             },
@@ -3646,7 +3648,7 @@ export const timelineData = [
             {
                 id: "f39387db-8f83-57b0-ac28-84721bc3579f",
                 description:
-                    'Samuel Beckett\'s review "MacGreevy on Yeats" published in The Irish Times.',
+                    'Samuel Beckett\'s review "MacGreevy on Yeats" published in <i>The Irish Times</i>.',
                 date: "4 August",
                 type: "personal",
             },
@@ -3655,7 +3657,7 @@ export const timelineData = [
                 date: "6 August",
                 type: "global",
                 description:
-                    "United States drops an Atomic bomb on Hiroshima, Japan.",
+                    "The United States drops an Atomic bomb on Hiroshima, Japan.",
             },
             {
                 id: "498b7fe1-4a89-551c-8c9a-8a811c19dfa1",
@@ -3746,7 +3748,7 @@ export const timelineData = [
                 type: "personal",
                 image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/2022-07-09_12-19-07_-_Dieppe_-_Vue_g%C3%A9n%C3%A9rale.jpg/1280px-2022-07-09_12-19-07_-_Dieppe_-_Vue_g%C3%A9n%C3%A9rale.jpg",
                 caption:
-                    "View of Dieppe, by Baidax under CCA-SA 4.0 International",
+                    "View of Dieppe, by Baidax under CC BY-SA 4.0",
             },
             {
                 id: "7210024b-7b82-53ca-a95a-33b900430d2c",
@@ -3885,7 +3887,7 @@ export const timelineData = [
                 id: "252476e9-26be-5bda-b751-5ef762ce6ef3",
                 type: "personal",
                 description:
-                    "First part of Suite published in <i>Les Temps Modernes</i>.",
+                    'First part of "Suite" published in <i>Les Temps Modernes</i>.',
                 date: "July",
             },
             {
@@ -3923,7 +3925,7 @@ export const timelineData = [
                 date: "25 September",
                 image: "https://upload.wikimedia.org/wikipedia/commons/2/2c/Simone_De_Beauvoir2.jpg",
                 caption:
-                    "Simone de Beauvoir, 1950, unknown photographer. Archivio del diario Clarin. Public domain.",
+                    "Simone de Beauvoir, 1950, unknown photographer. Archivio del diario Clarin. Via Wikimedia Commons. Public domain.",
             },
             {
                 id: "12f868da-ae14-5c6c-930f-e6553df271ed",
@@ -3936,7 +3938,7 @@ export const timelineData = [
                 id: "5a31881a-6d77-526c-bc42-be76265ef4a2",
                 type: "personal",
                 description:
-                    "Samuel Beckett and Suzanne Deschevaux-Dumesnil in Abondant, occupying the cottage of André and Ruth Salzman.",
+                    "Samuel Beckett and Suzanne Déchevaux-Dumesnil in Abondant, occupying the cottage of André and Ruth Salzman.",
                 date: "October",
             },
             {
@@ -4093,7 +4095,7 @@ export const timelineData = [
                 id: "9c5857f6-a430-5e1e-a07b-3f92fad48d94",
                 type: "personal",
                 description:
-                    "Imprint date of French edition of Murphy (Bordas).",
+                    "Imprint date of French edition of <i>Murphy</i> (Bordas).",
                 date: "15 April",
             },
             {
@@ -4119,7 +4121,7 @@ export const timelineData = [
                 id: "270840ef-038d-5b1e-ad85-bc1a86988a05",
                 type: "personal",
                 description:
-                    "Samuel Beckett and Suzanne Deschevaux-Dumesnil go to Menton. Samuel Beckett works on <i>Molloy</i> there. ",
+                    "Samuel Beckett and Suzanne Déchevaux-Dumesnil go to Menton. Samuel Beckett works on <i>Molloy</i> there. ",
                 date: "23 July",
                 caption:
                     "Menton, 2003, by Gerard cohen under GNU Free Documentation.",
@@ -4189,7 +4191,7 @@ export const timelineData = [
                 id: "06596f4a-20aa-501d-9bff-7e9fdb17d1bb",
                 type: "personal",
                 description:
-                    "Samuel Beckett begins <i>Malone meurt</i>. The Grenier-Hussenot theatre, Paris, interested in <i>Eleutheria</i>.",
+                    "Samuel Beckett begins <i>Malone meurt</i>. <br> The Grenier-Hussenot theatre, Paris, interested in <i>Eleutheria</i>.",
                 date: "27 November",
             },
         ],
@@ -4268,7 +4270,7 @@ export const timelineData = [
                 id: "a532457a-eb3c-5e29-a56c-ccac2de4781f",
                 type: "personal",
                 description:
-                    "MacGreevy in Paris. Samuel Beckett attends Andromaque with him at the Comédie-Française.",
+                    "Thomas MacGreevy in Paris. Samuel Beckett attends <i>Andromaque</i> with him at the Comédie-Française.",
                 date: "21-28 June",
             },
             {
@@ -4297,14 +4299,14 @@ export const timelineData = [
                 id: "c872dd05-cb9c-5271-83fe-8f2d67c75165",
                 type: "personal",
                 description:
-                    "MacGreevy awarded Chevalier de l'Ordre de la Légion d'Honneur for his services to the arts.",
+                    "Thomas MacGreevy awarded Chevalier de l'Ordre de la Légion d'Honneur for his services to the arts.",
                 date: "19 July",
             },
             {
                 id: "13670c5f-2db7-5e1c-88f7-20d4bdd3fb3e",
                 type: "personal",
                 description:
-                    "Samuel Beckett attends the private viewing of the Irish Exhibition of Living Art at the National College of Art.",
+                    "Samuel Beckett attends the private viewing of the <i>Irish Exhibition of Living Art</i> at the National College of Art.",
                 date: "11 August",
             },
             {
@@ -4368,7 +4370,7 @@ export const timelineData = [
             {
                 id: "6f859821-c54b-57eb-838f-45ddd68d39ed",
                 description:
-                    "Samuel Beckett and Suzanne Deschevaux-Dumesnil take a room in a farmhouse in Ussy-sur-Marne.",
+                    "Samuel Beckett and Suzanne Déchevaux-Dumesnil take a room in a farmhouse in Ussy-sur-Marne.",
                 date: "by 27 March",
                 type: "personal",
             },
@@ -4420,7 +4422,7 @@ export const timelineData = [
                 id: "3cb44fd4-c4aa-54c7-bfdb-0d7a1e4793da",
                 type: "personal",
                 decription:
-                    "Samuel Beckett begins translations for Sélection, the French edition of <i>The Reader's Digest</i>.",
+                    "Samuel Beckett begins translations for <i>Sélection</i>, the French edition of <i>The Reader's Digest</i>.",
                 date: "before 1 June",
             },
             {
@@ -4527,7 +4529,7 @@ export const timelineData = [
                 id: "89795e22-3688-5c27-8589-77eb01d46b51",
                 date: "25 June",
                 description:
-                    "North Korea invades South Korea; the United States declares war on Korea.",
+                    "North Korea invades South Korea, starting the Korean War; the United States sides with South Korea.",
                 type: "personal",
             },
             {
@@ -4554,9 +4556,7 @@ export const timelineData = [
                 description: "Samuel Beckett returns to France.",
                 date: "8 September",
                 type: "personal",
-                caption:
-                    "Yoshida signs San Francisco Peace Treaty, 8 September 1951, unknown photographer. Public domain.",
-                image: "https://upload.wikimedia.org/wikipedia/commons/e/e2/Yoshida_signs_San_Francisco_Peace_Treaty.jpg",
+               
             },
             {
                 id: "d8dbdcb5-e62c-5bc4-a431-07b749af2126",
@@ -4568,28 +4568,28 @@ export const timelineData = [
             {
                 id: "d30a3ed7-129b-520c-adab-ec437de27831",
                 description:
-                    "Suzanne Deschevaux-Dumesnil brings <i>Molloy</i> to Georges Lambrichs at Editions de Minuit.",
+                    "Suzanne Déchevaux-Dumesnil brings <i>Molloy</i> to Georges Lambrichs at Editions de Minuit.",
                 date: "6 October",
                 type: "personal",
             },
             {
                 id: "b6e7f8db-73e4-5ca3-88e9-8c050453ddb8",
                 description:
-                    "Jérôme Lindon reads <i>Molloy</i> and writes to Suzanne Deschevaux-Dumesnil that Editions de Minuit will publish the novel.",
+                    "Jérôme Lindon reads <i>Molloy</i> and writes to Suzanne Déchevaux-Dumesnil that Editions de Minuit will publish the novel.",
                 date: "before mid-October",
                 type: "personal",
             },
             {
                 id: "2cdfcb89-1c86-5645-b412-262347d835ec",
                 description:
-                    'Extracts from <i>Molloy</i> and <i>Malone meurt</i>, translated by Samuel Beckett, are published in Transition Fifty, no. 6 as "Two Fragments."',
+                    'Extracts from <i>Molloy</i> and <i>Malone meurt</i>, translated by Samuel Beckett, are published in <i>Transition</i> Fifty, no. 6 as "Two Fragments."',
                 date: "20 October",
                 type: "personal",
             },
             {
                 id: "23d8e073-7bba-50b5-a5b1-346dc70334b3",
                 description:
-                    "Suzanne Deschevaux-Dumensil returns the signed contracts to Editions de Minuit for publication of the three novels <i>Molloy</i>, <i>Malone meurt</i>, <i>L'Innommable</i>.",
+                    "Suzanne Déchevaux-Dumesnil returns the signed contracts to Editions de Minuit for publication of the three novels <i>Molloy</i>, <i>Malone meurt</i>, <i>L'Innommable</i>.",
                 date: "15 November",
                 type: "personal",
             },
@@ -4651,7 +4651,7 @@ export const timelineData = [
             {
                 id: "73e4c942-79d1-5b93-a6f7-0d10536583d0",
                 description:
-                    "First review of <i>Molloy</i> by Maurice Nadeau in Combat",
+                    "First review of <i>Molloy</i> by Maurice Nadeau in <i>Combat</i>",
                 date: "12 April",
                 type: "personal",
             },
@@ -4724,7 +4724,7 @@ export const timelineData = [
             {
                 id: "ff0e62ef-7c45-56f5-9f06-29568de965f7",
                 description:
-                    'Sends "Texte pour rien, V" ("torn off the placenta of <i>L\'Innommable</i>") to Jean Wahl for Deucalion.',
+                    'Sends "Texte pour rien, V" ("torn off the placenta of <i>L\'Innommable</i>") to Jean Wahl for <i>Deucalion</i>.',
                 date: "8 July",
                 type: "personal",
             },
@@ -4766,6 +4766,9 @@ export const timelineData = [
                 description:
                     "Treaty of San Francisco: 48 nations sign a peace treaty with Japan.",
                 type: "personal",
+                 caption:
+                    "Yoshida signs San Francisco Peace Treaty, 8 September 1951, unknown photographer. Public domain.",
+                image: "https://upload.wikimedia.org/wikipedia/commons/e/e2/Yoshida_signs_San_Francisco_Peace_Treaty.jpg",
             },
             {
                 id: "13c58c2e-3609-5fd9-8358-b92fb8594d09",
@@ -4878,14 +4881,14 @@ export const timelineData = [
             },
             {
                 id: "7827d3d8-3059-5038-8ad7-636912c430ae",
-                description: "Samuel Beckett having a cottage built in Ussy.",
+                description: "Samuel Beckett is having a cottage built in Ussy.",
                 date: "Autumn",
                 type: "personal",
             },
             {
                 id: "d6717133-c2f8-59ed-8a23-e39635323016",
                 description:
-                    '"Je tiens le Greffe" ("Texte pour rien, V") published in Deucalion.',
+                    '"Je tiens le Greffe" ("Texte pour rien, V") published in <i>Deucalion</i>.',
                 date: "October",
                 type: "personal",
             },
@@ -4939,7 +4942,7 @@ export const timelineData = [
                 date: "January",
                 type: "personal",
                 caption:
-                    "Samuel Beckett's Cottage at Ussy, by Lois Overbeck under CCA-SA 4.0 International.",
+                    "Samuel Beckett's Cottage at Ussy, by Lois Overbeck under CC BY-SA 4.0.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Samuel_Beckett%27s_Cottage_at_Ussy.jpg/1024px-Samuel_Beckett%27s_Cottage_at_Ussy.jpg",
             },
             {
@@ -5152,9 +5155,6 @@ export const timelineData = [
                     "Samuel Beckett attends Cirque Médrano with Jean Martin to see Buster Keaton perform.",
                 date: "12 January",
                 type: "personal",
-                caption:
-                    "Technical drawing of USS Nautilus (SS-168) and USS Nautilus (SSN-571), 1955, by the U.S. Navy. Public domain.",
-                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Technical_drawing_of_USS_Nautilus_%28SS-168%29_and_USS_Nautilus_%28SSN-571%29_1955.jpg/1024px-Technical_drawing_of_USS_Nautilus_%28SS-168%29_and_USS_Nautilus_%28SSN-571%29_1955.jpg",
             },
             {
                 id: "73e4026e-8bc4-57c0-b5da-fd7685baac6e",
@@ -5334,7 +5334,7 @@ export const timelineData = [
             {
                 id: "7803270f-2d36-5467-b75c-d966c894d20f",
                 description:
-                    "Samuel Beckett gives Patrick Bowles final text of translation of <i>Molloy</i>; Bowles sends to Rosset on 23 January.",
+                    "Samuel Beckett gives Patrick Bowles final text of translation of <i>Molloy</i>; Bowles sends to Barney Rosset on 23 January.",
                 date: "13 January",
                 type: "personal",
             },
@@ -5354,7 +5354,7 @@ export const timelineData = [
             {
                 id: "2f88e91f-49b0-5ca0-b9f3-843f1be2f4f0",
                 description:
-                    "Opening of Blin's production of <i>Wachten op Godot</i>, Toneelgroep Theater, Arnhem.",
+                    "Opening of Roger Blin's production of <i>Wachten op Godot</i>, Toneelgroep Theater, Arnhem.",
                 date: "6 March",
                 type: "personal",
             },
@@ -5408,7 +5408,7 @@ export const timelineData = [
             {
                 id: "ee368af4-7004-5868-bc4a-c49ea3576437",
                 description:
-                    "Samuel Beckett meets in Paris the American painter Joan Mitchell (former wife of Barney Rosset).",
+                    "Samuel Beckett meets the American painter Joan Mitchell (former wife of Barney Rosset) in Paris.",
                 date: "week of 5 June",
                 type: "personal",
             },
@@ -5442,7 +5442,7 @@ export const timelineData = [
             {
                 id: "43e5829d-aafe-50cb-accd-ab45de9efb4d",
                 description:
-                    "Extract from <i>Watt</i> broadcast on the BBC Third Programme.",
+                    "Extract from <i>Watt</i> broadcast on the BBC <i>Third Programme</i>.",
                 date: "7 September",
                 type: "personal",
             },
@@ -5517,7 +5517,7 @@ export const timelineData = [
                 date: "early December",
                 type: "personal",
                 caption:
-                    "Elisabeth Bergner and O.E. Hasse, 20 June 1960, by Joop van Bilsen/Anefo. Public domain.",
+                    "Elisabeth Bergner and O.E. Hasse, 20 June 1960, by Joop van Bilsen/Anefo. Via Wikimedia Commons. Public domain.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Elisabeht_Bergner_en_O_E_Hasse_%28persconferentie%29%2C_Bestanddeelnr_911-3483.jpg/1280px-Elisabeht_Bergner_en_O_E_Hasse_%28persconferentie%29%2C_Bestanddeelnr_911-3483.jpg",
             },
             {
@@ -5535,7 +5535,7 @@ export const timelineData = [
             {
                 id: "369f5520-cd76-5d22-b5d1-7b17266c991e",
                 description:
-                    "US opening of <i>Waiting for Godot</i>, Coconut Grove Playhouse, Miami, directed by Alan Schneider.",
+                    "U.S. opening of <i>Waiting for Godot</i>, Coconut Grove Playhouse, Miami, directed by Alan Schneider.",
                 date: "3 January",
                 type: "personal",
             },
@@ -5679,14 +5679,14 @@ export const timelineData = [
             {
                 id: "40ba37be-4868-5a2e-b10b-5017ff4eefed",
                 description:
-                    '"L\'écriture est gravure" by Jean Wahl, translated by the author with the assistance of Samuel Beckett as "The word is graven," published in Verve with Marc Chagall\'s "Illustrations for the Bible."',
+                    '"L\'écriture est gravure" by Jean Wahl, translated by the author with the assistance of Samuel Beckett as "The word is graven," published in <i>Verve</i> with Marc Chagall\'s "Illustrations for the Bible."',
                 date: "September",
                 type: "personal",
             },
             {
                 id: "3c7f7258-22d7-58d0-b3d6-d4add7576e7e",
                 description:
-                    "Extract from <i>Watt</i>, the BBC Third Programme.",
+                    "Extract from <i>Watt</i>, the BBC <i>Third Programme</i>.",
                 date: "7 September",
                 type: "personal",
             },
@@ -5714,7 +5714,7 @@ export const timelineData = [
                 id: "87eafc3c-056b-5456-9f88-c7327726d9bd",
                 date: "23 October-10 November",
                 description:
-                    "Hungarian Revolution: begun by student protest, a populist revolt against the government of the People's Republic of Hungary against its Soviet imposed policies. Soviet forces invade Budapest and other regions from 4 to 10 November to crush the revolt.",
+                    "Hungarian Revolution: begun by student protest, a populist revolt against the government of the People's Republic of Hungary and its Soviet-imposed policies.",
                 type: "personal",
             },
             {
@@ -5774,14 +5774,14 @@ export const timelineData = [
                 id: "fbc9d962-5c1b-5257-8156-7bf76cbe371c",
                 date: "10-19 January",
                 description:
-                    "<i>Waiting for Godot</i> with an all black cast at the Shubert Theatre in Boston. It opened on 21 January at the Ethel Barrymore Theatre, New York.",
+                    "<i>Waiting for Godot</i> with an all-black cast at the Shubert Theatre in Boston. It opened on 21 January at the Ethel Barrymore Theatre, New York.",
                 type: "personal",
             },
             {
                 id: "56964974-e342-591b-9cd0-32490e27ba03",
                 date: "13 January",
                 description:
-                    "<i>All That Fall</i> broadcast on the BBC Third Programme. ",
+                    "<i>All That Fall</i> broadcast on the BBC <i>Third Programme</i>. ",
                 type: "personal",
             },
             {
@@ -5826,7 +5826,6 @@ export const timelineData = [
                 date: "15 March",
                 description: "<i>Murphy</i> published by Grove Press.",
                 type: "personal",
-                image: "https://upload.wikimedia.org/wikipedia/en/0/05/Beckett_Murphy.jpg",
             },
             {
                 id: "51d24f92-c582-5c63-b522-78493926f25e",
@@ -5842,6 +5841,7 @@ export const timelineData = [
                     "Death of Jack B. Yeats in Dublin; Samuel Beckett unable to attend the funeral.",
                 type: "global",
                 image: "https://upload.wikimedia.org/wikipedia/commons/4/42/Jack_Butler_Yeats.jpg",
+                caption: "Portrait of Yeats holding a cigar, 1904, by Alice Boughton. Archives of American Art. Public domain.",
             },
             {
                 id: "e3918a98-8d5d-59e4-8660-894aac6b7296",
@@ -5858,13 +5858,13 @@ export const timelineData = [
                 type: "personal",
                 image: "https://commons.wikimedia.org/wiki/File:Th%C3%A9%C3%A2tre_des_Champs-%C3%89lys%C3%A9es,_21_April_2013.jpg",
                 caption:
-                    "Théâtre des Champs-Élysées [linked to original image] by Coldcreation under GNU Free Documentation license.",
+                    "Théâtre des Champs-Élysées [linked to original image] by Coldcreation, GFDL.",
             },
             {
                 id: "d1d0fe42-e851-5fc8-845c-786a2e26121c",
                 date: "2 May",
                 description:
-                    "<i>Fin de partie</i>, in French with the original London cast, BBC Third Programme.",
+                    "<i>Fin de partie</i>, in French with the original London cast, BBC <i>Third Programme</i>.",
                 type: "personal",
             },
             {
@@ -5878,7 +5878,7 @@ export const timelineData = [
                 id: "25cdf95d-ff49-579e-9cd9-b0481a1f59ee",
                 date: "22 May",
                 description:
-                    'The term "Le Nouveau Roman" coined (by Emile Henriot in Le Monde, reviewing works by Alain Robbe-Grillet and Nathalie Sarraute.',
+                    'The term "Le Nouveau Roman" coined by Emile Henriot in <i>Le Monde</i>, reviewing works by Alain Robbe-Grillet and Nathalie Sarraute.',
                 type: "global",
             },
             {
@@ -5901,7 +5901,6 @@ export const timelineData = [
                 description:
                     "<i>All That Fall</i> published by Faber and Faber.",
                 type: "personal",
-                image: "https://upload.wikimedia.org/wikipedia/en/thumb/2/2b/All_That_Fall.jpg/220px-All_That_Fall.jpg",
             },
             {
                 id: "3abfc4f3-d19d-5239-b2e4-4f1283fd2b89",
@@ -5932,20 +5931,19 @@ export const timelineData = [
                 description:
                     "<i>Tous ceux qui tombent</i> published by Editions de Minuit.",
                 type: "personal",
-                image: "http://www.leseditionsdeminuit.fr/images/livre_galerie_9782707302052.jpg",
             },
             {
                 id: "3a701d3f-f8d4-5bd2-85a5-a4be1abed4aa",
                 date: "10 December",
                 description:
-                    "Extracts from <i>Molloy</i> read by Patrick Magee, with music by John Beckett, BBC Third Programme.",
+                    "Extracts from <i>Molloy</i> read by Patrick Magee, with music by John Beckett, BBC <i>Third Programme</i>.",
                 type: "personal",
             },
             {
                 id: "d8fa772a-d99f-5432-ad68-6e763152ab2b",
                 date: "14 December",
                 description:
-                    "<i>From an Abandoned Work</i> read by Patrick Magee, BBC Third Programme.",
+                    "<i>From an Abandoned Work</i> read by Patrick Magee, BBC <i>Third Programme</i>.",
                 type: "personal",
             },
             {
@@ -5968,7 +5966,7 @@ export const timelineData = [
                 type: "personal",
                 image: "https://upload.wikimedia.org/wikipedia/commons/8/86/Cherry_Lane_Theatre_%2848072709003%29.jpg",
                 caption:
-                    "Cherry Lane Theatre by Ajay Suresh under Creative Commons Attribution 2.0 Generic license.",
+                    "Cherry Lane Theatre by Ajay Suresh. Via Wikimedia Commons, CC BY 2.0.",
             },
             {
                 id: "fe5e737e-f52e-5562-bdec-15caa33ffe9d",
@@ -6006,7 +6004,6 @@ export const timelineData = [
                 date: "7 March",
                 description: "<i>Malone Dies</i> published by John Calder.",
                 type: "personal",
-                image: "https://pictures.abebooks.com/SHAPERO/md/md22841252761.jpg",
             },
             {
                 id: "c65f5e38-f7b1-55a2-a491-918282d27043",
@@ -6040,7 +6037,7 @@ export const timelineData = [
                 date: "13 May",
                 description: '"May 1958 Crisis" in Algeria.',
                 type: "global",
-                image: "https://upload.wikimedia.org/wikipedia/commons/3/30/Algerian_war_collage_wikipedia.jpg",
+                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Chlef_1957_-_Guerre_d%27Algerie.png/475px-Chlef_1957_-_Guerre_d%27Algerie.png?20230223174947",
                 caption:
                     "Chlef 1957 - Guerre d'Algerie, 1957, unknown photographer. Public domain.",
             },
@@ -6048,7 +6045,7 @@ export const timelineData = [
                 id: "76bd45f4-9ea5-509e-b7e9-7c9a34559980",
                 date: "29 May",
                 description:
-                    "Charles De Gaulle appointed Président du Conseil by President Coty, France.",
+                    "Charles De Gaulle appointed Président du Conseil by President René Coty, France.",
                 type: "global",
             },
             {
@@ -6062,14 +6059,14 @@ export const timelineData = [
                 id: "ae54e1ae-0934-5d6a-81e7-c9950e82b577",
                 date: "18 June",
                 description:
-                    "Extract from <i>Malone Dies</i> read by Patrick Magee, with music composed by John Beckett, BBC Third Programme.",
+                    "Extract from <i>Malone Dies</i> read by Patrick Magee, with music composed by John Beckett, BBC <i>Third Programme</i>.",
                 type: "personal",
             },
             {
                 id: "c4832ee0-91db-5636-a9ca-ceaa78401b5b",
                 date: "8 July",
                 description:
-                    "Beckett begins a three week holiday with Suzanne in Yugoslavia.",
+                    "Beckett begins a three week holiday with Suzanne Déchevaux-Dumesnil in Yugoslavia.",
                 type: "personal",
             },
             {
@@ -6197,7 +6194,7 @@ export const timelineData = [
                 id: "72d67937-7198-573b-8c43-9775c5310df0",
                 date: "19 January",
                 description:
-                    "The BBC Third Programme broadcasts extracts from <i>The Unnamable</i>, read by Patrick Magee, with music by John Beckett.",
+                    "The BBC <i>Third Programme</i> broadcasts extracts from <i>The Unnamable</i>, read by Patrick Magee, with music by John Beckett.",
                 type: "personal",
             },
             {
@@ -6259,14 +6256,14 @@ export const timelineData = [
                 id: "e4edade1-5047-52e9-aa0f-97d281868b86",
                 date: "24 June",
                 description:
-                    "The BBC Third Programme broadcasts <i>Embers</i>.",
+                    "The BBC <i>Third Programme</i> broadcasts <i>Embers</i>.",
                 type: "personal",
             },
             {
                 id: "0e81c349-32f1-544c-9f21-f97e26a23622",
                 date: "26 June",
                 description:
-                    "Limes Verlag, Wiesbaden, publish poems as Gedichte. ",
+                    "Limes Verlag, Wiesbaden, publish poems as <i>Gedichte</i>. ",
                 type: "personal",
             },
             {
@@ -6280,7 +6277,7 @@ export const timelineData = [
             {
                 id: "0a3a341d-9022-56c0-b97c-6c087e4f5fba",
                 date: "21 August",
-                description: "Death of Denis Devlin",
+                description: "Death of Denis Devlin.",
                 type: "global",
             },
             {
@@ -6311,7 +6308,7 @@ export const timelineData = [
                 description: "Beckett buys a Citroën 2CV.",
                 type: "personal",
                 image: "https://upload.wikimedia.org/wikipedia/commons/b/b8/1956_Citro%C3%ABn_2CV_-_Flickr_-_skinnylawyer.jpg",
-                caption: "2CV Citroën, 2004, by Pol. Public domain.",
+                caption: "2CV Citroën, 2004, by Pol. Via Wikimedia Commons. Public domain.",
             },
             {
                 id: "de7c8522-0a3e-52a6-a42b-c7916aed0761",
