@@ -5,6 +5,8 @@ import {
     EuiText,
     EuiTextAlign,
 } from "@elastic/eui";
+import { appendIconComponentCache } from "@elastic/eui/es/components/icon/icon";
+import { icon as EuiIconFullScreen } from "@elastic/eui/es/components/icon/assets/full_screen";
 import {
     VerticalTimeline,
     VerticalTimelineElement,
@@ -12,6 +14,13 @@ import {
 
 import React, { useEffect, useRef } from "react";
 import "./TimelineYear.css";
+
+// icon component cache required for dynamically imported EUI icons in Vite;
+// see https://github.com/elastic/eui/issues/5463
+appendIconComponentCache({
+    fullScreen: EuiIconFullScreen,
+});
+
 /**
  * React component for displaying a timeline for a year.
  * Much of the intersection observer logic is based on
@@ -124,6 +133,12 @@ function TimelineYear({ data, root, setCurrentYear, docHeightState }) {
                                             src={event.image}
                                             alt=""
                                             caption={event.caption}
+                                            allowFullScreen
+                                            fullScreenIconColor="dark"
+                                            style={{
+                                                padding: "20px 30px",
+                                                background: "white",
+                                            }}
                                         />
                                     </EuiFlexItem>
                                 </EuiFlexGroup>

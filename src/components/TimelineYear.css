@@ -46,3 +46,16 @@
 .timeline-event figcaption {
     font-size: 0.85rem;
 }
+
+.euiImage-isFullScreen {
+    text-align: center;
+}
+
+.euiImage-isFullScreen:hover .euiImage__caption {
+    text-decoration: none;
+}
+
+.euiImage-isFullScreen figcaption {
+    background-color: black;
+    padding: 0.5rem;
+}
