@@ -3797,7 +3797,7 @@ export const timelineData = [
                 id: "5fe47f06-6df4-5bb0-8107-7032cb4ad4ff",
                 type: "personal",
                 description:
-                    'Samuel Beckett changes from writing in English to writing in French, in the manuscript of the novella that will become "Suite / Fin."',
+                    'Samuel Beckett changes from writing in English to writing in French, in the manuscript of the novella ("Script") that will become "Fin."',
                 date: "17 February",
             },
             {
@@ -3819,7 +3819,7 @@ export const timelineData = [
                 type: "global",
                 date: "6 March",
                 description:
-                    "Ho Chi Minh sings an agreement with France recognizing Vietnam as an autonomous state in the Indochinese Federation and the French Union.",
+                    "Ho Chi Minh signs an agreement with France recognizing Vietnam as an autonomous state in the Indochinese Federation and the French Union.",
             },
             {
                 id: "dac4dffc-55bb-5aaf-8b5a-8ee0c0bfb14c",
@@ -4107,7 +4107,7 @@ export const timelineData = [
                 id: "f40c6ad0-92c3-534f-afb5-4fad7ce206e6",
                 type: "personal",
                 description:
-                    "Exhibition of French Painting, Waddington Gallery, Dublin, including three paintings by Geer van Velde.",
+                    "<i>Exhibition of French Painting</i>, Waddington Gallery, Dublin, including three paintings by Geer van Velde.",
                 date: "May",
             },
             {
@@ -4426,7 +4426,7 @@ export const timelineData = [
             {
                 id: "3cb44fd4-c4aa-54c7-bfdb-0d7a1e4793da",
                 type: "personal",
-                decription:
+                description:
                     "Samuel Beckett begins translations for <i>Sélection</i>, the French edition of <i>The Reader's Digest</i>.",
                 date: "before 1 June",
             },
@@ -4441,7 +4441,7 @@ export const timelineData = [
                 id: "83a7c4b0-1de9-59ce-a320-6345e361d00e",
                 description: "Charles Prentice dies in Nairobi.",
                 date: "30 June",
-                type: "personal",
+                type: "global",
             },
             {
                 id: "0bc07a7f-681e-54b4-b7d2-f311dd556374",
@@ -4514,28 +4514,28 @@ export const timelineData = [
                 date: "27 April",
                 description:
                     "Apartheid is established in South Africa, segretating races.",
-                type: "personal",
+                type: "global",
             },
             {
                 id: "fea0ac15-5d0b-5244-82e5-59c7d0032c87",
                 date: "9 May",
                 description:
                     'The "Schumann Declaration," considered to be the beginning of the European Union; later known as Europe Day.',
-                type: "personal",
+                type: "global",
             },
             {
                 id: "9beecd95-1e8e-52c8-9ec0-c0ad3e9aa021",
                 date: "19 May",
                 description:
                     "Egypt closes the Suez Canal to Israeli ships and commerce.",
-                type: "personal",
+                type: "global",
             },
             {
                 id: "89795e22-3688-5c27-8589-77eb01d46b51",
                 date: "25 June",
                 description:
                     "North Korea invades South Korea, starting the Korean War; the United States sides with South Korea.",
-                type: "personal",
+                type: "global",
             },
             {
                 id: "c29e117e-18be-59ed-9407-35e5c9da77a6",
@@ -4770,7 +4770,7 @@ export const timelineData = [
                 date: "8 September",
                 description:
                     "Treaty of San Francisco: 48 nations sign a peace treaty with Japan.",
-                type: "personal",
+                type: "global",
                  caption:
                     "Yoshida signs San Francisco Peace Treaty, 8 September 1951, unknown photographer. Public domain.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/e/e2/Yoshida_signs_San_Francisco_Peace_Treaty.jpg",
@@ -4854,7 +4854,7 @@ export const timelineData = [
                 date: "28 April",
                 description:
                     "Allied occupation of Japan ends; peace treaty signed in San Francisco.",
-                type: "personal",
+                type: "global",
             },
             {
                 id: "7001d6fd-913e-5f86-a9eb-9e81bb603054",
@@ -4914,7 +4914,7 @@ export const timelineData = [
                 date: "1 November",
                 description:
                     "United States tests the first hydrogen bomb in the Marshall Islands.",
-                type: "personal",
+                type: "global",
             },
             {
                 id: "72e5e3eb-46da-5d44-a157-749d2517785c",
@@ -4962,7 +4962,7 @@ export const timelineData = [
                 date: "14 January",
                 description:
                     "Joseph Broz Tito inaugurated as first President of Yugoslavia.",
-                type: "personal",
+                type: "global",
             },
             {
                 id: "6d2453ed-78e1-5c74-9cf4-89b032a08937",
@@ -4995,8 +4995,8 @@ export const timelineData = [
             {
                 id: "fc2bb909-059e-5cdd-8409-b85687b34147",
                 date: "5 March",
-                description: "Death of Stalin.",
-                type: "personal",
+                description: "Death of Stalin at his Kuntsevo Dacha.",
+                type: "global",
             },
             {
                 id: "83e629c3-a326-5b4a-afeb-d53aa75b30d8",
@@ -5051,7 +5051,7 @@ export const timelineData = [
                 date: "23 July",
                 description:
                     "Armistice signed between Korea and the United States.",
-                type: "personal",
+                type: "global",
             },
             {
                 id: "aef6b625-b21c-55af-8fce-d0e92e8e7c86",
@@ -5157,7 +5157,7 @@ export const timelineData = [
             {
                 id: "e0192268-154c-5908-ac33-0ae19c1ecaae",
                 description:
-                    "Samuel Beckett attends Cirque Médrano with Jean Martin to see Buster Keaton perform.",
+                    "Samuel Beckett attends Cirque Médrano with Jean Martin to see Buster Keaton perform in Paris.",
                 date: "12 January",
                 type: "personal",
             },
@@ -5208,7 +5208,7 @@ export const timelineData = [
                 date: "13 March-7 May",
                 description:
                     "Battle of Dien Bien Phu, climactic confrontation between the French and Viet Minh communist revolutionaries.",
-                type: "personal",
+                type: "global",
             },
             {
                 id: "c5e7bfb9-cd77-5b5c-bd4f-e332c0d6b5cd",
@@ -5256,7 +5256,7 @@ export const timelineData = [
                 date: "27 May",
                 description:
                     "France and Vietnam agree to a ceasefire, marking the end of the French Indochina War.",
-                type: "personal",
+                type: "global",
             },
             {
                 id: "7ee59c24-ffa4-508a-a1ea-1ef9702eea39",
@@ -5314,7 +5314,7 @@ export const timelineData = [
             },
             {
                 id: "1dd7b2f8-0cac-59f7-ba24-8610f0ff81ee",
-                description: "Watt banned in Ireland.",
+                description: "<i>Watt</i> banned in Ireland.",
                 date: "15 October",
                 type: "personal",
             },
@@ -5322,7 +5322,7 @@ export const timelineData = [
                 id: "96ba277e-8431-513d-a905-955b220168a8",
                 date: "1 November",
                 description: "Algerian War begins (Toussaint Sanglante).",
-                type: "personal",
+                type: "global",
             },
             {
                 id: "1615431d-aed6-5f72-b2d4-efdc47f032df",
@@ -5381,7 +5381,7 @@ export const timelineData = [
                 id: "6fb16de4-30bf-54e9-a413-01b57aa847c0",
                 date: "April",
                 description: "State of emergency declared in Algeria.",
-                type: "personal",
+                type: "global",
             },
             {
                 id: "fa81b0ae-2110-574f-ad49-7cb1d8c6e2c3",
@@ -5393,7 +5393,7 @@ export const timelineData = [
             {
                 id: "1ad61791-f5cb-5e56-a14d-ad430256526b",
                 description:
-                    '"Deux textes pour rien [I, IX]" published in <i>Monde Nouveau/Paru</i>.',
+                    '"Deux textes pour rien [I, IX]" published in <i>Monde Nouveau / Paru</i>.',
                 date: "May-June",
                 type: "personal",
             },
@@ -5468,7 +5468,7 @@ export const timelineData = [
             {
                 id: "ecc6746c-cad4-508b-8e1d-7d56c7d716bb",
                 description:
-                    "Samuel Beckett spends several days with Giorgio and Asta Joyce in Zurich. Visits Joyce's grave.",
+                    "Samuel Beckett spends several days with Giorgio and Asta Joyce in Zurich. Visits James Joyce's grave.",
                 date: "8 October",
                 type: "personal",
             },
@@ -5575,13 +5575,13 @@ export const timelineData = [
                 id: "ea26c8bd-b17c-5589-8330-0aed83ce5527",
                 date: "2 March",
                 description: "Morocco gains independence from France",
-                type: "personal",
+                type: "global",
             },
             {
                 id: "719fb936-6d3a-5c7c-8d1e-9c223a5ef3e5",
                 date: "20 March",
                 description: "Tunisia gains independence from France.",
-                type: "personal",
+                type: "global",
             },
             {
                 id: "ec446ba7-2077-54d2-bc40-da4aca911aee",
@@ -5659,7 +5659,7 @@ export const timelineData = [
                 id: "943005e1-dd2d-5d8e-95bd-de0a2e5cd3c7",
                 date: "26 July",
                 description: "Suez Canal nationalized by Egypt",
-                type: "personal",
+                type: "global",
             },
             {
                 id: "657d1d78-92b8-5317-82c2-5e62cb0d660f",
@@ -5720,13 +5720,13 @@ export const timelineData = [
                 date: "23 October-10 November",
                 description:
                     "Hungarian Revolution: begun by student protest, a populist revolt against the government of the People's Republic of Hungary and its Soviet-imposed policies.",
-                type: "personal",
+                type: "global",
             },
             {
                 id: "8ea10b1c-64ae-5c73-8dd4-a1c702a61eb4",
                 date: "29 October",
                 description: "Suez War begins; ceasefire on 6 November.",
-                type: "personal",
+                type: "global",
             },
             {
                 id: "b9c73739-f261-56ed-84db-6f2b67c1d2a4",
@@ -5740,7 +5740,7 @@ export const timelineData = [
                 date: "4 - 11 November",
                 description:
                     "Hungarian Revolution: Soviet troops invade Hungary to crush the revolt.",
-                type: "personal",
+                type: "global",
             },
             {
                 id: "14e997b8-00fe-5d74-bb84-634d8ecbeb2d",
@@ -6276,7 +6276,6 @@ export const timelineData = [
                 description:
                     "Samuel Beckett receives honorary D. Litt. from Trinity College Dublin.",
                 type: "personal",
-                image: "https://i.pinimg.com/474x/f4/e7/09/f4e709955fdf3db7747154518ef7ee30.jpg",
             },
             {
                 id: "0a3a341d-9022-56c0-b97c-6c087e4f5fba",
@@ -6304,7 +6303,7 @@ export const timelineData = [
                 description:
                     'Olympia Press publish <i>Molloy</i>, <i>Malone Dies</i>, and <i>The Unnamable</i> as a single volume for European market; Grove Press publish the "three in one" in November.',
                 type: "personal",
-                image: "https://pictures.abebooks.com/ELLISBKS/15900021036.jpg",
+           //   image: "https://pictures.abebooks.com/ELLISBKS/15900021036.jpg",
             },
             {
                 id: "0e80e425-9214-59f6-bac4-7859c1b53b64",
@@ -6374,7 +6373,7 @@ export const timelineData = [
                 id: "a5074fa3-1eaa-5db8-94b9-2b3928ebeeb8",
                 date: "27 March",
                 description:
-                    "Générale of <i>La dernière bande</i>, directed by Roger Blin, and Lettre morte, directed by Jean Martin, Théâtre Récamier.",
+                    "Générale of <i>La dernière bande</i>, directed by Roger Blin, and <i>Lettre morte</i>, directed by Jean Martin, Théâtre Récamier.",
                 type: "personal",
             },
             {
@@ -6404,8 +6403,6 @@ export const timelineData = [
                 description:
                     "Samuel Beckett lifts his embargo on production of his work in Ireland.",
                 type: "personal",
-                caption:
-                    "Theatre de la Ville (Sarah Bernhardt), 2010, by Britchi Mirela, under Creative Commons Attribution-Share Alike 4.0 International license.",
             },
             {
                 id: "e0ca2d15-ebe6-5970-91e1-194798165279",
@@ -6414,6 +6411,8 @@ export const timelineData = [
                     "Beckett attends Berliner Ensemble production of Brecht's <i>Die Mutter</i>, Sarah Bernhardt Theatre, Paris; leaves at first opportunity.",
                 type: "personal",
                 image: "https://upload.wikimedia.org/wikipedia/commons/1/16/Paris%2C_France._Theatre_de_la_Ville_%28Sarah_Bernhardt%29._%28PA00086480%29.jpg",
+                caption:
+                  "Theatre de la Ville (Sarah Bernhardt), 2010, by Britchi Mirela under CC BY-SA 4.0.",
             },
             {
                 id: "85a9a6d2-8ebe-5d9f-9f05-57e50ba6b353",
@@ -6433,7 +6432,7 @@ export const timelineData = [
                 id: "c9bae537-7fcb-5e84-8f29-64d60fdb9820",
                 date: "2 August",
                 description:
-                    "Beckett completes revision  of his new work, which becomes <i>Comment c'est</i>.",
+                    "Beckett completes revision of his new work, which becomes <i>Comment c'est</i>.",
                 type: "personal",
             },
             {
@@ -6464,7 +6463,7 @@ export const timelineData = [
                 id: "b5d8e91c-6337-591b-a41d-b8d6f61a8ab0",
                 date: "6 September",
                 description:
-                    "Vérité-Liberté publishes a Déclaration sur le Droit à l'Insoumission dans la Guerre d'Algérie signed by 121 writers and artists; it becomes known as the \"Manifeste des 121.\"",
+                    "<i>Vérité-Liberté</i> publishes a Déclaration sur le Droit à l'Insoumission dans la Guerre d'Algérie signed by 121 writers and artists; it becomes known as the \"Manifeste des 121.\"",
                 type: "global",
             },
             {
@@ -6485,7 +6484,7 @@ export const timelineData = [
                 id: "dff1ca9b-9f93-5da1-8537-82015e95f821",
                 date: "7 October",
                 description:
-                    'A letter condemning the "apologists of desertion and disobedience" and defending the army appears in Le Figaro with 185 signatories.',
+                    'A letter condemning the "apologists of desertion and disobedience" and defending the army appears in <i>Le Figaro</i> with 185 signatories.',
                 type: "global",
             },
             {
@@ -6496,7 +6495,7 @@ export const timelineData = [
                 type: "personal",
                 image: "https://upload.wikimedia.org/wikipedia/commons/4/47/Samuel_Beckett%27s_Apartment_at_38_Boulevard_St_Jacques.jpg",
                 caption:
-                    "Samuel Beckett's Apartment at 38 Boulevard St. Jacques, by Lois Overbeck under Creative Commons Attribution-Share Alike 4.0 International license.",
+                    "Samuel Beckett's Apartment at 38 Boulevard St. Jacques, by Lois Overbeck under CC BY-SA 4.0.",
             },
             {
                 id: "68c3b303-adca-5b4f-a2af-06b0dc218ec7",
@@ -6794,7 +6793,7 @@ export const timelineData = [
                 id: "a30ce969-2b98-5be8-9aab-9146c1e5b6fb",
                 date: "11 February",
                 description: "Jean-Jacques Mayoux's home is bombed.",
-                type: "personal",
+                type: "global",
             },
             {
                 id: "370f0a78-ad50-5bd4-918e-f177e2473327",
@@ -6918,7 +6917,7 @@ export const timelineData = [
                 id: "a09078ed-ba29-5253-bfa8-7abf75a4a30a",
                 date: "13 October",
                 description:
-                    "Attends Jack McGowran's runthrough of his one-man Beckett show, End of the Day. The BBC Third Programme broadcasts <i>Words and Music</i>.",
+                    "Attends Jack McGowran's runthrough of his one-man Beckett show, <i>End of the Day</i>. The BBC <i>Third Programme</i> broadcasts <i>Words and Music</i>.",
                 type: "personal",
             },
             {
@@ -6945,7 +6944,7 @@ export const timelineData = [
                 id: "8443024f-be21-52e0-a899-f4e4a57f30fc",
                 date: "13 November",
                 description:
-                    "The BBC Third Programme broadcasts <i>Words and Music</i>.",
+                    "The BBC <i>Third Programme</i> broadcasts <i>Words and Music</i>.",
                 type: "personal",
             },
             {
