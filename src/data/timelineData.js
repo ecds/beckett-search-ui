@@ -6618,7 +6618,7 @@ export const timelineData = [
                 id: "d5bfe377-92b2-581b-9ea4-baeddaf6c708",
                 date: "10 April - 5 May",
                 description:
-                    "Beckett manages rehearsals of <i>En attendant Godot</i> duirng Roger Blin's absence in London.",
+                    "Beckett manages rehearsals of <i>En attendant Godot</i> during Roger Blin's absence in London.",
                 type: "personal",
             },
             {
@@ -6727,7 +6727,7 @@ export const timelineData = [
             {
                 id: "b6877d95-964a-5315-b805-511f893922a8",
                 date: "20-23 August",
-                description: "Beckett and Suzanne in Étretat, France.",
+                description: "Beckett and Suzanne Déchevaux-Dumesnil in Étretat, France.",
                 type: "personal",
             },
             {
@@ -6760,7 +6760,7 @@ export const timelineData = [
                 id: "a09e6063-a9ba-592a-9fea-5dc42fe6dffb",
                 date: "by 10 December",
                 description:
-                    "Samuel Beckett's Poems in English published by John Calder.",
+                    "Samuel Beckett's <i>Poems in English</i> published by John Calder.",
                 type: "personal",
             },
             {
@@ -6998,7 +6998,7 @@ export const timelineData = [
                 id: "a7e9e05e-fd66-5489-b01a-4b67d091d64b",
                 date: "22 March",
                 description:
-                    "Attends Ramón Valle-Inclán's play <i>Divines paroles</i> at the Théâtre de l'Odéon, directed by Roger Blin.",
+                    "Attends Ramón Valle-Inclán's play <i>Divines paroles</i> at the Théâtre de l'Odéon, Paris, directed by Roger Blin.",
                 type: "personal",
             },
             {
@@ -7018,14 +7018,14 @@ export const timelineData = [
                 id: "306729d5-56db-5026-a4c9-e201919cd10c",
                 date: "week of 15 April",
                 description:
-                    "Beckett works with Jean-Marie Serreau on Comédie.",
+                    "Beckett works with Jean-Marie Serreau on <i>Comédie</i>.",
                 type: "personal",
             },
             {
                 id: "253ecedd-99e0-5eaa-a72e-d311d7750e9c",
                 date: "10 May",
                 description:
-                    "Attends King Lear directed by Peter Brook at the Théâtre Sarah-Bernhardt.",
+                    "Attends <i>King Lear</i> directed by Peter Brook at the Théâtre Sarah-Bernhardt.",
                 type: "personal",
             },
             {
@@ -7046,7 +7046,7 @@ export const timelineData = [
                 id: "3830efd5-c859-5222-9120-8f687f86760f",
                 date: "30 May",
                 description:
-                    "With Alan Schneider, Beckett attends two working sessions of Spiel in Ulm, Germany.",
+                    "With Alan Schneider, Beckett attends two working sessions of <i>Spiel</i> in Ulm, Germany.",
                 type: "personal",
             },
             {
@@ -7059,21 +7059,21 @@ export const timelineData = [
                 id: "563d5e8e-edb8-5293-9362-884adf80699a",
                 date: "14 June",
                 description:
-                    "Premiere of Spiel at the Ulmer-Theater, Ulm-Donau, directed by Deryk Mendel.",
+                    "Premiere of <i>Spiel</i> at the Ulmer-Theater, Ulm-Donau, directed by Deryk Mendel.",
                 type: "personal",
             },
             {
                 id: "7690ea1b-e853-544d-aebd-397e5f652651",
                 date: "before 17 June",
                 description:
-                    "Beckett rehearses Oh Les beaux jours with Madeleine Renaud and Roger Blin.",
+                    "Beckett rehearses <i>Oh Les beaux jours</i> with Madeleine Renaud and Roger Blin.",
                 type: "personal",
             },
             {
                 id: "fd9676ee-fdae-5817-beb3-d6b70587bc6d",
                 date: "17 June - 16 July",
                 description:
-                    "Samuel Beckett holidays with Suzanne in Zell-am-See, Austria.",
+                    "Samuel Beckett holidays with Suzanne Déchevaux-Dumesnil in Zell-am-See, Austria.",
                 type: "personal",
             },
             {
@@ -7106,7 +7106,7 @@ export const timelineData = [
                 id: "11edfa16-4f5b-50de-a22f-07566aa321f2",
                 date: "27 September",
                 description:
-                    "Premiere of Oh les beaux jours at the Teatro del Ridotto, as part of the Venice Festival.",
+                    "Premiere of <i>Oh les beaux jours</i> at the Teatro del Ridotto, as part of the Venice Festival.",
                 type: "personal",
             },
             {
@@ -7145,7 +7145,7 @@ export const timelineData = [
                 id: "41f02da4-ac0d-5012-bbd9-d84e64d8dfb8",
                 date: "4 January",
                 description:
-                    "Play opens at the Cherry Lane Theatre, New York, directed by Alan Schneider, on a double bill with Harold Pinter's The Lover.",
+                    "<i>Play</i> opens at the Cherry Lane Theatre, New York, directed by Alan Schneider, on a double bill with Harold Pinter's <i>The Lover</i>.",
                 type: "personal",
             },
             {
@@ -7166,7 +7166,7 @@ export const timelineData = [
                 id: "a972a2e1-018a-5c6e-9d62-2d7c82f79344",
                 date: "28 January",
                 description:
-                    "Attends the opening night of Max Frisch's play Andorra at the Old Vic.",
+                    "Attends the opening night of Max Frisch's play <i>Andorra</i> at the Old Vic, London.",
                 type: "personal",
             },
             {
@@ -7180,27 +7180,27 @@ export const timelineData = [
                 id: "7be7609e-51c5-54ce-ae57-536bc7c8e9d4",
                 date: "4 February",
                 description:
-                    "Attends dress rehearsal of Who's Afraid of Virginia Woolf, directed by Alan Schneider, Piccadilly Theatre, London.",
+                    "Attends dress rehearsal of <i>Who's Afraid of Virginia Woolf</i>, directed by Alan Schneider, Piccadilly Theatre, London.",
                 type: "personal",
             },
             {
                 id: "e55193db-55d7-5158-8255-6e53f29c59d5",
                 date: "17 February",
                 description:
-                    "<i>Endgame</i> with Jack MacGowran and Patrick Magee opens at the Studio des Champs-Elysées.",
+                    "<i>Endgame</i> with Jack MacGowran and Patrick Magee opens at the Studio des Champs-Elysées, Paris.",
                 type: "personal",
             },
             {
                 id: "9ffbdcbe-83ce-5e6a-ae85-9ed57e4a2823",
                 date: "24 February",
                 description:
-                    "Goddard Lieberson's invites Beckett to contribute to a Homage for John F. Kennedy. Beckett declines.",
+                    "Goddard Lieberson invites Beckett to contribute to a Homage for John F. Kennedy. Beckett declines.",
                 type: "personal",
             },
             {
                 id: "44083099-8bcb-5ae0-b1ef-f45959cbdbb5",
                 date: "14 March - 8 April",
-                description: "Samuel Beckett in London for rehearsals of Play.",
+                description: "Samuel Beckett in London for rehearsals of <i>Play</i>.",
                 type: "personal",
             },
             {
@@ -7214,21 +7214,21 @@ export const timelineData = [
                 id: "cf2b29f3-b8e0-5597-afed-c0e93a1e1984",
                 date: "7 April",
                 description:
-                    "Play opens at the National Theatre, Old Vic, on a double bill with Sophocles' Philoctetes.",
+                    "<i>Play</i> opens at the National Theatre, Old Vic, on a double bill with Sophocles' <i>Philoctetes</i>.",
                 type: "personal",
             },
             {
                 id: "9a138996-df10-5541-ad62-d37555a290b7",
                 date: "10 April",
                 description:
-                    "Samuel Beckett writes tribute to Brendan Behan for Theater heute.",
+                    "Samuel Beckett writes tribute to Brendan Behan for <i>Theater heute</i>.",
                 type: "personal",
             },
             {
                 id: "75d32207-f89d-58ec-8997-693a36c20df6",
                 date: "14 April",
                 description:
-                    "Samuel Beckett resumes rehearsals in Paris for Comédie, directed by Jean-Marie Serreau.",
+                    "Samuel Beckett resumes rehearsals in Paris for <i>Comédie</i>, directed by Jean-Marie Serreau.",
                 type: "personal",
             },
             {
@@ -7236,7 +7236,7 @@ export const timelineData = [
                 date: "21 April",
                 description: "Gisèle Freund photographs Samuel Beckett.",
                 type: "personal",
-                image: "https://upload.wikimedia.org/wikipedia/en/2/22/Self_Portrait_of_Gisele_Freund.jpg",
+          //    image: "https://upload.wikimedia.org/wikipedia/en/2/22/Self_Portrait_of_Gisele_Freund.jpg",
             },
             {
                 id: "ef439230-1cc6-58ca-913f-95f710c23bf5",
@@ -7255,14 +7255,14 @@ export const timelineData = [
                 id: "ad74fd6b-4ae0-5448-aa52-250a7852a2a0",
                 date: "June",
                 description:
-                    "Comédie published in <i>Les Lettres Nouvelles</i>.",
+                    "<i>Comédie</i> published in <i>Les Lettres Nouvelles</i>.",
                 type: "personal",
             },
             {
                 id: "13504d0a-e6bb-5335-b92f-e1c2268f9134",
                 date: "11 June",
                 description:
-                    "Comédie opens at the Pavillon de Marsan, as part of the Estival 1964, directed by Jean-Marie Serreau, assisted by Samuel Beckett.",
+                    "<i>Comédie</i> opens at the Pavillon de Marsan, as part of the <i>Estival 1964</i>, directed by Jean-Marie Serreau, assisted by Samuel Beckett.",
                 type: "personal",
             },
             {
@@ -7311,7 +7311,7 @@ export const timelineData = [
                 id: "601b6a94-f00c-51ec-8d08-f12a05aaed98",
                 date: "23 July",
                 description:
-                    "Beckett attends Dutchman by LeRoi Jones (later Amiri Baraka) and The American Dream by Edward Albee at Cherry Lane Theatre.",
+                    "Beckett attends <i>Dutchman</i> by LeRoi Jones (later Amiri Baraka) and <i>The American Dream</i> by Edward Albee at Cherry Lane Theatre.",
                 type: "personal",
             },
             {
@@ -7441,7 +7441,7 @@ export const timelineData = [
                 id: "4cf4178e-7418-5702-bdec-d7a6cc8c96c8",
                 date: "28 February",
                 description:
-                    "Samuel Beckett learns that Italian actress Clara Colosimo has gone on hunger strike because she cannot get permission to perform Giorni felici (<i>Happy Days</i>).",
+                    "Samuel Beckett learns that Italian actress Clara Colosimo has gone on hunger strike because she cannot get permission to perform <i>Giorni felici</i> (<i>Happy Days</i>).",
                 type: "personal",
             },
             {
@@ -7462,7 +7462,7 @@ export const timelineData = [
                 id: "ed996587-2499-5b04-a253-b1d59b01ea30",
                 date: "17 March",
                 description: "Death of Nancy Cunard in Paris.",
-                type: "personal",
+                type: "global",
             },
             {
                 id: "60ec45f5-ef9f-5df2-b8af-5c687b268d8a",
@@ -7491,7 +7491,7 @@ export const timelineData = [
                 description:
                     "Unexpurgated edition of <i>Waiting for Godot</i> published by Faber and Faber.",
                 type: "personal",
-                image: "https://i2.wp.com/i1083.photobucket.com/albums/j391/bookkarino/13453814_zpsywj532ak.jpg",
+         //     image: "https://i2.wp.com/i1083.photobucket.com/albums/j391/bookkarino/13453814_zpsywj532ak.jpg",
             },
             {
                 id: "21134c81-dd7f-5b20-865d-9e2d216836d3",
@@ -7536,7 +7536,7 @@ export const timelineData = [
                 type: "global",
                 image: "https://upload.wikimedia.org/wikipedia/commons/a/a0/Mont_Blanc_Tunnel_French_Side.jpg",
                 caption:
-                    "Mont Blanc Tunnel in France, 20 August 2011, by Kristoferb, under Creative Commons Attribution-Share Alike 3.0 Unported license.",
+                    "Mont Blanc Tunnel in France, 20 August 2011, by Kristoferb, under CC-BY-SA 3.0.",
             },
             {
                 id: "7948be7f-3e53-59dc-8029-e577d8bb1c10",
@@ -7555,7 +7555,7 @@ export const timelineData = [
                 id: "5e1a36cd-caa6-5eca-a381-46d5d7a2b72b",
                 date: "4 September",
                 description:
-                    "Premiere of <i>Film</i> at the Venice <i>Film</i> Festival. Samuel Beckett begins draft of <i>Assez</i>.",
+                    "Premiere of <i>Film</i> at the Venice Film Festival. Samuel Beckett begins draft of <i>Assez</i>.",
                 type: "personal",
             },
             {
@@ -7576,7 +7576,7 @@ export const timelineData = [
                 id: "895914f0-fdca-5918-bc34-344f8cdac85c",
                 date: "7 December",
                 description:
-                    "Samuel Beckett begins work with director Marin Karmitz on a film of <i>Comédie in Paris</i>.",
+                    "Samuel Beckett begins work with director Marin Karmitz on a film of <i>Comédie</> in Paris.",
                 type: "personal",
             },
             {
@@ -7865,14 +7865,14 @@ export const timelineData = [
                 date: "4 January",
                 type: "personal",
                 description:
-                    "Samuel Beckett and Suzanne return to Paris from Cascais, Portugal.",
+                    "Samuel Beckett and Suzanne Déchevaux-Dumesnil return to Paris from Cascais, Portugal.",
             },
             {
                 id: "b205c845-c3b8-5890-813f-15e8fc5c554a",
                 date: "14 January",
                 type: "personal",
                 description:
-                    "Samuel Beckett completes <i>D'un ouvrage abandonné </i>with the Janviers<i>. </i>Begins work with them on French translation of <i>Watt</i>.",
+                    "Samuel Beckett completes <i>D'un ouvrage abandonné</i> with the Janviers. Begins work with them on French translation of <i>Watt</i>.",
             },
             {
                 id: "9bca0fda-f57a-568c-aaa4-f953bc7d68b6",
@@ -7888,26 +7888,26 @@ export const timelineData = [
                 description:
                     "In Ussy, where he takes delivery of a Schimmel upright piano.",
             },
-            {
-                id: "13bb2b11-5280-5a79-9931-56c303723eb9",
-                date: "14 February",
-                type: "global",
-                description:
-                    'Aretha Franklin records "Respect" at Atlantic Studios in New York.',
-            },
+            //{
+            //  id: "13bb2b11-5280-5a79-9931-56c303723eb9",
+            //  date: "14 February",
+            //  type: "global",
+            //  description:
+            //      'Aretha Franklin records "Respect" at Atlantic Studios in New York.',
+            //},
             {
                 id: "c205eee5-91d0-5fb0-a6a1-eacad5ad4464",
                 date: "20 February",
                 type: "personal",
                 description:
-                    "Têtes-Mortes (<i>D'un ouvrage abandonné, Assez, Imagination morte imaginez, Bing</i>) printed by Editions de Minuit.",
+                    "<i>Têtes-Mortes</i> (<i>D'un ouvrage abandonné, Assez, Imagination morte imaginez, Bing</i>) printed by Éditions de Minuit.",
             },
             {
                 id: "724c2ff4-3d83-501a-9dff-500b13b5bb97",
                 date: "20 and 23 February",
                 type: "personal",
                 description:
-                    "Samuel Beckett sends corrections and notes to Lawrence Harvey on the manuscript of his monograph <i>Samuel Beckett: Poet and Criti</i>c.",
+                    "Samuel Beckett sends corrections and notes to Lawrence Harvey on the manuscript of his monograph <i>Samuel Beckett: Poet and Critic</i>.",
             },
             {
                 id: "95c1af2c-bd3e-525c-a736-f80427a2a783",
@@ -7921,7 +7921,7 @@ export const timelineData = [
                 date: "23 February -14 March",
                 type: "personal",
                 description:
-                    "Film shown at the Cinéma de la Pagode (Paris), with film of<i> Comédie</i>.",
+                    "<i>Film</i> shown at the Cinéma de la Pagode (Paris), with film of<i> Comédie</i>.",
             },
             {
                 id: "01e852ee-ccbb-5992-959b-909cacaab83d",
@@ -7934,7 +7934,7 @@ export const timelineData = [
                 date: "18 March",
                 type: "personal",
                 description:
-                    "MacGowran's reading of <i>Imagination Dead Imagine </i>broadcast on the BBC Third Programme, produced by Martin Esslin, introduced by Barbara Bray.",
+                    "MacGowran's reading of <i>Imagination Dead Imagine</i> broadcast on the BBC <i>Third Programme</i>, produced by Martin Esslin, introduced by Barbara Bray.",
             },
             {
                 id: "65b0d81b-3c9b-5c21-be3e-60ede8013ba1",
@@ -7948,7 +7948,7 @@ export const timelineData = [
                 date: "16 May",
                 type: "personal",
                 description:
-                    "No's Knife (<i>Stories</i>, <i>Texts for Nothing</i>, <i>From An Abandoned Work</i>, <i>Enough</i>, <i>Imagination Dead Imagine</i>, and <i>Ping</i>) published by John Calder.",
+                    "<i>No's Knife</i> (<i>Stories</i>, <i>Texts for Nothing</i>, <i>From An Abandoned Work</i>, <i>Enough</i>, <i>Imagination Dead Imagine</i>, and <i>Ping</i>) published by John Calder.",
             },
             {
                 id: "103f9bad-32fa-5e66-99c0-eeca84ecfa50",
@@ -7962,7 +7962,7 @@ export const timelineData = [
                 date: "22 June - 14 July",
                 type: "personal",
                 description:
-                    "Samuel Beckett and Suzanne on holiday in Sardinia.",
+                    "Samuel Beckett and Suzanne Déchevaux-Dumesnil on holiday in Sardinia.",
             },
             {
                 id: "5f14fe1f-8b9b-5161-b8bc-764a553c843b",
@@ -7976,7 +7976,7 @@ export const timelineData = [
                 date: "before 4 September",
                 type: "personal",
                 description:
-                    "Receives telegraphed request from the Arrabals to give testimony at Arrabal's trial in Spain for blasphemy.",
+                    "Receives telegraphed request from the Arrabals to give testimony at Fernando Arrabal's trial in Spain for blasphemy.",
             },
             {
                 id: "1a7633b4-81ca-57df-9b5d-d8d607d2e6bc",
@@ -7985,14 +7985,14 @@ export const timelineData = [
                 description: "Meets Theodor Adorno in Berlin.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/1/18/Theodor_W._Adorno.jpg",
                 caption:
-                    "Theodor Adorno, 1964. By Jeremy J. Shapiro. CCA-SA 3.0 Unported",
+                    "Theodor Adorno, 1964. By Jeremy J. Shapiro, via Wikimedia Commons. CC-BY-SA 3.0.",
             },
             {
                 id: "bcc9c4a9-cc3d-534f-9c4d-2dccc4978502",
                 date: "26 September",
                 type: "personal",
                 description:
-                    "Endspiel opens at the Schiller-Theater Werkstatt.",
+                    "<i>Endspiel</i> opens at the Schiller-Theater Werkstatt.",
             },
             {
                 id: "7775e437-0c3b-522d-8c3f-9db99a2540d5",
@@ -8005,21 +8005,21 @@ export const timelineData = [
                 date: "11 October - 2 November",
                 type: "personal",
                 description:
-                    "Samuel Beckett and Suzanne in Sardinia on holiday.",
+                    "Samuel Beckett and Suzanne Déchevaux-Dumesnil in Sardinia on holiday.",
             },
             {
                 id: "bfe72df1-71ca-57d1-a00b-fe42c1287f06",
                 date: "13 October",
                 type: "personal",
                 description:
-                    "Samuel Beckett sends definitive text of <i>Séjour </i>to be published with illustrations by the late Jean Deyrolle by Georges Richar.Continues to revise French translation of Watt.",
+                    "Samuel Beckett sends definitive text of <i>Séjour</i> to be published with illustrations by the late Jean Deyrolle by Georges Richar. Continues to revise French translation of <i>Watt</i>.",
             },
             {
                 id: "0de3af5a-2f02-5e72-a011-55ac4831d860",
                 date: "30 October",
                 type: "personal",
                 description:
-                    "Bing printed in a limited edition by Editions de Minuit.",
+                    "<i>Bing</i> printed in a limited edition by Editions de Minuit.",
             },
             {
                 id: "a4957553-11d2-590e-bd09-6aa9d56e3748",
@@ -8032,7 +8032,7 @@ export const timelineData = [
                 id: "5097052b-b5cb-50b6-be32-619e5500b3c0",
                 date: "28 November",
                 type: "personal",
-                description: "Burial of Suzanne Beckett's mother.",
+                description: "Burial of Suzanne Déchevaux-Dumesnil's mother, Jeanne Fourniols Déchevaux-Dumesnil.",
             },
             {
                 id: "23e2a587-6cb0-5ed7-a9ee-4da06e2d30ba",
@@ -8072,7 +8072,7 @@ export const timelineData = [
                 date: "4 February",
                 type: "personal",
                 description:
-                    "Declines Martin Esslin's request to produce <i>Happy Days </i>as a radio drama. Refuses proposal by the National Theatre for a stage production of <i>All That Fall.</i>",
+                    "Declines Martin Esslin's request to produce <i>Happy Days</i> as a radio drama. Refuses proposal by the National Theatre for a stage production of <i>All That Fall</i>.",
             },
             {
                 id: "b4baf0ae-1648-5fd1-bb62-b0ed5ae149d2",
@@ -8086,17 +8086,17 @@ export const timelineData = [
                 date: "27 February",
                 type: "personal",
                 description:
-                    "Signs copies of the limited edition of <i>Poèmes </i>to be released by Editions de Minuit 1 March.",
+                    "Signs copies of the limited edition of <i>Poèmes</i> to be released by Éditions de Minuit on 1 March.",
             },
             {
                 id: "c702e901-3d06-5497-8c2d-b7a4dcad7e3d",
                 date: "28 February",
                 type: "personal",
                 description:
-                    "Premiere of <i>Come and Go</i>, Abbey's Peacock Theatre, Dublin.",
+                    "Premiere of <i>Come and Go</i> at the Abbey's Peacock Theatre, Dublin.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/0/04/Abbey_Theatre_%40_Dublin.jpg",
                 caption:
-                    "Abbey Theatre, Dublin, 20 November 2006. By bjaglin, under CCA 2.0 Generic license",
+                    "Abbey Theatre, Dublin, 20 November 2006. By bjaglin, under CC-BY-SA 2.0.",
             },
             {
                 id: "da72b725-f4bf-5f0e-9ab9-e17a38a86ec1",
@@ -8124,7 +8124,7 @@ export const timelineData = [
                 date: "18 - 23 March",
                 type: "personal",
                 description:
-                    "Samuel Beckett in Dublin to attend her funeral. This would be his last visit to Ireland.",
+                    "Samuel Beckett in Dublin to attend Peggy Beckett's funeral. This would be his last visit to Ireland.",
             },
             {
                 id: "11995f4e-1af2-5ecc-9d24-930bfdcc9396",
@@ -8144,7 +8144,7 @@ export const timelineData = [
                 id: "ed1488a6-8173-54ee-b6f8-97f37d7dc8fa",
                 date: "27 April - 2 May",
                 type: "personal",
-                description: "Fin de Partie opens at the Alpha-347, Paris 9.",
+                description: "<i>Fin de Partie</i> opens at the Alpha-347, Paris 9.",
             },
             {
                 id: "90b3be0f-0ace-5dd0-9c43-ca793351a3a5",
@@ -8174,14 +8174,14 @@ export const timelineData = [
                 description:
                     '"Nuit des barricades" in the Latin Quarter. Students burn cars, break windows, and remove cobblestones from the streets. Police respond with great force; hundreds are injured.',
             },
-            {
-                id: "74de7f57-795f-5239-bc88-400dd22beb8c",
-                date: "12 May",
-                type: "global",
-                description:
-                    'Reginald Dwight chooses "Elton John" as his stage name after his final concert with R&B group Bluesology.',
-                image: "https://upload.wikimedia.org/wikipedia/commons/f/f1/Popzanger_Elton_John_in_Nederland%2C_Bestanddeelnr_924-2769.jpg",
-            },
+           // {
+           //     id: "74de7f57-795f-5239-bc88-400dd22beb8c",
+           //     date: "12 May",
+           //     type: "global",
+           //     description:
+           //         'Reginald Dwight chooses "Elton John" as his stage name after his final concert with R&B group Bluesology.',
+           //     image: "https://upload.wikimedia.org/wikipedia/commons/f/f1/Popzanger_Elton_John_in_Nederland%2C_Bestanddeelnr_924-2769.jpg",
+           // },
             {
                 id: "118f0011-fc42-58d3-bfa3-4b1da796ab39",
                 date: "13 May",
@@ -8237,13 +8237,13 @@ export const timelineData = [
                 description:
                     "Declines nomination by Enid Starkey for the Chair of Poetry at the University of Oxford.",
             },
-            {
-                id: "dd18a52e-2346-52e1-a2f5-7d8f627412a6",
-                date: "14 August",
-                type: "global",
-                description:
-                    "Pink Floyd release their debut album <i>The Piper at the Gates of Dawn</i>.",
-            },
+            // {
+            //    id: "dd18a52e-2346-52e1-a2f5-7d8f627412a6",
+            //    date: "14 August",
+            //    type: "global",
+            //    description:
+            //        "Pink Floyd release their debut album <i>The Piper at the Gates of Dawn</i>.",
+            // },
             {
                 id: "eca64789-10d6-5e84-bd2a-45c7c32c5cb1",
                 date: "20 August",
@@ -8254,7 +8254,7 @@ export const timelineData = [
             {
                 id: "a0bb8840-57bb-5e7d-920b-864279d79350",
                 date: "18 September",
-                type: "global",
+                type: "personal",
                 description: "Meets Ezra Pound and Olga Rudge in Paris.",
             },
             {
@@ -8296,21 +8296,21 @@ export const timelineData = [
                 date: "2 December",
                 type: "personal",
                 description:
-                    "Samuel Beckett and Suzanne leave Paris for a long holiday in Madeira.",
+                    "Samuel Beckett and Suzanne Déchevaux-Dumesnil leave Paris for a long holiday in Madeira.",
             },
             {
                 id: "a8f18b3e-f275-539e-97e1-6d58c9b3d22b",
                 date: "9 December",
                 type: "personal",
                 description:
-                    'Come and Go performed at the Royal Festival Hall, London, as part of an "Evening Concerning Depravity and Corruption," in support of the Arts Against Censorship.',
+                    '<i>Come and Go</i> performed at the Royal Festival Hall, London, as part of an "Evening Concerning Depravity and Corruption," in support of the Arts Against Censorship.',
             },
             {
                 id: "bd113926-0357-55c8-94fb-1d37875e4f69",
                 date: "12 December",
                 type: "personal",
                 description:
-                    "Samuel Beckett and Suzanne leave Funchal for Porto Santo.",
+                    "Samuel Beckett and Suzanne Déchevaux-Dumesnil leave Funchal for Porto Santo.",
             },
             {
                 id: "b9d73a66-90a2-5515-aa0f-4f0a321eabf1",
@@ -8334,7 +8334,7 @@ export const timelineData = [
                 id: "922483ce-3873-5b1f-9efb-e7e41f1434a5",
                 date: "January",
                 type: "personal",
-                description: "Samuel Beckett and Suzanne in Porto Santo.",
+                description: "Samuel Beckett and Suzanne Déchevaux-Dumesnil in Porto Santo.",
             },
             {
                 id: "2da70638-93eb-5c97-8756-4b8a321e6727",
@@ -8354,20 +8354,20 @@ export const timelineData = [
                 date: "31 January",
                 type: "personal",
                 description:
-                    "Samuel Beckett sends notes for Alan Schneider's television adaptation of <i>Krapp's Last Tape</i>.<i>Fin de partie</i>, directed by Roger Blin ends its run at Théâtre 347, Paris.",
+                    "Samuel Beckett sends notes for Alan Schneider's television adaptation of <i>Krapp's Last Tape</i>.<br><i>Fin de partie</i>, directed by Roger Blin ends its run at Théâtre 347, Paris.",
             },
             {
                 id: "d84d17a4-a75a-54a8-a9c8-a889b399c0fb",
                 date: "14 February",
                 type: "personal",
                 description:
-                    "Samuel Beckett and Suzanne leave Porto Santo for Cascais.",
+                    "Samuel Beckett and Suzanne Déchevaux-Dumesnil leave Porto Santo for Cascais.",
             },
             {
                 id: "ac94b63b-77da-51e0-af28-7b1caa14c5c9",
                 date: "2 March",
                 type: "personal",
-                description: "Samuel Beckett and Suzanne return to Paris.",
+                description: "Samuel Beckett and Suzanne Déchevaux-Dumesnil return to Paris.",
             },
             {
                 id: "224c7667-2b86-54de-9b31-932b8eaade27",
@@ -8390,12 +8390,12 @@ export const timelineData = [
                 description:
                     "Charles de Gaulle, defeated in a referendum on 27 April, steps down as President of France.",
             },
-            {
-                id: "0a388796-76c2-5b1a-9d71-c8b8f78fa2da",
-                date: "11 June",
-                type: "global",
-                description: 'David Bowie releases his single "Space Oddity".',
-            },
+            // {
+            //    id: "0a388796-76c2-5b1a-9d71-c8b8f78fa2da",
+            //    date: "11 June",
+            //    type: "global",
+            //    description: 'David Bowie releases his single "Space Oddity".',
+            // },
             {
                 id: "baa4b720-13d1-50e1-9215-5843d0400284",
                 date: "20 June",
@@ -8408,7 +8408,7 @@ export const timelineData = [
                 date: "before 16 July",
                 type: "personal",
                 description:
-                    'Film (scenario, illustrations, production shots and "On Directing Film" by Alan Schneider) published by Grove Press.',
+                    '<i>Film</i> (scenario, illustrations, production shots and "On Directing Film" by Alan Schneider) published by Grove Press.',
             },
             {
                 id: "d7a2d1ed-0d58-547d-a5f3-97ef56c5038a",
@@ -8452,7 +8452,7 @@ export const timelineData = [
                 id: "55ccfcf0-1281-563c-8062-1bd0cc6eab16",
                 date: "11 September",
                 type: "personal",
-                description: "Visits Dahlem museum near Berlin.",
+                description: "Visits Dahlem Museum near Berlin.",
             },
             {
                 id: "41afca09-2940-5f8e-98c2-86a84f3a9631",
@@ -8478,24 +8478,24 @@ export const timelineData = [
                 id: "6c7a82fe-15ea-57cb-842f-9a4adc59cfb9",
                 date: "5 October",
                 type: "personal",
-                description: "Das letzte Band opens at the Schiller-Theater.",
+                description: "<i>Das letzte Band</i> opens at the Schiller-Theater.",
             },
             {
                 id: "90e4b360-92ca-5bec-9575-4bcbfbec650e",
                 date: "6 October",
                 type: "personal",
                 description:
-                    "Samuel Beckett flies from Berlin to Tunis, where he meets Suzanne. They later travel on to Hammamet.",
+                    "Samuel Beckett flies from Berlin to Tunis, where he meets Suzanne Déchevaux-Dumesnil. They later travel on to Hammamet.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/f/f8/M%C3%A9dina_d%27Hammamet_2022_%282%29.jpg",
                 caption:
-                    "Médina d'Hammamet, 2022, by Mathieu Brossais under CCA-SA 4.0 International",
+                    "Médina d'Hammamet, 2022, by Mathieu Brossais, via Wikimedia Commons under CC-BY-SA 4.0.",
             },
             {
                 id: "eeb86608-d1fa-580c-b2e0-f64404c85f49",
                 date: "10 October",
                 type: "personal",
                 description:
-                    "Samuel Beckett and Suzanne Beckett move to Nabeul. <i>Sans</i> printed by Editions de Minuit.",
+                    "Samuel Beckett and Suzanne Déchevaux-Dumesnil move to Nabeul. <i>Sans</i> printed by Editions de Minuit.",
             },
             {
                 id: "94ef71be-fd63-5ec0-9d20-cb2b3cf47a5c",
@@ -8505,7 +8505,7 @@ export const timelineData = [
                     "Hundreds of thousands of people across the United States demonstrate in the Moratorium to End the War in Vietnam.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/e/e1/VietnamWar2ndMoratorium-WashDC-19691115a-DrDennisBogdan.jpg",
                 caption:
-                    "Vietnam War Second Moratorium, 1969. By Dr. Dennis Bogdan, under CCA-SA 4.0/GNU Free Documentation",
+                    "Vietnam War Second Moratorium, 1969. By Dr. Dennis Bogdan, via Wikimedia Commons under CC-BY-SA 4.0/GNU.",
             },
             {
                 id: "9f155e38-c5f3-5512-9e26-98348f2f2203",
@@ -8532,7 +8532,7 @@ export const timelineData = [
                 date: "13 December",
                 type: "personal",
                 description:
-                    "Samuel Beckett and Suzanne travel from Nabeul to Cascais, Portugal.",
+                    "Samuel Beckett and Suzanne Déchevaux-Dumesnil travel from Nabeul to Cascais, Portugal.",
             },
         ],
     },
@@ -8543,7 +8543,7 @@ export const timelineData = [
                 id: "55d9ea64-b509-563f-857b-cee1b47e7ba3",
                 date: "January",
                 type: "personal",
-                description: "Samuel Beckett and Suzanne in Cascais.",
+                description: "Samuel Beckett and Suzanne Déchevaux-Dumesnil in Cascais.",
             },
             {
                 id: "a1cc7e89-2294-5217-b784-4ab272497663",
@@ -8591,7 +8591,7 @@ export const timelineData = [
                 date: "20 March",
                 type: "personal",
                 description:
-                    "Samuel Beckett completes translation of <i>Sans</i> as <i>Lessness</i>.",
+                    "Samuel Beckett completes English translation of <i>Sans</i> as <i>Lessness</i>.",
             },
             {
                 id: "ca1c9d2f-8871-512b-b10e-b2e917d6a8eb",
@@ -8612,13 +8612,13 @@ export const timelineData = [
                 date: "29 April",
                 type: "personal",
                 description:
-                    "La dernière bande, directed by Samuel Beckett, opens at the Théâtre Récamier<i>, </i>preceded by<i> Actes sans paroles I </i>and<i> II, </i>directed by Deryk Mendel.",
+                    "<i>La dernière bande</i>, directed by Samuel Beckett, opens at the Théâtre Récamier<i>, </i>preceded by<i> Actes sans paroles I </i>and<i> II, </i>directed by Deryk Mendel.",
             },
             {
                 id: "2b791079-258b-5bb3-a876-b748ee462cb9",
                 date: "4 May",
                 type: "global",
-                description: "Kent State Shootings, Kent, Ohio.",
+                description: "Kent State Shootings, Kent, Ohio. Members of the Ohio National Guard fired into a crowd of unarmed students protesting U.S. involvement in Vietnam.",
             },
             {
                 id: "c6f8e722-4227-5584-80bb-c217a11369ec",
@@ -8628,7 +8628,7 @@ export const timelineData = [
                     "Samuel Beckett and Suzanne on holiday in Alghero, Sardinia.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/9/98/Alghero_215DSC_0559_%2849407926743%29.jpg",
                 caption:
-                    "Alghero, 10 October 2019. By János Korom Dr. under CCA-SA 2.0 Generic.",
+                    "Alghero, 10 October 2019. By János Korom Dr. via Wikimedia Commons under CC-BY-SA 2.0.",
             },
             {
                 id: "ec112650-3b98-51b9-8fac-04cdb4a212ec",
@@ -8641,7 +8641,7 @@ export const timelineData = [
                 date: "27 May",
                 type: "personal",
                 description:
-                    "Premier amour and <i>Mercier et Camier </i>printed by Editions de Minuit.",
+                    "<i>Premier amour</i> and <i>Mercier et Camier </i>printed by Editions de Minuit.",
             },
             {
                 id: "a22ca6dd-bdcf-54a6-93de-dba552d4a40c",
@@ -8667,7 +8667,7 @@ export const timelineData = [
                 id: "336fd584-496c-52ab-ad51-9c3ac4739437",
                 date: "17 September",
                 type: "personal",
-                description: "Glückliche Tage opens at the Schiller-Theater.",
+                description: "<i>Glückliche Tage</i> opens at the Schiller-Theater.",
             },
             {
                 id: "7a5b2f1e-4797-5245-af2d-0ba6708347ed",
@@ -8734,7 +8734,7 @@ export const timelineData = [
                 date: "25 February",
                 type: "personal",
                 description:
-                    "Lessness is broadcast by BBC Radio 3, directed by Martin Esslin.",
+                    "<i>Lessness</i> is broadcast by BBC Radio 3, directed by Martin Esslin.",
             },
             {
                 id: "d60fe361-3cec-5a85-8104-93bf14765379",
@@ -8756,13 +8756,13 @@ export const timelineData = [
                 description:
                     "Samuel Beckett has begun English translation of <i>Le Dépeupleur</i>.",
             },
-            {
-                id: "ffdd94b5-28a4-5f8a-b37c-1a9ffabef44d",
-                date: "16 May",
-                type: "global",
-                description:
-                    "BBC Television airs the first broadcast of Benjamin Britten's television opera, <i>Owen Maltings</i>.",
-            },
+            // {
+            //    id: "ffdd94b5-28a4-5f8a-b37c-1a9ffabef44d",
+            //    date: "16 May",
+            //    type: "global",
+            //    description:
+            //        "BBC Television airs the first broadcast of Benjamin Britten's television opera, <i>Owen Maltings</i>.",
+            // },
             {
                 id: "e63d6ab2-3b0e-597e-abc1-c0a9071e3990",
                 date: "19 May",
@@ -8785,7 +8785,7 @@ export const timelineData = [
                     "Samuel Beckett and Suzanne in Santa Margherita, Italy.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/5/59/2016_-_Santa_Margherita_Ligure_24.jpg",
                 caption:
-                    "Santa Margherita Ligure: Castello Conquecentesco, 9 August 2016. By Jordiferrer under CCA-SA 4.0 International.",
+                    "Santa Margherita Ligure: Castello Conquecentesco, 9 August 2016. By Jordiferrer, via Wikimedia Commons under CC-BY-SA 4.0.",
             },
             {
                 id: "5fe10c08-107a-5417-bf87-a49e899a486d",
@@ -8811,7 +8811,7 @@ export const timelineData = [
                 id: "8a9306a4-f6ea-577e-9524-87cfadccbb25",
                 date: "8 October - 14 November",
                 type: "personal",
-                description: "Samuel Beckett and Suzanne on holiday in Malta.",
+                description: "Samuel Beckett and Suzanne Déchevaux-Dumesnil on holiday in Malta.",
             },
             {
                 id: "57180e3d-8530-5cf0-b518-21456282aa2c",
@@ -8819,13 +8819,15 @@ export const timelineData = [
                 type: "personal",
                 description:
                     "Samuel Beckett views the <i>Beheading of St. John the Baptist </i>by Caravaggio in St. John's Co-Cathedral, Valletta.",
+                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/The_Beheading_of_Saint_John-Caravaggio_%281608%29.jpg/800px-The_Beheading_of_Saint_John-Caravaggio_%281608%29.jpg?20110515195128",
+                caption: "<i>The Beheading of Saint John</i> by Caravaggio, 1606, St. John's Co-Cathedral in Valletta. Public domain.",
             },
             {
                 id: "ca04e845-cebf-51f5-9461-8c89684dfd8f",
                 date: "14 November",
                 type: "personal",
                 description:
-                    "Samuel Beckett and Suzanne return to Paris from Malta.",
+                    "Samuel Beckett and Suzanne Déchevaux-Dumesnil return to Paris from Malta.",
             },
             {
                 id: "e42cecce-4f0b-5298-b3fc-f444ea00d9b4",
@@ -8864,7 +8866,7 @@ export const timelineData = [
                 type: "personal",
                 description:
                     "Samuel Beckett has met Deirdre Bair but will have nothing to do with her proposed biography of him.",
-                image: "https://upload.wikimedia.org/wikipedia/commons/7/7e/Bloody_Sunday_Banner_and_Crosses.jpg",
+           //     image: "https://upload.wikimedia.org/wikipedia/commons/7/7e/Bloody_Sunday_Banner_and_Crosses.jpg",
             },
             {
                 id: "b4a133bc-7276-5e25-a93a-233506924430",
@@ -8873,7 +8875,7 @@ export const timelineData = [
                 description:
                     "Bloody Sunday massacre, Londonderry, Northern Ireland.",
                 caption:
-                    "Bloody Sunday memorial, Derry, Northern Ireland, 11 August 2003. By Zubro under CCA-SA 3.0 Unported/GNU Free Documentation.",
+                    "Bloody Sunday memorial, Derry, Northern Ireland, 11 August 2003. By Zubro via Wikimedia Commons, CC-BY-SA 3.0/GNU.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Bloody_Sunday_memorial.jpg/576px-Bloody_Sunday_memorial.jpg",
             },
             {
@@ -8881,7 +8883,7 @@ export const timelineData = [
                 date: "3 February",
                 type: "personal",
                 description:
-                    "Samuel Beckett and Suzanne travel to Morocco, beginning their stay in Taroudant.",
+                    "Samuel Beckett and Suzanne Déchevaux-Dumesnil travel to Morocco, beginning their stay in Taroudant.",
             },
             {
                 id: "aef0cc6c-53ba-5fed-9e96-1490fa1099dc",
@@ -8896,7 +8898,7 @@ export const timelineData = [
                 id: "fd44a621-5a81-5103-93b0-5300276c9bd1",
                 date: "27 February",
                 type: "personal",
-                description: "Samuel Beckett and Suzanne move on to El-Jadida.",
+                description: "Samuel Beckett and Suzanne Déchevaux-Dumesnil move on to El-Jadida.",
             },
             {
                 id: "35af5a07-cb58-5066-898b-82d60151b56a",
@@ -8910,7 +8912,7 @@ export const timelineData = [
                 date: "13 March",
                 type: "personal",
                 description:
-                    "Samuel Beckett and Suzanne return from El-Jadida to Paris.",
+                    "Samuel Beckett and Suzanne Déchevaux-Dumesnil return from El-Jadida to Paris.",
             },
             {
                 id: "c288eb8c-4f7d-5d54-970b-e31e5f0aaab0",
@@ -8953,16 +8955,16 @@ export const timelineData = [
                 description:
                     "Dolmen Press publishes <i>Zone,</i> Samuel Beckett's translation from the 1950s of the first poem in Apollinaire's <i>Alcools</i>.",
             },
-            {
-                id: "e9113075-c7a7-578a-b6c9-ed4b6b1a0e46",
-                date: "3 September - 15 October",
-                type: "global",
-                description:
-                    "Samuel Beckett and Suzanne on holiday in Malta, where he views the <i>Beheading of St. John the Baptist </i>by Caravaggio in St. John's Co-Cathedral, Valletta.",
-                image: "https://upload.wikimedia.org/wikipedia/commons/4/42/Michelangelo_Caravaggio_021.jpg",
-                caption:
-                    "Beheading of St. John the Baptist, 1608, St. John's Co-Cathedral, Malta. By Caravaggio. Public domain.",
-            },
+            //{
+            //    id: "e9113075-c7a7-578a-b6c9-ed4b6b1a0e46",
+            //    date: "3 September - 15 October",
+            //    type: "global",
+            //    description:
+            //        "Samuel Beckett and Suzanne on holiday in Malta, where he views the <i>Beheading of St. John the Baptist </i>by Caravaggio in St. John's Co-Cathedral, Valletta.",
+            //    image: "https://upload.wikimedia.org/wikipedia/commons/4/42/Michelangelo_Caravaggio_021.jpg",
+            //    caption:
+            //        "Beheading of St. John the Baptist, 1608, St. John's Co-Cathedral, Malta. By Caravaggio. Public domain.",
+            //},
             {
                 id: "1d972f31-9e95-58ed-a232-20790da24d7d",
                 date: "5 September",
@@ -8975,14 +8977,14 @@ export const timelineData = [
                 date: "13 October",
                 type: "personal",
                 description:
-                    "Film, suivi de Souffle printed by Editions de Minuit.",
+                    "<i>Film, suivi de Souffle</i> printed by Éditions de Minuit.",
             },
             {
                 id: "5083038d-812d-583b-8994-4a4c95799be6",
                 date: "November",
                 type: "personal",
                 description:
-                    'Minuit 1 publishes the <i>Foirade</i> "Il est tête nue."<i>Limited edition of Samuel Beckett\'s The North (penultimate paragraph of The Lost Ones), including three etchings by Arikha, published by Enitharmon Press.</i>',
+                    '<i>Minuit</i> 1 publishes the <i>Foirade</i>, "Il est tête nue." Limited edition of Samuel Beckett\'s <i>The North</i> (penultimate paragraph of <i>The Lost Ones</i>), including three etchings by Arikha, published by Enitharmon Press.</i>',
             },
             {
                 id: "f39a3e63-2333-5ec5-9b25-1043ac2fd75d",
