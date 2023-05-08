@@ -635,7 +635,8 @@ export const timelineData = [
                 id: "c545d8a8-0222-5902-a720-ef61ed3e199a",
                 date: "17 October",
                 type: "personal",
-                description: "Chatto and Windus sends contract for <i>Proust</i>.",
+                description:
+                    "Chatto and Windus sends contract for <i>Proust</i>.",
             },
             {
                 id: "aae695a7-095e-5915-9879-77ccc178fa67",
@@ -940,7 +941,7 @@ export const timelineData = [
                 type: "personal",
                 description: 'Samuel Beckett writes poem "Home Olga<i>.</i>"',
             },
-          
+
             {
                 id: "fd3eb647-0813-55fd-9f02-c6833ee9116f",
                 date: "By 28 June",
@@ -962,7 +963,7 @@ export const timelineData = [
                 description:
                     "Prentice sends personal comments on <i>Dream of Fair to Middling Women.</i>",
             },
-              {
+            {
                 id: "5238a127-03c3-5303-804c-c05447b5da65",
                 date: "8 July",
                 type: "global",
@@ -1083,7 +1084,8 @@ export const timelineData = [
                 id: "1c858afe-203a-5da9-b861-c3f3ef1cdb8b",
                 date: "December",
                 type: "personal",
-                description: '<i>This Quarter</i> publishes "Dante and the Lobster."',
+                description:
+                    '<i>This Quarter</i> publishes "Dante and the Lobster."',
             },
             {
                 id: "b7179f1b-b6dc-5d4b-bd37-822099c2bea1",
@@ -3071,7 +3073,8 @@ export const timelineData = [
                 description:
                     "Paul Léon arrested by French police, as part of a second mass round-up of Jews in Paris.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/0/0a/Paul_L%C3%A9on_rue_de_Valois-8.jpg",
-                caption: "Paul Léon, Archives familiales. Via Wikimedia Commons. Public domain.",
+                caption:
+                    "Paul Léon, Archives familiales. Via Wikimedia Commons. Public domain.",
             },
             {
                 id: "7be2cd83-d283-55f5-a791-d2c3eccd2459",
@@ -3559,7 +3562,8 @@ export const timelineData = [
             },
             {
                 id: "93a405bb-6935-5233-abc8-527446d368e6",
-                description: "Purchases <i>Regatta</i> Evening from Jack B. Yeats.",
+                description:
+                    "Purchases <i>Regatta</i> Evening from Jack B. Yeats.",
                 date: "19 April",
                 type: "personal",
             },
@@ -3752,8 +3756,7 @@ export const timelineData = [
                 date: "21 December",
                 type: "personal",
                 image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/2022-07-09_12-19-07_-_Dieppe_-_Vue_g%C3%A9n%C3%A9rale.jpg/1280px-2022-07-09_12-19-07_-_Dieppe_-_Vue_g%C3%A9n%C3%A9rale.jpg",
-                caption:
-                    "View of Dieppe, by Baidax under CC BY-SA 4.0",
+                caption: "View of Dieppe, by Baidax under CC BY-SA 4.0",
             },
             {
                 id: "7210024b-7b82-53ca-a95a-33b900430d2c",
@@ -4561,7 +4564,6 @@ export const timelineData = [
                 description: "Samuel Beckett returns to France.",
                 date: "8 September",
                 type: "personal",
-               
             },
             {
                 id: "d8dbdcb5-e62c-5bc4-a431-07b749af2126",
@@ -4771,7 +4773,7 @@ export const timelineData = [
                 description:
                     "Treaty of San Francisco: 48 nations sign a peace treaty with Japan.",
                 type: "global",
-                 caption:
+                caption:
                     "Yoshida signs San Francisco Peace Treaty, 8 September 1951, unknown photographer. Public domain.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/e/e2/Yoshida_signs_San_Francisco_Peace_Treaty.jpg",
             },
@@ -4886,7 +4888,8 @@ export const timelineData = [
             },
             {
                 id: "7827d3d8-3059-5038-8ad7-636912c430ae",
-                description: "Samuel Beckett is having a cottage built in Ussy.",
+                description:
+                    "Samuel Beckett is having a cottage built in Ussy.",
                 date: "Autumn",
                 type: "personal",
             },
@@ -5795,7 +5798,7 @@ export const timelineData = [
                 description:
                     "<i>Fin de Partie</i> and <i>Acte sans paroles</i> published, <i>Editions de Minuit</i>.",
                 type: "personal",
-          //    image: "https://www.foldvaribooks.com/pictures/1291.jpg?v=1504617993",
+                //    image: "https://www.foldvaribooks.com/pictures/1291.jpg?v=1504617993",
             },
             {
                 id: "ac672cb7-5aaa-5470-a7a8-8c60b16134dd",
@@ -5845,7 +5848,8 @@ export const timelineData = [
                     "Death of Jack B. Yeats in Dublin; Samuel Beckett unable to attend the funeral.",
                 type: "global",
                 image: "https://upload.wikimedia.org/wikipedia/commons/4/42/Jack_Butler_Yeats.jpg",
-                caption: "Portrait of Yeats holding a cigar, 1904, by Alice Boughton. Archives of American Art. Public domain.",
+                caption:
+                    "Portrait of Yeats holding a cigar, 1904, by Alice Boughton. Archives of American Art. Public domain.",
             },
             {
                 id: "e3918a98-8d5d-59e4-8660-894aac6b7296",
@@ -6160,7 +6164,7 @@ export const timelineData = [
                     "Beckett flies to Dublin for a week. Ethna MacCarthy Leventhal is dying of cancer; Thomas MacGreevy has had a serious heart attack.",
                 type: "personal",
             },
-            //{
+            // {
             //    id: "34c09301-a7c2-5065-987a-6e2269190b0d",
             //    date: "10 December",
             //    description:
@@ -6214,7 +6218,7 @@ export const timelineData = [
                 description:
                     'Henri Hayden exhibition, Waddington Galleries, London; catalogue includes Samuel Beckett text "Henri Hayden."',
                 type: "personal",
-          //    image: "https://upload.wikimedia.org/wikipedia/commons/3/33/Fille_assise_au_bouquet_de_fleurs%2C_1919.jpg",
+                //    image: "https://upload.wikimedia.org/wikipedia/commons/3/33/Fille_assise_au_bouquet_de_fleurs%2C_1919.jpg",
             },
             {
                 id: "4b48c89c-9a4f-5109-b41b-e9818dfcf42a",
@@ -6253,7 +6257,8 @@ export const timelineData = [
             {
                 id: "d1915937-ece3-599f-84df-d6c4d9ce96e9",
                 date: "24 May",
-                description: "Death of Ethna MacCarthy Leventhal in East Ham, London.",
+                description:
+                    "Death of Ethna MacCarthy Leventhal in East Ham, London.",
                 type: "personal",
             },
             {
@@ -6303,7 +6308,7 @@ export const timelineData = [
                 description:
                     'Olympia Press publish <i>Molloy</i>, <i>Malone Dies</i>, and <i>The Unnamable</i> as a single volume for European market; Grove Press publish the "three in one" in November.',
                 type: "personal",
-           //   image: "https://pictures.abebooks.com/ELLISBKS/15900021036.jpg",
+                //   image: "https://pictures.abebooks.com/ELLISBKS/15900021036.jpg",
             },
             {
                 id: "0e80e425-9214-59f6-bac4-7859c1b53b64",
@@ -6311,7 +6316,8 @@ export const timelineData = [
                 description: "Beckett buys a Citroën 2CV.",
                 type: "personal",
                 image: "https://upload.wikimedia.org/wikipedia/commons/b/b8/1956_Citro%C3%ABn_2CV_-_Flickr_-_skinnylawyer.jpg",
-                caption: "2CV Citroën, 2004, by Pol. Via Wikimedia Commons. Public domain.",
+                caption:
+                    "2CV Citroën, 2004, by Pol. Via Wikimedia Commons. Public domain.",
             },
             {
                 id: "de7c8522-0a3e-52a6-a42b-c7916aed0761",
@@ -6412,7 +6418,7 @@ export const timelineData = [
                 type: "personal",
                 image: "https://upload.wikimedia.org/wikipedia/commons/1/16/Paris%2C_France._Theatre_de_la_Ville_%28Sarah_Bernhardt%29._%28PA00086480%29.jpg",
                 caption:
-                  "Theatre de la Ville (Sarah Bernhardt), 2010, by Britchi Mirela under CC BY-SA 4.0.",
+                    "Theatre de la Ville (Sarah Bernhardt), 2010, by Britchi Mirela under CC BY-SA 4.0.",
             },
             {
                 id: "85a9a6d2-8ebe-5d9f-9f05-57e50ba6b353",
@@ -6727,7 +6733,8 @@ export const timelineData = [
             {
                 id: "b6877d95-964a-5315-b805-511f893922a8",
                 date: "20-23 August",
-                description: "Beckett and Suzanne Déchevaux-Dumesnil in Étretat, France.",
+                description:
+                    "Beckett and Suzanne Déchevaux-Dumesnil in Étretat, France.",
                 type: "personal",
             },
             {
@@ -6884,7 +6891,8 @@ export const timelineData = [
                 description: "Beckett holidays with Suzanne in Kitzbühel.",
                 type: "personal",
                 image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Kitzbuhel_Schwarzsee_1.jpg/1280px-Kitzbuhel_Schwarzsee_1.jpg",
-                caption: "The Schwarzsee lake and Wilder Kaiser mountains, 2010. By MartinPutz via Wikimedia Commons, CC-BY-SA 3.0",
+                caption:
+                    "The Schwarzsee lake and Wilder Kaiser mountains, 2010. By MartinPutz via Wikimedia Commons, CC-BY-SA 3.0",
             },
             {
                 id: "2b25a0f8-3c7a-5540-b1ad-8130aff85a57",
@@ -7200,7 +7208,8 @@ export const timelineData = [
             {
                 id: "44083099-8bcb-5ae0-b1ef-f45959cbdbb5",
                 date: "14 March - 8 April",
-                description: "Samuel Beckett in London for rehearsals of <i>Play</i>.",
+                description:
+                    "Samuel Beckett in London for rehearsals of <i>Play</i>.",
                 type: "personal",
             },
             {
@@ -7236,7 +7245,7 @@ export const timelineData = [
                 date: "21 April",
                 description: "Gisèle Freund photographs Samuel Beckett.",
                 type: "personal",
-          //    image: "https://upload.wikimedia.org/wikipedia/en/2/22/Self_Portrait_of_Gisele_Freund.jpg",
+                //    image: "https://upload.wikimedia.org/wikipedia/en/2/22/Self_Portrait_of_Gisele_Freund.jpg",
             },
             {
                 id: "ef439230-1cc6-58ca-913f-95f710c23bf5",
@@ -7491,7 +7500,7 @@ export const timelineData = [
                 description:
                     "Unexpurgated edition of <i>Waiting for Godot</i> published by Faber and Faber.",
                 type: "personal",
-         //     image: "https://i2.wp.com/i1083.photobucket.com/albums/j391/bookkarino/13453814_zpsywj532ak.jpg",
+                //     image: "https://i2.wp.com/i1083.photobucket.com/albums/j391/bookkarino/13453814_zpsywj532ak.jpg",
             },
             {
                 id: "21134c81-dd7f-5b20-865d-9e2d216836d3",
@@ -7888,13 +7897,13 @@ export const timelineData = [
                 description:
                     "In Ussy, where he takes delivery of a Schimmel upright piano.",
             },
-            //{
+            // {
             //  id: "13bb2b11-5280-5a79-9931-56c303723eb9",
             //  date: "14 February",
             //  type: "global",
             //  description:
             //      'Aretha Franklin records "Respect" at Atlantic Studios in New York.',
-            //},
+            // },
             {
                 id: "c205eee5-91d0-5fb0-a6a1-eacad5ad4464",
                 date: "20 February",
@@ -8032,7 +8041,8 @@ export const timelineData = [
                 id: "5097052b-b5cb-50b6-be32-619e5500b3c0",
                 date: "28 November",
                 type: "personal",
-                description: "Burial of Suzanne Déchevaux-Dumesnil's mother, Jeanne Fourniols Déchevaux-Dumesnil.",
+                description:
+                    "Burial of Suzanne Déchevaux-Dumesnil's mother, Jeanne Fourniols Déchevaux-Dumesnil.",
             },
             {
                 id: "23e2a587-6cb0-5ed7-a9ee-4da06e2d30ba",
@@ -8144,7 +8154,8 @@ export const timelineData = [
                 id: "ed1488a6-8173-54ee-b6f8-97f37d7dc8fa",
                 date: "27 April - 2 May",
                 type: "personal",
-                description: "<i>Fin de Partie</i> opens at the Alpha-347, Paris 9.",
+                description:
+                    "<i>Fin de Partie</i> opens at the Alpha-347, Paris 9.",
             },
             {
                 id: "90b3be0f-0ace-5dd0-9c43-ca793351a3a5",
@@ -8174,14 +8185,14 @@ export const timelineData = [
                 description:
                     '"Nuit des barricades" in the Latin Quarter. Students burn cars, break windows, and remove cobblestones from the streets. Police respond with great force; hundreds are injured.',
             },
-           // {
-           //     id: "74de7f57-795f-5239-bc88-400dd22beb8c",
-           //     date: "12 May",
-           //     type: "global",
-           //     description:
-           //         'Reginald Dwight chooses "Elton John" as his stage name after his final concert with R&B group Bluesology.',
-           //     image: "https://upload.wikimedia.org/wikipedia/commons/f/f1/Popzanger_Elton_John_in_Nederland%2C_Bestanddeelnr_924-2769.jpg",
-           // },
+            // {
+            //     id: "74de7f57-795f-5239-bc88-400dd22beb8c",
+            //     date: "12 May",
+            //     type: "global",
+            //     description:
+            //         'Reginald Dwight chooses "Elton John" as his stage name after his final concert with R&B group Bluesology.',
+            //     image: "https://upload.wikimedia.org/wikipedia/commons/f/f1/Popzanger_Elton_John_in_Nederland%2C_Bestanddeelnr_924-2769.jpg",
+            // },
             {
                 id: "118f0011-fc42-58d3-bfa3-4b1da796ab39",
                 date: "13 May",
@@ -8334,7 +8345,8 @@ export const timelineData = [
                 id: "922483ce-3873-5b1f-9efb-e7e41f1434a5",
                 date: "January",
                 type: "personal",
-                description: "Samuel Beckett and Suzanne Déchevaux-Dumesnil in Porto Santo.",
+                description:
+                    "Samuel Beckett and Suzanne Déchevaux-Dumesnil in Porto Santo.",
             },
             {
                 id: "2da70638-93eb-5c97-8756-4b8a321e6727",
@@ -8367,7 +8379,8 @@ export const timelineData = [
                 id: "ac94b63b-77da-51e0-af28-7b1caa14c5c9",
                 date: "2 March",
                 type: "personal",
-                description: "Samuel Beckett and Suzanne Déchevaux-Dumesnil return to Paris.",
+                description:
+                    "Samuel Beckett and Suzanne Déchevaux-Dumesnil return to Paris.",
             },
             {
                 id: "224c7667-2b86-54de-9b31-932b8eaade27",
@@ -8478,7 +8491,8 @@ export const timelineData = [
                 id: "6c7a82fe-15ea-57cb-842f-9a4adc59cfb9",
                 date: "5 October",
                 type: "personal",
-                description: "<i>Das letzte Band</i> opens at the Schiller-Theater.",
+                description:
+                    "<i>Das letzte Band</i> opens at the Schiller-Theater.",
             },
             {
                 id: "90e4b360-92ca-5bec-9575-4bcbfbec650e",
@@ -8543,7 +8557,8 @@ export const timelineData = [
                 id: "55d9ea64-b509-563f-857b-cee1b47e7ba3",
                 date: "January",
                 type: "personal",
-                description: "Samuel Beckett and Suzanne Déchevaux-Dumesnil in Cascais.",
+                description:
+                    "Samuel Beckett and Suzanne Déchevaux-Dumesnil in Cascais.",
             },
             {
                 id: "a1cc7e89-2294-5217-b784-4ab272497663",
@@ -8618,7 +8633,8 @@ export const timelineData = [
                 id: "2b791079-258b-5bb3-a876-b748ee462cb9",
                 date: "4 May",
                 type: "global",
-                description: "Kent State Shootings, Kent, Ohio. Members of the Ohio National Guard fired into a crowd of unarmed students protesting U.S. involvement in Vietnam.",
+                description:
+                    "Kent State Shootings, Kent, Ohio. Members of the Ohio National Guard fired into a crowd of unarmed students protesting U.S. involvement in Vietnam.",
             },
             {
                 id: "c6f8e722-4227-5584-80bb-c217a11369ec",
@@ -8667,7 +8683,8 @@ export const timelineData = [
                 id: "336fd584-496c-52ab-ad51-9c3ac4739437",
                 date: "17 September",
                 type: "personal",
-                description: "<i>Glückliche Tage</i> opens at the Schiller-Theater.",
+                description:
+                    "<i>Glückliche Tage</i> opens at the Schiller-Theater.",
             },
             {
                 id: "7a5b2f1e-4797-5245-af2d-0ba6708347ed",
@@ -8811,7 +8828,8 @@ export const timelineData = [
                 id: "8a9306a4-f6ea-577e-9524-87cfadccbb25",
                 date: "8 October - 14 November",
                 type: "personal",
-                description: "Samuel Beckett and Suzanne Déchevaux-Dumesnil on holiday in Malta.",
+                description:
+                    "Samuel Beckett and Suzanne Déchevaux-Dumesnil on holiday in Malta.",
             },
             {
                 id: "57180e3d-8530-5cf0-b518-21456282aa2c",
@@ -8820,7 +8838,8 @@ export const timelineData = [
                 description:
                     "Samuel Beckett views the <i>Beheading of St. John the Baptist </i>by Caravaggio in St. John's Co-Cathedral, Valletta.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/The_Beheading_of_Saint_John-Caravaggio_%281608%29.jpg/800px-The_Beheading_of_Saint_John-Caravaggio_%281608%29.jpg?20110515195128",
-                caption: "<i>The Beheading of Saint John</i> by Caravaggio, 1606, St. John's Co-Cathedral in Valletta. Public domain.",
+                caption:
+                    "<i>The Beheading of Saint John</i> by Caravaggio, 1606, St. John's Co-Cathedral in Valletta. Public domain.",
             },
             {
                 id: "ca04e845-cebf-51f5-9461-8c89684dfd8f",
@@ -8866,7 +8885,7 @@ export const timelineData = [
                 type: "personal",
                 description:
                     "Samuel Beckett has met Deirdre Bair but will have nothing to do with her proposed biography of him.",
-           //     image: "https://upload.wikimedia.org/wikipedia/commons/7/7e/Bloody_Sunday_Banner_and_Crosses.jpg",
+                //     image: "https://upload.wikimedia.org/wikipedia/commons/7/7e/Bloody_Sunday_Banner_and_Crosses.jpg",
             },
             {
                 id: "b4a133bc-7276-5e25-a93a-233506924430",
@@ -8898,7 +8917,8 @@ export const timelineData = [
                 id: "fd44a621-5a81-5103-93b0-5300276c9bd1",
                 date: "27 February",
                 type: "personal",
-                description: "Samuel Beckett and Suzanne Déchevaux-Dumesnil move on to El-Jadida.",
+                description:
+                    "Samuel Beckett and Suzanne Déchevaux-Dumesnil move on to El-Jadida.",
             },
             {
                 id: "35af5a07-cb58-5066-898b-82d60151b56a",
@@ -8955,7 +8975,7 @@ export const timelineData = [
                 description:
                     "Dolmen Press publishes <i>Zone,</i> Samuel Beckett's translation from the 1950s of the first poem in Apollinaire's <i>Alcools</i>.",
             },
-            //{
+            // {
             //    id: "e9113075-c7a7-578a-b6c9-ed4b6b1a0e46",
             //    date: "3 September - 15 October",
             //    type: "global",
@@ -8964,7 +8984,7 @@ export const timelineData = [
             //    image: "https://upload.wikimedia.org/wikipedia/commons/4/42/Michelangelo_Caravaggio_021.jpg",
             //    caption:
             //        "Beheading of St. John the Baptist, 1608, St. John's Co-Cathedral, Malta. By Caravaggio. Public domain.",
-            //},
+            // },
             {
                 id: "1d972f31-9e95-58ed-a232-20790da24d7d",
                 date: "5 September",
@@ -9160,7 +9180,8 @@ export const timelineData = [
                 id: "48fadf3d-dd6d-53f4-8650-4598cdf10217",
                 date: "17 October",
                 type: "personal",
-                description: "Samuel Beckett and Suzanne Déchevaux-Dumesnil return to Paris.",
+                description:
+                    "Samuel Beckett and Suzanne Déchevaux-Dumesnil return to Paris.",
             },
             {
                 id: "849aa43f-f846-5fd7-b22e-74bd43ae74d1",
@@ -9191,7 +9212,8 @@ export const timelineData = [
                 id: "d919d585-9427-598e-bdd2-ca76873b91ca",
                 date: "13 February",
                 type: "global",
-                description: "Soviet dissident and writer Alexander Solzhenitsyn exiled from the USSR.",
+                description:
+                    "Soviet dissident and writer Alexander Solzhenitsyn exiled from the USSR.",
             },
             {
                 id: "a74fbc0c-1c02-5691-bc53-33e4efd41ebc",
@@ -9361,7 +9383,7 @@ export const timelineData = [
                 type: "personal",
                 description:
                     "Opening of <i>Warten auf Godot</i>, Schiller-Theater, Berlin.",
-           //     image: "https://upload.wikimedia.org/wikipedia/commons/4/47/Bundesarchiv_B_145_Bild-F000894-0009%2C_Berlin%2C_Schiller-Theater.jpg",
+                //     image: "https://upload.wikimedia.org/wikipedia/commons/4/47/Bundesarchiv_B_145_Bild-F000894-0009%2C_Berlin%2C_Schiller-Theater.jpg",
             },
             {
                 id: "e14d2082-bb09-57d7-84da-bcfd594a869d",
@@ -9431,7 +9453,8 @@ export const timelineData = [
                 id: "8fdb98ad-7f6b-56be-bc99-78de442a21eb",
                 date: "11 June - 23 July",
                 type: "personal",
-                description: "Samuel Beckett and Suzanne Déchevaux-Dumesnil holiday in Tangier.",
+                description:
+                    "Samuel Beckett and Suzanne Déchevaux-Dumesnil holiday in Tangier.",
             },
             {
                 id: "6d764d92-a9aa-5317-8e3f-f61e2cdabe3b",
@@ -9779,12 +9802,12 @@ export const timelineData = [
                 description:
                     "BBC broadcast of<b> </b><i>Not I,</i><b> </b><i>Ghost Trio </i>and<b> </b><i>. . . but the clouds . . . </i>, as <i>Shades.</i>",
             },
-            //{
+            // {
             //    id:
             //    date: "17 April",
             //    type: "global",
             //    description: "Death of Mary Hutchinson in London.",
-            //},    
+            // },
             {
                 id: "532a6479-19fc-5311-9ebd-67291c0de951",
                 date: "18 April - 9 May",
@@ -10012,7 +10035,8 @@ export const timelineData = [
                 id: "ea0147a4-29e8-5344-8cec-a5486af5e255",
                 date: "8 December",
                 type: "personal",
-                description: "Samuel Beckett and Suzanne Déchevaux-Dumesnil travel to Tangier.",
+                description:
+                    "Samuel Beckett and Suzanne Déchevaux-Dumesnil travel to Tangier.",
             },
         ],
     },
@@ -10023,7 +10047,8 @@ export const timelineData = [
                 id: "9663bca7-185f-5ed9-8448-6d3a06b4d96c",
                 date: "2 January",
                 type: "personal",
-                description: "Samuel Beckett and Suzanne Déchevaux-Dumesnil return from Tangier.",
+                description:
+                    "Samuel Beckett and Suzanne Déchevaux-Dumesnil return from Tangier.",
             },
             {
                 id: "f25a95ab-7013-5448-ba95-79c07301e4f1",
@@ -10094,7 +10119,8 @@ export const timelineData = [
                 id: "82427d00-becf-5abc-9364-acffa3778022",
                 date: "19 August - 3 September",
                 type: "personal",
-                description: "Samuel Beckett translating <i>Company into French</i>.",
+                description:
+                    "Samuel Beckett translating <i>Company into French</i>.",
             },
             {
                 id: "2ef6aa13-317b-5875-9e4d-9787c9cece1d",
@@ -10400,7 +10426,8 @@ export const timelineData = [
                 description:
                     "Space Shuttle Columbia launched by the US; returns to earth 15 April.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/4/41/Space_Shuttle_Columbia_launching.jpg",
-                caption: "Launch of the Space Shuttle Columbia, 12 April 1981. By NASA. Public domain.",
+                caption:
+                    "Launch of the Space Shuttle Columbia, 12 April 1981. By NASA. Public domain.",
             },
             {
                 id: "9dc4fcaa-0a04-5974-b2d6-5602dc7fb4be",
@@ -10609,7 +10636,7 @@ export const timelineData = [
                 description:
                     "Samuel Beckett sends <i>Nacht und Träume</i> to SDR under the provisional title <i>Nachtstück</i>.",
             },
-            //{
+            // {
             //    id: "",
             //    date: "15 June",
             //    type: "global",
@@ -10740,7 +10767,8 @@ export const timelineData = [
                 id: "c2563f37-aab1-50c7-951a-6f3b09837717",
                 date: "10 January",
                 type: "personal",
-                description: "<i>The New Yorker</i> publishes <i>Catastrophe.</i> ",
+                description:
+                    "<i>The New Yorker</i> publishes <i>Catastrophe.</i> ",
             },
             {
                 id: "0ebc9214-3125-57a4-9b0c-39879a612225",
@@ -11134,7 +11162,7 @@ export const timelineData = [
                 date: "16 April",
                 type: "personal",
                 description:
-                    'Richard Ellmann gives his lecture on <i>Samuel Beckett, Nayman of Noland</i> at the Library of Congress, Washington, D.C.',
+                    "Richard Ellmann gives his lecture on <i>Samuel Beckett, Nayman of Noland</i> at the Library of Congress, Washington, D.C.",
             },
             {
                 id: "f9ca275f-7840-5b47-99dd-7d3706a054c8",
