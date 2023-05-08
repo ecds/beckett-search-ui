@@ -9802,12 +9802,12 @@ export const timelineData = [
                 description:
                     "BBC broadcast of<b> </b><i>Not I,</i><b> </b><i>Ghost Trio </i>and<b> </b><i>. . . but the clouds . . . </i>, as <i>Shades.</i>",
             },
-            // {
-            //    id:
-            //    date: "17 April",
-            //    type: "global",
-            //    description: "Death of Mary Hutchinson in London.",
-            // },
+            {
+                id: "36177640-ea15-5743-8a17-e7b21abf14a9",
+                date: "17 April",
+                type: "global",
+                description: "Death of Mary Hutchinson in London.",
+            },
             {
                 id: "532a6479-19fc-5311-9ebd-67291c0de951",
                 date: "18 April - 9 May",
@@ -10636,12 +10636,12 @@ export const timelineData = [
                 description:
                     "Samuel Beckett sends <i>Nacht und Träume</i> to SDR under the provisional title <i>Nachtstück</i>.",
             },
-            // {
-            //    id: "",
-            //    date: "15 June",
-            //    type: "global",
-            //    description: "End of the Falklands war.",
-            // },
+            {
+                id: "bbaa657e-9ea4-5fc2-8e9e-0e2e010c381b",
+                date: "15 June",
+                type: "global",
+                description: "End of the Falklands war.",
+            },
             {
                 id: "dbeccb12-9712-59d1-956d-e9ec1a909f7d",
                 date: "19 June",
