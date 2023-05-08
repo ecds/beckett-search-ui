@@ -8,6 +8,7 @@ import moment from "moment";
  * @returns {string} Formatted date string
  */
 export const formatDate = (date) => {
+    if (!date) return undefined;
     const d = new Date(date);
     const month = new Intl.DateTimeFormat("en-US", {
         month: "long",
