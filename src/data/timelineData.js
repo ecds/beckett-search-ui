@@ -7362,7 +7362,7 @@ export const timelineData = [
                 id: "f216f669-3cd8-54ea-a8fd-22915f1103e8",
                 date: "6 October",
                 description:
-                    "<i>Cascando</i> broadcast on the BBC Third Program. ",
+                    "<i>Cascando</i> broadcast on the BBC <i>Third Program</i>. ",
                 type: "personal",
             },
             {
@@ -7571,7 +7571,7 @@ export const timelineData = [
                 id: "b38f6277-9671-56ab-a1ab-1b7a0209c368",
                 date: "November",
                 description:
-                    "Annales (Toulouse) publishes an extract from <i>Mercier et Camier</i> (as yet unpublished novel, 1946).",
+                    "<i>Annales</i> (Toulouse) publishes an extract from <i>Mercier et Camier</i> (as yet unpublished novel, 1946).",
                 type: "personal",
             },
             {
@@ -7615,7 +7615,7 @@ export const timelineData = [
                 date: "10 January",
                 type: "personal",
                 description:
-                    "Comédie et actes divers (<i>Comédie</i>, <i>Va et vient</i>, <i>Cascando</i>, <i>Paroles et musique</i>, <i>Dis Joe</i>, <i>Acte sans paroles II</i>) printed by Editions de Minuit.",
+                    "<i>Comédie et actes divers</i> (<i>Comédie</i>, <i>Va et vient</i>, <i>Cascando</i>, <i>Paroles et musique</i>, <i>Dis Joe</i>, <i>Acte sans paroles II</i>) printed by Editions de Minuit.",
             },
             {
                 id: "734c0b5a-d819-5d3a-83ff-6c3a0f9c8268",
@@ -7623,19 +7623,19 @@ export const timelineData = [
                 type: "global",
                 description: "Death of Alberto Giacometti.",
             },
-            {
-                id: "97b09c9f-a88c-5a1d-87b6-67f49b1023ed",
-                date: "14 January",
-                type: "global",
-                description:
-                    "David Jones changes his last name to Bowie to avoid confusion with Davy Jones (the Monkees).",
-            },
+            //{
+            //    id: "97b09c9f-a88c-5a1d-87b6-67f49b1023ed",
+            //    date: "14 January",
+            //    type: "global",
+            //    description:
+            //        "David Jones changes his last name to Bowie to avoid confusion with Davy Jones (the Monkees).",
+            //},
             {
                 id: "eb6dd79e-8fb7-54af-a423-0f647ac9fb96",
                 date: "16 January",
                 type: "personal",
                 description:
-                    "A Beckett-Abend directed by Deryk Mendel at the Schiller-Theater Werkstatt, Berlin (<i>Alle, die da fallen</i>, <i>Kommen und Gehen</i>, and <i>Ake ohne Worte II).</i>",
+                    "A <i>Beckett-Abend</i> directed by Deryk Mendel at the Schiller-Theater Werkstatt, Berlin (<i>Alle, die da fallen</i>, <i>Kommen und Gehen</i>, and <i>Ake ohne Worte II).</i>",
                 image: "https://upload.wikimedia.org/wikipedia/commons/6/67/DBPB_1956_152_Berliner_Stadtbilder.jpg",
                 caption:
                     "Schiller-Theatre, Berlin, August 1953. Attribution: Bundesarchiv, B 145 Bild-F000894-0009 / Gielow / CC-BY-SA 3.0",
@@ -7665,7 +7665,7 @@ export const timelineData = [
                 date: "27 January",
                 type: "personal",
                 description:
-                    "Recording of readings from Samuel Beckett's poems by Jack MacGowran and Denis Hawthorn for BBC Third Programme. Second session on 9 February.",
+                    "Recording of readings from Samuel Beckett's poems by Jack MacGowran and Denis Hawthorne for BBC <i>Third Programme</i>. Second session on 9 February.",
             },
             {
                 id: "d9458428-487f-5f2c-bd69-d92a0ec48c37",
@@ -7686,14 +7686,14 @@ export const timelineData = [
                 date: "28 February",
                 type: "personal",
                 description:
-                    "Spectacle Beckett-Ionesco-Pinget (BIP) opens at L'Odéon-Théâtre de France: <i>Va et vient</i>, <i>Comédie</i>, Robert Pinget's <i>L'Hypothèse</i>, Eugène Ionesco, <i>La Lacune</i> and <i>Délire à deux</i>.",
+                    "<i>Spectacle Beckett-Ionesco-Pinget</i> (<i>BIP</i>) opens at L'Odéon-Théâtre de France: <i>Va et vient</i>, <i>Comédie</i>, Robert Pinget's <i>L'Hypothèse</i>, Eugène Ionesco, <i>La Lacune</i> and <i>Délire à deux</i>.",
             },
             {
                 id: "acd93cf7-fb03-5fbf-8329-a9d23f46ea7f",
                 date: "8 March",
                 type: "personal",
                 description:
-                    "Samuel Beckett's poems broadcast on the BBC Third Programme.",
+                    "Samuel Beckett's poems broadcast on the BBC <i>Third Programme</i>.",
             },
             {
                 id: "4c04ddb5-e048-5aba-8405-a230a2b8d95d",
@@ -7738,7 +7738,7 @@ export const timelineData = [
                 date: "18 April",
                 type: "personal",
                 description:
-                    "Eh Joe directed by Alan Schneider broadcast on WNET-TV, New York. Samuel Beckett attends Roger Blin's production of Jean Genet's <i>Paravents</i> at the Odéon-Théâtre de France.",
+                    "<i>Eh Joe</i> directed by Alan Schneider broadcast on WNET-TV, New York. Samuel Beckett attends Roger Blin's production of Jean Genet's <i>Paravents</i> at the Odéon-Théâtre de France.",
             },
             {
                 id: "492bee32-1200-5437-8188-ca316be4f1d3",
@@ -7778,13 +7778,13 @@ export const timelineData = [
                 date: "1 - 30 July",
                 type: "global",
                 description:
-                    "An exhibition: Henri Hayden: his Cezanne and Cubist Period, held at Roland, Browse, and Delbanco gallery, London.",
+                    "An exhibition, <i>Henri Hayden: his Cezanne and Cubist Period</i>, held at Roland, Browse, and Delbanco gallery, London.",
             },
             {
                 id: "6602fb4b-ae27-56ef-ab33-639a86706779",
                 date: "4 July",
                 type: "personal",
-                description: "Eh Joe broadcast on BBC TV2.",
+                description: "<i>Eh Joe</i> broadcast on BBC TV2.",
             },
             {
                 id: "c3517bb9-c8da-5665-aa10-fd5639488ea0",
@@ -7819,7 +7819,7 @@ export const timelineData = [
                 date: "3 October",
                 type: "personal",
                 description:
-                    "Opening of BIP 66, to play on Monday evenings at the Odéon-Théâtre de France.",
+                    "Opening of <i>BIP 66</i>, to play on Monday evenings at the Odéon-Théâtre de France.",
             },
             {
                 id: "78be6704-52e4-518e-a930-1bfd9905295b",
@@ -7834,14 +7834,14 @@ export const timelineData = [
                 id: "00e2a17d-f74e-50e8-9686-43309a8bb01d",
                 date: "11 October",
                 type: "personal",
-                description: "Play broadcast on the BBC Third Programme.",
+                description: "<i>Play</i> broadcast on the BBC <i>Third Programme</i>.",
             },
             {
                 id: "7c856b2d-14d9-59e4-80ca-850934d6bebc",
                 date: "31 October",
                 type: "personal",
                 description:
-                    "Bing printed by Editions de Minuit in a limited edition<i>.</i>",
+                    "<i>Bing</i> printed by Éditions de Minuit in a limited edition<i>.</i>",
             },
             {
                 id: "1c85e13f-93f4-592e-a7cd-c11d41b827e0",
@@ -8332,7 +8332,7 @@ export const timelineData = [
             {
                 id: "0db67900-c2a4-5806-a8f8-bbbf4d1c8352",
                 date: "26 December",
-                type: "global",
+                type: "personal",
                 description:
                     "French translation of <i>Watt</i> printed by Minuit.",
             },
@@ -8517,9 +8517,9 @@ export const timelineData = [
                 type: "global",
                 description:
                     "Hundreds of thousands of people across the United States demonstrate in the Moratorium to End the War in Vietnam.",
-                image: "https://upload.wikimedia.org/wikipedia/commons/e/e1/VietnamWar2ndMoratorium-WashDC-19691115a-DrDennisBogdan.jpg",
-                caption:
-                    "Vietnam War Second Moratorium, 1969. By Dr. Dennis Bogdan, via Wikimedia Commons under CC-BY-SA 4.0/GNU.",
+             //   image: "https://upload.wikimedia.org/wikipedia/commons/e/e1/VietnamWar2ndMoratorium-WashDC-19691115a-DrDennisBogdan.jpg",
+             //   caption:
+             //       "Vietnam War Second Moratorium, 1969. By Dr. Dennis Bogdan, via Wikimedia Commons under CC-BY-SA 4.0/GNU.",
             },
             {
                 id: "9f155e38-c5f3-5512-9e26-98348f2f2203",
@@ -8565,7 +8565,7 @@ export const timelineData = [
                 date: "By 11 January",
                 type: "personal",
                 description:
-                    "Samuel Beckett withdraws <i>Breath</i> from productions of <i>Oh Calcutta </i>outside the United States.",
+                    "Samuel Beckett withdraws <i>Breath</i> from productions of <i>Oh! Calcutta! </i>outside the United States.",
             },
             {
                 id: "96944671-1351-53e5-826f-a5ae3d290046",
@@ -9107,7 +9107,7 @@ export const timelineData = [
                 date: "June",
                 type: "personal",
                 description:
-                    "<i>Hermathena</i> publishes Samuel Beckett's doggerel version of the maxims of Chamfort.",
+                    "<i>Hermathena</i> publishes Samuel Beckett's doggerel versions of some of the maxims of Chamfort.",
             },
             // {
             //    id: "8afc644c-7809-5185-abe6-3c0b859d0146",
@@ -9482,7 +9482,7 @@ export const timelineData = [
                 date: "13 October - 1 November",
                 type: "personal",
                 description:
-                    "Samuel Beckett in London for three weeks of rehearsals with Peggy Ashcroft and Peter Hall, Old Vic, National Theatre.",
+                    "Samuel Beckett in London for three weeks of rehearsals of <i>Happy Days</i> with Peggy Ashcroft and Peter Hall, Old Vic, National Theatre.",
             },
             // {
             //    id: "305fbda1-af54-5f24-8d7b-800b78e1bf38",
@@ -10120,7 +10120,7 @@ export const timelineData = [
                 date: "19 August - 3 September",
                 type: "personal",
                 description:
-                    "Samuel Beckett translating <i>Company into French</i>.",
+                    "Samuel Beckett translating <i>Company</i> into French.",
             },
             {
                 id: "2ef6aa13-317b-5875-9e4d-9787c9cece1d",
@@ -11107,7 +11107,7 @@ export const timelineData = [
                 date: "25 December",
                 type: "personal",
                 description:
-                    "Samuel Beckett exceptionally allows staged production of <i>Eh Joe</i> by Rick Cluchey.",
+                    "Samuel Beckett allows staged production of <i>Eh Joe</i> by Rick Cluchey.",
             },
         ],
     },
