@@ -45,13 +45,7 @@ function LettersResults({ data, offset, onSort, sortState }) {
                                 </Link>
                             </td>
                             <td>
-                                <ul>
-                                    {letter?.fields?.recipients?.map(
-                                        (recipient) => (
-                                            <li key={recipient}>{recipient}</li>
-                                        ),
-                                    )}
-                                </ul>
+                                <ul>{letter?.fields?.recipients}</ul>
                             </td>
                             <td>
                                 <ul>
