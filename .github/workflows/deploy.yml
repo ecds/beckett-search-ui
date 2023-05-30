@@ -42,6 +42,7 @@ jobs:
     - name: Set up Key
       run: |
         mkdir ~/.ssh
+        touch ~/.ssh/id_rsa
         'echo "$SSH_KEY" >> ~/.ssh/id_rsa'
         chmod 400 ~/.ssh/id_rsa
     - name: Copy files to server
