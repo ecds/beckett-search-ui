@@ -36,15 +36,15 @@ jobs:
       with:
         node-version: 16
     - name: Install and Build
-        run: |
-          npm install
-          npm run build
+      run: |
+        npm install
+        npm run build
     - name: Set up Key
-        run: |
-          mkdir ~/.ssh
-          'echo "$SSH_KEY" >> ~/.ssh/id_rsa'
-          chmod 400 ~/.ssh/id_rsa
+      run: |
+        mkdir ~/.ssh
+        'echo "$SSH_KEY" >> ~/.ssh/id_rsa'
+        chmod 400 ~/.ssh/id_rsa
     - name: Copy files to server
-        run: |
-          echo $REMOTE_HOST
-          'rsync -aze "ssh -o StrictHostKeyChecking=no" dist/* $REMOTE_USER@$REMOTE_HOST:~/$REMOTE_HOST/'
+      run: |
+        echo $REMOTE_HOST
+        'rsync -aze "ssh -o StrictHostKeyChecking=no" dist/* $REMOTE_USER@$REMOTE_HOST:~/$REMOTE_HOST/'
