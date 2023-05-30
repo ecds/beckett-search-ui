@@ -3,6 +3,8 @@ import { EuiFlexGroup, EuiFlexItem } from "@elastic/eui";
 import "./Footer.css";
 import logo from "../assets/EU_shield_hz_rv.png";
 
+const YEAR = new Date().getFullYear();
+
 /**
  * Footer component containing branding.
  *
@@ -23,7 +25,8 @@ function Footer() {
                         404.727.6123
                     </p>
                     <p>
-                        COPYRIGHT © 2017 EMORY UNIVERSITY - ALL RIGHTS RESERVED
+                        COPYRIGHT © {YEAR} EMORY UNIVERSITY - ALL RIGHTS
+                        RESERVED
                     </p>
                 </EuiFlexItem>
             </EuiFlexGroup>
