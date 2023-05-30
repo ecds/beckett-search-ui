@@ -3,6 +3,7 @@
     --primary-dark: #27738c;
     --primary-transparent: rgba(99, 178, 205, 0.15);
     --primary-dark-transparent: rgba(99, 178, 205, 0.25);
+    --primary-light: #fafbfd;
     font-weight: 400;
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -10,6 +11,13 @@
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
 }
+
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 .capital-label {
     text-transform: capitalize;
 }
@@ -18,7 +26,7 @@ sup {
 }
 
 .result-name {
-    background-color: #fafbfd;
+    background-color: var(--primary-light);
     padding: 1rem 0;
     top: 48px;
 }
@@ -29,7 +37,7 @@ h2 {
 }
 
 .static-page-header {
-    background-color: #fafbfd;
+    background-color: var(--primary-light);
     padding: 1rem 0;
     top: 3rem;
     z-index: 1;

@@ -16,7 +16,7 @@
 }
 
 .timeline-year-header {
-    background-color: #fafbfd;
+    background-color: var(--primary-light);
     position: sticky;
     top: -1px;
     z-index: 1;

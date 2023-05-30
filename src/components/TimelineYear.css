@@ -9,7 +9,7 @@
 }
 
 .sticky-timeline-header {
-    background-color: #fafbfd;
+    background-color: var(--primary-light);
     display: flex;
     position: sticky;
     top: 0px;

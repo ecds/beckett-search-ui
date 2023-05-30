@@ -1,0 +1,20 @@
+footer.main-footer {
+    background-color: var(--primary-dark);
+    margin: auto 0 0 0;
+    padding: 2rem;
+    width: 100%;
+}
+
+footer.main-footer img {
+    width: 25vw;
+}
+
+footer.main-footer * {
+    text-align: center;
+}
+
+footer.main-footer p {
+    color: var(--primary-light);
+    font-size: 1.2rem;
+    padding: 0.75rem 0;
+}
