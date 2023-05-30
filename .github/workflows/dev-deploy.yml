@@ -4,6 +4,7 @@ name: Dev-Deploy
 on:
   push:
     branches:
+      - main
       - develop
 
 jobs:
@@ -24,13 +25,20 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - name: Set REMOTE_HOST for dev
+      if: endsWith(github.ref, '/develop')
+      run: echo "REMOTE_HOST=chercher.ecdsdev.org" >> $GITHUB_ENV
+    - name: Set REMOTE_HOST for prod
+      if: endsWith(github.ref, '/main')
+      run: echo "REMOTE_HOST=chercherbeckettletters.emory.edu" >> $GITHUB_ENV
     - name: Use Node.js 16
       uses: actions/setup-node@v3
       with:
         node-version: 16
-    - run: npm install
-    - run: npm run build
-    - run: mkdir ~/.ssh
-    - run: 'echo "$SSH_KEY" >> ~/.ssh/id_rsa'
-    - run: chmod 400 ~/.ssh/id_rsa
-    - run: 'rsync -aze "ssh -o StrictHostKeyChecking=no" dist/* $REMOTE_USER@$REMOTE_DEV_HOST:~/$REMOTE_DEV_HOST/'
+    - run: |
+        npm install
+        npm run build
+        mkdir ~/.ssh
+        'echo "$SSH_KEY" >> ~/.ssh/id_rsa'
+        chmod 400 ~/.ssh/id_rsa
+        'rsync -aze "ssh -o StrictHostKeyChecking=no" dist/* $REMOTE_USER@$REMOTE_HOST:~/$REMOTE_HOST/'
