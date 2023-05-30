@@ -43,11 +43,9 @@ jobs:
       run: |
         mkdir ~/.ssh
         touch ~/.ssh/id_rsa
-        ls -la ~/
-        ls -la ~/.ssh
         echo "$SSH_KEY" >> ~/.ssh/id_rsa
         chmod 400 ~/.ssh/id_rsa
     - name: Copy files to server
       run: |
         echo $REMOTE_HOST
-        'rsync -aze "ssh -o StrictHostKeyChecking=no" dist/* $REMOTE_USER@$REMOTE_HOST:~/$REMOTE_HOST/'
+        rsync -aze "ssh -o StrictHostKeyChecking=no" dist/* $REMOTE_USER@$REMOTE_HOST:~/$REMOTE_HOST/
