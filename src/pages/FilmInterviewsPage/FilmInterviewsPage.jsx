@@ -76,16 +76,15 @@ export function FilmInterviewsPages() {
                             <EuiPageContentBody>
                                 <p>
                                     The film segments below are excerpts from
-                                    interviews for the documentary Waiting for
-                                    Beckett (1993, Global Village Communication,
+                                    interviews for the documentary <i>Waiting for Beckett</i> (1993, Global Village Communication,
                                     Inc.), co-produced and directed by the late
-                                    John Reilly and Melissa Shaw Smith They are
+                                    John Reilly and Melissa Shaw Smith. They are
                                     used here with the kind permission of Estate
                                     of John Reilly and Global Village
-                                    Communication, Inc.)
+                                    Communication, Inc.
                                 </p>
                                 <p>
-                                    Outtakes, transcriptions and other
+                                    Interviews, transcriptions and other
                                     information about the making of this film
                                     have been deposited in the Rose Library,
                                     Emory University as MSS 1336; the digitized
