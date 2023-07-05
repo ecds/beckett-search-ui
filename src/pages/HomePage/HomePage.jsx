@@ -44,9 +44,9 @@ export function HomePage() {
                                     Welcome to the interactive index for The
                                     Letters of Samuel Beckett. Here you can find
                                     information on all Beckett <b>letters</b> held in
-                                    public archives, such as their physical state and location. You can also research
-                                    <b>entities</b>: people, places and things
-                                    mentioned by Beckett in his letters.
+                                    public archives, such as their physical state and
+                                    location. You can also research <b>entities</b>:
+                                    people, places and things mentioned by Beckett in his letters.
                                 </p>
                                 <EuiButton fill href={useHref("/letters")}>
                                     Search Letters
