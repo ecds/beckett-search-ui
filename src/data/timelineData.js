@@ -1267,7 +1267,7 @@ export const timelineData = [
                 date: "8 November",
                 type: "global",
                 description:
-                    'U.S. President Franklin D. Roosevelt announces the Civil Works Adminstration as part of the "New Deal"',
+                    'U.S. President Franklin D. Roosevelt announces the Civil Works Administration as part of the "New Deal"',
             },
             {
                 id: "2788e359-dafa-58f5-84ad-19e52252639b",
@@ -1295,7 +1295,7 @@ export const timelineData = [
                 date: "5 December",
                 type: "global",
                 description:
-                    "The Twenty-first Amendment to the United States Consitution is ratified: Prohibition is repealed",
+                    "The Twenty-first Amendment to the United States Constitution is ratified: Prohibition is repealed",
             },
             {
                 id: "65efe863-ecb6-536c-902c-4666dc08f695",
@@ -1456,7 +1456,7 @@ export const timelineData = [
                 date: "19 August",
                 type: "global",
                 description:
-                    "90% of the German population approves Hilter's assumption of presidential powers in the 1934 German referendum.",
+                    "90% of the German population approves Hitler's assumption of presidential powers in the 1934 German referendum.",
             },
             {
                 id: "8905731e-0125-584a-b193-cc15c5d45b76",
@@ -2146,7 +2146,7 @@ export const timelineData = [
                 date: "12 May",
                 type: "global",
                 description:
-                    "George VI and Elizabeth are crowed King and Queen of the United Kingdom, the British dominions, and Emperor and Empress of India.",
+                    "George VI and Elizabeth are crowned King and Queen of the United Kingdom, the British dominions, and Emperor and Empress of India.",
             },
             {
                 id: "4abe72d6-6c38-51fa-9b45-aad1da3e86e0",
@@ -2664,7 +2664,7 @@ export const timelineData = [
                 date: "9-10 November",
                 type: "global",
                 description:
-                    "Kristallnacht pomgrom begins in Germany; Jewish shops and synagogues looted and destroyed.",
+                    "Kristallnacht pogrom begins in Germany; Jewish shops and synagogues looted and destroyed.",
             },
             {
                 id: "d0c53a7f-4009-517c-b008-088646da16c9",
@@ -3577,7 +3577,7 @@ export const timelineData = [
                 id: "5e0a16a6-0ee4-5484-9645-ab2f2e0b5062",
                 date: "30 April",
                 type: "global",
-                description: "Adolph Hitler commits suicide.",
+                description: "Adolf Hitler commits suicide.",
             },
             {
                 id: "f8142dcc-50cf-5095-8d3b-aaf7d9e49d1b",
