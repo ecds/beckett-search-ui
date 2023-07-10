@@ -110,7 +110,7 @@ export const timelineData = [
                 id: "964c3dee-be06-5026-be55-0003c9db0f54",
                 date: "3 February",
                 type: "global",
-                description: "United States declares war on Germany",
+                description: "United States declares war on Germany.",
             },
             {
                 id: "70c90475-92ce-516c-a733-416bad4b840e",
@@ -281,7 +281,7 @@ export const timelineData = [
                 id: "3f55a252-575f-58c2-b645-bcb291c8fa49",
                 date: "June",
                 type: "personal",
-                description: "Becomes Senior Exhibitioner at TCD.",
+                description: "Becomes Senior Exhibitioner at Trinity College Dublin.",
             },
         ],
     },
@@ -607,7 +607,7 @@ export const timelineData = [
                 date: "1 October",
                 type: "personal",
                 description:
-                    "Beckett in Dublin to begin duties at beginning of the Michaelmas Term at Trinity College Dublin. Attends Greta Garbo's first talkie, <i>Anna Chris</i>tie, with Georges Pelorson.",
+                    "Beckett in Dublin to begin duties at beginning of the Michaelmas Term at Trinity College Dublin. Attends Greta Garbo's first talkie, <i>Anna Christie</i>, with Georges Pelorson.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Anna_Christie_1930_film.jpg/700px-Anna_Christie_1930_film.jpg",
                 caption: "Poster for Anna Christie, 1930. MGM. Public domain.",
             },
@@ -666,7 +666,7 @@ export const timelineData = [
                 date: "December",
                 type: "personal",
                 description:
-                    "Beckett's Song lyric \"From the Only Poet to a Shining Whore: for Henry Crowder to Sing\" published in Henry Crowder's <i>Henry-Music</i>.",
+                    "Beckett's song lyric \"From the Only Poet to a Shining Whore: for Henry Crowder to Sing\" published in Henry Crowder's <i>Henry-Music</i>.",
             },
         ],
     },
@@ -685,7 +685,7 @@ export const timelineData = [
                 date: "By 25 January",
                 type: "personal",
                 description:
-                    "Sends manuscript of <i>Proust</i> to literary agent J. R. Pinker who refuses to represent it in the US, saying there is not enough time before March publication by Chatto and Windus",
+                    "Sends manuscript of <i>Proust</i> to literary agent J. R. Pinker who refuses to represent it in the U.S., saying there is not enough time before March publication by Chatto and Windus",
             },
             {
                 id: "3ea9e3a3-7781-5712-a820-494b7d6be5eb",
@@ -699,7 +699,7 @@ export const timelineData = [
                 date: "19-21 February",
                 type: "personal",
                 description:
-                    'Performance of "Le Kid," parody of Corneille\'s <i>Le Cid </i>written by Georges Pelorson with Samuel Beckett, at the Peacock Theatre, as the French contribution to the annual theatrical event of the Trinity College Dublin Modern Languages Society.',
+                    'Performance of "Le Kid," a parody of Corneille\'s <i>Le Cid </i>written by Georges Pelorson with Samuel Beckett, at the Peacock Theatre, as the French contribution to the annual theatrical event of the Trinity College Dublin Modern Languages Society.',
             },
             {
                 id: "b9047134-d3e6-5e97-9d90-92fcd9adf9df",
@@ -758,7 +758,7 @@ export const timelineData = [
                 date: "29 June - 27 July",
                 type: "personal",
                 description:
-                    "Travels in France with brother Frank (Rouen, Toulon, LeLavandou (8-12 July), Paris via Digne, Grenoble, Annency, Dijon, and Troyes).",
+                    "Travels in France with brother Frank (Rouen, Toulon, Le Lavandou (8-12 July), Paris via Digne, Grenoble, Annency, Dijon, and Troyes).",
             },
             {
                 id: "473b02f9-c778-55df-bf4d-41145dfac734",
@@ -771,7 +771,7 @@ export const timelineData = [
                 date: "28 July",
                 type: "personal",
                 description:
-                    "Meets Charles Prentice, Chatto and Windus, and proposes a book on Fyodor Dostoevsky.",
+                    "Meets Charles Prentice of Chatto and Windus, and proposes a book on Fyodor Dostoevsky.",
             },
             {
                 id: "e5970649-ec79-5727-bc17-6ef541af59a4",
@@ -851,7 +851,7 @@ export const timelineData = [
                 date: "By 20 December",
                 type: "personal",
                 description:
-                    '<i>Dublin Magazine</i> returns "Enueg." Samuel Beckett sends it to Thomas McGreevy.',
+                    '<i>Dublin Magazine</i> returns "Enueg I." Samuel Beckett sends it to Thomas McGreevy.',
             },
             {
                 id: "ad2558e6-2d5d-5cd7-9089-31724f5c7d98",
@@ -968,7 +968,7 @@ export const timelineData = [
                 date: "8 July",
                 type: "global",
                 description:
-                    "The Dow Jones Industrial Average in the United states reaches its lowest level of the Great Depression.",
+                    "The Dow Jones Industrial Average in the United States reaches its lowest level of the Great Depression.",
             },
             {
                 id: "a629186a-f596-50bf-bb6b-dcfbcb56c07c",
@@ -1002,7 +1002,7 @@ export const timelineData = [
                 id: "478effbf-ba18-5c13-9a9b-d3ba7e6644f3",
                 date: "27 July",
                 type: "personal",
-                description: "Prentice returns Samuel Beckett's poems.",
+                description: "Charles Prentice returns Samuel Beckett's poems.",
             },
             {
                 id: "5e3056f6-f54e-5676-823f-b364f00e049d",
@@ -1030,7 +1030,7 @@ export const timelineData = [
                 date: "August",
                 type: "personal",
                 description:
-                    "This Quarter publishes Samuel Beckett's translations of work by Paul Eluard, André Breton, and René Crevel.",
+                    "<i>This Quarter</i> publishes Samuel Beckett's translations of work by Paul Eluard, André Breton, and René Crevel.",
             },
             {
                 id: "cbf05e11-8220-5bd3-ba3e-a85bda741596",
