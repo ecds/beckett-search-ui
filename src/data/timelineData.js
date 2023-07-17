@@ -1375,7 +1375,7 @@ export const timelineData = [
                 date: "23 May",
                 type: "personal",
                 description:
-                    "<i>The Spectator</i> publishes "Schwabenstreich," Samuel Beckett\'s review of the English translation, <i>Mozart on the Journey to Prague</i>, written by Eduard Mörike.",
+                    '<i>The Spectator</i> publishes "Schwabenstreich," Samuel Beckett\'s review of the English translation, <i>Mozart on the Journey to Prague</i>, written by Eduard Mörike.',
             },
             {
                 id: "d3451e15-19b0-513c-83e5-a2df25607840",
