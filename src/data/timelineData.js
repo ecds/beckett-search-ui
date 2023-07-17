@@ -75,11 +75,8 @@ export const timelineData = [
                 date: "Fall",
                 type: "personal",
                 description:
-                    "Samuel Beckett is a pupil at Earlsfort House School, Dublin",
-                image: "https://iiif.ucd.ie/loris/ucdlib:48001/full/800,/0/default.jpg",
-                caption:
-                    '"Earlsfort House, Earlsfort Terrace for MEPC," held by Assoc. Prof. Joseph Brady. © Unknown. Digital content by Dr. Joseph Brady, published by UCD Library, University College Dublin https://doi.org/10.7925/drs1.ucdlib_47334',
-            },
+                    "Samuel Beckett is a pupil at Earlsfort House School, Dublin.",
+                },
         ],
     },
     {
@@ -293,7 +290,7 @@ export const timelineData = [
                 date: "January",
                 type: "personal",
                 description:
-                    "Samuel Beckett begins private study of Italian with Bianca Esposito.",
+                    "Samuel Beckett begins private study of Italian with Bianca Esposito in Dublin.",
             },
             {
                 id: "06231b72-6f49-5b15-9248-c3df77cfbf88",
@@ -504,7 +501,7 @@ export const timelineData = [
                 date: "28 November",
                 type: "personal",
                 description:
-                    "Samuel Beckett returns to Paris to take up position as exchange lecteur at Ecole Normale Supérieure. Georges Pelorson arrives in Dublin in early December to take up position as exchange lecteur at TCD in the Hilary term (January 1930).",
+                    "Samuel Beckett returns to Paris to take up position as exchange lecteur at Ecole Normale Supérieure. Georges Pelorson arrives in Dublin in early December to take up position as exchange lecturer at TCD in the Hilary term (January 1930).",
             },
             {
                 id: "b29b8feb-81d6-5736-8db4-9bd084fd534f",
@@ -1144,14 +1141,14 @@ export const timelineData = [
                 date: "1 April",
                 type: "global",
                 description:
-                    "Germans told to boycott Jewish shops and businesses",
+                    "Germans told to boycott Jewish shops and businesses.",
             },
             {
                 id: "750b41bf-96e4-565c-9314-15faffce888b",
                 date: "15 April",
                 type: "personal",
                 description:
-                    "Bicycles through Malahide, the Portrane estuary, and Swords.",
+                    "Samuel Beckett bicycles through Malahide, the Portrane estuary, and Swords.",
             },
             {
                 id: "fb4860e7-b9ef-50b6-8084-a83c6ff595a5",
@@ -1165,7 +1162,7 @@ export const timelineData = [
                 date: "26 April",
                 type: "global",
                 description:
-                    "Establishment of the Gestapo secret police in Germany",
+                    "Establishment of the Gestapo secret police in Germany.",
             },
             {
                 id: "5dad0dc2-dbab-51f5-9119-8ba3d21b3f59",
@@ -1267,7 +1264,7 @@ export const timelineData = [
                 date: "8 November",
                 type: "global",
                 description:
-                    'U.S. President Franklin D. Roosevelt announces the Civil Works Administration as part of the "New Deal"',
+                    'U.S. President Franklin D. Roosevelt announces the Civil Works Administration as part of the "New Deal."',
             },
             {
                 id: "2788e359-dafa-58f5-84ad-19e52252639b",
@@ -1295,7 +1292,7 @@ export const timelineData = [
                 date: "5 December",
                 type: "global",
                 description:
-                    "The Twenty-first Amendment to the United States Constitution is ratified: Prohibition is repealed",
+                    "The Twenty-first Amendment to the United States Constitution is ratified: Prohibition is repealed.",
             },
             {
                 id: "65efe863-ecb6-536c-902c-4666dc08f695",
@@ -1378,7 +1375,7 @@ export const timelineData = [
                 date: "23 May",
                 type: "personal",
                 description:
-                    'The Spectator publishes "Schwabenstreich," Samuel Beckett\'s review of the English translation, <i>Mozart on the Journey to Prague</i>, written by Eduard Mörike.',
+                    "<i>The Spectator</i> publishes "Schwabenstreich," Samuel Beckett\'s review of the English translation, <i>Mozart on the Journey to Prague</i>, written by Eduard Mörike.",
             },
             {
                 id: "d3451e15-19b0-513c-83e5-a2df25607840",
@@ -1476,7 +1473,7 @@ export const timelineData = [
                 id: "57c27054-688d-5109-970e-9b639f8fa3db",
                 date: "19 September",
                 type: "global",
-                description: "The Soviet Union joins the League of Nations",
+                description: "The Soviet Union joins the League of Nations.",
             },
             {
                 id: "a9793383-604c-5920-84b2-0a2cbabca1c8",
@@ -1675,7 +1672,7 @@ export const timelineData = [
                 date: "By 25 December",
                 type: "personal",
                 description:
-                    "Samuel Beckett returns to Dublin. Ill with pleurisy.",
+                    "Samuel Beckett returns to Dublin. Sick with pleurisy.",
             },
         ],
     },
@@ -1700,7 +1697,7 @@ export const timelineData = [
                 date: "29 January",
                 type: "global",
                 description:
-                    "Death of George V, King of the United Kingdom and the British Dominions and Emperor of India",
+                    "Death of George V, King of the United Kingdom and the British Dominions and Emperor of India.",
             },
             {
                 id: "d13f1a95-53f6-523a-9631-5ccdd1899145",
@@ -1727,7 +1724,7 @@ export const timelineData = [
                 date: "7 March",
                 type: "global",
                 description:
-                    "Germans occupy the Rhineland in violation of the Treaty of Versailles and Locarno Treaties.",
+                    "Germans occupy the Rhineland in violation of the Locarno Treaties and the Treaty of Versailles.",
             },
             {
                 id: "d3b896d5-5cd5-540b-94a6-3613339ceead",
@@ -2080,7 +2077,7 @@ export const timelineData = [
                 date: "By 20 March",
                 type: "personal",
                 description:
-                    "Tells George Reavey to reclaim <i>Murphy</i> from Houghton- Mifflin.",
+                    "Tells George Reavey to reclaim <i>Murphy</i> from Houghton-Mifflin.",
             },
             {
                 id: "51520596-1d8a-567d-be9f-4bb56327a858",
@@ -2577,7 +2574,7 @@ export const timelineData = [
                 date: "July",
                 type: "global",
                 description:
-                    "The Maulthausen concentration camp is built in Austria",
+                    "The Maulthausen concentration camp is built in Austria.",
             },
             {
                 id: "926d4e73-bf76-5caa-bcb6-47c175f43275",
@@ -2703,7 +2700,7 @@ export const timelineData = [
                 date: "Early March",
                 type: "personal",
                 description:
-                    "Ill with flu for two weeks. Writes to Joyce from 12 Square Port Royal, 5 March.",
+                    "Sick with flu for two weeks. Writes to Joyce from 12 Square Port Royal, 5 March.",
             },
             {
                 id: "3c9f252b-b174-530e-9368-195c91c253fd",
@@ -2766,7 +2763,7 @@ export const timelineData = [
                 date: "23 August",
                 type: "global",
                 description:
-                    "The Molotov-Ribbentrop Pact is signed between Germany and the Soviet Union, a neutrality treat that divides spheres of influence.",
+                    "The Molotov-Ribbentrop Pact is signed between Germany and the Soviet Union, a neutrality treaty that divides spheres of influence.",
             },
             {
                 id: "f6907082-aeaf-52d0-ae84-38888f694ce0",
@@ -2822,7 +2819,7 @@ export const timelineData = [
                 date: "By 6 December",
                 type: "personal",
                 description:
-                    "Expects to be called to active service, but only receives acknowledgement of his willingness to serve. Translates all but four chapters of <i>Murphy </i>into French.",
+                    "Expects to be called to active service, but only receives acknowledgement of his willingness to serve. All but four chapters of <i>Murphy </i> have been translated into French.",
             },
         ],
     },
