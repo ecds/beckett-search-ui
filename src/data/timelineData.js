@@ -8836,7 +8836,7 @@ export const timelineData = [
                     "Samuel Beckett views the <i>Beheading of St. John the Baptist </i>by Caravaggio in St. John's Co-Cathedral, Valletta.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/The_Beheading_of_Saint_John-Caravaggio_%281608%29.jpg/800px-The_Beheading_of_Saint_John-Caravaggio_%281608%29.jpg?20110515195128",
                 caption:
-                    '"The Beheading of Saint John" by Caravaggio, 1606, St. John's Co-Cathedral in Valletta. Public domain.',
+                    "<i>The Beheading of Saint John by Caravaggio</i>, 1606, St. John's Co-Cathedral in Valletta. Public domain.",
             },
             {
                 id: "ca04e845-cebf-51f5-9461-8c89684dfd8f",
