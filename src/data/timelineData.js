@@ -3286,7 +3286,7 @@ export const timelineData = [
                 date: "2 December",
                 type: "global",
                 description:
-                    "Enrico Fermi initiates the Manhattan Project to establish the first self sustaining nuclear chain reaction, University of Chicago",
+                    "Enrico Fermi initiates the Manhattan Project to establish the first self-sustaining nuclear chain reaction, University of Chicago.",
             },
         ],
     },
@@ -5255,7 +5255,7 @@ export const timelineData = [
                 id: "244b2b65-f5fd-5a95-ae76-c084b7b8bbbe",
                 date: "27 May",
                 description:
-                    "France and Vietnam agree to a ceasefire, marking the end of the French Indochina War.",
+                    "France and Vietnam agree to a ceasefire, marking the end of the First Indochina War.",
                 type: "global",
             },
             {
@@ -8830,13 +8830,13 @@ export const timelineData = [
             },
             {
                 id: "57180e3d-8530-5cf0-b518-21456282aa2c",
-                date: "?20 October",
+                date: "circa 20 October",
                 type: "personal",
                 description:
                     "Samuel Beckett views the <i>Beheading of St. John the Baptist </i>by Caravaggio in St. John's Co-Cathedral, Valletta.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/The_Beheading_of_Saint_John-Caravaggio_%281608%29.jpg/800px-The_Beheading_of_Saint_John-Caravaggio_%281608%29.jpg?20110515195128",
                 caption:
-                    "<i>The Beheading of Saint John</i> by Caravaggio, 1606, St. John's Co-Cathedral in Valletta. Public domain.",
+                    '"The Beheading of Saint John" by Caravaggio, 1606, St. John's Co-Cathedral in Valletta. Public domain.',
             },
             {
                 id: "ca04e845-cebf-51f5-9461-8c89684dfd8f",
@@ -9645,7 +9645,7 @@ export const timelineData = [
                 description: "Death of Mao Zedong in Beijing.",
                 image: "https://upload.wikimedia.org/wikipedia/commons/b/b6/Mao_Zedong_in_front_of_crowd.jpg",
                 caption:
-                    "Mao Zedong, from <i>Quotations from Chairman Mao Tse-Tung</i>. The People's Republic of China Printing Office. Public domain.",
+                    "Mao Zedong, from <i>Quotations from Chairman Mao Tse-Tung.</i> The People's Republic of China Printing Office. Public domain.",
             },
             {
                 id: "a4d51458-1ef8-5d8e-9bba-409f7810d97f",
