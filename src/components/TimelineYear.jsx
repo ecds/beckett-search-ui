@@ -22,6 +22,24 @@ appendIconComponentCache({
 });
 
 /**
+ * React component to render html image caption.
+ *
+ * @param {object} props React functional components props object
+ * @param {string} props.content String that could contain HTML
+ * @returns {React.Component} React functional component for a caption
+ */
+function ImageCaption({ content }) {
+    return (
+        <span
+            // eslint-disable-next-line react/no-danger
+            dangerouslySetInnerHTML={{
+                __html: content,
+            }}
+        />
+    );
+}
+
+/**
  * React component for displaying a timeline for a year.
  * Much of the intersection observer logic is based on
  * https://developer.chrome.com/blog/sticky-headers/
@@ -132,7 +150,11 @@ function TimelineYear({ data, root, setCurrentYear, docHeightState }) {
                                             size="l"
                                             src={event.image}
                                             alt=""
-                                            caption={event.caption}
+                                            caption={
+                                                <ImageCaption
+                                                    content={event.caption}
+                                                />
+                                            }
                                             allowFullScreen
                                             fullScreenIconColor="dark"
                                         />
