@@ -71,7 +71,7 @@ export const lettersSearchConfig = {
             display: "CustomListFacet",
         }),
         new RefinementSelectFacet({
-            field: "language",
+            field: "languages",
             identifier: "language",
             label: "Language",
             multipleSelect: true,
