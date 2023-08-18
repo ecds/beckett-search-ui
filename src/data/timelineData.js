@@ -337,7 +337,7 @@ export const timelineData = [
             },
             {
                 id: "13029872-6deb-5ce4-bd26-72df62fe7c5f",
-                date: "20 April - August",
+                date: "20 April-August",
                 type: "personal",
                 description:
                     "Takes first trip to Italy. Lives in Florence, spends time with the Esposito family; reads Dante with Bianca Esposito.",
@@ -380,7 +380,7 @@ export const timelineData = [
         events: [
             {
                 id: "1b9c4405-d537-567e-a3ca-139d1a0f2df2",
-                date: "January - July",
+                date: "January-July",
                 type: "personal",
                 description:
                     "Teaches at Campbell College, Belfast, an interim post arranged by Professor Thomas Rudmose-Brown.",
@@ -752,7 +752,7 @@ export const timelineData = [
             },
             {
                 id: "c3212b54-f609-5997-a541-f77a59af7767",
-                date: "29 June - 27 July",
+                date: "29 June-27 July",
                 type: "personal",
                 description:
                     "Travels in France with brother Frank (Rouen, Toulon, Le Lavandou (8-12 July), Paris via Digne, Grenoble, Annency, Dijon, and Troyes).",
@@ -1984,7 +1984,7 @@ export const timelineData = [
                 date: "By 18 January",
                 type: "personal",
                 description:
-                    "Learns that Richard Church, a reader for Dent, has written positively about <i>Murphy </i>to George Reavey. Beckett meets Axel Kaun and film comedian Josef Eichheim.",
+                    "Learns that Richard Church, a reader for Dent, has written positively about <i>Murphy</i> to George Reavey. Beckett meets Axel Kaun and film comedian Josef Eichheim.",
             },
             {
                 id: "76a55aa8-148b-5f71-a7d2-b7e5a3c41817",
@@ -2068,7 +2068,7 @@ export const timelineData = [
             },
             {
                 id: "9e851341-c49d-50c9-bde5-e855274874b5",
-                date: "5 March - 2 April",
+                date: "5 March-2 April",
                 type: "personal",
                 description: "In Munich. From 6 March, the Pension Romana.",
             },
@@ -2651,7 +2651,7 @@ export const timelineData = [
             },
             {
                 id: "3245ac3b-56f6-56c0-813d-9837dd40f7da",
-                date: "on or before 24 October",
+                date: "On or before 24 October",
                 type: "personal",
                 description:
                     'Writes ten poems in French and half-finishes a French version of "Love and Lethe." Writes "Les Deux Besoins" which he gives to Freundlich.',
@@ -2803,7 +2803,7 @@ export const timelineData = [
             },
             {
                 id: "ca5a3767-729a-55de-8fc4-8b5444097ee0",
-                date: "17 September - 10 October",
+                date: "17 September-10 October",
                 type: "global",
                 description:
                     "The Soviet Union invades Poland. It demands that Estonia, Latvia and Lithuania permit Soviet military bases within their borders.",
@@ -2928,7 +2928,7 @@ export const timelineData = [
             },
             {
                 id: "c45f6fca-174e-5907-88f4-602e480538f5",
-                date: "mid-June",
+                date: "Mid-June",
                 type: "personal",
                 description:
                     "Samuel Beckett and Suzanne Déchevaux-Dumesnil travel to Toulouse; lacking adequate papers, they go to Cahors, and from there to Arcachon, where Mary Reynolds and Marcel Duchamp help them settle.",
@@ -2979,7 +2979,7 @@ export const timelineData = [
             },
             {
                 id: "38483c51-a610-5460-8217-6c97b857b3dd",
-                date: "mid-September",
+                date: "Mid-September",
                 type: "personal",
                 description:
                     "Samuel Beckett and Suzanne Déchevaux-Dumesnil return to Paris from Arcachon.",
@@ -3212,7 +3212,7 @@ export const timelineData = [
             },
             {
                 id: "b6ad761a-5c28-5f4c-b85a-4986e76db8c8",
-                date: "early to mid-September",
+                date: "Early to mid-September",
                 type: "personal",
                 description:
                     "Samuel Beckett and Suzanne Déchevaux-Dumesnil move from Vanves to Janvry, where they stay for ten days with Nathalie Sarraute.",
@@ -3542,7 +3542,7 @@ export const timelineData = [
                 id: "6dd0d9b5-f342-5c24-b071-316c6c159b2c",
                 description:
                     "Leaves Paris for Dublin. The typescript of <i>Watt</i> is confiscated on entry into England, under suspicion of coded message. Samuel Beckett stays for several days in London. Following interrogation, he retrieves his passport as well as the typescript of <i>Watt</i>. Jeannine Picabia, a member of his Resistance réseaux, is in London.",
-                date: "from 8 April",
+                date: "From 8 April",
                 type: "personal",
             },
             {
@@ -3853,7 +3853,7 @@ export const timelineData = [
                 type: "personal",
                 description:
                     'The first part of "Suite" accepted by <i>Les Temps Modernes</i>.',
-                date: "before 15 May",
+                date: "Before 15 May",
             },
             {
                 id: "ac1657a0-19fd-54db-ae9f-89efb490e769",
@@ -3908,7 +3908,7 @@ export const timelineData = [
                 type: "personal",
                 description:
                     "Routledge indicates that <i>Murphy</i> went out of print in 1942.",
-                date: "before 1 September",
+                date: "Before 1 September",
             },
             {
                 id: "da828b31-b464-5163-93d8-c51498c5b7a0",
@@ -3960,14 +3960,14 @@ export const timelineData = [
                 id: "347ea232-4365-5bc5-96a8-0f7250c104f0",
                 type: "personal",
                 description: "Samuel Beckett revises <i>Mercier et Camier</i>.",
-                date: "before 13 October",
+                date: "Before 13 October",
             },
             {
                 id: "baaa7645-b563-5626-a455-4016708e155f",
                 type: "personal",
                 description:
                     'Has received proofs of "Poèmes 38 39" from <i>Les Temps Modernes</i>.',
-                date: "by 13 October",
+                date: "By 13 October",
             },
             {
                 id: "041ddf55-d528-5981-a7d1-a5aa1695d2e2",
@@ -3992,7 +3992,7 @@ export const timelineData = [
                 type: "personal",
                 description:
                     "Pierre Bordas sends Samuel Beckett contract for <i>Murphy</i> and future work.",
-                date: " 29 October",
+                date: "29 October",
             },
             {
                 id: "f8f0fc2c-3dcd-53e3-95a0-24f28a981d3f",
@@ -4024,7 +4024,7 @@ export const timelineData = [
                 id: "8de694c1-50bc-54f1-babc-45a573873c80",
                 type: "personal",
                 description: 'Sends "Premier amour" to Jacoba van Velde.',
-                date: "before 3 December",
+                date: "Before 3 December",
             },
             {
                 id: "48fd8b48-bbaa-5187-b29e-8ef3ea11140c",
@@ -4088,7 +4088,7 @@ export const timelineData = [
                 type: "personal",
                 description:
                     "Travels to London, where he stays with George Reavey for a few days, before going to Dublin on 14 April.",
-                date: "before 14 April",
+                date: "Before 14 April",
             },
             {
                 id: "9c5857f6-a430-5e1e-a07b-3f92fad48d94",
@@ -4157,7 +4157,7 @@ export const timelineData = [
                 id: "db5d125c-c044-5cc0-9d07-f0d79312c3e1",
                 type: "personal",
                 description: "Samuel Beckett returns to Paris from Menton.",
-                date: "end of September",
+                date: "End of September",
             },
             {
                 id: "47964db4-08c7-5f5e-8fa1-866b2e56d396",
@@ -4203,7 +4203,7 @@ export const timelineData = [
                 type: "personal",
                 description:
                     "Samuel Beckett unable to receive money in France from Irish Bank; applies to UNESCO for employment.",
-                date: "before 4 January",
+                date: "Before 4 January",
             },
             {
                 id: "b0801503-5d42-5a4f-94a8-e6bab56b8bed",
@@ -4363,14 +4363,14 @@ export const timelineData = [
                 id: "03616184-3070-5a56-86da-00b7f52471cf",
                 description:
                     'Samuel Beckett submits <i>Eleutheria</i> for the Prix Rivarol; the play is being read by director Raymond Rouleau. Begins retyping <i>En attendant Godot</i>. Translates Guillaume Apollinaire\'s poem "Zone."',
-                date: "before 27 March",
+                date: "Before 27 March",
                 type: "personal",
             },
             {
                 id: "6f859821-c54b-57eb-838f-45ddd68d39ed",
                 description:
                     "Samuel Beckett and Suzanne Déchevaux-Dumesnil take a room in a farmhouse in Ussy-sur-Marne.",
-                date: "by 27 March",
+                date: "By 27 March",
                 type: "personal",
             },
             {
@@ -4395,12 +4395,6 @@ export const timelineData = [
                     "The twenty-six counties of the Irish Free State become the Republic of Ireland.",
             },
             {
-                id: "28af56a7-e8f1-537b-a18e-43790e4e2275",
-                type: "global",
-                date: "12 May",
-                description: "Berlin blockade lifted.",
-            },
-            {
                 id: "44f9e1bf-577e-5fe5-b882-73559d06f54a",
                 type: "global",
                 date: "4 April",
@@ -4409,6 +4403,12 @@ export const timelineData = [
                 image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Truman_signing_North_Atlantic_Treaty.jpg/966px-Truman_signing_North_Atlantic_Treaty.jpg",
                 caption:
                     "Truman signing the North Atlantic Treaty, 24 August 1949, by Abbie Rowe. Public domain.",
+            },
+             {
+                id: "28af56a7-e8f1-537b-a18e-43790e4e2275",
+                type: "global",
+                date: "12 May",
+                description: "Berlin blockade lifted.",
             },
             {
                 id: "d13de471-7727-5221-9064-34e94f388796",
@@ -4422,7 +4422,7 @@ export const timelineData = [
                 type: "personal",
                 description:
                     "Samuel Beckett begins translations for <i>Sélection</i>, the French edition of <i>The Reader's Digest</i>.",
-                date: "before 1 June",
+                date: "Before 1 June",
             },
             {
                 id: "950b277d-490e-5601-ba30-21ae4a498863",
@@ -4574,7 +4574,7 @@ export const timelineData = [
                 id: "b6e7f8db-73e4-5ca3-88e9-8c050453ddb8",
                 description:
                     "Jérôme Lindon reads <i>Molloy</i> and writes to Suzanne Déchevaux-Dumesnil that Editions de Minuit will publish the novel.",
-                date: "before mid-October",
+                date: "Before mid-October",
                 type: "personal",
             },
             {
@@ -4983,7 +4983,7 @@ export const timelineData = [
                 id: "db9c8189-0a5b-556b-9194-9bf68deabb25",
                 description:
                     "Samuel Beckett reads draft of Elmar Tophoven's German translation, <i>Warten auf Godot</i>.",
-                date: "by 19 February",
+                date: "By 19 February",
                 type: "personal",
             },
             {
@@ -5030,7 +5030,7 @@ export const timelineData = [
                 id: "84d976ac-e4d3-51ec-a1cd-46c3b8495405",
                 description:
                     "Barney Rosset, Grove Press, offers to publish English translations of <i>En attendant Godot</i>, <i>Molloy</i>, <i>Malone meurt</i>, and takes an option for <i>L'Innommable</i>.",
-                date: "before 22 May",
+                date: "Before 22 May",
                 type: "personal",
             },
             {
@@ -5051,7 +5051,7 @@ export const timelineData = [
                 id: "aef6b625-b21c-55af-8fce-d0e92e8e7c86",
                 description:
                     "Samuel Beckett working in Paris with Patrick Bowles on the English translation of <i>Molloy</i>.",
-                date: "by 27 July",
+                date: "By 27 July",
                 type: "personal",
             },
             {
@@ -5085,7 +5085,7 @@ export const timelineData = [
             {
                 id: "53202fc6-d011-513c-8a32-81d909f04f46",
                 description: "Thomas MacGreevy in Paris.",
-                date: "early September",
+                date: "Early September",
                 type: "personal",
             },
             {
@@ -5113,7 +5113,7 @@ export const timelineData = [
                 id: "ae3afe10-9634-5ab3-8376-30bea8924330",
                 description:
                     "Samuel Beckett works on French translation of <i>Watt</i> with Daniel Mauroc.",
-                date: "by 31 October",
+                date: "By 31 October",
                 type: "personal",
             },
             {
@@ -5127,7 +5127,7 @@ export const timelineData = [
                 id: "0f609efe-1927-5e62-bbb4-f253751e0652",
                 description:
                     "Tour of the Théâtre de Babylone production of <i>En attendant Godot</i>: Germany, Italy, and France.",
-                date: "16 November - 12 December",
+                date: "16 November-12 December",
                 type: "personal",
             },
             {
@@ -5166,7 +5166,7 @@ export const timelineData = [
                 id: "17a07db5-d016-5f2b-8d6b-56bc44a781ca",
                 description:
                     "Reviews German translation of <i>Molloy</i> by translator Erich Franzen in a series of letters.",
-                date: "23 January - 17 February",
+                date: "23 January-17 February",
                 type: "personal",
             },
             {
@@ -5408,7 +5408,7 @@ export const timelineData = [
                 id: "ee368af4-7004-5868-bc4a-c49ea3576437",
                 description:
                     "Samuel Beckett meets the American painter Joan Mitchell (former wife of Barney Rosset) in Paris.",
-                date: "week of 5 June",
+                date: "Week of 5 June",
                 type: "personal",
             },
             {
@@ -5506,14 +5506,14 @@ export const timelineData = [
                 id: "811d1991-461c-51fb-acc5-a2a3516b0ee5",
                 description:
                     "Samuel Beckett discusses <i>Waiting for Godot</i> with Alan Schneider in Paris.",
-                date: "from 26 November",
+                date: "From 26 November",
                 type: "personal",
             },
             {
                 id: "b261bc98-e4e4-53f6-b77d-a55425e73758",
                 description:
                     "Samuel Beckett and Schneider attend several performances of London production of <i>Waiting for Godot</i>. Samuel Beckett meets German actress Elizabeth Bergner in London.",
-                date: "early December",
+                date: "Early December",
                 type: "personal",
                 caption:
                     "Elisabeth Bergner and O.E. Hasse, 20 June 1960, by Joop van Bilsen/Anefo. Via Wikimedia Commons. Public domain.",
@@ -5522,7 +5522,7 @@ export const timelineData = [
             {
                 id: "99ce2d70-a777-55f2-ad76-0a61f04b8dc9",
                 description:
-                    "Samuel Beckett attends 100th performance of <i>Waiting for Godot</i> in London.",
+                    "Samuel Beckett attends 100th performance of <i>Waiting for Godot</i> in London with Alan Schneider.",
                 date: "8 December",
                 type: "personal",
             },
@@ -5609,7 +5609,7 @@ export const timelineData = [
                 id: "de918a06-28e2-5ac2-b148-c340f6e65a06",
                 description:
                     "Reprise of <i>En attendant Godot</i>, Théâtre Hébertot, Paris.",
-                date: "14 June - 23 September",
+                date: "14 June-23 September",
                 type: "personal",
             },
             {
@@ -5731,7 +5731,7 @@ export const timelineData = [
             },
             {
                 id: "122994af-1a8a-5b26-829e-11113afd0e52",
-                date: "4 - 11 November",
+                date: "4-11 November",
                 description:
                     "Hungarian Revolution: Soviet troops invade Hungary to crush the revolt.",
                 type: "global",
@@ -5979,7 +5979,7 @@ export const timelineData = [
             },
             {
                 id: "9ebe8913-e8d5-5987-b790-3c7a743e7673",
-                date: "by 17 February",
+                date: "By 17 February",
                 description:
                     "Samuel Beckett withdraws his two mimes and a reading of <i>All That Fall</i> from the Dublin Theatre Festival.",
                 type: "personal",
@@ -6136,7 +6136,7 @@ export const timelineData = [
             },
             {
                 id: "cf235d4d-6120-5e66-aecb-3d94ee21d054",
-                date: "before 23 November",
+                date: "Before 23 November",
                 description:
                     'Beckett asks Barbara Bray and Donald McWhinnie to read his "aborted radio script" (<i>Embers</i>).',
                 type: "personal",
@@ -6205,7 +6205,7 @@ export const timelineData = [
             },
             {
                 id: "599515c3-80f6-5e19-9dd5-610a8d274459",
-                date: "12 February - 7 March",
+                date: "12 February-7 March",
                 description:
                     'Henri Hayden exhibition, Waddington Galleries, London; catalogue includes Samuel Beckett text "Henri Hayden."',
                 type: "personal",
@@ -6303,7 +6303,7 @@ export const timelineData = [
             },
             {
                 id: "0e80e425-9214-59f6-bac4-7859c1b53b64",
-                date: "before 14 October",
+                date: "Before 14 October",
                 description: "Beckett buys a Citroën 2CV.",
                 type: "personal",
                 image: "https://upload.wikimedia.org/wikipedia/commons/b/b8/1956_Citro%C3%ABn_2CV_-_Flickr_-_skinnylawyer.jpg",
@@ -6340,7 +6340,7 @@ export const timelineData = [
             },
             {
                 id: "216d41de-5676-5bb7-955c-c77a2941eca2",
-                date: "after 5 January",
+                date: "After 5 January",
                 description:
                     "Publication of <i>La dernière bande, suivi de Cendres</i> by Editions de Minuit.",
                 type: "personal",
@@ -6413,7 +6413,7 @@ export const timelineData = [
             },
             {
                 id: "85a9a6d2-8ebe-5d9f-9f05-57e50ba6b353",
-                date: "before 15 June",
+                date: "Before 15 June",
                 description:
                     "John Calder's edition of <i>Three Novels</i> is seized from Hanna's bookstore in Dublin, under Irish Government order.",
                 type: "personal",
@@ -6486,7 +6486,7 @@ export const timelineData = [
             },
             {
                 id: "1054f9f1-fc66-56c2-ab20-8bacde6e5dcb",
-                date: "by 19 October",
+                date: "By 19 October",
                 description:
                     "Beckett has begun to move into his new apartment at 38 Boulevard Saint-Jacques, Paris 14",
                 type: "personal",
@@ -6613,7 +6613,7 @@ export const timelineData = [
             },
             {
                 id: "d5bfe377-92b2-581b-9ea4-baeddaf6c708",
-                date: "10 April - 5 May",
+                date: "10 April-5 May",
                 description:
                     "Beckett manages rehearsals of <i>En attendant Godot</i> during Roger Blin's absence in London.",
                 type: "personal",
@@ -6633,7 +6633,7 @@ export const timelineData = [
             },
             {
                 id: "44fe637e-399e-5efb-b4a5-8d2a939acc2c",
-                date: "17 - 20 April",
+                date: "17-20 April",
                 description: 'Bay of Pigs "invasion" of Cuba by US.',
                 type: "global",
             },
@@ -6667,14 +6667,14 @@ export const timelineData = [
             },
             {
                 id: "8cd7904e-56d3-5733-adc1-929cd3cceae5",
-                date: "by 28 May",
+                date: "By 28 May",
                 description:
                     "Barbara Bray and her daughters have moved to Paris.",
                 type: "personal",
             },
             {
                 id: "583db3eb-b348-5ae8-8799-405a036b0a65",
-                date: "16 - 30 June",
+                date: "16-30 June",
                 description:
                     "Beckett in Surrey with Sheila and Donald Page until 22 or 23 June, then in London.",
                 type: "personal",
@@ -6688,7 +6688,7 @@ export const timelineData = [
             },
             {
                 id: "97b798da-ef7b-5321-8e3b-bd8a0ae9057f",
-                date: "3 - 4 July",
+                date: "3-4 July",
                 description:
                     "The Bielefeld production of Mihalovici's opera of <i>Krapp</i> performed as part of the Théâtre des Nations, Paris.",
                 type: "personal",
@@ -6756,7 +6756,7 @@ export const timelineData = [
             },
             {
                 id: "a09e6063-a9ba-592a-9fea-5dc42fe6dffb",
-                date: "by 10 December",
+                date: "By 10 December",
                 description:
                     "Samuel Beckett's <i>Poems in English</i> published by John Calder.",
                 type: "personal",
@@ -6823,7 +6823,7 @@ export const timelineData = [
             },
             {
                 id: "7f7617d9-83f4-5ada-88c0-841c296f1d0b",
-                date: "before 15 May",
+                date: "Before 15 May",
                 description:
                     "Beckett has begun work on a play for three faces and lights (ultimately <i>Play</i>).",
                 type: "personal",
@@ -6955,7 +6955,7 @@ export const timelineData = [
             },
             {
                 id: "b5dd4a83-3877-5b61-a341-d885a5ab1782",
-                date: "before 27 December",
+                date: "Before 27 December",
                 description:
                     "Samuel Beckett attends Ionesco's <i>Le Roi se meurt</i> with George Devine, Jocelyn Herbert, and her daughter Jenny.",
                 type: "personal",
@@ -7015,7 +7015,7 @@ export const timelineData = [
             },
             {
                 id: "306729d5-56db-5026-a4c9-e201919cd10c",
-                date: "week of 15 April",
+                date: "Week of 15 April",
                 description:
                     "Beckett works with Jean-Marie Serreau on <i>Comédie</i>.",
                 type: "personal",
@@ -7036,7 +7036,7 @@ export const timelineData = [
             },
             {
                 id: "8a6573c3-c99c-5503-86d5-acf2cb1115fb",
-                date: "16 May - 6 June",
+                date: "16 May-6 June",
                 description:
                     "Beckett attends rehearsals and recordings of <i>Cascando</i>, RTF studios.",
                 type: "personal",
@@ -7063,14 +7063,14 @@ export const timelineData = [
             },
             {
                 id: "7690ea1b-e853-544d-aebd-397e5f652651",
-                date: "before 17 June",
+                date: "Before 17 June",
                 description:
                     "Beckett rehearses <i>Oh Les beaux jours</i> with Madeleine Renaud and Roger Blin.",
                 type: "personal",
             },
             {
                 id: "fd9676ee-fdae-5817-beb3-d6b70587bc6d",
-                date: "17 June - 16 July",
+                date: "17 June-16 July",
                 description:
                     "Samuel Beckett holidays with Suzanne Déchevaux-Dumesnil in Zell-am-See, Austria.",
                 type: "personal",
@@ -7089,7 +7089,7 @@ export const timelineData = [
             },
             {
                 id: "0edab204-504d-5cec-8346-e1f11e675662",
-                date: "before 20 August",
+                date: "Before 20 August",
                 description:
                     "Samuel Beckett writes a brief tribute to Richard Aldington.",
                 type: "personal",
@@ -7149,7 +7149,7 @@ export const timelineData = [
             },
             {
                 id: "a0b05080-aa53-542c-b97d-5d028e7ef0e3",
-                date: "16 January - 5 February",
+                date: "16 January-5 February",
                 description:
                     "Beckett in London for rehearsals of <i>Endgame</i> with Patrick Magee and Jack MacGowran.",
                 type: "personal",
@@ -7198,7 +7198,7 @@ export const timelineData = [
             },
             {
                 id: "44083099-8bcb-5ae0-b1ef-f45959cbdbb5",
-                date: "14 March - 8 April",
+                date: "14 March-8 April",
                 description:
                     "Samuel Beckett in London for rehearsals of <i>Play</i>.",
                 type: "personal",
@@ -7288,7 +7288,7 @@ export const timelineData = [
             },
             {
                 id: "9a63027b-4d8f-5dd2-8634-0424527bc35c",
-                date: "10 July - 6 August",
+                date: "10 July-6 August",
                 description:
                     "Beckett flies from London to New York for work on <i>Film</i>.",
                 type: "personal",
@@ -7322,7 +7322,7 @@ export const timelineData = [
             },
             {
                 id: "277a57a6-73c3-56d5-b967-0c997a101aab",
-                date: "1 and 2 August",
+                date: "1-2 August",
                 description:
                     "Beckett works with Sidney Meyers, the editor of <i>Film</i>.",
                 type: "personal",
@@ -7335,7 +7335,7 @@ export const timelineData = [
             },
             {
                 id: "4ad5b9e9-daf8-5754-9487-971d25924d42",
-                date: "by 21 August",
+                date: "By 21 August",
                 description:
                     'Samuel Beckett has begun to write first of four pieces which will later be called "Faux départs."',
                 type: "personal",
@@ -7567,7 +7567,7 @@ export const timelineData = [
             },
             {
                 id: "bc711ace-4212-5df1-9dda-399a39b39d01",
-                date: "mid-November to 5 December",
+                date: "Mid-November to 5 December",
                 description:
                     "Beckett in Ussy, working on <i>Le Dépeupleur</i>. Completes first draft on 28 November.",
                 type: "personal",
@@ -7843,7 +7843,7 @@ export const timelineData = [
             },
             {
                 id: "544f6127-a9ad-518b-bfde-0a2d8bfdd382",
-                date: "before 23 December",
+                date: "Before 23 December",
                 type: "personal",
                 description:
                     'Has written, "Siège remis devant le dehors imprenable" for the catalogue of Avigdor Arikha\'s exhibition at the Galérie Claude Bernard.',
@@ -7973,7 +7973,7 @@ export const timelineData = [
             },
             {
                 id: "cd397dce-c3dc-5014-9a9c-bd5ea029c8ce",
-                date: "before 4 September",
+                date: "Before 4 September",
                 type: "personal",
                 description:
                     "Receives telegraphed request from the Arrabals to give testimony at Fernando Arrabal's trial in Spain for blasphemy.",
@@ -8077,7 +8077,7 @@ export const timelineData = [
             },
             {
                 id: "b4baf0ae-1648-5fd1-bb62-b0ed5ae149d2",
-                date: "before 11 February",
+                date: "Before 11 February",
                 type: "personal",
                 description:
                     "Learns of the death of Nancy Sinclair Cusack from her brother Morris Sinclair.",
@@ -8101,7 +8101,7 @@ export const timelineData = [
             },
             {
                 id: "da72b725-f4bf-5f0e-9ab9-e17a38a86ec1",
-                date: "by 6 March",
+                date: "By 6 March",
                 type: "personal",
                 description:
                     "Samuel Beckett has finished the French translation of <i>Watt</i>.",
@@ -8409,7 +8409,7 @@ export const timelineData = [
             },
             {
                 id: "991103de-3eeb-5929-bd9e-245c9b5b00f3",
-                date: "before 16 July",
+                date: "Before 16 July",
                 type: "personal",
                 description:
                     '<i>Film</i> (scenario, illustrations, production shots and "On Directing Film" by Alan Schneider) published by Grove Press.',
@@ -8553,14 +8553,14 @@ export const timelineData = [
             },
             {
                 id: "a1cc7e89-2294-5217-b784-4ab272497663",
-                date: "by 11 January",
+                date: "By 11 January",
                 type: "personal",
                 description:
                     "Samuel Beckett withdraws <i>Breath</i> from productions of <i>Oh! Calcutta! </i>outside the United States.",
             },
             {
                 id: "96944671-1351-53e5-826f-a5ae3d290046",
-                date: "by 16 January",
+                date: "By 16 January",
                 type: "personal",
                 description:
                     "Has corrected proofs of revised edition of <i>En attendant Godot</i>.",
@@ -8608,7 +8608,7 @@ export const timelineData = [
             },
             {
                 id: "7c2f49ec-f80d-564e-b5d2-f3eea36dbc2a",
-                date: "from 26 April",
+                date: "From 26 April",
                 type: "personal",
                 description:
                     "Christine Tsingos presents four performances of <i>Oh les beaux jours</i> in Greek, Théâtre Récamier, Paris.",
@@ -8711,7 +8711,7 @@ export const timelineData = [
         events: [
             {
                 id: "27e9d2fa-98b0-5156-b331-77087b6ea8f8",
-                date: "by January",
+                date: "By January",
                 type: "personal",
                 description:
                     "Samuel Beckett has translated <i>Breath</i> as <i>Souffle</i>. Translates <i>Film</i> into French.",
@@ -8746,7 +8746,7 @@ export const timelineData = [
             },
             {
                 id: "d60fe361-3cec-5a85-8104-93bf14765379",
-                date: "before 19 March",
+                date: "Before 19 March",
                 type: "personal",
                 description:
                     "Death of Samuel Beckett's uncle James Beckett in Dublin.",
@@ -8759,7 +8759,7 @@ export const timelineData = [
             },
             {
                 id: "25921ccf-e9e8-5859-9e15-7e181b6bdad0",
-                date: "by 5 May",
+                date: "By 5 May",
                 type: "personal",
                 description:
                     "Samuel Beckett has begun English translation of <i>Le Dépeupleur</i>.",
@@ -8787,7 +8787,7 @@ export const timelineData = [
             },
             {
                 id: "44e15a5a-f294-5886-b870-310f0f22dd2a",
-                date: "10 June - 8 July",
+                date: "10 June-8 July",
                 type: "personal",
                 description:
                     "Samuel Beckett and Suzanne in Santa Margherita, Italy.",
@@ -8841,7 +8841,7 @@ export const timelineData = [
             },
             {
                 id: "e42cecce-4f0b-5298-b3fc-f444ea00d9b4",
-                date: "by 12 December",
+                date: "By 12 December",
                 type: "personal",
                 description:
                     "Samuel Beckett completes translation of <i>Le Dépeupleur</i> as <i>The Lost Ones.</i>",
@@ -8927,7 +8927,7 @@ export const timelineData = [
             },
             {
                 id: "c288eb8c-4f7d-5d54-970b-e31e5f0aaab0",
-                date: "by 24 April",
+                date: "By 24 April",
                 type: "personal",
                 description: "Samuel Beckett has written <i>Not I.</i>",
             },
@@ -8961,14 +8961,14 @@ export const timelineData = [
             },
             {
                 id: "877930e8-e03f-5ac4-8f2d-34897c887f93",
-                date: "by 7 August",
+                date: "By 7 August",
                 type: "personal",
                 description:
                     "Dolmen Press publishes <i>Zone,</i> Samuel Beckett's translation from the 1950s of the first poem in Apollinaire's <i>Alcools</i>.",
             },
             // {
             //    id: "e9113075-c7a7-578a-b6c9-ed4b6b1a0e46",
-            //    date: "3 September - 15 October",
+            //    date: "3 September-15 October",
             //    type: "global",
             //    description:
             //        "Samuel Beckett and Suzanne on holiday in Malta, where he views the <i>Beheading of St. John the Baptist </i>by Caravaggio in St. John's Co-Cathedral, Valletta.",
@@ -9126,7 +9126,7 @@ export const timelineData = [
             // },
             {
                 id: "a840760a-d991-5485-b7e4-6d0b93616ab1",
-                date: "before 5 August",
+                date: "Before 5 August",
                 type: "personal",
                 description:
                     'Writes "As the Story Was Told" for a memorial volume for Günter Eich.',
@@ -9228,7 +9228,7 @@ export const timelineData = [
             },
             {
                 id: "2309d730-f8ae-51e4-9c53-9b093fa08166",
-                date: "26 March - 20 April",
+                date: "26 March-20 April",
                 type: "personal",
                 description:
                     "Samuel Beckett and Suzanne Déchevaux-Dumesnil on holiday in Morocco.",
@@ -9242,7 +9242,7 @@ export const timelineData = [
             },
             {
                 id: "ae41865a-8413-54c4-8afc-93c3fa1566ce",
-                date: "before 14 April",
+                date: "Before 14 April",
                 type: "global",
                 description: "Death of BBC producer John Gibson in London.",
             },
@@ -9282,14 +9282,14 @@ export const timelineData = [
             },
             {
                 id: "a406e11f-40d1-55b3-9c69-fef424301848",
-                date: "before 6 September-5 October",
+                date: "Before 6 September-5 October",
                 type: "personal",
                 description:
                     "Samuel Beckett and Suzanne Déchevaux-Dumesnil on holiday in Morocco. <br>Samuel Beckett preparing directing notes for <i>Warten auf Godot</i> and <i>Glückliche Tage</i> at the Schiller-Theater, Berlin.",
             },
             {
                 id: "363ce1ff-4c1d-5751-bc1f-54ca18989584",
-                date: "by 8 October",
+                date: "By 8 October",
                 type: "personal",
                 description:
                     "<i>Mercier and Camier</i> published by Calder and Boyars.",
@@ -9342,7 +9342,7 @@ export const timelineData = [
             },
             {
                 id: "36f29e76-7053-5ff4-bc24-fdb3f6733686",
-                date: "by 17 January",
+                date: "By 17 January",
                 type: "personal",
                 description:
                     "Martin Held resigns as Pozzo; replaced by Carl Raddatz, Schiller-Theater production of <i>Warten auf Godot.</i>",
@@ -9363,7 +9363,7 @@ export const timelineData = [
             },
             {
                 id: "a94831f7-1c80-554e-8f9b-a7baa5c952a8",
-                date: "by 2 March",
+                date: "By 2 March",
                 type: "personal",
                 description:
                     'Has written "Pour Bram" in honor of Bram van Velde\'s 80th birthday.',
@@ -9456,7 +9456,7 @@ export const timelineData = [
             },
             {
                 id: "500b50d6-ed11-52c2-9781-4a749dcb88f4",
-                date: "before 2 September",
+                date: "Before 2 September",
                 type: "personal",
                 description:
                     "Samuel Beckett sends five <i>Foirades</i> to Jasper Johns for his work on <i>Foirades/Fizzles</i>.",
@@ -9821,7 +9821,7 @@ export const timelineData = [
             },
             {
                 id: "67795a0f-dab3-5b4b-8c7d-25b2acee2a31",
-                date: "late June",
+                date: "Late June",
                 type: "personal",
                 description:
                     'Samuel Beckett adds full final stanza of "The Tower" by W. B. Yeats to the text and tape of <i>. . . but the clouds . . . </i>.',
@@ -9888,7 +9888,7 @@ export const timelineData = [
             },
             {
                 id: "f30daa70-097e-549e-ae4f-a206fa8cb542",
-                date: "mid-October to early November",
+                date: "Mid-October to early November",
                 type: "personal",
                 description:
                     "In Ussy, working on <i>Company</i> and a monologue for David Warrilow.",
@@ -9919,7 +9919,7 @@ export const timelineData = [
             },
             {
                 id: "c4a05e19-ef9e-5345-a40a-c8a0886e3128",
-                date: "before 26 December",
+                date: "Before 26 December",
                 type: "personal",
                 description:
                     'Samuel Beckett sends one of his <i>Mirlitonnades</i>, "pas à pas," to <i>Akzente </i>to honor Herbert Marcuse on his 80th birthday.',
@@ -9965,7 +9965,7 @@ export const timelineData = [
             },
             {
                 id: "5ebecba0-96c5-5164-9d31-c7b35a2abb30",
-                date: "before 25 April",
+                date: "Before 25 April",
                 type: "personal",
                 description:
                     "Tree collapses during production of <i>En attendant Godot</i> at the Comédie Française, Paris.",
@@ -10101,7 +10101,7 @@ export const timelineData = [
             },
             {
                 id: "b039dff6-a7ef-54a7-bc90-dcafeb55588b",
-                date: "after 5 August-9 September",
+                date: "After 5 August-9 September",
                 type: "personal",
                 description:
                     "Samuel Beckett and Suzanne Déchevaux-Dumesnil on holiday in Tangier.",
@@ -10322,7 +10322,7 @@ export const timelineData = [
             },
             {
                 id: "d228cb44-bba5-56da-922c-44d94089c856",
-                date: "before 20 November",
+                date: "Before 20 November",
                 type: "global",
                 description: "Barney Rosset and Elizabeth (Lisa) Krug marry.",
             },
@@ -10478,7 +10478,7 @@ export const timelineData = [
             },
             {
                 id: "c51c0346-99f2-5e03-ab0c-1077727bc5ae",
-                date: "by 13 September",
+                date: "By 13 September",
                 type: "personal",
                 description:
                     "Has corrected Grove proofs of <i>Ill Seen Ill Said</i>.",
@@ -10818,7 +10818,7 @@ export const timelineData = [
             },
             {
                 id: "f24c7fa8-211d-5e5a-aefd-9c6ab67e1fb4",
-                date: "late August",
+                date: "Late August",
                 type: "personal",
                 description: "The Arikha family moves to New York.",
             },
@@ -11171,7 +11171,7 @@ export const timelineData = [
             },
             {
                 id: "36c5399c-9eac-5ea5-b095-e9ad4ebfe865",
-                date: "before 14 July",
+                date: "Before 14 July",
                 type: "personal",
                 description:
                     "Tells Barney Rosset that he cannot permit publication of <i>Eleutheria</i>.",
@@ -11287,7 +11287,7 @@ export const timelineData = [
             },
             {
                 id: "9f92f285-1e12-5aef-84e4-2121385d87e6",
-                date: "before 10 December",
+                date: "Before 10 December",
                 type: "personal",
                 description:
                     "Publication of Samuel Beckett's <i>As the Story was Told</i>, edited by Christopher Ricks in a limited edition, Ramparts Lions Press, Cambridge, UK.",
@@ -11353,18 +11353,18 @@ export const timelineData = [
                     "Opening of <i>Waiting for Godot</i>, with Steve Martin and Robin Williams, directed by Mike Nichols, Lincoln Center, New York.",
             },
             {
-                id: "a61fc889-8696-54b9-8057-fe6afa61da3e",
-                date: "8 November",
-                type: "global",
-                description:
-                    "George H. W. Bush elected President of the United States.",
-            },
-            {
                 id: "0ae3d36b-609e-54c9-9257-5d7f57b99e19",
                 date: "November",
                 type: "personal",
                 description:
                     "Limited edition of<i> Stirrings Still </i>with illustrations by Louis Le Brocquy published by John Calder and Barney Rosset.",
+            },
+            {
+                id: "a61fc889-8696-54b9-8057-fe6afa61da3e",
+                date: "8 November",
+                type: "global",
+                description:
+                    "George H. W. Bush elected President of the United States.",
             },
             {
                 id: "a744f43d-3aa9-5d8e-82ef-5100811d2aad",
