@@ -4,6 +4,7 @@ import { AiTwotoneStar } from "react-icons/ai";
 import { TbChairDirector } from "react-icons/tb";
 import { BiEdit } from "react-icons/bi";
 import "./MentionQualifier.css";
+
 /**
  * Icon based on type.
  *
@@ -24,6 +25,25 @@ const getIcon = (type) => {
 };
 
 /**
+ * Tooltip content based on type.
+ *
+ * @param {string} type Qualifier type
+ * @returns {string} Tooltip content.
+ */
+const getContent = (type) => {
+    switch (type) {
+        case "directing":
+            return "Letter discusses directing of a production.";
+        case "star":
+            return "Discussion is highly important.";
+        case "revision":
+            return "Letter discusses revision of a text.";
+        default:
+            return undefined;
+    }
+};
+
+/**
  * Displays qualifier icon for a mention.
  *
  * @param {string} type Qualifier type
@@ -31,11 +51,11 @@ const getIcon = (type) => {
  */
 export default function MentionQualifier({ type }) {
     return (
-        <EuiToolTip content={`This mention is ${type}.`} position="top">
+        <EuiToolTip content={getContent(type)} position="top">
             <EuiIcon
                 className="qualifier-icon"
                 type={getIcon(type)}
-                alt={`This mention is ${type}`}
+                alt={getContent(type)}
             />
         </EuiToolTip>
     );

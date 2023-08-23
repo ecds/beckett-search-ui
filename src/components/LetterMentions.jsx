@@ -72,7 +72,10 @@ export function LetterMentions({ mentions }) {
                                                 }}
                                             />
                                             {e.tags.map((tag) => (
-                                                <MentionQualifier type={tag} />
+                                                <MentionQualifier
+                                                    type={tag}
+                                                    key={`qualified-${tag}`}
+                                                />
                                             ))}
                                         </dd>
                                     ),
