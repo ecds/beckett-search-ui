@@ -58,14 +58,14 @@ function Navigation() {
                             <NavLink to="/letters" tabIndex="-1">
                                 {({ isActive }) => (
                                     <EuiHeaderLink isActive={isActive}>
-                                        Search Letters
+                                        Search Letter Data
                                     </EuiHeaderLink>
                                 )}
                             </NavLink>
                             <NavLink to="/entities" tabIndex="-1">
                                 {({ isActive }) => (
                                     <EuiHeaderLink isActive={isActive}>
-                                        Search Entities
+                                        Search Index
                                     </EuiHeaderLink>
                                 )}
                             </NavLink>
