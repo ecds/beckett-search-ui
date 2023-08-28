@@ -41,18 +41,18 @@ export function HomePage() {
                             />
                             <div className="description">
                                 <p>
-                                    Welcome to the interactive index for The
+                                    Welcome to the Interactive Index for The
                                     Letters of Samuel Beckett. Here you can find
-                                    information on all Beckett <b>letters</b> held in
+                                    data on all Beckett <b>letters</b> held in
                                     public archives, such as their physical state and
-                                    location. You can also research <b>entities</b>:
+                                    location. You can also browse the <b>index</b>:
                                     people, places and things mentioned by Beckett in his letters.
                                 </p>
                                 <EuiButton fill href={useHref("/letters")}>
-                                    Search Letters
+                                    Search Letter Data
                                 </EuiButton>
                                 <EuiButton fill href={useHref("/entities")}>
-                                    Search Entities
+                                    Search Index
                                 </EuiButton>
                             </div>
                         </EuiPageContentBody>
