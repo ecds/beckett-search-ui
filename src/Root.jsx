@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { Outlet, useLocation } from "react-router-dom";
+import { Outlet, useLocation  } from "react-router-dom";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 
@@ -14,10 +14,7 @@ export function Root() {
 
     useEffect(() => {
         window?.ga("send", "pageview");
-        trackerRef.current?.setAttribute(
-            "src",
-            "https://matomo.ecdsdev.org/matomo.php?idsite=59&rec=1",
-        );
+        trackerRef.current?.setAttribute("src", "https://matomo.ecdsdev.org/matomo.php?idsite=59&rec=1");
     }, [location]);
 
     return (
@@ -26,11 +23,11 @@ export function Root() {
             <Outlet />
             <Footer />
             <img
-                ref={trackerRef}
-                referrerPolicy="no-referrer-when-downgrade"
-                src="https://matomo.ecdsdev.org/matomo.php?idsite=59&amp;rec=1"
-                alt=""
-                style={{ border: 0 }}
+              ref={trackerRef}
+              referrerPolicy="no-referrer-when-downgrade"
+              src="https://matomo.ecdsdev.org/matomo.php?idsite=59&amp;rec=1"
+              alt=""
+              style={{ border: 0 }}
             />
         </>
     );
