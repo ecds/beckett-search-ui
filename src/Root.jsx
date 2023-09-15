@@ -13,7 +13,12 @@ export function Root() {
     const trackerRef = useRef();
 
     useEffect(() => {
-        window?.gtag("send", "pageview");
+        window?.gtag(
+            "config", "G-EKKTZZFEPL",
+            {
+                page_path: location.pathname
+            }
+        );
         trackerRef.current?.setAttribute("src", "https://matomo.ecdsdev.org/matomo.php?idsite=59&rec=1");
     }, [location]);
 
