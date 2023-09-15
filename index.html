@@ -16,10 +16,10 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-EKKTZZFEPL"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){
+        window.gtag = window.gtag || function (){
             dataLayer.push(arguments);
         }
-        gtag('js', new Date());
-        gtag('config', 'G-EKKTZZFEPL');
+        window?.gtag('js', new Date());
+        window?.gtag('config', 'G-EKKTZZFEPL');
     </script>
 </html>
