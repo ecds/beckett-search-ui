@@ -41,7 +41,7 @@ export function HomePage() {
                             />
                             <div className="description">
                                 <p>
-                                    Welcome to the Interactive Index for The
+                                    Welcome to the Interactive Index to the
                                     Letters of Samuel Beckett. Here you can find
                                     data on all Beckett <b>letters</b> held in
                                     public archives, such as their physical state and
