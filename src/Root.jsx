@@ -32,7 +32,7 @@ export function Root() {
               referrerPolicy="no-referrer-when-downgrade"
               src="https://matomo.ecdsdev.org/matomo.php?idsite=59&amp;rec=1"
               alt=""
-              style={{ border: 0 }}
+              style={{ border: 0, height: 0 }}
             />
         </>
     );
