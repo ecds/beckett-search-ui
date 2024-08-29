@@ -1,6 +1,11 @@
 .timeline-page {
     height: calc(100vh - 48px);
-    position: fixed;
+    width: 100vw;
+}
+
+.timeline-page nav {
+    position: sticky;
+    top: 48px;
 }
 
 .timeline-scrolling-container {
