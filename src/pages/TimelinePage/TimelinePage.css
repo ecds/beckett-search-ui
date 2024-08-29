@@ -1,5 +1,6 @@
 .timeline-page {
     height: calc(100vh - 48px);
+    position: fixed;
 }
 
 .timeline-scrolling-container {
