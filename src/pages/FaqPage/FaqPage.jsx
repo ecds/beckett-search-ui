@@ -4,8 +4,7 @@ import {
     EuiAccordion,
     EuiPage,
     EuiPageBody,
-    EuiPageContent,
-    EuiPageContentBody,
+    EuiPageSection,
     EuiPageHeader,
     EuiPageHeaderSection,
     EuiPanel,
@@ -59,9 +58,9 @@ export function FaqPage() {
                             </EuiTitle>
                         </EuiPageHeaderSection>
                     </EuiPageHeader>
-                    <EuiPageContent>
+                    <EuiPageSection>
                         <EuiText>
-                            <EuiPageContentBody>
+                            <EuiPageSection>
                                 {faqs.map((faq) => (
                                     <EuiAccordion
                                         key={faq.position}
@@ -80,9 +79,9 @@ export function FaqPage() {
                                         </EuiPanel>
                                     </EuiAccordion>
                                 ))}
-                            </EuiPageContentBody>
+                            </EuiPageSection>
                         </EuiText>
-                    </EuiPageContent>
+                    </EuiPageSection>
                 </EuiPageBody>
             </EuiPage>
         </main>

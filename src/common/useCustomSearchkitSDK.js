@@ -1,4 +1,4 @@
-import createInstance from "@ecds/searchkit-sdk";
+import createInstance from "@searchkit/sdk";
 import { useEffect, useState } from "react";
 import moment from "moment";
 import { useSearchParams } from "react-router-dom";

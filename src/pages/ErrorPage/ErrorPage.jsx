@@ -1,8 +1,7 @@
 import {
     EuiPage,
     EuiPageBody,
-    EuiPageContent,
-    EuiPageContentBody,
+    EuiPageSection,
     EuiPageHeader,
     EuiPageHeaderSection,
     EuiTitle,
@@ -35,11 +34,11 @@ export function ErrorPage() {
                                 </EuiTitle>
                             </EuiPageHeaderSection>
                         </EuiPageHeader>
-                        <EuiPageContent>
-                            <EuiPageContentBody>
+                        <EuiPageSection>
+                            <EuiPageSection>
                                 <p>This page could not be displayed.</p>
-                            </EuiPageContentBody>
-                        </EuiPageContent>
+                            </EuiPageSection>
+                        </EuiPageSection>
                     </EuiPageBody>
                 </EuiPage>
             </main>

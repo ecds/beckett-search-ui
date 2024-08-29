@@ -2,10 +2,9 @@ import React, { useState } from "react";
 import {
     EuiPage,
     EuiPageBody,
-    EuiPageContent,
-    EuiPageContentBody,
+    EuiPageSection,
     EuiText,
-    EuiPageSideBar,
+    EuiPageSidebar,
     EuiSideNav,
     EuiHorizontalRule,
 } from "@elastic/eui";
@@ -55,7 +54,7 @@ export function FilmInterviewsPages() {
     return (
         <main id="film-interviews">
             <EuiPage paddingSize="none" className="film-interview-page">
-                <EuiPageSideBar
+                <EuiPageSidebar
                     sticky
                     paddingSize="m"
                     className="film-topic-nav"
@@ -66,14 +65,14 @@ export function FilmInterviewsPages() {
                         toggleOpenOnMobile={() => toggleOpenOnMobile()}
                         isOpenOnMobile={isSideNavOpenOnMobile}
                     />
-                </EuiPageSideBar>
-                <EuiPageBody component="section">
-                    <EuiPageContent>
+                </EuiPageSidebar>
+                <EuiPageBody panelled component="section">
+                    <EuiPageSection>
                         <EuiText>
                             <header>
                                 <h1>Film Interviews</h1>
                             </header>
-                            <EuiPageContentBody>
+                            <EuiPageSection>
                                 <p>
                                     The film segments below are excerpts from
                                     interviews for the documentary <i>Waiting for Beckett</i> (1993, Global Village Communication,
@@ -138,9 +137,9 @@ export function FilmInterviewsPages() {
                                         </p>
                                     </section>
                                 ))}
-                            </EuiPageContentBody>
+                            </EuiPageSection>
                         </EuiText>
-                    </EuiPageContent>
+                    </EuiPageSection>
                 </EuiPageBody>
             </EuiPage>
         </main>

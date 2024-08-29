@@ -1,5 +1,5 @@
 import moment from "moment";
-import { EuiLoadingContent, EuiPagination, EuiTitle } from "@elastic/eui";
+import { EuiPageSection, EuiPagination, EuiTitle } from "@elastic/eui";
 import React, { useEffect, useState } from "react";
 import "./EntityRelatedLetters.css";
 import { Link, useSearchParams } from "react-router-dom";
@@ -173,7 +173,7 @@ export function EntityRelatedLetters({ title, type, uri }) {
                             <tr key={key}>
                                 {[...Array(3).keys()].map((tdKey) => (
                                     <td key={tdKey}>
-                                        <EuiLoadingContent lines={1} />
+                                        <EuiPageSection lines={1} />
                                     </td>
                                 ))}
                             </tr>

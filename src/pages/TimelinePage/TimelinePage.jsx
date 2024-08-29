@@ -3,7 +3,7 @@ import {
     EuiFormLabel,
     EuiPage,
     EuiPageBody,
-    EuiPageSideBar,
+    EuiPageSidebar,
     EuiSelect,
     EuiSpacer,
     EuiText,
@@ -59,7 +59,7 @@ export function TimeLinePage() {
     return (
         <main ref={containerRef}>
             <EuiPage paddingSize="none" className="timeline-page">
-                <EuiPageSideBar sticky paddingSize="l">
+                <EuiPageSidebar sticky paddingSize="l">
                     <nav className="timeline-nav">
                         <EuiFormControlLayout
                             prepend={
@@ -87,8 +87,8 @@ export function TimeLinePage() {
                             </p>
                         </EuiText>
                     </nav>
-                </EuiPageSideBar>
-                <EuiPageBody>
+                </EuiPageSidebar>
+                <EuiPageBody panelled>
                     <section className="timeline-scrolling-container">
                         {timelineData.map((year) => (
                             <TimelineYear

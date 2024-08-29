@@ -4,7 +4,7 @@ import {
     EuiHorizontalRule,
     EuiPage,
     EuiPageBody,
-    EuiPageContent,
+    EuiPageSection,
     EuiPageHeader,
     EuiPageHeaderSection,
     EuiTitle,
@@ -67,7 +67,7 @@ export function LetterPage() {
                             </EuiTitle>
                         </EuiPageHeaderSection>
                     </EuiPageHeader>
-                    <EuiPageContent>
+                    <EuiPageSection>
                         <EuiTitle>
                             <h2 className="result-meta-heading">
                                 Letter Information
@@ -96,7 +96,7 @@ export function LetterPage() {
                         {letter.mentions && (
                             <LetterMentions mentions={letter.mentions} />
                         )}
-                    </EuiPageContent>
+                    </EuiPageSection>
                 </EuiPageBody>
             </EuiPage>
         </main>

@@ -10,11 +10,10 @@
         "prepare": "husky install"
     },
     "dependencies": {
-        "@ecds/searchkit-elastic-ui": "^3.0.1-alpha.5",
-        "@ecds/searchkit-sdk": "^3.0.1-alpha.1",
-        "@elastic/eui": "^42.1.0",
+        "@elastic/eui": "^86.0.0",
         "@searchkit/client": "^3.0.0",
         "@searchkit/schema": "^3.0.0",
+        "@searchkit/sdk": "^3.0.0",
         "fold-to-ascii": "^5.0.1",
         "moment": "^2.29.4",
         "react": "^16.14.0",
@@ -24,8 +23,8 @@
         "react-vertical-timeline-component": "^3.6.0"
     },
     "devDependencies": {
-        "@types/react": "^16.9.49",
-        "@types/react-dom": "^16.9.9",
+        "@types/react": "^18.3.0",
+        "@types/react-dom": "^18.3.0",
         "@vitejs/plugin-react": "^2.1.0",
         "eslint": "^8.25.0",
         "eslint-config-airbnb": "^19.0.4",

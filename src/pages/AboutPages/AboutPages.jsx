@@ -3,8 +3,7 @@ import { useLoaderData } from "react-router-dom";
 import {
     EuiPage,
     EuiPageBody,
-    EuiPageContent,
-    EuiPageContentBody,
+    EuiPageSection,
     EuiText,
 } from "@elastic/eui";
 import { getFromApi } from "../../common";
@@ -29,18 +28,18 @@ export function AboutPages() {
         <main id="faq">
             <EuiPage paddingSize="l">
                 <EuiPageBody component="section">
-                    <EuiPageContent>
+                    <EuiPageSection>
                         <EuiText>
-                            <EuiPageContentBody className="about-page">
+                            <EuiPageSection className="about-page">
                                 <article
                                     // eslint-disable-next-line react/no-danger
                                     dangerouslySetInnerHTML={{
                                         __html: content.body,
                                     }}
                                 />
-                            </EuiPageContentBody>
+                            </EuiPageSection>
                         </EuiText>
-                    </EuiPageContent>
+                    </EuiPageSection>
                 </EuiPageBody>
             </EuiPage>
         </main>

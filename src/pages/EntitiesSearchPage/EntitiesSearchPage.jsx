@@ -6,22 +6,20 @@ import {
     useSearchkitVariables,
     withSearchkit,
 } from "@searchkit/client";
-import { Pagination } from "@ecds/searchkit-elastic-ui";
+// import { Pagination } from "@ecds/searchkit-elastic-ui";
 import {
     EuiPage,
     EuiPageBody,
-    EuiPageContent,
-    EuiPageContentBody,
-    EuiPageContentHeader,
-    EuiPageContentHeaderSection,
+    EuiPageSection,
     EuiPageHeader,
-    EuiPageHeaderSection,
-    EuiPageSideBar,
+    EuiPageSidebar,
     EuiSpacer,
     EuiTitle,
     EuiHorizontalRule,
     EuiFlexGroup,
     EuiButton,
+    EuiHeaderSection,
+    EuiHeaderSectionItem,
 } from "@elastic/eui";
 import "@elastic/eui/dist/eui_theme_light.css";
 import { appendIconComponentCache } from "@elastic/eui/es/components/icon/icon";
@@ -193,7 +191,7 @@ function EntitiesSearch() {
         <main className="search-page">
             <EuiPage paddingSize="l">
                 <aside>
-                    <EuiPageSideBar>
+                    <EuiPageSidebar>
                         <SearchControls
                             loading={loading}
                             onSearch={(value) => {
@@ -262,11 +260,11 @@ function EntitiesSearch() {
                                     yearRange={yearRangeState}
                                 />
                             )}
-                    </EuiPageSideBar>
+                    </EuiPageSidebar>
                 </aside>
-                <EuiPageBody component="section">
+                <EuiPageSection className="search-results-panel">
                     <EuiPageHeader>
-                        <EuiPageHeaderSection className="active-facet-group">
+                        <EuiHeaderSectionItem className="active-facet-group">
                             <EuiTitle size="l">
                                 <EuiFlexGroup
                                     gutterSize="s"
@@ -283,8 +281,8 @@ function EntitiesSearch() {
                                     )}
                                 </EuiFlexGroup>
                             </EuiTitle>
-                        </EuiPageHeaderSection>
-                        <EuiPageHeaderSection>
+                        </EuiHeaderSectionItem>
+                        <EuiHeaderSection>
                             <EuiButton
                                 fill
                                 color="text"
@@ -314,18 +312,20 @@ function EntitiesSearch() {
                                 Reset Search
                             </EuiButton>
                             <SaveSearchButton />
-                        </EuiPageHeaderSection>
+                        </EuiHeaderSection>
                     </EuiPageHeader>
-                    <EuiPageContent>
-                        <EuiPageContentHeader>
-                            <EuiPageContentHeaderSection>
+                    <EuiPageBody panelled component="section">
+                        <EuiPageHeader>
+                            <EuiPageSection>
                                 <EuiTitle size="s">
-                                    <h2>{results?.summary.total} Results</h2>
+                                    <h2 className="result-count">
+                                        {results?.summary.total} Results
+                                    </h2>
                                 </EuiTitle>
-                            </EuiPageContentHeaderSection>
-                        </EuiPageContentHeader>
+                            </EuiPageSection>
+                        </EuiPageHeader>
                         {results?.summary?.total > 0 ? (
-                            <EuiPageContentBody>
+                            <EuiPageSection className="results-container">
                                 <EntitiesResults
                                     data={results}
                                     offset={variables?.page?.from}
@@ -333,18 +333,18 @@ function EntitiesSearch() {
                                     sortState={sortState}
                                 />
                                 <EuiFlexGroup justifyContent="spaceAround">
-                                    <Pagination data={results} />
+                                    {/* <Pagination data={results} /> */}
                                 </EuiFlexGroup>
-                            </EuiPageContentBody>
+                            </EuiPageSection>
                         ) : (
-                            <EuiPageContentBody>
+                            <div>
                                 {loading
                                     ? "Loading..."
                                     : "Your search did not return any results."}
-                            </EuiPageContentBody>
+                            </div>
                         )}
-                    </EuiPageContent>
-                </EuiPageBody>
+                    </EuiPageBody>
+                </EuiPageSection>
             </EuiPage>
         </main>
     );

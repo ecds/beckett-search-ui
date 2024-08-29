@@ -2,8 +2,7 @@ import {
     EuiButton,
     EuiPage,
     EuiPageBody,
-    EuiPageContent,
-    EuiPageContentBody,
+    EuiPageSection,
     EuiPageHeader,
     EuiPageHeaderSection,
     EuiTitle,
@@ -29,12 +28,12 @@ export function HomePage() {
                             </EuiTitle>
                         </EuiPageHeaderSection>
                     </EuiPageHeader>
-                    <EuiPageContent
+                    <EuiPageSection
                         paddingSize="none"
                         hasShadow={false}
                         className="home-container"
                     >
-                        <EuiPageContentBody>
+                        <EuiPageSection>
                             <img
                                 alt="Samuel Beckett Letters banner"
                                 src={bannerImg}
@@ -55,8 +54,8 @@ export function HomePage() {
                                     Search Index
                                 </EuiButton>
                             </div>
-                        </EuiPageContentBody>
-                    </EuiPageContent>
+                        </EuiPageSection>
+                    </EuiPageSection>
                 </EuiPageBody>
             </EuiPage>
         </main>

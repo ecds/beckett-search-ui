@@ -3,8 +3,7 @@ import {
     EuiHorizontalRule,
     EuiPage,
     EuiPageBody,
-    EuiPageContent,
-    EuiPageContentBody,
+    EuiPageSection,
     EuiPageHeader,
     EuiPageHeaderSection,
     EuiTitle,
@@ -49,66 +48,62 @@ export function EntityPage() {
     return (
         <main className="result">
             <EuiPage paddingSize="l">
-                <EuiPageBody>
-                    <EuiPageHeader className="result-name">
-                        <EuiPageHeaderSection>
-                            <EuiButtonEmpty
-                                type="button"
-                                color="text"
-                                iconType="arrowLeft"
-                                onClick={() => {
-                                    navigate(-1);
+                <EuiPageHeader className="result-name">
+                    <EuiPageHeaderSection>
+                        <EuiButtonEmpty
+                            type="button"
+                            color="text"
+                            iconType="arrowLeft"
+                            onClick={() => {
+                                navigate(-1);
+                            }}
+                        >
+                            Back
+                        </EuiButtonEmpty>
+                        <EuiTitle size="l">
+                            <h1
+                                // eslint-disable-next-line react/no-danger
+                                dangerouslySetInnerHTML={{
+                                    __html: entity.label,
                                 }}
-                            >
-                                Back
-                            </EuiButtonEmpty>
-                            <EuiTitle size="l">
-                                <h1
-                                    // eslint-disable-next-line react/no-danger
-                                    dangerouslySetInnerHTML={{
-                                        __html: entity.label,
-                                    }}
-                                />
+                            />
+                        </EuiTitle>
+                    </EuiPageHeaderSection>
+                </EuiPageHeader>
+                <EuiPageSection>
+                    <EuiPageSection>
+                        <section>
+                            <EuiTitle>
+                                <h2 className="capital-label result-meta-heading">
+                                    {entity?.e_type
+                                        .toString()
+                                        .replaceAll("_", " ")}{" "}
+                                    Information
+                                </h2>
                             </EuiTitle>
-                        </EuiPageHeaderSection>
-                    </EuiPageHeader>
-                    <EuiPageContent>
-                        <EuiPageContentBody>
-                            <section>
-                                <EuiTitle>
-                                    <h2 className="capital-label result-meta-heading">
-                                        {entity?.e_type
-                                            .toString()
-                                            .replaceAll("_", " ")}{" "}
-                                        Information
-                                    </h2>
-                                </EuiTitle>
-                                <div
-                                    // eslint-disable-next-line react/no-danger
-                                    dangerouslySetInnerHTML={{
-                                        __html: entity.full_display,
-                                    }}
-                                    className="entity-details"
-                                />
-                            </section>
-                            {entity.letters &&
-                                Object.entries(entity.letters).map(
-                                    ([key, value]) => (
-                                        <React.Fragment key={key}>
-                                            <EuiHorizontalRule />
-                                            <EntityRelatedLetters
-                                                title={
-                                                    relatedLettersMapping[key]
-                                                }
-                                                type={key}
-                                                uri={value}
-                                            />
-                                        </React.Fragment>
-                                    ),
-                                )}
-                        </EuiPageContentBody>
-                    </EuiPageContent>
-                </EuiPageBody>
+                            <div
+                                // eslint-disable-next-line react/no-danger
+                                dangerouslySetInnerHTML={{
+                                    __html: entity.full_display,
+                                }}
+                                className="entity-details"
+                            />
+                        </section>
+                        {entity.letters &&
+                            Object.entries(entity.letters).map(
+                                ([key, value]) => (
+                                    <React.Fragment key={key}>
+                                        <EuiHorizontalRule />
+                                        <EntityRelatedLetters
+                                            title={relatedLettersMapping[key]}
+                                            type={key}
+                                            uri={value}
+                                        />
+                                    </React.Fragment>
+                                ),
+                            )}
+                    </EuiPageSection>
+                </EuiPageSection>
             </EuiPage>
         </main>
     );

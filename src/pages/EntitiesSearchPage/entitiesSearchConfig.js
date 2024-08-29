@@ -1,4 +1,4 @@
-import { RefinementSelectFacet } from "@ecds/searchkit-sdk";
+import { RefinementSelectFacet } from "@searchkit/sdk";
 import { buildQuery } from "../../common";
 import { CustomYearRangeFacet } from "./CustomYearRangeFacet";
 import { MinMaxYearFacet } from "./MinMaxYearFacet";
@@ -24,7 +24,7 @@ export const scopeOptions = [
 // https://www.rubydoc.info/gems/searchkick/0.1.3/Searchkick%2FSearch:search
 export const analyzers = ["searchkick_search", "searchkick_search2"];
 
-// Config for Searchkit SDK; see https://searchkit.co/docs/core/reference/searchkit-sdk
+// Config for Searchkit SDK; see https://searchkit.co/docs/core/reference/@searchkit/sdk
 export const entitiesSearchConfig = {
     name: "entities",
     host: import.meta.env.VITE_SEARCHKIT_ENDPOINT,

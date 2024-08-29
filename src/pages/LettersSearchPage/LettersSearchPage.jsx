@@ -6,22 +6,20 @@ import {
     useSearchkitVariables,
     withSearchkit,
 } from "@searchkit/client";
-import { Pagination } from "@ecds/searchkit-elastic-ui";
+// import { Pagination } from "@ecds/searchkit-elastic-ui";
 import {
     EuiPage,
     EuiPageBody,
-    EuiPageContent,
-    EuiPageContentBody,
-    EuiPageContentHeader,
-    EuiPageContentHeaderSection,
+    EuiPageSection,
     EuiPageHeader,
-    EuiPageHeaderSection,
-    EuiPageSideBar,
+    EuiPageSidebar,
     EuiTitle,
     EuiHorizontalRule,
     EuiFlexGroup,
     EuiSpacer,
     EuiButton,
+    EuiHeaderSection,
+    EuiHeaderSectionItem,
 } from "@elastic/eui";
 import { appendIconComponentCache } from "@elastic/eui/es/components/icon/icon";
 import { icon as EuiIconArrowDown } from "@elastic/eui/es/components/icon/assets/arrow_down";
@@ -54,6 +52,7 @@ import {
     useScope,
 } from "../../common";
 import { useDateFilter } from "./useDateFilter";
+import "./LettersSearchPage.css";
 
 // icon component cache required for dynamically imported EUI icons in Vite;
 // see https://github.com/elastic/eui/issues/5463
@@ -195,7 +194,7 @@ function LettersSearch() {
         <main className="search-page">
             <EuiPage paddingSize="l">
                 <aside>
-                    <EuiPageSideBar>
+                    <EuiPageSidebar>
                         <SearchControls
                             loading={loading}
                             onSearch={(value) => {
@@ -248,11 +247,11 @@ function LettersSearch() {
                                     <EuiSpacer size="l" />
                                 </div>
                             ))}
-                    </EuiPageSideBar>
+                    </EuiPageSidebar>
                 </aside>
-                <EuiPageBody component="section">
+                <EuiPageSection className="search-results-panel">
                     <EuiPageHeader>
-                        <EuiPageHeaderSection className="active-facet-group">
+                        <EuiHeaderSectionItem className="active-facet-group ">
                             <EuiTitle size="l">
                                 <EuiFlexGroup
                                     gutterSize="s"
@@ -272,8 +271,8 @@ function LettersSearch() {
                                         ))}
                                 </EuiFlexGroup>
                             </EuiTitle>
-                        </EuiPageHeaderSection>
-                        <EuiPageHeaderSection>
+                        </EuiHeaderSectionItem>
+                        <EuiHeaderSection>
                             <EuiButton
                                 fill
                                 color="text"
@@ -299,18 +298,20 @@ function LettersSearch() {
                                 Reset Search
                             </EuiButton>
                             <SaveSearchButton />
-                        </EuiPageHeaderSection>
+                        </EuiHeaderSection>
                     </EuiPageHeader>
-                    <EuiPageContent>
-                        <EuiPageContentHeader>
-                            <EuiPageContentHeaderSection>
+                    <EuiPageBody panelled component="section">
+                        <EuiPageHeader>
+                            <EuiPageSection>
                                 <EuiTitle size="s">
-                                    <h2>{results?.summary.total} Results</h2>
+                                    <h2 className="result-count">
+                                        {results?.summary.total} Results
+                                    </h2>
                                 </EuiTitle>
-                            </EuiPageContentHeaderSection>
-                        </EuiPageContentHeader>
+                            </EuiPageSection>
+                        </EuiPageHeader>
                         {results?.summary?.total > 0 ? (
-                            <EuiPageContentBody>
+                            <EuiPageSection>
                                 <LettersResults
                                     data={results}
                                     offset={variables?.page?.from}
@@ -318,18 +319,18 @@ function LettersSearch() {
                                     sortState={sortState}
                                 />
                                 <EuiFlexGroup justifyContent="spaceAround">
-                                    <Pagination data={results} />
+                                    {/* <Pagination data={results} /> */}
                                 </EuiFlexGroup>
-                            </EuiPageContentBody>
+                            </EuiPageSection>
                         ) : (
-                            <EuiPageContentBody>
+                            <EuiPageSection>
                                 {loading
                                     ? "Loading..."
                                     : "Your search did not return any results."}
-                            </EuiPageContentBody>
+                            </EuiPageSection>
                         )}
-                    </EuiPageContent>
-                </EuiPageBody>
+                    </EuiPageBody>
+                </EuiPageSection>
             </EuiPage>
         </main>
     );

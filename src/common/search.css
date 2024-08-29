@@ -1,10 +1,19 @@
-main.search-page > div.euiPage {
+main.search-page>div.euiPage {
     flex-flow: row wrap;
 }
+
 @media (min-width: 900px) {
-    main.search-page > div.euiPage {
+    main.search-page>div.euiPage {
         flex-flow: row nowrap;
     }
+}
+
+.search-results-panel div {
+    padding-top: 0;
+}
+
+.search-results-panel button {
+    margin-bottom: 1rem;
 }
 
 /* search results table style */
@@ -14,15 +23,18 @@ table.search-results {
     width: 100%;
     position: relative;
 }
+
 table.search-results th,
 table.search-results td {
     padding: 10px;
     border: 1px solid #d3dae6;
 }
+
 table.search-results th {
     background: #f5f7fa;
     text-align: left;
 }
+
 table.search-results tr {
     position: relative;
 }
@@ -34,6 +46,7 @@ main.search-page aside {
     max-width: 400px;
     margin: 0 auto;
 }
+
 @media (min-width: 900px) {
     main.search-page aside {
         align-self: flex-start;
@@ -42,45 +55,56 @@ main.search-page aside {
         max-width: 25%;
     }
 }
+
 aside ul li:not(:last-of-type) {
     margin-bottom: 2px;
 }
+
 aside a,
 section header button:not(:disabled) span {
     color: var(--primary-dark);
 }
+
 aside .operator-group {
     display: flex;
     align-items: center;
 }
+
 aside svg.operator-icon {
     margin-left: 0.5rem;
     fill: var(--primary-dark);
 }
+
 .operator-tooltip {
     text-align: center;
 }
+
 /* ensure search button flush with right of search form */
 aside .search-button-container {
     text-align: right;
 }
-aside
-    .search-button-container
-    button.euiButton--primary:not([class*="isDisabled"]) {
+
+aside .search-button-container button.euiButton--primary:not([class*="isDisabled"]) {
     background-color: var(--primary-dark);
+}
+
+div.active-facet-group {
+    margin-bottom: 1.5rem;
 }
 
 /* prevent multiple applied facets from causing horizontal scroll */
 div.active-facet-group .euiFlexGroup {
     flex-flow: row wrap;
 }
+
 div.active-facet-group button {
     background-color: var(--primary-transparent);
 }
-div.active-facet-group
-    button.euiButton--primary:not([class*="isDisabled"]):hover {
+
+div.active-facet-group button.euiButton--primary:not([class*="isDisabled"]):hover {
     background-color: var(--primary-dark-transparent);
 }
+
 div.active-facet-group button a,
 div.active-facet-group button svg {
     color: var(--primary-dark);
@@ -90,7 +114,8 @@ div.active-facet-group button svg {
 button.reset-search.euiButton:not([class*="isDisabled"]) {
     background-color: var(--primary-dark);
 }
-button.reset-search.euiButton:not([class*="isDisabled"]) span.euiButton__text {
+
+button.reset-search.euiButton:not([class*="isDisabled"]) span {
     color: white;
 }
 
@@ -98,9 +123,11 @@ button.reset-search.euiButton:not([class*="isDisabled"]) span.euiButton__text {
 table.search-results tr:hover td {
     text-decoration: underline;
 }
+
 a.to-record {
     color: inherit;
 }
+
 a.to-record::before {
     content: "";
     cursor: pointer;
@@ -112,13 +139,20 @@ a.to-record::before {
     top: 0;
     z-index: 2;
 }
+
 a.to-record:hover {
     text-decoration: underline;
 }
+
 a.to-record:hover::before,
 a.to-record:focus::before {
     background-color: var(--primary-transparent);
 }
+
 .save-search {
     margin-left: 5px;
+}
+
+h2.result-count {
+    padding-top: 2rem;
 }
