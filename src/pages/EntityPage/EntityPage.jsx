@@ -49,18 +49,20 @@ export function EntityPage() {
         <main className="result">
             <EuiPage paddingSize="l">
                 <EuiPageBody>
+                    <div style={{ width: "100vw" }}>
+                        <EuiButtonEmpty
+                            type="button"
+                            color="text"
+                            iconType="arrowLeft"
+                            onClick={() => {
+                                navigate(-1);
+                            }}
+                        >
+                            Back
+                        </EuiButtonEmpty>
+                    </div>
                     <EuiPageHeader className="result-name">
                         <EuiPageHeaderSection>
-                            <EuiButtonEmpty
-                                type="button"
-                                color="text"
-                                iconType="arrowLeft"
-                                onClick={() => {
-                                    navigate(-1);
-                                }}
-                            >
-                                Back
-                            </EuiButtonEmpty>
                             <EuiTitle size="l">
                                 <h1
                                     // eslint-disable-next-line react/no-danger
