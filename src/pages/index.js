@@ -8,3 +8,4 @@ export * from "./TimelinePage";
 export * from "./FaqPage";
 export * from "./AboutPages";
 export * from "./FilmInterviewsPage";
+export * from "./FormPage";

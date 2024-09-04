@@ -16,6 +16,7 @@ import {
     faqLoader,
     AboutPages,
     FilmInterviewsPages,
+    FormPage,
 } from "./pages";
 import { Root } from "./Root";
 import { getFromApi } from "./common";
@@ -100,6 +101,10 @@ const router = createBrowserRouter([
                     getFromApi(
                         "/about_pages/c98f6be1-1401-4c64-b225-39d39f4f68de",
                     ),
+            },
+            {
+                path: "form",
+                element: <FormPage />,
             },
         ],
     },
