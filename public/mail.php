@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $name = isset($_POST['name']) ? strip_tags(trim($_POST['name'])) : '';
   $email = isset($_POST['email']) ? trim($_POST['email']) : '';
   $message = isset($_POST['message']) ? strip_tags(trim($_POST['message'])) : '';
-  $subject = "Chercher Feedback";
+  $subject = "From: $name <$email>\n\nChercher Feedback";
 
   // Validate form fields
   if (empty($name)) {
@@ -26,11 +26,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // If no errors, send email
   if (empty($errors)) {
     $recipient = "jayvarner@gmail.com";
-    // Additional headers
-    $headers = "From: $name <$email>";
 
     // Send email
-    if (mail($recipient, $subject, $message, $headers)) {
+    if (mail($recipient, $subject, $message)) {
       echo "Email sent successfully!";
     } else {
       echo "Failed to send email. Please try again later.";
@@ -47,4 +45,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   header("HTTP/1.1 403 Forbidden");
   echo "You are not allowed to access this page.";
 }
-?>
