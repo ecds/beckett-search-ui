@@ -6,6 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $name = isset($_POST['name']) ? strip_tags(trim($_POST['name'])) : '';
   $email = isset($_POST['email']) ? trim($_POST['email']) : '';
   $message = isset($_POST['message']) ? strip_tags(trim($_POST['message'])) : '';
+  $subject = "Chercher Feedback";
 
   // Validate form fields
   if (empty($name)) {
@@ -24,14 +25,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   // If no errors, send email
   if (empty($errors)) {
-    // Recipient email address (replace with your own)
     $recipient = "jayvarner@gmail.com";
-
     // Additional headers
     $headers = "From: $name <$email>";
 
     // Send email
-    if (mail($recipient, $message, $headers)) {
+    if (mail($recipient, $subject, $message, $headers)) {
       echo "Email sent successfully!";
     } else {
       echo "Failed to send email. Please try again later.";
