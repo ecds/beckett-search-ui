@@ -1,6 +1,6 @@
 export function Form() {
     return (
-        <form>
+        <form action="/mail.php" method="post">
             <label for="firstName">First Name:</label>
             <input type="text" id="firstName" name="firstName" required />
             <br />
