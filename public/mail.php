@@ -5,8 +5,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // Get POST data
   $name = isset($_POST['name']) ? strip_tags(trim($_POST['name'])) : '';
   $email = isset($_POST['email']) ? trim($_POST['email']) : '';
-  $message = isset($_POST['message']) ? strip_tags(trim($_POST['message'])) : '';
-  $subject = "From: $name <$email>\n\nChercher Feedback";
+  $subject = "Chercher Feedback";
+  $body = isset($_POST['message']) ? strip_tags(trim($_POST['message'])) : '';
+  $message = "From: $name <$email>\n\n$message";
 
   // Validate form fields
   if (empty($name)) {

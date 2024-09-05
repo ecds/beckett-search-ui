@@ -16,7 +16,8 @@ export function Form() {
         });
     };
 
-    const handleSubmit = () => {
+    const handleSubmit = (event) => {
+        event.preventDefault();
         sendMail();
         return false;
     };
