@@ -32,10 +32,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (mail($recipient, $subject, $message)) {
       echo "Email sent successfully!";
     } else {
+      header("HTTP/1.1 400 Bad Request");
       echo "Failed to send email. Please try again later.";
     }
   } else {
     // Display errors
+    header("HTTP/1.1 400 Bad Request");
     echo "The form contains the following errors:<br>";
     foreach ($errors as $error) {
       echo "- $error<br>";
