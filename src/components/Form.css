@@ -1,0 +1,7 @@
+.contact-form {
+  display: inline-flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  width: 33%;
+}

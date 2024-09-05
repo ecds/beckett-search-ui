@@ -18,9 +18,14 @@
     min-height: 100vh;
 }
 
+.primary-button {
+    background-color: var(--primary-dark) !important;
+}
+
 .capital-label {
     text-transform: capitalize;
 }
+
 sup {
     vertical-align: super !important;
 }

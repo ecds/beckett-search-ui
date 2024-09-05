@@ -106,6 +106,7 @@ export function SearchControls({
                             fill
                             onClick={() => onSearch(query)}
                             type="submit"
+                            className="primary-button"
                         >
                             Search
                         </EuiButton>

@@ -16,8 +16,9 @@
         "@searchkit/sdk": "^3.0.0",
         "fold-to-ascii": "^5.0.1",
         "moment": "^2.29.4",
-        "react": "^16.14.0",
-        "react-dom": "^16.14.0",
+        "react": "^17.0.0",
+        "react-dom": "^17.0.0",
+        "react-google-recaptcha": "^3.1.0",
         "react-icons": "^4.8.0",
         "react-router-dom": "^6.4.3",
         "react-vertical-timeline-component": "^3.6.0"
