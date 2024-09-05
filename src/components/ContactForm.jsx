@@ -6,7 +6,7 @@ import {
     EuiButton,
     EuiCallOut,
 } from "@elastic/eui";
-import "./Form.css";
+import "./ContactForm.css";
 
 /**
  * Contact form component.
@@ -14,7 +14,7 @@ import "./Form.css";
  * @summary Component that calls a PHP file to send email.
  * @returns HTML contact form.
  */
-export function Form() {
+export function ContactForm() {
     const nameRef = useRef();
     const emailRef = useRef();
     const messageRef = useRef();
@@ -31,9 +31,9 @@ export function Form() {
     const sendMail = async () => {
         const response = await fetch("/mail.php", {
             method: "POST",
-            body: `name=${encodeURI(nameRef.current.value)}&message=${encodeURI(
-                messageRef.current.value,
-            )}`,
+            body: `name=${encodeURI(nameRef.current.value)}&email=${encodeURI(
+                emailRef.current,
+            )}&message=${encodeURI(messageRef.current.value)}`,
             headers: {
                 "content-type": "application/x-www-form-urlencoded",
             },

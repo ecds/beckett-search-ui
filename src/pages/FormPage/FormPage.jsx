@@ -1,5 +1,5 @@
-import { Form } from "../../components/Form";
+import { ContactForm } from "../../components/ContactForm";
 
 export function FormPage() {
-    return <Form />;
+    return <ContactForm />;
 }
