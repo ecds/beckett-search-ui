@@ -21,7 +21,7 @@ export function Form() {
     const formRef = useRef();
     const [token, setToken] = useState(undefined);
     const [success, setSuccess] = useState(false);
-
+    const [error, setError] = useState(undefined);
     /**
      * Send POST request to PHP file.
      *
@@ -42,13 +42,40 @@ export function Form() {
         messageRef.current.value = "";
         emailRef.current.value = "";
         if (response.status === 200) setSuccess(true);
-        const responseBody = await response.text();
-        console.log("🚀 ~ sendMail ~ response:", responseBody);
+        if (response.status !== 400) {
+            const responseBody = await response.text();
+            setError(responseBody);
+        }
     };
 
     const handleVerify = useCallback((_token) => {
         setToken(_token);
     });
+
+    if (error) {
+        return (
+            <EuiCallOut color="danger" title="An Error Occurred">
+                <p>
+                    dangerouslySetInnerHTML=
+                    {{
+                        __html: error,
+                    }}
+                </p>
+                <p>
+                    <EuiButton
+                        fill
+                        onClick={() => {
+                            setError(undefined);
+                            setToken(undefined);
+                        }}
+                        color="text"
+                    >
+                        Try again
+                    </EuiButton>
+                </p>
+            </EuiCallOut>
+        );
+    }
 
     if (success) {
         return (
