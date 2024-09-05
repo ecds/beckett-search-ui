@@ -55,12 +55,12 @@ export function Form() {
     if (error) {
         return (
             <EuiCallOut color="danger" title="An Error Occurred">
-                <p>
-                    dangerouslySetInnerHTML=
-                    {{
+                <div
+                    // eslint-disable-next-line react/no-danger
+                    dangerouslySetInnerHTML={{
                         __html: error,
                     }}
-                </p>
+                />
                 <p>
                     <EuiButton
                         fill
@@ -127,7 +127,7 @@ export function Form() {
                 <textarea
                     ref={messageRef}
                     className="euiTextArea"
-                    aria-label="Use aria labels when no actual label is in use"
+                    aria-label="Message to send."
                     rows="6"
                     placeholder="Message"
                 />
