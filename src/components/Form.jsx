@@ -42,7 +42,7 @@ export function Form() {
         messageRef.current.value = "";
         emailRef.current.value = "";
         if (response.status === 200) setSuccess(true);
-        if (response.status !== 400) {
+        if (response.status !== 200) {
             const responseBody = await response.text();
             setError(responseBody);
         }
