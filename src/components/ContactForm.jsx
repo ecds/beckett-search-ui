@@ -1,11 +1,6 @@
 import { useCallback, useRef, useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
-import {
-    EuiFormControlLayout,
-    EuiFormLabel,
-    EuiButton,
-    EuiCallOut,
-} from "@elastic/eui";
+import { EuiButton, EuiCallOut, EuiFormRow } from "@elastic/eui";
 import "./ContactForm.css";
 
 /**
@@ -19,20 +14,24 @@ export function ContactForm() {
     const emailRef = useRef();
     const messageRef = useRef();
     const formRef = useRef();
-    const [token, setToken] = useState(undefined);
-    const [success, setSuccess] = useState(false);
+    const recaptchaRef = useRef(undefined);
+    const [captchaSuccess, setCaptchaSuccess] = useState(false);
+    const [sentSuccess, setSentSuccess] = useState(false);
     const [error, setError] = useState(undefined);
+
     /**
      * Send POST request to PHP file.
      *
      * @summary Sends a POST request to PHP mailer with parameters from the form. If the request is successful, the form is reset and a success message is displayed.
+     * @param {Event} event Form onSubmit event.
      * @returns {undefined} Noting is returned.
      */
-    const sendMail = async () => {
-        const response = await fetch("/mail.php", {
+    const sendMail = async (event) => {
+        if (formRef.current.checkValidity()) event.preventDefault();
+        const response = await fetch("http://localhost:8000/public/mail.php", {
             method: "POST",
             body: `name=${encodeURI(nameRef.current.value)}&email=${encodeURI(
-                emailRef.current,
+                emailRef.current.value,
             )}&message=${encodeURI(messageRef.current.value)}`,
             headers: {
                 "content-type": "application/x-www-form-urlencoded",
@@ -41,15 +40,37 @@ export function ContactForm() {
         nameRef.current.value = "";
         messageRef.current.value = "";
         emailRef.current.value = "";
-        if (response.status === 200) setSuccess(true);
+        if (response.status === 200) setSentSuccess(true);
         if (response.status !== 200) {
             const responseBody = await response.text();
             setError(responseBody);
         }
     };
 
-    const handleVerify = useCallback((_token) => {
-        setToken(_token);
+    const handleVerify = useCallback((token) => {
+        /**
+         * Verify the token.
+         *
+         * @summary Verifies the token and sets captchaSuccess accordingly.
+         * @param {string} captchaValue - Token from reCAPTCHA.
+         * @returns {undefined} Nothing.
+         */
+        const verifyCaptcha = async (captchaValue) => {
+            const response = fetch(
+                "http://localhost:8000/public/verifyCaptcha.php",
+                {
+                    method: "POST",
+                    body: `captchaValue=${captchaValue}`,
+                    headers: {
+                        "content-type": "application/x-www-form-urlencoded",
+                    },
+                },
+            );
+            const data = await (await response).json();
+
+            setCaptchaSuccess(data.success);
+        };
+        verifyCaptcha(token);
     });
 
     if (error) {
@@ -66,7 +87,7 @@ export function ContactForm() {
                         fill
                         onClick={() => {
                             setError(undefined);
-                            setToken(undefined);
+                            setCaptchaSuccess(false);
                         }}
                         color="text"
                     >
@@ -77,15 +98,15 @@ export function ContactForm() {
         );
     }
 
-    if (success) {
+    if (sentSuccess) {
         return (
             <EuiCallOut color="success" title="Response sent. Thank you!">
                 <p>
                     <EuiButton
                         fill
                         onClick={() => {
-                            setSuccess(false);
-                            setToken(undefined);
+                            setSentSuccess(false);
+                            setCaptchaSuccess(false);
                         }}
                         className="primary-button"
                     >
@@ -97,56 +118,53 @@ export function ContactForm() {
     }
 
     return (
-        <form ref={formRef} className="contact-form">
-            <EuiFormControlLayout
-                prepend={<EuiFormLabel htmlFor="name">Name</EuiFormLabel>}
-            >
+        <form ref={formRef} className="contact-form" action={sendMail}>
+            <EuiFormRow label="Name">
                 <input
-                    className="euiFieldText"
                     ref={nameRef}
+                    className="euiFieldText"
                     type="text"
                     id="name"
                     name="name"
                     required
                 />
-            </EuiFormControlLayout>
-            <EuiFormControlLayout
-                prepend={<EuiFormLabel htmlFor="email">Email</EuiFormLabel>}
-            >
+            </EuiFormRow>
+            <EuiFormRow label="Email">
                 <input
-                    className="euiFieldText"
                     ref={emailRef}
+                    className="euiFieldText"
                     type="email"
                     id="email"
                     name="email"
                     required
                 />
-            </EuiFormControlLayout>
-
-            <div>
+            </EuiFormRow>
+            <EuiFormRow label="Message">
                 <textarea
                     ref={messageRef}
                     className="euiTextArea"
                     aria-label="Message to send."
                     rows="6"
-                    placeholder="Message"
+                    required
                 />
-            </div>
+            </EuiFormRow>
             <div>
                 <ReCAPTCHA
+                    ref={recaptchaRef}
                     sitekey={import.meta.env.VITE_RECAPTCHA_API_KEY}
                     onChange={handleVerify}
-                    onExpired={() => setToken(undefined)}
+                    onExpired={() => setCaptchaSuccess(false)}
                 />
             </div>
             <div>
                 <EuiButton
+                    type="submit"
                     fill
-                    isDisabled={token === undefined}
+                    isDisabled={!captchaSuccess}
                     onClick={sendMail}
-                    className={token === undefined ? "" : "primary-button"}
+                    className={captchaSuccess ? "primary-button" : ""}
                 >
-                    Send
+                    Send {captchaSuccess}
                 </EuiButton>
             </div>
         </form>

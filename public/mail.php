@@ -9,6 +9,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $body = isset($_POST['message']) ? strip_tags(trim($_POST['message'])) : '';
   $message = "From: $name <$email> \n\n $body";
 
+  header('Access-Control-Allow-Origin: *');
+  header('Access-Control-Allow-Methods: POST');
+  header("Access-Control-Allow-Headers: X-Requested-With");
+
   // Validate form fields
   if (empty($name)) {
     $errors[] = 'Name is empty';
