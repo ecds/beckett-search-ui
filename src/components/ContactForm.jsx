@@ -28,7 +28,7 @@ export function ContactForm() {
      */
     const sendMail = async (event) => {
         if (formRef.current.checkValidity()) event.preventDefault();
-        const response = await fetch("http://localhost:8000/public/mail.php", {
+        const response = await fetch("/mail.php", {
             method: "POST",
             body: `name=${encodeURI(nameRef.current.value)}&email=${encodeURI(
                 emailRef.current.value,
@@ -56,16 +56,13 @@ export function ContactForm() {
          * @returns {undefined} Nothing.
          */
         const verifyCaptcha = async (captchaValue) => {
-            const response = fetch(
-                "http://localhost:8000/public/verifyCaptcha.php",
-                {
-                    method: "POST",
-                    body: `captchaValue=${captchaValue}`,
-                    headers: {
-                        "content-type": "application/x-www-form-urlencoded",
-                    },
+            const response = fetch("/verifyCaptcha.php", {
+                method: "POST",
+                body: `captchaValue=${captchaValue}`,
+                headers: {
+                    "content-type": "application/x-www-form-urlencoded",
                 },
-            );
+            });
             const data = await (await response).json();
 
             setCaptchaSuccess(data.success);
