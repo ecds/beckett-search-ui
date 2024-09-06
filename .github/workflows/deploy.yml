@@ -24,7 +24,7 @@ jobs:
       CAPTCHA_SECRET_KEY: ${{secrets.CAPTCHA_SECRET_KEY}}
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Set REMOTE_HOST for dev
       if: endsWith(github.ref, '/develop')
       run: echo "REMOTE_HOST=chercher.ecdsdev.org" >> $GITHUB_ENV
@@ -34,14 +34,14 @@ jobs:
     - name: Use Node.js 16
       uses: actions/setup-node@v3
       with:
-        node-version: 16
-    - name: Add key to Captcha script
-      run: |
-        sed -i "s\<KEY>\\$CAPTCHA_SECRET_KEY\g" ./public/verifyCaptcha.php
+        node-version: 20
     - name: Install and Build
       run: |
         npm install
         npm run build
+    - name: Add key to Captcha script
+      run: |
+        sed -i "s\<KEY>\\$CAPTCHA_SECRET_KEY\g" ./dist/verifyCaptcha.php
     - name: Set up Key
       run: |
         mkdir ~/.ssh
