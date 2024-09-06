@@ -2,7 +2,7 @@
 switch ($_SERVER["REQUEST_METHOD"]) {
   case 'POST':
     $captcha_value = $_POST['captchaValue'];
-    $url = "https://www.google.com/recaptcha/api/siteverify?secret=&response=$captcha_value";
+    $url = "https://www.google.com/recaptcha/api/siteverify?secret=6LcX8jYqA4-ka_cYIcW7mM6TmMDFAAAAFnPjlLa0&response=$captcha_value";
     $request = [
       'https' => [
         'method' => 'POST',

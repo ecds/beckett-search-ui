@@ -21,6 +21,7 @@ jobs:
       VITE_API_ENDPOINT: ${{secrets.VITE_API_ENDPOINT}}
       VITE_RECAPTCHA_API_KEY: ${{secrets.VITE_RECAPTCHA_API_KEY}}
       REMOTE_USER: ${{secrets.REMOTE_USER}}
+      CAPTCHA_SECRET_KEY: ${{secrets.CAPTCHA_SECRET_KEY}}
 
     steps:
     - uses: actions/checkout@v3
@@ -34,6 +35,9 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: 16
+    - name: Add key to Captcha script
+      run: |
+        sed -i "s\<KEY>\\$CAPTCHA_SECRET_KEY\g" ./public/verifyCaptcha.php
     - name: Install and Build
       run: |
         npm install
