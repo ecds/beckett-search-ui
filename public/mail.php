@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   // If no errors, send email
   if (empty($errors)) {
-    $recipient = "jayvarner@gmail.com";
+    $recipient = "chercherbeckettletters@gmail.com";
 
     // Send email
     if (mail($recipient, $subject, $message)) {
