@@ -20,27 +20,6 @@ export function ContactForm() {
     const [error, setError] = useState(undefined);
 
     /**
-     * Check if all fields have content.
-     * @param {boolean | undefined} submitted Form onSubmit event.
-     * @returns {boolean | undefined} True if all fields have content.
-     */
-    const allFilled = (submitted) => {
-        if (!submitted) return undefined;
-        const values = [
-            nameRef.current.value.length,
-            emailRef.current.value.length,
-            messageRef.current.value.length,
-        ];
-
-        if (values.some((value) => value === 0)) {
-            setError("All fields are required.");
-            return false;
-        }
-
-        return true;
-    };
-
-    /**
      * Send POST request to PHP file.
      *
      * @summary Sends a POST request to PHP mailer with parameters from the form. If the request is successful, the form is reset and a success message is displayed.
@@ -49,7 +28,7 @@ export function ContactForm() {
      */
     const sendMail = async (event) => {
         if (formRef.current.checkValidity()) event.preventDefault();
-        if (!allFilled()) return;
+        // if (!allFilled()) return;
         const response = await fetch("/mail.php", {
             method: "POST",
             body: `name=${encodeURI(nameRef.current.value)}&email=${encodeURI(
