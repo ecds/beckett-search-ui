@@ -132,7 +132,6 @@ export function ContactForm() {
                         id="name"
                         name="name"
                         required
-                        onChange={allFilled}
                     />
                 </EuiFormRow>
                 <EuiFormRow label="Email">
