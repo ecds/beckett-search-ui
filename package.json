@@ -10,14 +10,14 @@
         "prepare": "husky install"
     },
     "dependencies": {
-        "@elastic/eui": "^86.0.0",
+        "@elastic/eui": "^87.0.0",
         "@searchkit/client": "^3.0.0",
         "@searchkit/schema": "^3.0.0",
         "@searchkit/sdk": "^3.0.0",
         "fold-to-ascii": "^5.0.1",
         "moment": "^2.29.4",
-        "react": "^17.0.0",
-        "react-dom": "^17.0.0",
+        "react": "^18.0.0",
+        "react-dom": "^18.0.0",
         "react-google-recaptcha": "^3.1.0",
         "react-icons": "^4.8.0",
         "react-router-dom": "^6.4.3",
@@ -47,5 +47,8 @@
     "lint-staged": {
         "**/*.{js,jsx}": "npx eslint --fix",
         "**/*": "prettier --write --ignore-unknown"
+    },
+    "engines": {
+        "node": ">=20"
     }
 }

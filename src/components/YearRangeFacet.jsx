@@ -29,7 +29,6 @@ function YearRangeFacet({
     yearRange,
 }) {
     const accordionId = useGeneratedHtmlId({ prefix: "accordion" });
-
     /**
      * Handle change in start/end year of year filtering range
      *
@@ -50,14 +49,14 @@ function YearRangeFacet({
         <div>
             {accordion ? (
                 <EuiAccordion
-                    id={accordionId}
+                    id={`${accordionId}!!!!`}
                     arrowDisplay="right"
                     buttonClassName="accordion-button"
                     buttonContent="Years"
                     className="accordion-facet"
                 >
                     <EuiPanel color="subdued">
-                        <EuiFormRow>
+                        <p style={{ minHeight: "48px" }}>
                             <EuiDualRange
                                 value={[
                                     yearRange.startYear || "",
@@ -73,7 +72,7 @@ function YearRangeFacet({
                                 prepend="From"
                                 append="To"
                             />
-                        </EuiFormRow>
+                        </p>
                     </EuiPanel>
                 </EuiAccordion>
             ) : (

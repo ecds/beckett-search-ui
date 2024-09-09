@@ -10,6 +10,10 @@
     padding: 10px;
 }
 
+.euiAccordion__childWrapper {
+    block-size: 4rem;
+}
+
 .accordion-facet .euiFormRow {
     padding: 2px;
 }
