@@ -2,22 +2,26 @@ main#home {
     text-align: center;
     margin-bottom: 12rem;
 }
+
 main#home img {
     max-width: 100%;
 }
+
 main#home .description {
     margin-top: 1.5rem;
     justify-content: center;
     gap: 1.5rem;
 }
+
 main#home .description p {
     text-align: left;
     line-height: 1.5;
     max-width: 60ch;
     padding: 0 2rem;
     font-size: 1.33rem;
-    grid-column: span 2;
+    grid-column: span 3;
 }
+
 main#home a {
     font-size: 1.5rem;
     padding: 1.75rem;
@@ -25,9 +29,11 @@ main#home a {
     background-color: var(--primary);
     width: calc(100% - 4rem);
 }
+
 main#home a:first-of-type {
     margin-bottom: -1rem;
 }
+
 main#home .home-container {
     background-color: var(--primary-light);
 }
@@ -37,13 +43,16 @@ main#home .home-container {
         display: grid;
         grid-template-columns: auto auto;
     }
+
     main#home .description p {
         padding: 0;
     }
+
     main#home a {
         margin: 0 0 0.5rem;
         width: auto;
     }
+
     main#home a:first-of-type {
         margin-bottom: 0;
     }

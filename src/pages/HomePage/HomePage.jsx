@@ -30,7 +30,7 @@ export function HomePage() {
                     </EuiPageHeader>
                     <EuiPageSection
                         paddingSize="none"
-                        hasShadow={false}
+                        hasshadow={false}
                         className="home-container"
                     >
                         <EuiPageSection>
@@ -43,15 +43,19 @@ export function HomePage() {
                                     Welcome to the Interactive Index to the
                                     Letters of Samuel Beckett. Here you can find
                                     data on all Beckett <b>letters</b> held in
-                                    public archives, such as their physical state and
-                                    location. You can also browse the <b>index</b>:
-                                    people, places and things mentioned by Beckett in his letters.
+                                    public archives, such as their physical
+                                    state and location. You can also browse the{" "}
+                                    <b>index</b>: people, places and things
+                                    mentioned by Beckett in his letters.
                                 </p>
                                 <EuiButton fill href={useHref("/letters")}>
                                     Search Letter Data
                                 </EuiButton>
                                 <EuiButton fill href={useHref("/entities")}>
                                     Search Index
+                                </EuiButton>
+                                <EuiButton fill href={useHref("/contact")}>
+                                    Contact
                                 </EuiButton>
                             </div>
                         </EuiPageSection>

@@ -20,6 +20,27 @@ export function ContactForm() {
     const [error, setError] = useState(undefined);
 
     /**
+     * Check if all fields have content.
+     * @param {boolean | undefined} submitted Form onSubmit event.
+     * @returns {boolean | undefined} True if all fields have content.
+     */
+    const allFilled = (submitted) => {
+        if (!submitted) return undefined;
+        const values = [
+            nameRef.current.value.length,
+            emailRef.current.value.length,
+            messageRef.current.value.length,
+        ];
+
+        if (values.some((value) => value === 0)) {
+            setError("All fields are required.");
+            return false;
+        }
+
+        return true;
+    };
+
+    /**
      * Send POST request to PHP file.
      *
      * @summary Sends a POST request to PHP mailer with parameters from the form. If the request is successful, the form is reset and a success message is displayed.
@@ -28,6 +49,7 @@ export function ContactForm() {
      */
     const sendMail = async (event) => {
         if (formRef.current.checkValidity()) event.preventDefault();
+        if (!allFilled()) return;
         const response = await fetch("/mail.php", {
             method: "POST",
             body: `name=${encodeURI(nameRef.current.value)}&email=${encodeURI(
@@ -70,31 +92,6 @@ export function ContactForm() {
         verifyCaptcha(token);
     });
 
-    if (error) {
-        return (
-            <EuiCallOut color="danger" title="An Error Occurred">
-                <div
-                    // eslint-disable-next-line react/no-danger
-                    dangerouslySetInnerHTML={{
-                        __html: error,
-                    }}
-                />
-                <p>
-                    <EuiButton
-                        fill
-                        onClick={() => {
-                            setError(undefined);
-                            setCaptchaSuccess(false);
-                        }}
-                        color="text"
-                    >
-                        Try again
-                    </EuiButton>
-                </p>
-            </EuiCallOut>
-        );
-    }
-
     if (sentSuccess) {
         return (
             <EuiCallOut color="success" title="Response sent. Thank you!">
@@ -115,55 +112,68 @@ export function ContactForm() {
     }
 
     return (
-        <form ref={formRef} className="contact-form" action={sendMail}>
-            <EuiFormRow label="Name">
-                <input
-                    ref={nameRef}
-                    className="euiFieldText"
-                    type="text"
-                    id="name"
-                    name="name"
-                    required
-                />
-            </EuiFormRow>
-            <EuiFormRow label="Email">
-                <input
-                    ref={emailRef}
-                    className="euiFieldText"
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                />
-            </EuiFormRow>
-            <EuiFormRow label="Message">
-                <textarea
-                    ref={messageRef}
-                    className="euiTextArea"
-                    aria-label="Message to send."
-                    rows="6"
-                    required
-                />
-            </EuiFormRow>
-            <div>
-                <ReCAPTCHA
-                    ref={recaptchaRef}
-                    sitekey={import.meta.env.VITE_RECAPTCHA_API_KEY}
-                    onChange={handleVerify}
-                    onExpired={() => setCaptchaSuccess(false)}
-                />
-            </div>
-            <div>
-                <EuiButton
-                    type="submit"
-                    fill
-                    isDisabled={!captchaSuccess}
-                    onClick={sendMail}
-                    className={captchaSuccess ? "primary-button" : ""}
-                >
-                    Send {captchaSuccess}
-                </EuiButton>
-            </div>
-        </form>
+        <div>
+            {error && (
+                <EuiCallOut color="danger" title="An Error Occurred">
+                    <div
+                        // eslint-disable-next-line react/no-danger
+                        dangerouslySetInnerHTML={{
+                            __html: error,
+                        }}
+                    />
+                </EuiCallOut>
+            )}
+            <form ref={formRef} className="contact-form" onSubmit={sendMail}>
+                <EuiFormRow label="Name">
+                    <input
+                        ref={nameRef}
+                        className="euiFieldText"
+                        type="text"
+                        id="name"
+                        name="name"
+                        required
+                        onChange={allFilled}
+                    />
+                </EuiFormRow>
+                <EuiFormRow label="Email">
+                    <input
+                        ref={emailRef}
+                        className="euiFieldText"
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                    />
+                </EuiFormRow>
+                <EuiFormRow label="Message">
+                    <textarea
+                        ref={messageRef}
+                        className="euiTextArea"
+                        aria-label="Message to send."
+                        rows="6"
+                        required
+                    />
+                </EuiFormRow>
+                <div>
+                    <ReCAPTCHA
+                        ref={recaptchaRef}
+                        sitekey={import.meta.env.VITE_RECAPTCHA_API_KEY}
+                        onChange={handleVerify}
+                        onExpired={() => setCaptchaSuccess(false)}
+                    />
+                </div>
+                <div className="submit-button-container">
+                    <EuiButton
+                        type="submit"
+                        fill
+                        isDisabled={!captchaSuccess}
+                        onClick={sendMail}
+                        className={captchaSuccess ? "primary-button" : ""}
+                    >
+                        Send {captchaSuccess}
+                    </EuiButton>
+                </div>
+            </form>
+        </div>
     );
 }

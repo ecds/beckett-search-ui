@@ -1,5 +1,5 @@
 import React from "react";
-import * as ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { EuiProvider } from "@elastic/eui";
 import {
@@ -16,7 +16,7 @@ import {
     faqLoader,
     AboutPages,
     FilmInterviewsPages,
-    FormPage,
+    ContactPage,
 } from "./pages";
 import { Root } from "./Root";
 import { getFromApi } from "./common";
@@ -103,18 +103,20 @@ const router = createBrowserRouter([
                     ),
             },
             {
-                path: "form",
-                element: <FormPage />,
+                path: "contact",
+                element: <ContactPage />,
             },
         ],
     },
 ]);
 
-ReactDOM.render(
+const container = document.getElementById("root");
+const root = createRoot(container); // createRoot(container!) if you use TypeScript
+
+root.render(
     <React.StrictMode>
         <EuiProvider colorMode="light">
             <RouterProvider router={router} />
         </EuiProvider>
     </React.StrictMode>,
-    document.getElementById("root"),
 );

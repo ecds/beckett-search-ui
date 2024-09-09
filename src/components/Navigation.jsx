@@ -188,6 +188,13 @@ function Navigation() {
                                     </EuiHeaderLink>
                                 )}
                             </NavLink>
+                            <NavLink to="/contact" tabIndex="-1">
+                                {({ isActive }) => (
+                                    <EuiHeaderLink isActive={isActive}>
+                                        Contact
+                                    </EuiHeaderLink>
+                                )}
+                            </NavLink>
                         </EuiHeaderLinks>
                     </EuiHeaderSectionItem>
                 </EuiHeaderSection>

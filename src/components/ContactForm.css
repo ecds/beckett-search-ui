@@ -5,3 +5,13 @@
   gap: 1.5rem;
   width: 33%;
 }
+
+.contact-form .submit-button-container {
+  text-align: left;
+}
+
+.euiTextArea:invalid,
+.euiFieldText:invalid {
+  background-image: linear-gradient(to top, #ba3d76, #ba3d76 2px, transparent 2px, transparent 100%);
+  background-size: 100%;
+}
