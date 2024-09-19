@@ -1,12 +1,4 @@
-import {
-    EuiButton,
-    EuiPage,
-    EuiPageBody,
-    EuiPageSection,
-    EuiPageHeader,
-    EuiPageHeaderSection,
-    EuiTitle,
-} from "@elastic/eui";
+import { EuiPage, EuiPageBody, EuiPageSection, EuiText } from "@elastic/eui";
 import { ContactForm } from "../../components/ContactForm";
 import "./ContactPage.css";
 
@@ -20,6 +12,11 @@ export function ContactPage() {
         <main id="contact">
             <EuiPage paddingSize="none">
                 <EuiPageBody>
+                    <EuiPageSection>
+                        <EuiText>
+                            <article>{/* HTML content here */}</article>
+                        </EuiText>
+                    </EuiPageSection>
                     <ContactForm />
                 </EuiPageBody>
             </EuiPage>

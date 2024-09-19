@@ -28,7 +28,6 @@ export function ContactForm() {
      */
     const sendMail = async (event) => {
         if (formRef.current.checkValidity()) event.preventDefault();
-        // if (!allFilled()) return;
         const response = await fetch("/mail.php", {
             method: "POST",
             body: `name=${encodeURI(nameRef.current.value)}&email=${encodeURI(
