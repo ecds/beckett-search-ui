@@ -6,7 +6,6 @@ import {
     useSearchkitVariables,
     withSearchkit,
 } from "@searchkit/client";
-// import { Pagination } from "@ecds/searchkit-elastic-ui";
 import {
     EuiPage,
     EuiPageBody,
@@ -53,6 +52,7 @@ import {
 } from "../../common";
 import ValueFilter from "../../components/ValueFilter";
 import { useYearFilter } from "./useYearFilter";
+import { Pagination } from "../../components/Pagination";
 
 // icon component cache required for dynamically imported EUI icons in Vite;
 // see https://github.com/elastic/eui/issues/5463
@@ -315,17 +315,13 @@ function EntitiesSearch() {
                         </EuiHeaderSection>
                     </EuiPageHeader>
                     <EuiPageBody panelled component="section">
-                        <EuiPageHeader>
-                            <EuiPageSection>
+                        {results?.summary?.total > 0 ? (
+                            <EuiPageSection className="results-container">
                                 <EuiTitle size="s">
                                     <h2 className="result-count">
                                         {results?.summary.total} Results
                                     </h2>
                                 </EuiTitle>
-                            </EuiPageSection>
-                        </EuiPageHeader>
-                        {results?.summary?.total > 0 ? (
-                            <EuiPageSection className="results-container">
                                 <EntitiesResults
                                     data={results}
                                     offset={variables?.page?.from}
@@ -333,7 +329,7 @@ function EntitiesSearch() {
                                     sortState={sortState}
                                 />
                                 <EuiFlexGroup justifyContent="spaceAround">
-                                    {/* <Pagination data={results} /> */}
+                                    <Pagination data={results} />
                                 </EuiFlexGroup>
                             </EuiPageSection>
                         ) : (

@@ -6,7 +6,6 @@ import {
     useSearchkitVariables,
     withSearchkit,
 } from "@searchkit/client";
-// import { Pagination } from "@ecds/searchkit-elastic-ui";
 import {
     EuiPage,
     EuiPageBody,
@@ -53,6 +52,7 @@ import {
 } from "../../common";
 import { useDateFilter } from "./useDateFilter";
 import "./LettersSearchPage.css";
+import { Pagination } from "../../components/Pagination";
 
 // icon component cache required for dynamically imported EUI icons in Vite;
 // see https://github.com/elastic/eui/issues/5463
@@ -301,17 +301,13 @@ function LettersSearch() {
                         </EuiHeaderSection>
                     </EuiPageHeader>
                     <EuiPageBody panelled component="section">
-                        <EuiPageHeader>
+                        {results?.summary?.total > 0 ? (
                             <EuiPageSection>
                                 <EuiTitle size="s">
                                     <h2 className="result-count">
                                         {results?.summary.total} Results
                                     </h2>
                                 </EuiTitle>
-                            </EuiPageSection>
-                        </EuiPageHeader>
-                        {results?.summary?.total > 0 ? (
-                            <EuiPageSection>
                                 <LettersResults
                                     data={results}
                                     offset={variables?.page?.from}
@@ -319,7 +315,7 @@ function LettersSearch() {
                                     sortState={sortState}
                                 />
                                 <EuiFlexGroup justifyContent="spaceAround">
-                                    {/* <Pagination data={results} /> */}
+                                    <Pagination data={results} />
                                 </EuiFlexGroup>
                             </EuiPageSection>
                         ) : (

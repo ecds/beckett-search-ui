@@ -155,4 +155,5 @@ a.to-record:focus::before {
 
 h2.result-count {
     padding-top: 2rem;
+    padding-bottom: 2rem;
 }
