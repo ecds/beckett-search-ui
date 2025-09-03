@@ -1,4 +1,4 @@
-# beckett-search-ui
+# Beckett Search UI
 
 The frontend for the ECDS Beckett Letters project, built with React and Searchkit/ElasticSearch, bundled with Vite, and using the [beckett-data-api](https://github.com/ecds/beckett-data-api) developed by Jay Varner.
 
