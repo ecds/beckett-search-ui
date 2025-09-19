@@ -24,5 +24,9 @@
 
 .list-facet .facet-group {
     overflow-y: auto;
-    /* max-height: 400px; */
+}
+
+.list-facet.searchable-facet {
+    overflow-y: auto;
+    max-height: 400px;
 }
