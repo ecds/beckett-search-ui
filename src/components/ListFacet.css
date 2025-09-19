@@ -5,19 +5,24 @@
     margin-bottom: 0;
     margin-right: 5px;
 }
+
 .list-facet .facet-group .facet-button span.capital-label {
     color: var(--primary-dark);
 }
+
 .list-facet .facet-group .facet-button:hover span.capital-label {
     text-decoration: underline;
 }
+
 .list-facet:not(:first-child) {
     margin-top: 1rem;
 }
+
 .list-facet h3 {
     margin-bottom: 0.25rem;
 }
+
 .list-facet .facet-group {
     overflow-y: auto;
-    max-height: 400px;
+    /* max-height: 400px; */
 }
