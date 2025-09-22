@@ -6,6 +6,7 @@
 export async function getFromApi(path) {
     const p = path.startsWith("/") ? path : `/${path}`;
     const data = await fetch(`${import.meta.env.VITE_API_ENDPOINT}${p}`);
+    if (data.status === 404) return { status: 404 };
     return data.json();
 }
 
