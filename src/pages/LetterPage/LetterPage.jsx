@@ -83,18 +83,32 @@ export function LetterPage() {
                         )}
                         <EuiHorizontalRule />
                         {letter.repositories && (
-                            <LetterMetadata metadata={letter.repositories} />
+                            <>
+                                <LetterMetadata metadata={letter.repositories} />
+                                <EuiHorizontalRule />
+                            </>
                         )}
-                        <EuiHorizontalRule />
                         {letter.publication_information && (
-                            <LetterMetadata
-                                metadata={{
-                                    publication_information:
-                                        letter.publication_information,
-                                }}
-                            />
+                            <>
+                                <LetterMetadata
+                                    metadata={{
+                                        publication_information:
+                                            letter.publication_information,
+                                    }}
+                                />
+                                <EuiHorizontalRule />
+                            </>
                         )}
-                        <EuiHorizontalRule />
+                        {letter.previously_published && (
+                            <>
+                                <LetterMetadata
+                                    metadata={{
+                                        previously_published: letter.previously_published
+                                    }}
+                                />
+                                <EuiHorizontalRule />
+                            </>
+                        )}
                         {letter.mentions && (
                             <LetterMentions mentions={letter.mentions} />
                         )}
