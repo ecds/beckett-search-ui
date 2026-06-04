@@ -59,28 +59,24 @@ export function FaqPage() {
                         </EuiPageHeaderSection>
                     </EuiPageHeader>
                     <EuiPageSection>
-                        <EuiText>
-                            <EuiPageSection>
-                                {faqs.map((faq) => (
-                                    <EuiAccordion
-                                        key={faq.position}
-                                        id="faq-accordion"
-                                        buttonContent={buttonContent(
-                                            faq.question,
-                                        )}
-                                    >
-                                        <EuiPanel color="subdued">
-                                            <p
-                                                // eslint-disable-next-line react/no-danger
-                                                dangerouslySetInnerHTML={{
-                                                    __html: faq.answer,
-                                                }}
-                                            />
-                                        </EuiPanel>
-                                    </EuiAccordion>
-                                ))}
-                            </EuiPageSection>
-                        </EuiText>
+                        {faqs.map((faq) => {
+                            return <EuiAccordion
+                                key={faq.position}
+                                id={`faq-${faq.position}`}
+                                buttonContent={buttonContent(faq.question)}
+                            >
+                                <EuiPanel color="subdued">
+                                    <EuiText>
+                                        <div
+                                            // eslint-disable-next-line react/no-danger
+                                            dangerouslySetInnerHTML={{
+                                                __html: faq.answer,
+                                            }}
+                                        />
+                                    </EuiText>
+                                </EuiPanel>
+                            </EuiAccordion>;
+                        })}
                     </EuiPageSection>
                 </EuiPageBody>
             </EuiPage>

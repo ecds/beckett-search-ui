@@ -1,4 +1,4 @@
-import { RefinementSelectFacet } from "@searchkit/sdk";
+import { RefinementSelectFacet } from "../../common/facets";
 import { buildQuery } from "../../common";
 import { CustomYearRangeFacet } from "./CustomYearRangeFacet";
 import { MinMaxYearFacet } from "./MinMaxYearFacet";

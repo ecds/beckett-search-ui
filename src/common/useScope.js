@@ -1,4 +1,4 @@
-import { useSearchkitVariables } from "@searchkit/client";
+import { useSearchkitVariables } from "./SearchContext";
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { isDefault, stateToRoute } from "./searchRouting";

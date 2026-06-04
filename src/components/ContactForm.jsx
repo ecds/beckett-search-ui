@@ -1,6 +1,6 @@
 import { useCallback, useRef, useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
-import { EuiButton, EuiCallOut, EuiFormRow } from "@elastic/eui";
+import { EuiButton, EuiCallOut, EuiForm, EuiFormRow } from "@elastic/eui";
 import "./ContactForm.css";
 
 /**
@@ -101,7 +101,7 @@ export function ContactForm() {
                     />
                 </EuiCallOut>
             )}
-            <form ref={formRef} className="contact-form" onSubmit={sendMail}>
+            <EuiForm ref={formRef} className="contact-form" onSubmit={sendMail}>
                 <EuiFormRow label="Name">
                     <input
                         ref={nameRef}
@@ -150,7 +150,7 @@ export function ContactForm() {
                         Send {captchaSuccess}
                     </EuiButton>
                 </div>
-            </form>
+            </EuiForm>
         </div>
     );
 }

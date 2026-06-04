@@ -22,7 +22,7 @@ import "./AccordionFacet.css";
  * @returns {React.Component} Year range React component
  */
 function YearRangeFacet({
-    accordion,
+    accordion = false,
     minYear,
     maxYear,
     setYearRange,
@@ -103,8 +103,5 @@ function YearRangeFacet({
     );
 }
 
-YearRangeFacet.defaultProps = {
-    accordion: false,
-};
 
 export default YearRangeFacet;

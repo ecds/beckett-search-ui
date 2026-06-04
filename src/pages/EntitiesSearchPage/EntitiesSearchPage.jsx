@@ -1,11 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import {
-    SearchkitClient,
     useSearchkit,
     useSearchkitVariables,
     withSearchkit,
-} from "@searchkit/client";
+} from "../../common/SearchContext";
 import {
     EuiPage,
     EuiPageBody,
@@ -20,13 +19,12 @@ import {
     EuiHeaderSection,
     EuiHeaderSectionItem,
 } from "@elastic/eui";
-import "@elastic/eui/dist/eui_theme_light.css";
 import { appendIconComponentCache } from "@elastic/eui/es/components/icon/icon";
 import { icon as EuiIconArrowLeft } from "@elastic/eui/es/components/icon/assets/arrow_left";
 import { icon as EuiIconArrowRight } from "@elastic/eui/es/components/icon/assets/arrow_right";
 import { icon as EuiIconCross } from "@elastic/eui/es/components/icon/assets/cross";
 import { icon as EuiIconSearch } from "@elastic/eui/es/components/icon/assets/search";
-import { icon as EuiIconQuestion } from "@elastic/eui/es/components/icon/assets/question_in_circle";
+import { icon as EuiIconQuestion } from "@elastic/eui/es/components/icon/assets/question";
 import { icon as EuiIconSortable } from "@elastic/eui/es/components/icon/assets/sortable";
 import { icon as EuiIconSortUp } from "@elastic/eui/es/components/icon/assets/sort_up";
 import { icon as EuiIconSortDown } from "@elastic/eui/es/components/icon/assets/sort_down";
@@ -119,13 +117,7 @@ function EntitiesSearch() {
         }
     };
 
-    // Use React Router useSearchParams to translate to and from URL query params
-    useEffect(() => {
-        if (api && searchParams) {
-            api.setSearchState(routeToState(searchParams));
-            api.search();
-        }
-    }, [searchParams]);
+    // useCustomSearchkitSDK watches searchParams directly; no manual sync needed.
     useEffect(() => {
         // handle sorting separately in order to only update in case of changes
         // use mounted ref to ensure we don't fire this effect on initial value
@@ -170,22 +162,8 @@ function EntitiesSearch() {
             );
         }
     }, [operator]);
-    useEffect(() => {
-        if (variables?.page?.from) {
-            setSearchParams(
-                stateToRoute({
-                    ...variables,
-                    query,
-                    sortBy: getSortByFromState(sortState),
-                    scope,
-                    operator,
-                    page: {
-                        from: variables.page.from,
-                    },
-                }),
-            );
-        }
-    }, [variables?.page?.from]);
+    // Page navigation is handled by SearchContext.api.setPage, which updates
+    // searchParams directly — no secondary effect needed here.
 
     return (
         <main className="search-page">
@@ -346,7 +324,4 @@ function EntitiesSearch() {
     );
 }
 
-export const EntitiesSearchPage = withSearchkit(
-    EntitiesSearch,
-    () => new SearchkitClient({ itemsPerPage: 25 }),
-);
+export const EntitiesSearchPage = withSearchkit(EntitiesSearch);

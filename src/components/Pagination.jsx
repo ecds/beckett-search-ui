@@ -1,4 +1,4 @@
-import { useSearchkit } from "@searchkit/client";
+import { useSearchkit } from "../common/SearchContext";
 import { EuiPagination } from "@elastic/eui";
 
 /**

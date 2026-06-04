@@ -1,11 +1,10 @@
 import { useState, useEffect, useRef } from "react";
 import { useSearchParams } from "react-router-dom";
 import {
-    SearchkitClient,
     useSearchkit,
     useSearchkitVariables,
     withSearchkit,
-} from "@searchkit/client";
+} from "../../common/SearchContext";
 import {
     EuiPage,
     EuiPageBody,
@@ -122,13 +121,7 @@ function LettersSearch() {
             operator,
         });
 
-    // Use React Router useSearchParams to translate to and from URL query params
-    useEffect(() => {
-        if (api && searchParams) {
-            api.setSearchState(routeToState(searchParams));
-            api.search();
-        }
-    }, [searchParams]);
+    // useCustomSearchkitSDK watches searchParams directly; no manual sync needed.
     useEffect(() => {
         // handle sorting separately in order to only update in case of changes
         // use mounted ref to ensure we don't fire this effect on initial value
@@ -173,22 +166,8 @@ function LettersSearch() {
             );
         }
     }, [operator]);
-    useEffect(() => {
-        if (variables?.page?.from) {
-            setSearchParams(
-                stateToRoute({
-                    ...variables,
-                    query,
-                    sortBy: getSortByFromState(sortState),
-                    scope,
-                    operator,
-                    page: {
-                        from: variables.page.from,
-                    },
-                }),
-            );
-        }
-    }, [variables?.page?.from]);
+    // Page navigation is handled by SearchContext.api.setPage, which updates
+    // searchParams directly — no secondary effect needed here.
 
     return (
         <main className="search-page">
@@ -332,7 +311,4 @@ function LettersSearch() {
     );
 }
 
-export const LettersSearchPage = withSearchkit(
-    LettersSearch,
-    () => new SearchkitClient({ itemsPerPage: 25 }),
-);
+export const LettersSearchPage = withSearchkit(LettersSearch);

@@ -11,8 +11,8 @@ import {
     EuiListGroupItem,
 } from "@elastic/eui";
 import { appendIconComponentCache } from "@elastic/eui/es/components/icon/icon";
-import { icon as EuiIconArrowEnd } from "@elastic/eui/es/components/icon/assets/arrowEnd";
-import { icon as EuiIconArrowStart } from "@elastic/eui/es/components/icon/assets/arrowStart";
+import { icon as EuiIconChevronLimitRight } from "@elastic/eui/es/components/icon/assets/chevron_limit_right";
+import { icon as EuiIconChevronLimitLeft } from "@elastic/eui/es/components/icon/assets/chevron_limit_left";
 import { icon as EuiIconApps } from "@elastic/eui/es/components/icon/assets/apps";
 import { NavLink } from "react-router-dom";
 import "./Navigation.css";
@@ -20,8 +20,8 @@ import "./Navigation.css";
 // icon component cache required for dynamically imported EUI icons in Vite;
 // see https://github.com/elastic/eui/issues/5463
 appendIconComponentCache({
-    arrowEnd: EuiIconArrowEnd,
-    arrowStart: EuiIconArrowStart,
+    arrowEnd: EuiIconChevronLimitRight,
+    arrowStart: EuiIconChevronLimitLeft,
     apps: EuiIconApps,
 });
 

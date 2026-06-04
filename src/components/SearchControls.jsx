@@ -87,12 +87,8 @@ export function SearchControls({
                         <EuiIconTip
                             className="operator-tooltip"
                             position="bottom"
-                            type="questionInCircle"
                             content="Choose Any to match any entered keyword, or All to match all keywords."
-                            iconProps={{
-                                className: "operator-icon",
-                            }}
-                            size="l"
+                            size="m"
                         />
                     </div>
                 </EuiFlexItem>

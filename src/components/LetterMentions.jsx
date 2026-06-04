@@ -1,7 +1,7 @@
 import React from "react";
 import { EuiIconTip, EuiTitle } from "@elastic/eui";
 import { appendIconComponentCache } from "@elastic/eui/es/components/icon/icon";
-import { icon as EuiIconiInCircle } from "@elastic/eui/es/components/icon/assets/iInCircle";
+import { icon as EuiIconInfo } from "@elastic/eui/es/components/icon/assets/info";
 import { Link } from "react-router-dom";
 import { entityTypes } from "../common";
 import MentionQualifier from "./MentionQualifier";
@@ -9,7 +9,7 @@ import MentionQualifier from "./MentionQualifier";
 // icon component cache required for dynamically imported EUI icons in Vite;
 // see https://github.com/elastic/eui/issues/5463
 appendIconComponentCache({
-    iInCircle: EuiIconiInCircle,
+    iInCircle: EuiIconInfo,
 });
 
 /**

@@ -1,5 +1,5 @@
 import { EuiButton, EuiFlexItem } from "@elastic/eui";
-import { useSearchkit, useSearchkitVariables } from "@searchkit/client";
+import { useSearchkit, useSearchkitVariables } from "../common/SearchContext";
 import { useSearchParams } from "react-router-dom";
 import { stateToRoute, volumeLabels } from "../common";
 

@@ -42,10 +42,10 @@ export function ContactPage() {
                                     Your response will help us to improve
                                     Chercher and reach new users.
                                 </p>
+                                <ContactForm />
                             </article>
                         </EuiText>
                     </EuiPageSection>
-                    <ContactForm />
                 </EuiPageBody>
             </EuiPage>
         </main>

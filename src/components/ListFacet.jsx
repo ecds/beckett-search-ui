@@ -7,7 +7,7 @@ import {
     EuiTitle,
     EuiToolTip,
 } from "@elastic/eui";
-import { useSearchkit, useSearchkitVariables } from "@searchkit/client";
+import { useSearchkit, useSearchkitVariables } from "../common/SearchContext";
 import { useSearchParams } from "react-router-dom";
 import ASCIIFolder from "fold-to-ascii";
 import { entityTypes, stateToRoute, volumeLabels } from "../common";
@@ -25,7 +25,7 @@ import "./ListFacet.css";
  * @param {boolean} props.textSearchable Indicate if text search box should be displayed
  * @returns {Fragment|null} ListFacet component set
  */
-function ListFacet({ displayTitle, facet, loading, textSearchable }) {
+function ListFacet({ displayTitle = true, facet, loading, textSearchable }) {
     const api = useSearchkit();
     const variables = useSearchkitVariables();
     const [_, setSearchParams] = useSearchParams();
@@ -141,7 +141,4 @@ function ListFacet({ displayTitle, facet, loading, textSearchable }) {
 
 // Disambiguate from Searchkit builtin ListFacet
 ListFacet.DISPLAY = "CustomListFacet";
-ListFacet.defaultProps = {
-    displayTitle: true,
-};
 export default ListFacet;

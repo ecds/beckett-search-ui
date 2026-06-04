@@ -1,52 +1,50 @@
-import createInstance from "@searchkit/sdk";
 import { useEffect, useState } from "react";
 import moment from "moment";
 import { useSearchParams } from "react-router-dom";
 import { buildQuery } from "./queryBuilder";
 import { routeToState } from "./searchRouting";
+import { executeSearch } from "./elasticsearchAdapter";
 
 /**
- * Hook that performs a search using chosen configuration.
- * Adapted from @searchkit/sdk, but customized to allow changing operator.
+ * Hook that performs a search against Elasticsearch 8 using the provided configuration.
  *
  * @param {object} kwargs Object of options for the hook
  * @param {Array<string>} kwargs.analyzers List of input analyzer names
- * @param {object} kwargs.config Initial search config
+ * @param {object} kwargs.config Search config (host, index, facets, sortOptions, etc.)
  * @param {Array<object>} kwargs.fields List of Field objects ({ name, boost })
- * @returns {object} Response in the form { results: SearchkitResponse; loading: boolean }
+ * @returns {object} Response in the form { results, loading, dateRange, dateRangeLoading, yearRange }
  */
 export const useCustomSearchkitSDK = ({ config, analyzers, fields }) => {
     const [results, setResponse] = useState(null);
     const [loading, setLoading] = useState(true);
     const [dateRange, setDateRange] = useState(null);
     const [dateRangeLoading, setDateRangeLoading] = useState(true);
-    const [searchParams, _] = useSearchParams();
+    const [searchParams] = useSearchParams();
     const [yearRange, setYearRange] = useState(null);
 
     if (config?.name === "letters") {
-        // initial request to get global date range with no filters/query
+        // One-time request on mount to get the global date range (no filters/query).
+        // eslint-disable-next-line react-hooks/rules-of-hooks
         useEffect(() => {
             // eslint-disable-next-line jsdoc/require-jsdoc
             async function fetchDateData() {
                 setDateRangeLoading(true);
-                const request = createInstance({
-                    ...config,
-                    query: buildQuery({ analyzers, fields }),
-                });
-                const response = await request.execute({
-                    facets: true,
-                    hits: { size: 0 },
+                const response = await executeSearch({
+                    config,
+                    searchState: { query: "", filters: [], page: { size: 0, from: 0 } },
+                    facets: config.facets,
                 });
                 // get min and max date facet values
                 const min =
                     response?.facets?.find((f) => f.identifier === "min_date")
-                        ?.value || null;
-                const minDate = min ? moment.utc(min) : null;
+                        ?.value ?? null;
                 const max =
                     response?.facets?.find((f) => f.identifier === "max_date")
-                        ?.value || null;
-                const maxDate = max ? moment.utc(max) : null;
-                setDateRange({ minDate, maxDate });
+                        ?.value ?? null;
+                setDateRange({
+                    minDate: min ? moment.utc(min) : null,
+                    maxDate: max ? moment.utc(max) : null,
+                });
                 setDateRangeLoading(false);
             }
             fetchDateData();
@@ -54,63 +52,56 @@ export const useCustomSearchkitSDK = ({ config, analyzers, fields }) => {
     }
 
     if (config?.name === "entities") {
-        // initial request to get global year range with no filters/query
+        // One-time request on mount to get the global year range (no filters/query).
+        // eslint-disable-next-line react-hooks/rules-of-hooks
         useEffect(() => {
             // eslint-disable-next-line jsdoc/require-jsdoc
             async function fetchYearData() {
-                const request = createInstance({
-                    ...config,
-                    query: buildQuery({ analyzers, fields }),
-                });
-                const response = await request.execute({
-                    facets: true,
-                    hits: { size: 0 },
+                const response = await executeSearch({
+                    config,
+                    searchState: { query: "", filters: [], page: { size: 0, from: 0 } },
+                    facets: config.facets,
                 });
                 // get min and max year facet values
                 const minYear =
                     response?.facets?.find((f) => f.identifier === "min_year")
-                        ?.value || null;
+                        ?.value ?? null;
                 const maxYear =
                     response?.facets?.find((f) => f.identifier === "max_year")
-                        ?.value || null;
+                        ?.value ?? null;
                 setYearRange({ minYear, maxYear });
             }
             fetchYearData();
         }, []); // (perform once, on page render)
     }
 
-    // other requests with filters applied, if/whenever they change
+    // Main search request — re-fires whenever URL search params change.
     useEffect(() => {
         // eslint-disable-next-line jsdoc/require-jsdoc
-        async function fetchData(vars) {
+        async function fetchData() {
             setLoading(true);
-            const request = createInstance({
-                ...config,
-                query: buildQuery({
-                    analyzers,
-                    fields:
-                        !vars.scope || vars.scope === "keyword"
-                            ? fields
-                            : [{ name: vars.scope, boost: 10 }],
-                    operator: vars.operator || "or",
-                }),
-            })
-                .query(vars.query)
-                .setFilters(vars.filters)
-                .setSortBy(vars.sortBy);
-
-            const response = await request.execute({
-                facets: true,
-                hits: {
-                    size: vars.page.size,
-                    from: vars.page.from,
-                },
+            const searchState = routeToState(searchParams);
+            // Scope narrows the searched fields; operator comes from URL state.
+            const scopeFields =
+                !searchState.scope || searchState.scope === "keyword"
+                    ? fields
+                    : [{ name: searchState.scope, boost: 10 }];
+            const queryFn = buildQuery({
+                analyzers,
+                fields: scopeFields,
+                operator: searchState.operator || "or",
+            });
+            const response = await executeSearch({
+                config,
+                searchState,
+                facets: config.facets,
+                queryFn,
             });
             setLoading(false);
             setResponse(response);
         }
         if (searchParams) {
-            fetchData(routeToState(searchParams));
+            fetchData();
         }
     }, [searchParams]);
 

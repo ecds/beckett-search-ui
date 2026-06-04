@@ -114,9 +114,14 @@ const container = document.getElementById("root");
 const root = createRoot(container); // createRoot(container!) if you use TypeScript
 
 root.render(
-    <React.StrictMode>
-        <EuiProvider colorMode="light">
-            <RouterProvider router={router} />
-        </EuiProvider>
-    </React.StrictMode>,
+    // NOTE: React.StrictMode is intentionally omitted. EUI v116's EuiResizeObserver
+    // is incompatible with StrictMode's mount-unmount-remount cycle: StrictMode
+    // disconnects the ResizeObserver during its synthetic unmount phase before the
+    // observer's initial callback fires, and EUI's useObserver ref-equality check
+    // prevents the observer from being re-created on remount. This leaves
+    // contentHeight=0 in every accordion, meaning they never visually open.
+    // Track: https://github.com/elastic/eui/issues/<open issue>
+    <EuiProvider colorMode="light">
+        <RouterProvider router={router} />
+    </EuiProvider>,
 );
