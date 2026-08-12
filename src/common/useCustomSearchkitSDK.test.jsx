@@ -15,11 +15,12 @@ const useHarness = (args) => {
     return { ...sdk, setSearchParams };
 };
 
-const wrapperFor =
-    (initialEntry) =>
-    ({ children }) => (
-        <MemoryRouter initialEntries={[initialEntry]}>{children}</MemoryRouter>
-    );
+const wrapperFor = (initialEntry) =>
+    function Wrapper({ children }) {
+        return (
+            <MemoryRouter initialEntries={[initialEntry]}>{children}</MemoryRouter>
+        );
+    };
 
 afterEach(() => {
     executeSearch.mockReset();

@@ -67,8 +67,14 @@ describe("page smoke tests", () => {
     });
 
     it("renders the letters search page", async () => {
-        vi.stubGlobal("fetch", vi.fn().mockResolvedValue(emptySearchResponse()));
-        renderRoute("/letters", { path: "letters", element: <LettersSearchPage /> });
+        vi.stubGlobal(
+            "fetch",
+            vi.fn().mockResolvedValue(emptySearchResponse()),
+        );
+        renderRoute("/letters", {
+            path: "letters",
+            element: <LettersSearchPage />,
+        });
         await waitFor(() =>
             expect(
                 screen.getByText(/did not return any results|loading/i),
@@ -77,7 +83,10 @@ describe("page smoke tests", () => {
     });
 
     it("renders the entities search page", async () => {
-        vi.stubGlobal("fetch", vi.fn().mockResolvedValue(emptySearchResponse()));
+        vi.stubGlobal(
+            "fetch",
+            vi.fn().mockResolvedValue(emptySearchResponse()),
+        );
         renderRoute("/entities", {
             path: "entities",
             element: <EntitiesSearchPage />,
@@ -102,7 +111,9 @@ describe("page smoke tests", () => {
             }),
         });
         expect(
-            await screen.findByRole("heading", { name: /letter to test recipient/i }),
+            await screen.findByRole("heading", {
+                name: /letter to test recipient/i,
+            }),
         ).toBeInTheDocument();
     });
 
@@ -132,7 +143,10 @@ describe("page smoke tests", () => {
     });
 
     it("renders the timeline page", async () => {
-        renderRoute("/timeline", { path: "timeline", element: <TimeLinePage /> });
+        renderRoute("/timeline", {
+            path: "timeline",
+            element: <TimeLinePage />,
+        });
         expect(
             await screen.findByRole("combobox", { name: /select year/i }),
         ).toBeInTheDocument();
@@ -142,10 +156,14 @@ describe("page smoke tests", () => {
         renderRoute("/faq", {
             path: "faq",
             element: <FaqPage />,
-            loader: () => [{ position: 1, question: "A question?", answer: "An answer." }],
+            loader: () => [
+                { position: 1, question: "A question?", answer: "An answer." },
+            ],
         });
         expect(
-            await screen.findByRole("heading", { name: /frequently asked questions/i }),
+            await screen.findByRole("heading", {
+                name: /frequently asked questions/i,
+            }),
         ).toBeInTheDocument();
         expect(screen.getByText("A question?")).toBeInTheDocument();
     });
@@ -173,7 +191,9 @@ describe("page smoke tests", () => {
             element: <AboutPages />,
             loader: () => ({ body: "<p>About page content</p>" }),
         });
-        expect(await screen.findByText("About page content")).toBeInTheDocument();
+        expect(
+            await screen.findByText("About page content"),
+        ).toBeInTheDocument();
     });
 
     it("renders the contact page", async () => {
@@ -184,7 +204,10 @@ describe("page smoke tests", () => {
     });
 
     it("renders the error page for an unmatched route", async () => {
-        renderRoute("/does-not-exist", { path: "letters", element: <LettersSearchPage /> });
+        renderRoute("/does-not-exist", {
+            path: "letters",
+            element: <LettersSearchPage />,
+        });
         expect(
             await screen.findByRole("heading", { name: /404/i }),
         ).toBeInTheDocument();

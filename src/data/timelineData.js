@@ -4383,7 +4383,7 @@ export const timelineData = [
             {
                 id: "e5f1e9e4-f615-57ea-9ca3-5e9b54430dfd",
                 description:
-                    '"\Three poems" published in <i>Poetry Ireland</i>.',
+                    '"Three poems" published in <i>Poetry Ireland</i>.',
                 date: "April",
                 type: "personal",
             },

@@ -7,6 +7,8 @@ import jsdoc from "eslint-plugin-jsdoc";
 import prettier from "eslint-config-prettier";
 
 export default [
+    { ignores: ["dist/**"] },
+
     // Base JS recommended rules
     js.configs.recommended,
 

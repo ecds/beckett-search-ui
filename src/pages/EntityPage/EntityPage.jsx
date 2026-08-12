@@ -41,10 +41,10 @@ const relatedLettersMapping = {
  */
 export function EntityPage() {
     const entity = useLoaderData();
+    const navigate = useNavigate();
     if (entity.status === 404) {
         return <Navigate replace to="/404" />;
     }
-    const navigate = useNavigate();
     return (
         <main className="result">
             <EuiPage paddingSize="l">
