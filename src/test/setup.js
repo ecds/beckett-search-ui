@@ -8,14 +8,14 @@ class ResizeObserverMock {
     unobserve() {}
     disconnect() {}
 }
-global.ResizeObserver = ResizeObserverMock;
+globalThis.ResizeObserver = ResizeObserverMock;
 
 class IntersectionObserverMock {
     observe() {}
     unobserve() {}
     disconnect() {}
 }
-global.IntersectionObserver = IntersectionObserverMock;
+globalThis.IntersectionObserver = IntersectionObserverMock;
 
 // Root calls window.gtag unconditionally on every route change.
 window.gtag = () => {};

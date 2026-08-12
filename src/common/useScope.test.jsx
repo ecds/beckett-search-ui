@@ -12,13 +12,14 @@ const useHarness = (...args) => {
     return { scope, setScope, searchParams };
 };
 
-const wrapperFor =
-    (initialEntry) =>
-    ({ children }) => (
-        <MemoryRouter initialEntries={[initialEntry]}>
-            <SearchProvider>{children}</SearchProvider>
-        </MemoryRouter>
-    );
+const wrapperFor = (initialEntry) =>
+    function Wrapper({ children }) {
+        return (
+            <MemoryRouter initialEntries={[initialEntry]}>
+                <SearchProvider>{children}</SearchProvider>
+            </MemoryRouter>
+        );
+    };
 
 describe("useScope", () => {
     it("defaults to 'keyword' when no scope param is present", () => {
