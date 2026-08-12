@@ -12,7 +12,7 @@
     },
     "dependencies": {
         "@elastic/datemath": "^5.0.3",
-        "@elastic/eui": "^116.3.1",
+        "@elastic/eui": "^119.0.0",
         "@elastic/eui-theme-borealis": "^8.0.0",
         "@emotion/css": "^11.13.5",
         "@emotion/react": "^11.14.0",
@@ -46,6 +46,9 @@
         "prettier": "2.8.4",
         "vite": "^7.3.6",
         "vitest": "^4.1.10"
+    },
+    "overrides": {
+        "prismjs": "^1.30.0"
     },
     "volta": {
         "node": "16.18.0",
