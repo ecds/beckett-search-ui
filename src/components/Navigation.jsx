@@ -74,7 +74,7 @@ function Navigation() {
                                     <EuiButtonEmpty
                                         onClick={togglePopover}
                                         color="text"
-                                        iconType="arrowDown"
+                                        iconType="chevronSingleDown"
                                         iconSide="right"
                                     >
                                         About
