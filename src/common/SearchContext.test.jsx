@@ -9,13 +9,14 @@ const useHarness = () => ({
     variables: useSearchkitVariables(),
 });
 
-const wrapperFor =
-    (initialEntry) =>
-    ({ children }) => (
-        <MemoryRouter initialEntries={[initialEntry]}>
-            <SearchProvider>{children}</SearchProvider>
-        </MemoryRouter>
-    );
+const wrapperFor = (initialEntry) =>
+    function Wrapper({ children }) {
+        return (
+            <MemoryRouter initialEntries={[initialEntry]}>
+                <SearchProvider>{children}</SearchProvider>
+            </MemoryRouter>
+        );
+    };
 
 describe("SearchProvider", () => {
     describe("getFilters", () => {

@@ -44,7 +44,6 @@ import SaveSearchButton from "../../components/SaveSearchButton";
 import { SearchControls } from "../../components/SearchControls";
 import {
     getSortByFromState,
-    routeToState,
     stateToRoute,
     useCustomSearchkitSDK,
     useScope,

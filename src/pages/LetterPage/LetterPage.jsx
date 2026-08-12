@@ -35,6 +35,7 @@ export function letterLoader({ params }) {
  */
 export function LetterPage() {
     const letter = useLoaderData();
+    const navigate = useNavigate();
     if (letter.status === 404) {
         return <Navigate replace to="/404" />;
     }
@@ -42,7 +43,6 @@ export function LetterPage() {
         ? formatDate(letter.metadata.date)
         : "";
     const excludedMeta = ["id", "date", "label"];
-    const navigate = useNavigate();
     return (
         <main className="result">
             <EuiPage paddingSize="l">

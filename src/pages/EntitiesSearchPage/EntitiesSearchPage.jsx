@@ -43,7 +43,6 @@ import YearRangeFacet from "../../components/YearRangeFacet";
 import {
     conditionalFacets,
     getSortByFromState,
-    routeToState,
     stateToRoute,
     useCustomSearchkitSDK,
     useScope,
