@@ -7,7 +7,6 @@
         "dev": "vite",
         "build": "vite build",
         "preview": "vite preview",
-        "prepare": "husky install",
         "test": "vitest run",
         "test:watch": "vitest"
     },
@@ -42,7 +41,6 @@
         "eslint-plugin-react": "^7.37.0",
         "eslint-plugin-react-hooks": "^5",
         "globals": "^15",
-        "husky": "^8.0.3",
         "jsdom": "^29.1.1",
         "lint-staged": "^13.2.0",
         "prettier": "2.8.4",
