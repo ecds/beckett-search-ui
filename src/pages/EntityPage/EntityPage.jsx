@@ -53,7 +53,7 @@ export function EntityPage() {
                         <EuiButtonEmpty
                             type="button"
                             color="text"
-                            iconType="arrowLeft"
+                            iconType="chevronSingleLeft"
                             onClick={() => {
                                 navigate(-1);
                             }}

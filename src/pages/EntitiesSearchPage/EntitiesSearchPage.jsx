@@ -20,10 +20,10 @@ import {
     EuiHeaderSectionItem,
 } from "@elastic/eui";
 import { appendIconComponentCache } from "@elastic/eui/es/components/icon/icon";
-import { icon as EuiIconArrowLeft } from "@elastic/eui/es/components/icon/assets/arrow_left";
-import { icon as EuiIconArrowRight } from "@elastic/eui/es/components/icon/assets/arrow_right";
+import { icon as EuiIconChevronSingleLeft } from "@elastic/eui/es/components/icon/assets/chevron_single_left";
+import { icon as EuiIconChevronSingleRight } from "@elastic/eui/es/components/icon/assets/chevron_single_right";
 import { icon as EuiIconCross } from "@elastic/eui/es/components/icon/assets/cross";
-import { icon as EuiIconSearch } from "@elastic/eui/es/components/icon/assets/search";
+import { icon as EuiIconMagnify } from "@elastic/eui/es/components/icon/assets/magnify";
 import { icon as EuiIconQuestion } from "@elastic/eui/es/components/icon/assets/question";
 import { icon as EuiIconSortable } from "@elastic/eui/es/components/icon/assets/sortable";
 import { icon as EuiIconSortUp } from "@elastic/eui/es/components/icon/assets/sort_up";
@@ -54,11 +54,11 @@ import { Pagination } from "../../components/Pagination";
 // icon component cache required for dynamically imported EUI icons in Vite;
 // see https://github.com/elastic/eui/issues/5463
 appendIconComponentCache({
-    arrowLeft: EuiIconArrowLeft,
-    arrowRight: EuiIconArrowRight,
+    chevronSingleLeft: EuiIconChevronSingleLeft,
+    chevronSingleRight: EuiIconChevronSingleRight,
     cross: EuiIconCross,
     questionInCircle: EuiIconQuestion,
-    search: EuiIconSearch,
+    search: EuiIconMagnify,
     sortable: EuiIconSortable,
     sortUp: EuiIconSortUp,
     sortDown: EuiIconSortDown,

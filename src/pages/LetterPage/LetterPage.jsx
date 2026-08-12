@@ -51,7 +51,7 @@ export function LetterPage() {
                         <EuiButtonEmpty
                             type="button"
                             color="text"
-                            iconType="arrowLeft"
+                            iconType="chevronSingleLeft"
                             onClick={() => {
                                 navigate(-1);
                             }}
