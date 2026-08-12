@@ -41,6 +41,18 @@ Builds the project as a static site and saves the output to the `./dist` directo
 
 (must be run after `build`) Serves the built output from the `./dist` directory on a local web server.
 
+#### `npm test`
+
+Runs the test suite ([Vitest](https://vitest.dev/) + [React Testing Library](https://testing-library.com/react)) once and exits. This is what CI runs.
+
+#### `npm run test:watch`
+
+Runs the test suite in watch mode, re-running affected tests as files change.
+
+### Tests
+
+Tests live alongside the code they cover, as `*.test.js`/`*.test.jsx` files (e.g. `src/common/dateUtil.test.js`), plus a `src/pages.smoke.test.jsx` covering every routed page. Shared test setup (jsdom polyfills, jest-dom matchers) lives in `src/test/setup.js`.
+
 ### Code style and linting
 
 This project uses ESLint to manage code style, catch errors, and enforce consistency.
