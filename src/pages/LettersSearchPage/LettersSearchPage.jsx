@@ -219,7 +219,9 @@ function LettersSearch() {
                                         facet={facet}
                                         loading={loading}
                                         textSearchable={
-                                            facet.identifier === "repository"
+                                            facet.identifier === "repository" ||
+                                            facet.identifier ===
+                                                "other_publisher"
                                         }
                                     />
                                     <EuiSpacer size="l" />

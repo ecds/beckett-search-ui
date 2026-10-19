@@ -84,7 +84,9 @@ export function LetterPage() {
                         <EuiHorizontalRule />
                         {letter.repositories && (
                             <>
-                                <LetterMetadata metadata={letter.repositories} />
+                                <LetterMetadata
+                                    metadata={letter.repositories}
+                                />
                                 <EuiHorizontalRule />
                             </>
                         )}
@@ -103,7 +105,8 @@ export function LetterPage() {
                             <>
                                 <LetterMetadata
                                     metadata={{
-                                        previously_published: letter.previously_published
+                                        previously_published:
+                                            letter.previously_published,
                                     }}
                                 />
                                 <EuiHorizontalRule />

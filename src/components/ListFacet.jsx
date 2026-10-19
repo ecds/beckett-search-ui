@@ -117,7 +117,11 @@ function ListFacet({ displayTitle = true, facet, loading, textSearchable }) {
     }
 
     return (
-        <div className={`list-facet pp ${textSearchable ? "searchable-facet" : ""}`}>
+        <div
+            className={`list-facet pp ${
+                textSearchable ? "searchable-facet" : ""
+            }`}
+        >
             {displayTitle && (
                 <EuiTitle size="xxs">
                     <h3>{facet.label}</h3>
