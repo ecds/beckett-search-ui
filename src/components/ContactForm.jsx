@@ -13,7 +13,6 @@ export function ContactForm() {
     const nameRef = useRef();
     const emailRef = useRef();
     const messageRef = useRef();
-    const formRef = useRef();
     const recaptchaRef = useRef(undefined);
     const [captchaSuccess, setCaptchaSuccess] = useState(false);
     const [sentSuccess, setSentSuccess] = useState(false);
@@ -27,7 +26,7 @@ export function ContactForm() {
      * @returns {undefined} Noting is returned.
      */
     const sendMail = async (event) => {
-        if (formRef.current.checkValidity()) event.preventDefault();
+        event.preventDefault();
         const response = await fetch("/mail.php", {
             method: "POST",
             body: `name=${encodeURI(nameRef.current.value)}&email=${encodeURI(
@@ -101,7 +100,11 @@ export function ContactForm() {
                     />
                 </EuiCallOut>
             )}
-            <EuiForm ref={formRef} className="contact-form" onSubmit={sendMail}>
+            <EuiForm
+                component="form"
+                className="contact-form"
+                onSubmit={sendMail}
+            >
                 <EuiFormRow label="Name">
                     <input
                         ref={nameRef}
@@ -144,7 +147,6 @@ export function ContactForm() {
                         type="submit"
                         fill
                         isDisabled={!captchaSuccess}
-                        onClick={sendMail}
                         className={captchaSuccess ? "primary-button" : ""}
                     >
                         Send {captchaSuccess}

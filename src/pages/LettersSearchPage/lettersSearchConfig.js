@@ -35,7 +35,13 @@ export const lettersSearchConfig = {
     },
     index: import.meta.env.VITE_SEARCHKIT_LETTERS_INDEX,
     hits: {
-        fields: ["id", "recipients", "repositories", "date"],
+        fields: [
+            "id",
+            "recipients",
+            "repositories",
+            "date",
+            "other_publishers",
+        ],
     },
     query: buildQuery({ analyzers, fields }),
     facets: [
@@ -80,6 +86,15 @@ export const lettersSearchConfig = {
             display: "CustomListFacet",
         }),
         new RefinementSelectFacet({
+            field: "other_publishers",
+            identifier: "other_publisher",
+            label: "Other Publishers",
+            multipleSelect: true,
+            order: "count",
+            size: 200,
+            display: "CustomListFacet",
+        }),
+        new RefinementSelectFacet({
             field: "repositories",
             identifier: "repository",
             label: "Repository",
@@ -114,12 +129,12 @@ export const lettersSearchConfig = {
         },
         {
             id: "repository_asc",
-            label: "Recipient (Ascending)",
+            label: "Repository (Ascending)",
             field: { repositories: "asc" },
         },
         {
             id: "repository_desc",
-            label: "Recipient (Descending)",
+            label: "Repository (Descending)",
             field: { repositories: "desc" },
         },
     ],
